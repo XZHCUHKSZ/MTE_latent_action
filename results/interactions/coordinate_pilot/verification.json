@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "jobs": 48,
+  "paired_controls": 32,
+  "initialization_equal": true,
+  "parameter_counts_equal_within_pairs": true,
+  "sample_indices_equal_within_pairs": true,
+  "access_violations": 0,
+  "native_action_labels_read": 0,
+  "simulator_queries": 0
+}

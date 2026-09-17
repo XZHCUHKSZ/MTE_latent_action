@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "synthetic_states": 20,
+  "max_error": 1.146186647815739e-07,
+  "entity_shape": [
+    4,
+    46
+  ],
+  "simulator_instantiated": false,
+  "simulator_queries": 0,
+  "native_action_labels_read": 0,
+  "source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\.venv_codex312\\Lib\\site-packages\\gymnasium_robotics\\envs\\multiagent_mujoco\\obsk.py"
+}

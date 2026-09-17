@@ -1,0 +1,122 @@
+[
+  {
+    "suite": "mamujoco_s0_n90",
+    "source_endpoints": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz",
+    "observation_shape": [
+      109,
+      201,
+      105
+    ],
+    "endpoint_shape": [
+      109,
+      200,
+      3,
+      8,
+      4,
+      46
+    ],
+    "target_column_zero": true,
+    "unique_masks": 8,
+    "prefix_mask": true,
+    "scale_min": 0.0006402634899131954,
+    "float32_vs_float64_relative_squared_error": 1.4560652833075113e-14,
+    "train": 1016,
+    "dev": 256
+  },
+  {
+    "suite": "mamujoco_s1_n90",
+    "source_endpoints": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz",
+    "observation_shape": [
+      109,
+      201,
+      105
+    ],
+    "endpoint_shape": [
+      109,
+      200,
+      3,
+      8,
+      4,
+      46
+    ],
+    "target_column_zero": true,
+    "unique_masks": 8,
+    "prefix_mask": true,
+    "scale_min": 0.0007170262397266924,
+    "float32_vs_float64_relative_squared_error": 1.5424616601839574e-14,
+    "train": 1015,
+    "dev": 256
+  },
+  {
+    "suite": "mamujoco_s2_n90",
+    "source_endpoints": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s2_n90\\endpoints.npz",
+    "observation_shape": [
+      109,
+      201,
+      105
+    ],
+    "endpoint_shape": [
+      109,
+      200,
+      3,
+      8,
+      4,
+      46
+    ],
+    "target_column_zero": true,
+    "unique_masks": 8,
+    "prefix_mask": true,
+    "scale_min": 0.0009825731394812465,
+    "float32_vs_float64_relative_squared_error": 1.759181220914075e-14,
+    "train": 1016,
+    "dev": 255
+  },
+  {
+    "suite": "mamujoco_s3_n90",
+    "source_endpoints": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s3_n90\\endpoints.npz",
+    "observation_shape": [
+      109,
+      201,
+      105
+    ],
+    "endpoint_shape": [
+      109,
+      200,
+      3,
+      8,
+      4,
+      46
+    ],
+    "target_column_zero": true,
+    "unique_masks": 8,
+    "prefix_mask": true,
+    "scale_min": 0.0006037435377947986,
+    "float32_vs_float64_relative_squared_error": 1.6070362741693428e-14,
+    "train": 1017,
+    "dev": 256
+  },
+  {
+    "suite": "mamujoco_s4_n90",
+    "source_endpoints": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s4_n90\\endpoints.npz",
+    "observation_shape": [
+      109,
+      201,
+      105
+    ],
+    "endpoint_shape": [
+      109,
+      200,
+      3,
+      8,
+      4,
+      46
+    ],
+    "target_column_zero": true,
+    "unique_masks": 8,
+    "prefix_mask": true,
+    "scale_min": 0.0007657294627279043,
+    "float32_vs_float64_relative_squared_error": 1.4589828466349813e-14,
+    "train": 1020,
+    "dev": 254
+  }
+]

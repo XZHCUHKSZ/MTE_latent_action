@@ -1,0 +1,912 @@
+{
+  "jobs": [
+    {
+      "id": "mamujoco_s0_n90__simple__mobius",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "simple",
+      "variant": "mobius"
+    },
+    {
+      "id": "mamujoco_s0_n90__simple__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "simple",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mamujoco_s0_n90__graph__mobius",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "graph",
+      "variant": "mobius"
+    },
+    {
+      "id": "mamujoco_s0_n90__graph__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "graph",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mamujoco_s0_n90__tree__mobius",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "mobius"
+    },
+    {
+      "id": "mamujoco_s0_n90__tree__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mamujoco_s0_n90__mif__mobius",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "mobius"
+    },
+    {
+      "id": "mamujoco_s0_n90__mif__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mamujoco_s0_n90__mif__self_time",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_time"
+    },
+    {
+      "id": "mamujoco_s0_n90__mif__self_entity",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_entity"
+    },
+    {
+      "id": "mamujoco_s0_n90__mif__self_coalition",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_coalition"
+    },
+    {
+      "id": "mamujoco_s0_n90__tree__upward_only",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "upward_only"
+    },
+    {
+      "id": "mamujoco_s1_n90__simple__mobius",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "simple",
+      "variant": "mobius"
+    },
+    {
+      "id": "mamujoco_s1_n90__simple__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "simple",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mamujoco_s1_n90__graph__mobius",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "graph",
+      "variant": "mobius"
+    },
+    {
+      "id": "mamujoco_s1_n90__graph__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "graph",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mamujoco_s1_n90__tree__mobius",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "mobius"
+    },
+    {
+      "id": "mamujoco_s1_n90__tree__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mamujoco_s1_n90__mif__mobius",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "mobius"
+    },
+    {
+      "id": "mamujoco_s1_n90__mif__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mamujoco_s1_n90__mif__self_time",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_time"
+    },
+    {
+      "id": "mamujoco_s1_n90__mif__self_entity",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_entity"
+    },
+    {
+      "id": "mamujoco_s1_n90__mif__self_coalition",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_coalition"
+    },
+    {
+      "id": "mamujoco_s1_n90__tree__upward_only",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "upward_only"
+    },
+    {
+      "id": "mpe_s40_n700__simple__mobius",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "simple",
+      "variant": "mobius"
+    },
+    {
+      "id": "mpe_s40_n700__simple__raw_coordinates",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "simple",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mpe_s40_n700__graph__mobius",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "graph",
+      "variant": "mobius"
+    },
+    {
+      "id": "mpe_s40_n700__graph__raw_coordinates",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "graph",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mpe_s40_n700__tree__mobius",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "mobius"
+    },
+    {
+      "id": "mpe_s40_n700__tree__raw_coordinates",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mpe_s40_n700__mif__mobius",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "mobius"
+    },
+    {
+      "id": "mpe_s40_n700__mif__raw_coordinates",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mpe_s40_n700__mif__self_time",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_time"
+    },
+    {
+      "id": "mpe_s40_n700__mif__self_entity",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_entity"
+    },
+    {
+      "id": "mpe_s40_n700__mif__self_coalition",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_coalition"
+    },
+    {
+      "id": "mpe_s40_n700__tree__upward_only",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "upward_only"
+    },
+    {
+      "id": "mpe_s41_n700__simple__mobius",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "simple",
+      "variant": "mobius"
+    },
+    {
+      "id": "mpe_s41_n700__simple__raw_coordinates",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "simple",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mpe_s41_n700__graph__mobius",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "graph",
+      "variant": "mobius"
+    },
+    {
+      "id": "mpe_s41_n700__graph__raw_coordinates",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "graph",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mpe_s41_n700__tree__mobius",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "mobius"
+    },
+    {
+      "id": "mpe_s41_n700__tree__raw_coordinates",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mpe_s41_n700__mif__mobius",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "mobius"
+    },
+    {
+      "id": "mpe_s41_n700__mif__raw_coordinates",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "raw_coordinates"
+    },
+    {
+      "id": "mpe_s41_n700__mif__self_time",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_time"
+    },
+    {
+      "id": "mpe_s41_n700__mif__self_entity",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_entity"
+    },
+    {
+      "id": "mpe_s41_n700__mif__self_coalition",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_coalition"
+    },
+    {
+      "id": "mpe_s41_n700__tree__upward_only",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "upward_only"
+    }
+  ],
+  "updates": 400,
+  "batch": 64,
+  "train_max": 2048,
+  "dev_max": 256,
+  "learning_rate": 0.001,
+  "latent": 16,
+  "hidden": 128,
+  "parallel": 2,
+  "port": 8785,
+  "scope": "Fixed exploratory architecture pilot, first two existing seeds in each environment. Not original formal retraining or new confirmation.",
+  "input": "Simple/Graph/Tree: raw h3 target edges. MIF: original rich three-horizon endpoint+edge tables.",
+  "loss": "Common value-coordinate reconstruction MSE + variance floor + .02 covariance. Full visibility for both arms; no coefficient-coordinate loss or masked reconstruction. This symmetric diagnostic objective differs from historical training.",
+  "controls": "raw_coordinates replaces only mobius/zeta buffers with identity on new control instances; self_axis replaces only chosen MIF adjacency with identity. Tree upward_only uses existing constructor switch.",
+  "fairness": "Within each architecture: identical observations, train/dev indices, initialization, parameter count, minibatches and updates. Report wall time and active gradients; cross-architecture resources are not equated. Tree upward-only disables a sweep and is explicitly not equal FLOPs.",
+  "primary": "Per-partner canonical Mobius coefficient skill from native decoder and fixed ridge=.01 linear readout. Also retain whole-edge reconstruction skill.",
+  "no_selection": "Report every arm at fixed update400. No dev-based checkpoint/metric/sign selection; retain failures.",
+  "stopping": "48 jobs; no automatic expansion based on advantage. Original checkpoints/results are not overwritten.",
+  "native_action_labels_read": 0,
+  "simulator_queries": 0,
+  "history_training": false
+}

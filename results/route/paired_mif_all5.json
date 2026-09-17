@@ -1,0 +1,405 @@
+{
+  "scope": "MaMuJoCo only;2 existing upstream seeds,5 nested decoder repeats,all budgets. Identical saved MIF trials verified with existing reuse digests and identical evaluation seeds.",
+  "rows": [
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 4,
+      "decoder_seed": 202609160,
+      "mif": 680.4614225477626,
+      "global_aux": 663.0884051659647,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B4_mif_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 4,
+      "decoder_seed": 202609161,
+      "mif": 671.7992212351865,
+      "global_aux": 621.8674462828849,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B4_mif_matched_d202609161\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 4,
+      "decoder_seed": 202609162,
+      "mif": 678.6965274822985,
+      "global_aux": 671.7409505922445,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B4_mif_matched_d202609162\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 4,
+      "decoder_seed": 202609163,
+      "mif": 673.3826747774254,
+      "global_aux": 679.196770476467,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B4_mif_matched_d202609163\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 4,
+      "decoder_seed": 202609164,
+      "mif": 708.4772044433879,
+      "global_aux": 658.5564786194109,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B4_mif_matched_d202609164\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 8,
+      "decoder_seed": 202609160,
+      "mif": 699.8067113104656,
+      "global_aux": 665.490846509377,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s0_n90_B8_mif_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 8,
+      "decoder_seed": 202609161,
+      "mif": 661.4243709651474,
+      "global_aux": 670.8515520873057,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s0_n90_B8_mif_matched_d202609161\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 8,
+      "decoder_seed": 202609162,
+      "mif": 723.9813058158377,
+      "global_aux": 696.3373967894389,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s0_n90_B8_mif_matched_d202609162\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 8,
+      "decoder_seed": 202609163,
+      "mif": 671.4327813132331,
+      "global_aux": 641.7249773688818,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s0_n90_B8_mif_matched_d202609163\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 8,
+      "decoder_seed": 202609164,
+      "mif": 701.868242364777,
+      "global_aux": 662.9925672064923,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s0_n90_B8_mif_matched_d202609164\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 16,
+      "decoder_seed": 202609160,
+      "mif": 697.1433096161657,
+      "global_aux": 729.367070876192,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B16_mif_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 16,
+      "decoder_seed": 202609161,
+      "mif": 722.0466008809865,
+      "global_aux": 720.0208351987947,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B16_mif_matched_d202609161\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 16,
+      "decoder_seed": 202609162,
+      "mif": 693.1873817931497,
+      "global_aux": 701.814153734765,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B16_mif_matched_d202609162\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 16,
+      "decoder_seed": 202609163,
+      "mif": 691.284806817284,
+      "global_aux": 709.5339651081824,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B16_mif_matched_d202609163\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 16,
+      "decoder_seed": 202609164,
+      "mif": 700.5876748146482,
+      "global_aux": 667.5913998046677,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B16_mif_matched_d202609164\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 32,
+      "decoder_seed": 202609160,
+      "mif": 715.4328624100199,
+      "global_aux": 678.912455651843,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s0_n90_B32_mif_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 32,
+      "decoder_seed": 202609161,
+      "mif": 730.1909300622464,
+      "global_aux": 675.6988723803801,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s0_n90_B32_mif_matched_d202609161\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 32,
+      "decoder_seed": 202609162,
+      "mif": 686.2793521219559,
+      "global_aux": 715.8693665223793,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s0_n90_B32_mif_matched_d202609162\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 32,
+      "decoder_seed": 202609163,
+      "mif": 720.1499845070488,
+      "global_aux": 706.0382177963237,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s0_n90_B32_mif_matched_d202609163\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 32,
+      "decoder_seed": 202609164,
+      "mif": 714.8894128664042,
+      "global_aux": 709.6478303582584,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s0_n90_B32_mif_matched_d202609164\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 64,
+      "decoder_seed": 202609160,
+      "mif": 722.6005648132394,
+      "global_aux": 719.1029148873006,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B64_mif_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 64,
+      "decoder_seed": 202609161,
+      "mif": 683.8316333127478,
+      "global_aux": 715.8726661004685,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B64_mif_matched_d202609161\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 64,
+      "decoder_seed": 202609162,
+      "mif": 714.7081978382615,
+      "global_aux": 731.6049607045729,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B64_mif_matched_d202609162\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 64,
+      "decoder_seed": 202609163,
+      "mif": 710.4658404904038,
+      "global_aux": 703.244662602995,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B64_mif_matched_d202609163\\result.json"
+    },
+    {
+      "suite": "mamujoco_s0_n90",
+      "budget": 64,
+      "decoder_seed": 202609164,
+      "mif": 722.5489249174726,
+      "global_aux": 718.7639676104998,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s0_n90_B64_mif_matched_d202609164\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 4,
+      "decoder_seed": 202609160,
+      "mif": 611.12447321264,
+      "global_aux": 649.8333357518571,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B4_mif_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 4,
+      "decoder_seed": 202609161,
+      "mif": 688.0962474191421,
+      "global_aux": 647.3504390677747,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B4_mif_matched_d202609161\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 4,
+      "decoder_seed": 202609162,
+      "mif": 612.8516914891652,
+      "global_aux": 648.8777431116787,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B4_mif_matched_d202609162\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 4,
+      "decoder_seed": 202609163,
+      "mif": 617.4136574917009,
+      "global_aux": 606.5703644448421,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B4_mif_matched_d202609163\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 4,
+      "decoder_seed": 202609164,
+      "mif": 601.919213166983,
+      "global_aux": 669.417700197859,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B4_mif_matched_d202609164\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 8,
+      "decoder_seed": 202609160,
+      "mif": 663.3735133494908,
+      "global_aux": 663.1465503342548,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s1_n90_B8_mif_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 8,
+      "decoder_seed": 202609161,
+      "mif": 743.2615475574992,
+      "global_aux": 689.7922024862402,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s1_n90_B8_mif_matched_d202609161\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 8,
+      "decoder_seed": 202609162,
+      "mif": 692.7313677470863,
+      "global_aux": 687.2798501345701,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s1_n90_B8_mif_matched_d202609162\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 8,
+      "decoder_seed": 202609163,
+      "mif": 691.7719914127312,
+      "global_aux": 710.3610651335708,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s1_n90_B8_mif_matched_d202609163\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 8,
+      "decoder_seed": 202609164,
+      "mif": 710.4766200666495,
+      "global_aux": 655.9932005023403,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s1_n90_B8_mif_matched_d202609164\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 16,
+      "decoder_seed": 202609160,
+      "mif": 694.6131058371232,
+      "global_aux": 684.3692506649364,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B16_mif_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 16,
+      "decoder_seed": 202609161,
+      "mif": 732.7309242135896,
+      "global_aux": 705.2002040551058,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B16_mif_matched_d202609161\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 16,
+      "decoder_seed": 202609162,
+      "mif": 682.4486264531774,
+      "global_aux": 714.430482136541,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B16_mif_matched_d202609162\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 16,
+      "decoder_seed": 202609163,
+      "mif": 661.1483780375008,
+      "global_aux": 681.0278081268531,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B16_mif_matched_d202609163\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 16,
+      "decoder_seed": 202609164,
+      "mif": 670.3764801343928,
+      "global_aux": 692.5780279906929,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B16_mif_matched_d202609164\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 32,
+      "decoder_seed": 202609160,
+      "mif": 692.9526308133713,
+      "global_aux": 684.6298951797868,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s1_n90_B32_mif_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 32,
+      "decoder_seed": 202609161,
+      "mif": 746.0211761125519,
+      "global_aux": 713.3052601917614,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s1_n90_B32_mif_matched_d202609161\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 32,
+      "decoder_seed": 202609162,
+      "mif": 739.2532014385075,
+      "global_aux": 695.8731270053775,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s1_n90_B32_mif_matched_d202609162\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 32,
+      "decoder_seed": 202609163,
+      "mif": 716.0100995400481,
+      "global_aux": 743.5840743205015,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s1_n90_B32_mif_matched_d202609163\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 32,
+      "decoder_seed": 202609164,
+      "mif": 723.2275739533297,
+      "global_aux": 718.5948590392001,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_repeat\\mamujoco_s1_n90_B32_mif_matched_d202609164\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 64,
+      "decoder_seed": 202609160,
+      "mif": 752.38783535224,
+      "global_aux": 695.5028532118513,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B64_mif_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 64,
+      "decoder_seed": 202609161,
+      "mif": 738.6278386515565,
+      "global_aux": 672.4281226105949,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B64_mif_matched_d202609161\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 64,
+      "decoder_seed": 202609162,
+      "mif": 726.9365684165476,
+      "global_aux": 694.0922969956616,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B64_mif_matched_d202609162\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 64,
+      "decoder_seed": 202609163,
+      "mif": 717.7025578256857,
+      "global_aux": 727.816537092416,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B64_mif_matched_d202609163\\result.json"
+    },
+    {
+      "suite": "mamujoco_s1_n90",
+      "budget": 64,
+      "decoder_seed": 202609164,
+      "mif": 725.5566347433831,
+      "global_aux": 738.562332545194,
+      "mif_source": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mte_family_transfer_audit_2026_09_16\\decoder_allbudgets\\mamujoco_s1_n90_B64_mif_matched_d202609164\\result.json"
+    }
+  ]
+}

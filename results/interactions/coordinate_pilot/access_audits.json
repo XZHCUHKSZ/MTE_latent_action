@@ -1,0 +1,654 @@
+[
+  {
+    "job": "mamujoco_s0_n90__simple__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s0_n90__simple__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s0_n90__graph__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s0_n90__graph__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s0_n90__tree__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s0_n90__tree__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s0_n90__mif__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s0_n90__mif__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s0_n90__mif__self_time",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s0_n90__mif__self_entity",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s0_n90__mif__self_coalition",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s0_n90__tree__upward_only",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s0_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s0_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__simple__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__simple__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__graph__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__graph__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__tree__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__tree__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__mif__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__mif__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__mif__self_time",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__mif__self_entity",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__mif__self_coalition",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mamujoco_s1_n90__tree__upward_only",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mamujoco_s1_n90__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\mamujoco_independent_branch_audit_2026_09_12\\repair\\mamujoco_s1_n90\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__simple__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__simple__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__graph__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__graph__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__tree__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__tree__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__mif__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__mif__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__mif__self_time",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__mif__self_entity",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__mif__self_coalition",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s40_n700__tree__upward_only",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s40_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__simple__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__simple__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__graph__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__graph__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__tree__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__tree__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__mif__mobius",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__mif__raw_coordinates",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__mif__self_time",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__mif__self_entity",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__mif__self_coalition",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  },
+  {
+    "job": "mpe_s41_n700__tree__upward_only",
+    "audit": {
+      "numeric_reads": [
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\train.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__prepare\\dev.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz",
+        "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\observation_scale_restore_2026_09_10\\runtime\\mpe_s41_n700__bridge\\endpoints.npz"
+      ],
+      "violations": [],
+      "pretraining": true,
+      "missing_stdlib_probes": []
+    }
+  }
+]

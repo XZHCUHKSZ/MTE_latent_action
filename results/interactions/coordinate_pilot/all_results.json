@@ -1,0 +1,7178 @@
+[
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__simple__mobius",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "simple",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.4664369523525238,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.31440915759599697
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.16769658029079437,
+        "baseline_mse": 0.1396576166152954,
+        "skill": -0.2007693125161647
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.19662095606327057,
+        "baseline_mse": 0.174466073513031,
+        "skill": -0.12698676656229546
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.1260257214307785,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.017572877117516317
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.21383151412010193,
+        "baseline_mse": 0.1907438039779663,
+        "skill": -0.12104041998031345
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.1043146401643753,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.06541846986998223
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.10905220359563828,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.04581564464355581
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10706552863121033,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.04387349699886478
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3696377936211538,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.45668908727121216
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.13622821192247803,
+        "baseline_mse": 0.1396576166152954,
+        "skill": 0.02455580136573654
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.16830203154592635,
+        "baseline_mse": 0.174466073513031,
+        "skill": 0.03533089180598914
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12429364711607915,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.003587542824008194
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.17632401223275368,
+        "baseline_mse": 0.1907438039779663,
+        "skill": 0.07559769410322925
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.09868460940175726,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.007916102503546574
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.1057093181549858,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.013757219624940475
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10342175954410904,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.008347272752492252
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.42676085233688354,
+        "baseline_mse": 0.6695101857185364,
+        "skill": 0.3625775060033294
+      }
+    ],
+    "parameters": 55465,
+    "active_gradient_parameters": 55465,
+    "training_seconds": 1.7166249752044678,
+    "elapsed_seconds": 8.562189817428589,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__simple__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "simple",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.35422495007514954,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.47934360539472465
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.14077629148960114,
+        "baseline_mse": 0.1396576166152954,
+        "skill": -0.008010124341354397
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.17552544176578522,
+        "baseline_mse": 0.174466073513031,
+        "skill": -0.006072058775800304
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.12390854954719543,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.00047813915076511115
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.19052770733833313,
+        "baseline_mse": 0.1907438039779663,
+        "skill": 0.00113291564457918
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.09796109795570374,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.0005265121586717214
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.10447440296411514,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.001914326186406079
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10278694331645966,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.0021579058854910294
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3752404264943454,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.4484540755041583
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.1372624486750677,
+        "baseline_mse": 0.1396576166152954,
+        "skill": 0.017150285092044082
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.16986961910216486,
+        "baseline_mse": 0.174466073513031,
+        "skill": 0.02634583514325972
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12469258297579687,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.006808681381673898
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.1824323890990315,
+        "baseline_mse": 0.1907438039779663,
+        "skill": 0.04357370832289209
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.09865029659084405,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.007565648315692508
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10544091688484691,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.01118323910828578
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10350142248604811,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.009123974972584215
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.3494257628917694,
+        "baseline_mse": 0.6695101857185364,
+        "skill": 0.47808745804702546
+      }
+    ],
+    "parameters": 55465,
+    "active_gradient_parameters": 55465,
+    "training_seconds": 1.9119172096252441,
+    "elapsed_seconds": 9.26887059211731,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__graph__mobius",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "graph",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.49709388613700867,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.2693481628510017
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.16477015614509583,
+        "baseline_mse": 0.1396576166152954,
+        "skill": -0.17981503722046233
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.1917208731174469,
+        "baseline_mse": 0.174466073513031,
+        "skill": -0.09890060145777912
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.13050885498523712,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.05377116313183783
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.2154800444841385,
+        "baseline_mse": 0.1907438039779663,
+        "skill": -0.12968306173148125
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.10648203641176224,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.08755518998763967
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.11263301223516464,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.08015576407458802
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10826031118631363,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.055522454977159796
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.33214602262957726,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.5117962453291062
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.1342697418667595,
+        "baseline_mse": 0.1396576166152954,
+        "skill": 0.038579168677763565
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.16835495278496385,
+        "baseline_mse": 0.174466073513031,
+        "skill": 0.035027559255586205
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12505298756798602,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.009718705888073664
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.1822349775615274,
+        "baseline_mse": 0.1907438039779663,
+        "skill": 0.04460866481105619
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.09846108288354279,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.005633112497194892
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10557812333221459,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.012499055244703738
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10283139603650844,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.0025913135090434025
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.4021728038787842,
+        "baseline_mse": 0.6695101857185364,
+        "skill": 0.39930293450702103
+      }
+    ],
+    "parameters": 72497,
+    "active_gradient_parameters": 72497,
+    "training_seconds": 3.6292498111724854,
+    "elapsed_seconds": 11.085240602493286,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__graph__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "graph",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.3014298677444458,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.5569442860169147
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.14064790308475494,
+        "baseline_mse": 0.1396576166152954,
+        "skill": -0.007090816050422832
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.17481911182403564,
+        "baseline_mse": 0.174466073513031,
+        "skill": -0.002023535601483495
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.12383593618869781,
+        "baseline_mse": 0.12384933233261108,
+        "skill": 0.00010816484563103135
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.19221872091293335,
+        "baseline_mse": 0.1907438039779663,
+        "skill": -0.007732450041404215
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.09782463312149048,
+        "baseline_mse": 0.09790954738855362,
+        "skill": 0.0008672725932044045
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.10432425141334534,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.0004743659133901179
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10250629484653473,
+        "baseline_mse": 0.10256561636924744,
+        "skill": 0.0005783763098458072
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3364628019582498,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.5054512412262151
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.13575314945166272,
+        "baseline_mse": 0.1396576166152954,
+        "skill": 0.027957423721385988
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.1720738008833662,
+        "baseline_mse": 0.174466073513031,
+        "skill": 0.013711964632975526
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12543038011494323,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.012765896695236645
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.18564484431772238,
+        "baseline_mse": 0.1907438039779663,
+        "skill": 0.02673198056191084
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.09802625744833342,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.0011920191941714453
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10604633708662364,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.016989246669114832
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10344556931288,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.00857941457168887
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.3070414960384369,
+        "baseline_mse": 0.6695101857185364,
+        "skill": 0.5413938389766069
+      }
+    ],
+    "parameters": 72497,
+    "active_gradient_parameters": 72497,
+    "training_seconds": 3.7032840251922607,
+    "elapsed_seconds": 10.959469556808472,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__tree__mobius",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.4784075915813446,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.29681415232977826
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.16483986377716064,
+        "baseline_mse": 0.1396576166152954,
+        "skill": -0.18031416955390922
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.18914435803890228,
+        "baseline_mse": 0.174466073513031,
+        "skill": -0.08413260085649221
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.13343940675258636,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.07743339620289658
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.21481016278266907,
+        "baseline_mse": 0.1907438039779663,
+        "skill": -0.12617111697889172
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.10852912068367004,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.10846310271431125
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.11423762887716293,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.09554411142132935
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10853671282529831,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.05821733118196515
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3440981948291845,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.49422838376591394
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.14036375505110854,
+        "baseline_mse": 0.1396576166152954,
+        "skill": -0.005056211418517087
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.1734558954105247,
+        "baseline_mse": 0.174466073513031,
+        "skill": 0.00579011198088808
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12581679089855657,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.015885903693543257
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.1924195059467842,
+        "baseline_mse": 0.1907438039779663,
+        "skill": -0.008785092537063166
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.0988926374185502,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.01004079843301886
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10593540373811254,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.015925390758272595
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10346522684492826,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.008771072680362257
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.3645150363445282,
+        "baseline_mse": 0.6695101857185364,
+        "skill": 0.4555496777792546
+      }
+    ],
+    "parameters": 198119,
+    "active_gradient_parameters": 85788,
+    "training_seconds": 4.635010242462158,
+    "elapsed_seconds": 11.815189838409424,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__tree__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.28760749101638794,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.5772610616437577
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.14213071763515472,
+        "baseline_mse": 0.1396576166152954,
+        "skill": -0.01770831466121736
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.1747823804616928,
+        "baseline_mse": 0.174466073513031,
+        "skill": -0.0018129997557272404
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.1239171177148819,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.0005473213379041386
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.19268359243869781,
+        "baseline_mse": 0.1907438039779663,
+        "skill": -0.010169601424933283
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.09785190969705582,
+        "baseline_mse": 0.09790954738855362,
+        "skill": 0.0005886830552802591
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.10413343459367752,
+        "baseline_mse": 0.10427478700876236,
+        "skill": 0.0013555761573789127
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10251137614250183,
+        "baseline_mse": 0.10256561636924744,
+        "skill": 0.0005288344053853145
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.32388054664124794,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.5239452284170198
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.14041651968991328,
+        "baseline_mse": 0.1396576166152954,
+        "skill": -0.005434025676582799
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.1750438853808711,
+        "baseline_mse": 0.174466073513031,
+        "skill": -0.003311886696395039
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.1251977660792142,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.010887694920968638
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.19268579104268735,
+        "baseline_mse": 0.1907438039779663,
+        "skill": -0.010181127901514264
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.09899175737109463,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.011053160916435045
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10576850833912702,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.014324856211301862
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10365458344262413,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.010617272258729438
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.28380805253982544,
+        "baseline_mse": 0.6695101857185364,
+        "skill": 0.5760959898836565
+      }
+    ],
+    "parameters": 198119,
+    "active_gradient_parameters": 85788,
+    "training_seconds": 4.650697708129883,
+    "elapsed_seconds": 12.029324054718018,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__mif__mobius",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.5918822884559631,
+        "baseline_mse": 0.6954677700996399,
+        "skill": 0.14894361190718586
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.11486247181892395,
+        "baseline_mse": 0.10112044960260391,
+        "skill": -0.1358975585089386
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.1409594565629959,
+        "baseline_mse": 0.12779675424098969,
+        "skill": -0.10299715669761822
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.08672118186950684,
+        "baseline_mse": 0.08210940659046173,
+        "skill": -0.056166223463863574
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.14209946990013123,
+        "baseline_mse": 0.12933072447776794,
+        "skill": -0.09872940458597856
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.06459584087133408,
+        "baseline_mse": 0.05987439677119255,
+        "skill": -0.07885581074301795
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.0704440325498581,
+        "baseline_mse": 0.0656631737947464,
+        "skill": -0.07280882843183867
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.06573837995529175,
+        "baseline_mse": 0.061830878257751465,
+        "skill": -0.06319660673832361
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3820393769035814,
+        "baseline_mse": 0.6954677700996399,
+        "skill": 0.4506727797769169
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.10122308241086979,
+        "baseline_mse": 0.10112044960260391,
+        "skill": -0.001014956012055146
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.1268624510660418,
+        "baseline_mse": 0.12779675424098969,
+        "skill": 0.00731085214563465
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.08215302972304392,
+        "baseline_mse": 0.08210940659046173,
+        "skill": -0.0005312805730013359
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.12902619253203346,
+        "baseline_mse": 0.12933072447776794,
+        "skill": 0.0023546759438963782
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.06023838480368826,
+        "baseline_mse": 0.05987439677119255,
+        "skill": -0.006079193313407005
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.06649255288404342,
+        "baseline_mse": 0.0656631737947464,
+        "skill": -0.012630810260398695
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.06188826089206114,
+        "baseline_mse": 0.061830878257751465,
+        "skill": -0.000928057888333278
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.5361005067825317,
+        "baseline_mse": 0.6776819825172424,
+        "skill": 0.20892023011856953
+      }
+    ],
+    "parameters": 65957,
+    "active_gradient_parameters": 65957,
+    "training_seconds": 3.497610330581665,
+    "elapsed_seconds": 9.058704614639282,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__mif__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.4656483829021454,
+        "baseline_mse": 0.6954677700996399,
+        "skill": 0.33045296572775507
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.10098633915185928,
+        "baseline_mse": 0.10112044960260391,
+        "skill": 0.001326244605039606
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.12771697342395782,
+        "baseline_mse": 0.12779675424098969,
+        "skill": 0.0006242788989884174
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.08215045928955078,
+        "baseline_mse": 0.08210940659046173,
+        "skill": -0.0004999755910282122
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.1290561407804489,
+        "baseline_mse": 0.12933072447776794,
+        "skill": 0.0021231126511336296
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.05977800488471985,
+        "baseline_mse": 0.05987439677119255,
+        "skill": 0.001609901588504714
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.06563858687877655,
+        "baseline_mse": 0.0656631737947464,
+        "skill": 0.0003744399569644008
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.06182265654206276,
+        "baseline_mse": 0.061830878257751465,
+        "skill": 0.00013297103195641924
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.37049128416435545,
+        "baseline_mse": 0.6954677700996399,
+        "skill": 0.46727756469393966
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.10007093824855585,
+        "baseline_mse": 0.10112044960260391,
+        "skill": 0.01037882404768331
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.12643622607991833,
+        "baseline_mse": 0.12779675424098969,
+        "skill": 0.010646030637881165
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.08217965413736546,
+        "baseline_mse": 0.08210940659046173,
+        "skill": -0.0008555359223834103
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.12820458845724164,
+        "baseline_mse": 0.12933072447776794,
+        "skill": 0.008707412914244372
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.06014727935763507,
+        "baseline_mse": 0.05987439677119255,
+        "skill": -0.0045575838949214464
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.06627568342636704,
+        "baseline_mse": 0.0656631737947464,
+        "skill": -0.009328054009927422
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.062095009904508426,
+        "baseline_mse": 0.061830878257751465,
+        "skill": -0.0042718404492960715
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.48073068261146545,
+        "baseline_mse": 0.6776819825172424,
+        "skill": 0.2906249612453964
+      }
+    ],
+    "parameters": 65957,
+    "active_gradient_parameters": 65957,
+    "training_seconds": 3.441431999206543,
+    "elapsed_seconds": 9.01499629020691,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__mif__self_time",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_time"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.5917578339576721,
+        "baseline_mse": 0.6954677700996399,
+        "skill": 0.1491225626848376
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.1152249276638031,
+        "baseline_mse": 0.10112044960260391,
+        "skill": -0.13948195559482546
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.14108453691005707,
+        "baseline_mse": 0.12779675424098969,
+        "skill": -0.10397590101553167
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.08671175688505173,
+        "baseline_mse": 0.08210940659046173,
+        "skill": -0.056051437779171875
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.14219971001148224,
+        "baseline_mse": 0.12933072447776794,
+        "skill": -0.09950447262766615
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.06464044004678726,
+        "baseline_mse": 0.05987439677119255,
+        "skill": -0.07960068965384215
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.07046226412057877,
+        "baseline_mse": 0.0656631737947464,
+        "skill": -0.07308648133326034
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.06577317416667938,
+        "baseline_mse": 0.061830878257751465,
+        "skill": -0.06375933869957096
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3883769950672585,
+        "baseline_mse": 0.6954677700996399,
+        "skill": 0.44156003805666566
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.10122495006406321,
+        "baseline_mse": 0.10112044960260391,
+        "skill": -0.0010334256015471777
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.12724650273356083,
+        "baseline_mse": 0.12779675424098969,
+        "skill": 0.004305676702799688
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.08214559742871438,
+        "baseline_mse": 0.08210940659046173,
+        "skill": -0.00044076360742884013
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.12913917550249346,
+        "baseline_mse": 0.12933072447776794,
+        "skill": 0.0014810786535678355
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.060235178687750475,
+        "baseline_mse": 0.05987439677119255,
+        "skill": -0.006025645952419945
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.06645238777810553,
+        "baseline_mse": 0.0656631737947464,
+        "skill": -0.012019126364895216
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.06190493389060516,
+        "baseline_mse": 0.061830878257751465,
+        "skill": -0.0011977127762117235
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.536857545375824,
+        "baseline_mse": 0.6776819825172424,
+        "skill": 0.2078031300438704
+      }
+    ],
+    "parameters": 65957,
+    "active_gradient_parameters": 65957,
+    "training_seconds": 3.4658710956573486,
+    "elapsed_seconds": 8.998358249664307,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__mif__self_entity",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_entity"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.5921098589897156,
+        "baseline_mse": 0.6954677700996399,
+        "skill": 0.14861639252544545
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.11478511244058609,
+        "baseline_mse": 0.10112044960260391,
+        "skill": -0.13513253641259815
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.14089713990688324,
+        "baseline_mse": 0.12779675424098969,
+        "skill": -0.10250953354566272
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.08670229464769363,
+        "baseline_mse": 0.08210940659046173,
+        "skill": -0.05593619839612196
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.14206597208976746,
+        "baseline_mse": 0.12933072447776794,
+        "skill": -0.09847039567298421
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.06459382176399231,
+        "baseline_mse": 0.05987439677119255,
+        "skill": -0.07882208835998528
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.07042217254638672,
+        "baseline_mse": 0.0656631737947464,
+        "skill": -0.07247591727010128
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.06571736186742783,
+        "baseline_mse": 0.061830878257751465,
+        "skill": -0.06285667807393835
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3824150504689306,
+        "baseline_mse": 0.6954677700996399,
+        "skill": 0.4501326058371593
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.10125075812734204,
+        "baseline_mse": 0.10112044960260391,
+        "skill": -0.0012886466115431539
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.1268506316060684,
+        "baseline_mse": 0.12779675424098969,
+        "skill": 0.007403338531878134
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.0821515119496473,
+        "baseline_mse": 0.08210940659046173,
+        "skill": -0.0005127958042077108
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.1290138782040394,
+        "baseline_mse": 0.12933072447776794,
+        "skill": 0.0024498917407905774
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.06023318092723424,
+        "baseline_mse": 0.05987439677119255,
+        "skill": -0.005992280096161373
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.06649260435163364,
+        "baseline_mse": 0.0656631737947464,
+        "skill": -0.012631594072499697
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.06188197445031999,
+        "baseline_mse": 0.061830878257751465,
+        "skill": -0.0008263863300714824
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.5362970232963562,
+        "baseline_mse": 0.6776819825172424,
+        "skill": 0.208630246735664
+      }
+    ],
+    "parameters": 65957,
+    "active_gradient_parameters": 65957,
+    "training_seconds": 3.4528729915618896,
+    "elapsed_seconds": 9.031660556793213,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__mif__self_coalition",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_coalition"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.5940205454826355,
+        "baseline_mse": 0.6954677700996399,
+        "skill": 0.14586905242563575
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.1161816343665123,
+        "baseline_mse": 0.10112044960260391,
+        "skill": -0.14894301620589867
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.1424793004989624,
+        "baseline_mse": 0.12779675424098969,
+        "skill": -0.11488982130395464
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.08606170117855072,
+        "baseline_mse": 0.08210940659046173,
+        "skill": -0.048134492163631304
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.14377522468566895,
+        "baseline_mse": 0.12933072447776794,
+        "skill": -0.11168653285000363
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.06388251483440399,
+        "baseline_mse": 0.05987439677119255,
+        "skill": -0.0669421034591513
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.06984756886959076,
+        "baseline_mse": 0.0656631737947464,
+        "skill": -0.06372514200919044
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.06569657474756241,
+        "baseline_mse": 0.061830878257751465,
+        "skill": -0.06252048488938167
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3732287838466778,
+        "baseline_mse": 0.6954677700996399,
+        "skill": 0.46334136549102023
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.09904069662685308,
+        "baseline_mse": 0.10112044960260391,
+        "skill": 0.020567085924994455
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.12601630700919123,
+        "baseline_mse": 0.12779675424098969,
+        "skill": 0.013931865815942635
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.08199416175182327,
+        "baseline_mse": 0.08210940659046173,
+        "skill": 0.0014035522046003113
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.12652995320114335,
+        "baseline_mse": 0.12933072447776794,
+        "skill": 0.021655884848198248
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.05982632657402508,
+        "baseline_mse": 0.05987439677119255,
+        "skill": 0.0008028506299808669
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.06611426513589219,
+        "baseline_mse": 0.0656631737947464,
+        "skill": -0.006869776696384555
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.06188129797897437,
+        "baseline_mse": 0.061830878257751465,
+        "skill": -0.0008154456582796232
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.5476065278053284,
+        "baseline_mse": 0.6776819825172424,
+        "skill": 0.19194173383325053
+      }
+    ],
+    "parameters": 65957,
+    "active_gradient_parameters": 65957,
+    "training_seconds": 3.472245216369629,
+    "elapsed_seconds": 9.027152061462402,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s0_n90__tree__upward_only",
+      "suite": {
+        "id": "mamujoco_s0_n90",
+        "env": "mamujoco",
+        "seed": 0,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "upward_only"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.477902352809906,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.29755677590018526
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.16511371731758118,
+        "baseline_mse": 0.1396576166152954,
+        "skill": -0.18227506182070852
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.18934252858161926,
+        "baseline_mse": 0.174466073513031,
+        "skill": -0.0852684695026229
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.13326120376586914,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.07599452702725462
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.21504244208335876,
+        "baseline_mse": 0.1907438039779663,
+        "skill": -0.12738887239660635
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.10861951112747192,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.10938630628549295
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.11422903835773468,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.09546172794518237
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10873430967330933,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.060143872015100186
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3444111317585667,
+        "baseline_mse": 0.6803430318832397,
+        "skill": 0.4937684144346841
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.14041085840272527,
+        "baseline_mse": 0.1396576166152954,
+        "skill": -0.005393488774083632
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.17330872945534054,
+        "baseline_mse": 0.174466073513031,
+        "skill": 0.0066336338887343915
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.1257833689830187,
+        "baseline_mse": 0.12384933233261108,
+        "skill": -0.01561604422067897
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.19225039510428613,
+        "baseline_mse": 0.1907438039779663,
+        "skill": -0.007898506241879488
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.0988987987717885,
+        "baseline_mse": 0.09790954738855362,
+        "skill": -0.010103727467037027
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10599357397001054,
+        "baseline_mse": 0.10427478700876236,
+        "skill": -0.016483245955743353
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10354494231506976,
+        "baseline_mse": 0.10256561636924744,
+        "skill": -0.009548287042868697
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.3641827404499054,
+        "baseline_mse": 0.6695101857185364,
+        "skill": 0.4560460046488245
+      }
+    ],
+    "parameters": 198119,
+    "active_gradient_parameters": 79467,
+    "training_seconds": 3.2948527336120605,
+    "elapsed_seconds": 10.209325313568115,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__simple__mobius",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "simple",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.48144036531448364,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.3493420300082004
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.16424624621868134,
+        "baseline_mse": 0.14154282212257385,
+        "skill": -0.16039968509633562
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.2806861996650696,
+        "baseline_mse": 0.24679183959960938,
+        "skill": -0.13733987363783906
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.13248910009860992,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.04584036053949192
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.17069858312606812,
+        "baseline_mse": 0.13777652382850647,
+        "skill": -0.23895260515166195
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.0906861275434494,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.06461380645203052
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.0941300317645073,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.039329760453273854
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10194676369428635,
+        "baseline_mse": 0.09384958446025848,
+        "skill": -0.08627826410309458
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.36121741413711467,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.5118211800653276
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.13708479428931225,
+        "baseline_mse": 0.14154282212257385,
+        "skill": 0.031495965435824225
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.23044230597439977,
+        "baseline_mse": 0.24679183959960938,
+        "skill": 0.06624827486895346
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12815096033117457,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.011596021532973788
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.13373757552241947,
+        "baseline_mse": 0.13777652382850647,
+        "skill": 0.029315214187827676
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.08525477308494439,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.00085218049122604
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.09183753602981219,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.014017338921942457
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.09496453895836486,
+        "baseline_mse": 0.09384958446025848,
+        "skill": -0.01188022839438907
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.4340555965900421,
+        "baseline_mse": 0.7429091930389404,
+        "skill": 0.4157353272013009
+      }
+    ],
+    "parameters": 55465,
+    "active_gradient_parameters": 55465,
+    "training_seconds": 1.8160264492034912,
+    "elapsed_seconds": 8.684355735778809,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__simple__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "simple",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.3267880380153656,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.5583518608918683
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.14230725169181824,
+        "baseline_mse": 0.14154282212257385,
+        "skill": -0.005400694699886577
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.24776846170425415,
+        "baseline_mse": 0.24679183959960938,
+        "skill": -0.003957270654610046
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.1268281489610672,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.001154034084880795
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.14052295684814453,
+        "baseline_mse": 0.13777652382850647,
+        "skill": -0.01993396946969428
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.08534743636846542,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.001940005207750728
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.09100357443094254,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.004809213815293534
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.09376954287290573,
+        "baseline_mse": 0.09384958446025848,
+        "skill": 0.0008528709829999093
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3529818255248215,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.5229514295296864
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.1395512036407375,
+        "baseline_mse": 0.14154282212257385,
+        "skill": 0.01407078403531925
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.23177273587081534,
+        "baseline_mse": 0.24679183959960938,
+        "skill": 0.06085737580772832
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.1269609652584187,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.002202457269914415
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.13598493101133705,
+        "baseline_mse": 0.13777652382850647,
+        "skill": 0.013003614602727698
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.08602695160939687,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.009917204441928895
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.0920009867632238,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.01582206806542774
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.0946502201600172,
+        "baseline_mse": 0.09384958446025848,
+        "skill": -0.008531052155033914
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.35152849555015564,
+        "baseline_mse": 0.7429091930389404,
+        "skill": 0.5268217181265519
+      }
+    ],
+    "parameters": 55465,
+    "active_gradient_parameters": 55465,
+    "training_seconds": 1.7646539211273193,
+    "elapsed_seconds": 8.493027925491333,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__graph__mobius",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "graph",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.5014957785606384,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.32223750074513
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.16532768309116364,
+        "baseline_mse": 0.14154282212257385,
+        "skill": -0.16804003630782827
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.2780187427997589,
+        "baseline_mse": 0.24679183959960938,
+        "skill": -0.12653134419197776
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.13731080293655396,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.08390184205530282
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.16955986618995667,
+        "baseline_mse": 0.13777652382850647,
+        "skill": -0.23068764894236726
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.09069051593542099,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.06466532417373316
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.09763593971729279,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.07803998294481351
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10285191982984543,
+        "baseline_mse": 0.09384958446025848,
+        "skill": -0.09592301789465107
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.33269364439888394,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.5503705403838535
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.13689511616398037,
+        "baseline_mse": 0.14154282212257385,
+        "skill": 0.03283604133997442
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.24092941284146258,
+        "baseline_mse": 0.24679183959960938,
+        "skill": 0.023754540537717528
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12750378228936912,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.006487337753921185
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.13387529615998148,
+        "baseline_mse": 0.13777652382850647,
+        "skill": 0.028315619817647186
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.08602899716231036,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.009941218300856702
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.09126741172828598,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.00772235375486785
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.0946268463029412,
+        "baseline_mse": 0.09384958446025848,
+        "skill": -0.00828199556932363
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.41085073351860046,
+        "baseline_mse": 0.7429091930389404,
+        "skill": 0.44697045430548976
+      }
+    ],
+    "parameters": 72497,
+    "active_gradient_parameters": 72497,
+    "training_seconds": 3.530766010284424,
+    "elapsed_seconds": 10.385952472686768,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__graph__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "graph",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.3012043833732605,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.5929277086887805
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.14159822463989258,
+        "baseline_mse": 0.14154282212257385,
+        "skill": -0.0003914187698670357
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.24794073402881622,
+        "baseline_mse": 0.24679183959960938,
+        "skill": -0.004655317740938303
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.12670277059078217,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.00016432429075297073
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.14043328166007996,
+        "baseline_mse": 0.13777652382850647,
+        "skill": -0.019283095245460125
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.0851944163441658,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.00014361986253952352
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.09070324897766113,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.001493192609671512
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.09377775341272354,
+        "baseline_mse": 0.09384958446025848,
+        "skill": 0.0007653848224055126
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3276321436610926,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.5572110673367858
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.14050142033334442,
+        "baseline_mse": 0.14154282212257385,
+        "skill": 0.007357503359143092
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.2400986833002462,
+        "baseline_mse": 0.24679183959960938,
+        "skill": 0.027120654841027325
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12772185647857173,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.00820876833568418
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.13582491952929138,
+        "baseline_mse": 0.13777652382850647,
+        "skill": 0.014164998832778664
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.08612756430505954,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.011098351633989978
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.09187266415410643,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.014405203499522123
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.09476529707008713,
+        "baseline_mse": 0.09384958446025848,
+        "skill": -0.009757236700567606
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.32025277614593506,
+        "baseline_mse": 0.7429091930389404,
+        "skill": 0.5689206983212702
+      }
+    ],
+    "parameters": 72497,
+    "active_gradient_parameters": 72497,
+    "training_seconds": 3.543339490890503,
+    "elapsed_seconds": 10.30548620223999,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__tree__mobius",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.5051547288894653,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.3172924953721381
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.16116060316562653,
+        "baseline_mse": 0.14154282212257385,
+        "skill": -0.13859961776135843
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.2752254009246826,
+        "baseline_mse": 0.24679183959960938,
+        "skill": -0.11521272895896129
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.14158621430397034,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.11765101661098609
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.16881811618804932,
+        "baseline_mse": 0.13777652382850647,
+        "skill": -0.22530393057514653
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.09185683727264404,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.07835740511270961
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.09916438162326813,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.09491616082583554
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.1028631329536438,
+        "baseline_mse": 0.09384958446025848,
+        "skill": -0.09604249763303097
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.34337657564388263,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.5359327514940657
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.14226655330772467,
+        "baseline_mse": 0.14154282212257385,
+        "skill": -0.005113160627276958
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.2466857421576678,
+        "baseline_mse": 0.24679183959960938,
+        "skill": 0.00042990660515229706
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12811663940015647,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.011325099511137138
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.14097568841228167,
+        "baseline_mse": 0.13777652382850647,
+        "skill": -0.02321995427724155
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.08665518796755671,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.01729241296311823
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.09285519062966358,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.025253696667298264
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.09536045507990033,
+        "baseline_mse": 0.09384958446025848,
+        "skill": -0.016098852523759977
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.38410788774490356,
+        "baseline_mse": 0.7429091930389404,
+        "skill": 0.4829679167467643
+      }
+    ],
+    "parameters": 198119,
+    "active_gradient_parameters": 85788,
+    "training_seconds": 4.322297811508179,
+    "elapsed_seconds": 11.244123697280884,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__tree__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.26857897639274597,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.6370203577590998
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.1418745517730713,
+        "baseline_mse": 0.14154282212257385,
+        "skill": -0.002343669891011313
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.2479199320077896,
+        "baseline_mse": 0.24679183959960938,
+        "skill": -0.004571027996753907
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.1264917403459549,
+        "baseline_mse": 0.12668195366859436,
+        "skill": 0.0015015029144330727
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.14024430513381958,
+        "baseline_mse": 0.13777652382850647,
+        "skill": -0.01791147894241263
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.08515993505716324,
+        "baseline_mse": 0.08518218249082565,
+        "skill": 0.00026117473175579775
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.09074774384498596,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.0019844793853287523
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.09377843141555786,
+        "baseline_mse": 0.09384958446025848,
+        "skill": 0.0007581604661313079
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.32757235239661997,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.5572918741522667
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.142473838230759,
+        "baseline_mse": 0.14154282212257385,
+        "skill": -0.006577628552431269
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.24666381689380584,
+        "baseline_mse": 0.24679183959960938,
+        "skill": 0.0005187477268747687
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12790883679281365,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.009684750579619816
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.13983479569571888,
+        "baseline_mse": 0.13777652382850647,
+        "skill": -0.014939205969330294
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.08643590707479304,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.01471815522104536
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.09197610201531427,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.015547304968051234
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.09489272040291613,
+        "baseline_mse": 0.09384958446025848,
+        "skill": -0.011114976679511779
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.2850961685180664,
+        "baseline_mse": 0.7429091930389404,
+        "skill": 0.6162435850983974
+      }
+    ],
+    "parameters": 198119,
+    "active_gradient_parameters": 85788,
+    "training_seconds": 4.522413015365601,
+    "elapsed_seconds": 11.405688285827637,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__mif__mobius",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.5806801915168762,
+        "baseline_mse": 0.7184245586395264,
+        "skill": 0.1917311504265602
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.1190844252705574,
+        "baseline_mse": 0.10875554382801056,
+        "skill": -0.09497337863420796
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.1888379007577896,
+        "baseline_mse": 0.17275863885879517,
+        "skill": -0.09307356208181794
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.09192737936973572,
+        "baseline_mse": 0.08660635352134705,
+        "skill": -0.06143920892682697
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.11349053680896759,
+        "baseline_mse": 0.09795450419187546,
+        "skill": -0.15860457612709467
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.060740359127521515,
+        "baseline_mse": 0.05595788359642029,
+        "skill": -0.08546562564076621
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.0638132393360138,
+        "baseline_mse": 0.05889018997550011,
+        "skill": -0.08359710441691237
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.0678606852889061,
+        "baseline_mse": 0.06192989647388458,
+        "skill": -0.09576616711320507
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.4006592332168547,
+        "baseline_mse": 0.7184245586395264,
+        "skill": 0.4423085508441148
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.10814750897921273,
+        "baseline_mse": 0.10875554382801056,
+        "skill": 0.005590840038089406
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.17464043621949366,
+        "baseline_mse": 0.17275863885879517,
+        "skill": -0.010892638267638644
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.08686389138806247,
+        "baseline_mse": 0.08660635352134705,
+        "skill": -0.0029736602020999925
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.0986194528851688,
+        "baseline_mse": 0.09795450419187546,
+        "skill": -0.006788342187826535
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.05641423916444569,
+        "baseline_mse": 0.05595788359642029,
+        "skill": -0.008155340028881852
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.059649089370332,
+        "baseline_mse": 0.05889018997550011,
+        "skill": -0.012886686138177117
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.06214516321450687,
+        "baseline_mse": 0.06192989647388458,
+        "skill": -0.003475974495017242
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.5456092953681946,
+        "baseline_mse": 0.7308170199394226,
+        "skill": 0.2534255764686212
+      }
+    ],
+    "parameters": 65957,
+    "active_gradient_parameters": 65957,
+    "training_seconds": 3.4113223552703857,
+    "elapsed_seconds": 8.815458059310913,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__mif__raw_coordinates",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.46491143107414246,
+        "baseline_mse": 0.7184245586395264,
+        "skill": 0.3528736935795448
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.10894981026649475,
+        "baseline_mse": 0.10875554382801056,
+        "skill": -0.0017862669951924648
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.17321482300758362,
+        "baseline_mse": 0.17275863885879517,
+        "skill": -0.002640586611482476
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.08659151941537857,
+        "baseline_mse": 0.08660635352134705,
+        "skill": 0.00017128195987170525
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.09805724769830704,
+        "baseline_mse": 0.09795450419187546,
+        "skill": -0.001048890066661201
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.05593864992260933,
+        "baseline_mse": 0.05595788359642029,
+        "skill": 0.00034371696309454247
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.058906782418489456,
+        "baseline_mse": 0.05889018997550011,
+        "skill": -0.0002817522408444795
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.061902545392513275,
+        "baseline_mse": 0.06192989647388458,
+        "skill": 0.00044164584358441505
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.3700011173713923,
+        "baseline_mse": 0.7184245586395264,
+        "skill": 0.48498264303205363
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.1074993172491485,
+        "baseline_mse": 0.10875554382801056,
+        "skill": 0.011550919931481274
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.17444342615802036,
+        "baseline_mse": 0.17275863885879517,
+        "skill": -0.009752260786230593
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.0871799823296646,
+        "baseline_mse": 0.08660635352134705,
+        "skill": -0.006623403306966091
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.09670082356819881,
+        "baseline_mse": 0.09795450419187546,
+        "skill": 0.012798601085468264
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.0561685590893024,
+        "baseline_mse": 0.05595788359642029,
+        "skill": -0.0037648938691381417
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.059232272347091934,
+        "baseline_mse": 0.05889018997550011,
+        "skill": -0.005808817593119464
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.062227817438952865,
+        "baseline_mse": 0.06192989647388458,
+        "skill": -0.004810616229496079
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.4982433617115021,
+        "baseline_mse": 0.7308170199394226,
+        "skill": 0.318237878815683
+      }
+    ],
+    "parameters": 65957,
+    "active_gradient_parameters": 65957,
+    "training_seconds": 3.49234676361084,
+    "elapsed_seconds": 8.977004289627075,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__mif__self_time",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_time"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.5808417201042175,
+        "baseline_mse": 0.7184245586395264,
+        "skill": 0.1915063131970991
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.11925774812698364,
+        "baseline_mse": 0.10875554382801056,
+        "skill": -0.09656707078382687
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.188805490732193,
+        "baseline_mse": 0.17275863885879517,
+        "skill": -0.09288595915897302
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.09188958257436752,
+        "baseline_mse": 0.08660635352134705,
+        "skill": -0.061002788342985115
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.1136058047413826,
+        "baseline_mse": 0.09795450419187546,
+        "skill": -0.15978132581682036
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.060705751180648804,
+        "baseline_mse": 0.05595788359642029,
+        "skill": -0.08484716145576754
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.06380848586559296,
+        "baseline_mse": 0.05889018997550011,
+        "skill": -0.08351638689124607
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.06789129972457886,
+        "baseline_mse": 0.06192989647388458,
+        "skill": -0.09626050728517144
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.4012051597831802,
+        "baseline_mse": 0.7184245586395264,
+        "skill": 0.4415486567678887
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.10809603620029698,
+        "baseline_mse": 0.10875554382801056,
+        "skill": 0.006064128820472359
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.17445480911077973,
+        "baseline_mse": 0.17275863885879517,
+        "skill": -0.00981815012661058
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.08685152976238403,
+        "baseline_mse": 0.08660635352134705,
+        "skill": -0.002830926728447869
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.0983904968665718,
+        "baseline_mse": 0.09795450419187546,
+        "skill": -0.004450971175784968
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.05638578627080083,
+        "baseline_mse": 0.05595788359642029,
+        "skill": -0.007646870233096514
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.059665488494799544,
+        "baseline_mse": 0.05889018997550011,
+        "skill": -0.013165155684197627
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.062169529552665664,
+        "baseline_mse": 0.06192989647388458,
+        "skill": -0.0038694248242789886
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.5469034314155579,
+        "baseline_mse": 0.7308170199394226,
+        "skill": 0.2516547692596285
+      }
+    ],
+    "parameters": 65957,
+    "active_gradient_parameters": 65957,
+    "training_seconds": 3.4344472885131836,
+    "elapsed_seconds": 8.889967441558838,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__mif__self_entity",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_entity"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.5807011723518372,
+        "baseline_mse": 0.7184245586395264,
+        "skill": 0.19170194647646044
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.11906798183917999,
+        "baseline_mse": 0.10875554382801056,
+        "skill": -0.09482218237516093
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.1888437271118164,
+        "baseline_mse": 0.17275863885879517,
+        "skill": -0.09310728748082142
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.09191606938838959,
+        "baseline_mse": 0.08660635352134705,
+        "skill": -0.061308618261289416
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.11347658187150955,
+        "baseline_mse": 0.09795450419187546,
+        "skill": -0.15846211266843957
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.06072808802127838,
+        "baseline_mse": 0.05595788359642029,
+        "skill": -0.08524633381887314
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.06379567831754684,
+        "baseline_mse": 0.05889018997550011,
+        "skill": -0.08329890503133974
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.06782622635364532,
+        "baseline_mse": 0.06192989647388458,
+        "skill": -0.09520974869136412
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.40089928709788103,
+        "baseline_mse": 0.7184245586395264,
+        "skill": 0.44197441154147055
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.1081604004545382,
+        "baseline_mse": 0.10875554382801056,
+        "skill": 0.005472303778955245
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.1746868020999397,
+        "baseline_mse": 0.17275863885879517,
+        "skill": -0.011161023575327667
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.08685493143607936,
+        "baseline_mse": 0.08660635352134705,
+        "skill": -0.002870204143522237
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.09859531656053207,
+        "baseline_mse": 0.09795450419187546,
+        "skill": -0.006541938769873967
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.056414655120644426,
+        "baseline_mse": 0.05595788359642029,
+        "skill": -0.008162773408631141
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.05964271000569657,
+        "baseline_mse": 0.05889018997550011,
+        "skill": -0.01277835969810126
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.062141518753941284,
+        "baseline_mse": 0.06192989647388458,
+        "skill": -0.003417126333255638
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.5456334352493286,
+        "baseline_mse": 0.7308170199394226,
+        "skill": 0.25339254510717857
+      }
+    ],
+    "parameters": 65957,
+    "active_gradient_parameters": 65957,
+    "training_seconds": 3.5299036502838135,
+    "elapsed_seconds": 9.044369220733643,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__mif__self_coalition",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "mif",
+      "variant": "self_coalition"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.5807240009307861,
+        "baseline_mse": 0.7184245586395264,
+        "skill": 0.19167017058757352
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.12219700962305069,
+        "baseline_mse": 0.10875554382801056,
+        "skill": -0.12359338496156935
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.19269971549510956,
+        "baseline_mse": 0.17275863885879517,
+        "skill": -0.11542737757162636
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.09158126264810562,
+        "baseline_mse": 0.08660635352134705,
+        "skill": -0.0574427732433318
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.11544197052717209,
+        "baseline_mse": 0.09795450419187546,
+        "skill": -0.17852641366079292
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.06076239049434662,
+        "baseline_mse": 0.05595788359642029,
+        "skill": -0.08585933900891285
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.06365203857421875,
+        "baseline_mse": 0.05889018997550011,
+        "skill": -0.08085979346814298
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.06802966445684433,
+        "baseline_mse": 0.06192989647388458,
+        "skill": -0.09849472274722726
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.39285613193551644,
+        "baseline_mse": 0.7184245586395264,
+        "skill": 0.45316995749774436
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.10843044130438302,
+        "baseline_mse": 0.10875554382801056,
+        "skill": 0.002989296105600503
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.17476372960489797,
+        "baseline_mse": 0.17275863885879517,
+        "skill": -0.01160631247935262
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.08726071456292431,
+        "baseline_mse": 0.08660635352134705,
+        "skill": -0.007555577795062884
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.09751958895933883,
+        "baseline_mse": 0.09795450419187546,
+        "skill": 0.004439971761632355
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.05622529079510241,
+        "baseline_mse": 0.05595788359642029,
+        "skill": -0.004778722523008927
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.05947640841194927,
+        "baseline_mse": 0.05889018997550011,
+        "skill": -0.009954432761942966
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.06210916657108874,
+        "baseline_mse": 0.06192989647388458,
+        "skill": -0.0028947262535752305
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.5637593865394592,
+        "baseline_mse": 0.7308170199394226,
+        "skill": 0.22859023372746679
+      }
+    ],
+    "parameters": 65957,
+    "active_gradient_parameters": 65957,
+    "training_seconds": 3.469482660293579,
+    "elapsed_seconds": 8.999590396881104,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mamujoco_s1_n90__tree__upward_only",
+      "suite": {
+        "id": "mamujoco_s1_n90",
+        "env": "mamujoco",
+        "seed": 1,
+        "n": 90,
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "model": "tree",
+      "variant": "upward_only"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.508082389831543,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.31333581441508496
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.16091042757034302,
+        "baseline_mse": 0.14154282212257385,
+        "skill": -0.13683212724836813
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.2746807038784027,
+        "baseline_mse": 0.24679183959960938,
+        "skill": -0.11300561770615958
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.14148244261741638,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.11683186531477685
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.1684185266494751,
+        "baseline_mse": 0.13777652382850647,
+        "skill": -0.22240365752810987
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.09180332720279694,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.0777292212803351
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.0993756577372551,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.09724895035988079
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10299922525882721,
+        "baseline_mse": 0.09384958446025848,
+        "skill": -0.09749260853086916
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.34793083263113217,
+        "baseline_mse": 0.7399284839630127,
+        "skill": 0.5297777553208447
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.14225779043184308,
+        "baseline_mse": 0.14154282212257385,
+        "skill": -0.005051250911544569
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.24689953279718496,
+        "baseline_mse": 0.24679183959960938,
+        "skill": -0.00043637260352813456
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12817715766364868,
+        "baseline_mse": 0.12668195366859436,
+        "skill": -0.011802817621252126
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.14107190218419513,
+        "baseline_mse": 0.13777652382850647,
+        "skill": -0.02391828639682103
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.08660101184220154,
+        "baseline_mse": 0.08518218249082565,
+        "skill": -0.01665640994263895
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.09270262885054491,
+        "baseline_mse": 0.09056801348924637,
+        "skill": -0.023569197104582607
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.09531407037484615,
+        "baseline_mse": 0.09384958446025848,
+        "skill": -0.015604607340673038
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.3861093521118164,
+        "baseline_mse": 0.7429091930389404,
+        "skill": 0.48027382655961015
+      }
+    ],
+    "parameters": 198119,
+    "active_gradient_parameters": 79467,
+    "training_seconds": 3.3440330028533936,
+    "elapsed_seconds": 10.127047300338745,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__simple__mobius",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "simple",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.4194957911968231,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.5507861656897279
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.35533085465431213,
+        "baseline_mse": 0.3064047396183014,
+        "skill": -0.15967806208533086
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.35889220237731934,
+        "baseline_mse": 0.32715779542922974,
+        "skill": -0.09700030808208071
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.16527432203292847,
+        "baseline_mse": 0.1504616141319275,
+        "skill": -0.09844841813283312
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.35237106680870056,
+        "baseline_mse": 0.306051105260849,
+        "skill": -0.15134714677266992
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.16140848398208618,
+        "baseline_mse": 0.14909367263317108,
+        "skill": -0.08259781338416938
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.18130096793174744,
+        "baseline_mse": 0.17103557288646698,
+        "skill": -0.06001906429193293
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.18220210075378418,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.12282008617174855
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.21916348635492922,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.7653104700635425
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.2555783036332415,
+        "baseline_mse": 0.3064047396183014,
+        "skill": 0.1658800580186066
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.28827292360465784,
+        "baseline_mse": 0.32715779542922974,
+        "skill": 0.11885662627587734
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.14805378909006423,
+        "baseline_mse": 0.1504616141319275,
+        "skill": 0.016002919121630876
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.2666717543071757,
+        "baseline_mse": 0.306051105260849,
+        "skill": 0.1286692002634987
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.14852806726557194,
+        "baseline_mse": 0.14909367263317108,
+        "skill": 0.0037936242203299164
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.16824148121690546,
+        "baseline_mse": 0.17103557288646698,
+        "skill": 0.01633631894469245
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.16294628657339216,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.004156169302030888
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.338123619556427,
+        "baseline_mse": 1.0318472385406494,
+        "skill": 0.6723123279036554
+      }
+    ],
+    "parameters": 30536,
+    "active_gradient_parameters": 30536,
+    "training_seconds": 1.838456153869629,
+    "elapsed_seconds": 3.716144323348999,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__simple__raw_coordinates",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "simple",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.19715619087219238,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.7888768127874936
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.3045312762260437,
+        "baseline_mse": 0.3064047396183014,
+        "skill": 0.006114342077709112
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.3254895806312561,
+        "baseline_mse": 0.32715779542922974,
+        "skill": 0.005099113703786129
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.15104882419109344,
+        "baseline_mse": 0.1504616141319275,
+        "skill": -0.0039027233793402782
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.30531439185142517,
+        "baseline_mse": 0.306051105260849,
+        "skill": 0.0024071581404547793
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.14978447556495667,
+        "baseline_mse": 0.14909367263317108,
+        "skill": -0.004633348415027827
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.17222583293914795,
+        "baseline_mse": 0.17103557288646698,
+        "skill": -0.006959137403954374
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.16277159750461578,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.0030796482605868203
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.228551793814753,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.7552570733901718
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.2671791027017234,
+        "baseline_mse": 0.3064047396183014,
+        "skill": 0.12801902792183528
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.3045475496598739,
+        "baseline_mse": 0.32715779542922974,
+        "skill": 0.06911113256430668
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.14867360779637057,
+        "baseline_mse": 0.1504616141319275,
+        "skill": 0.011883471713849625
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.27202146473744576,
+        "baseline_mse": 0.306051105260849,
+        "skill": 0.11118940575104141
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.14885443279452115,
+        "baseline_mse": 0.14909367263317108,
+        "skill": 0.001604627711053519
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.17026237723387952,
+        "baseline_mse": 0.17103557288646698,
+        "skill": 0.0045206715745660375
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.1636090827806851,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.008240649620908425
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.2103288471698761,
+        "baseline_mse": 1.0318472385406494,
+        "skill": 0.7961628046150068
+      }
+    ],
+    "parameters": 30536,
+    "active_gradient_parameters": 30536,
+    "training_seconds": 1.8497262001037598,
+    "elapsed_seconds": 3.7862472534179688,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__graph__mobius",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "graph",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.455780953168869,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.5119304796969588
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.34109047055244446,
+        "baseline_mse": 0.3064047396183014,
+        "skill": -0.11320233158714266
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.3498208522796631,
+        "baseline_mse": 0.32715779542922974,
+        "skill": -0.06927255644542885
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.17369194328784943,
+        "baseline_mse": 0.1504616141319275,
+        "skill": -0.15439372553555852
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.339069664478302,
+        "baseline_mse": 0.306051105260849,
+        "skill": -0.10788577021903278
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.16654609143733978,
+        "baseline_mse": 0.14909367263317108,
+        "skill": -0.11705673685501394
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.19097831845283508,
+        "baseline_mse": 0.17103557288646698,
+        "skill": -0.11659998694894913
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.18582630157470703,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.14515421657538918
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.1608697736224216,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.8277338429847381
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.2197868414000921,
+        "baseline_mse": 0.3064047396183014,
+        "skill": 0.28269111739626507
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.26296813899687915,
+        "baseline_mse": 0.32715779542922974,
+        "skill": 0.1962039643534521
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.14329206231211974,
+        "baseline_mse": 0.1504616141319275,
+        "skill": 0.04765037156600849
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.24527240564830372,
+        "baseline_mse": 0.306051105260849,
+        "skill": 0.19859003469614422
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.14648068554629606,
+        "baseline_mse": 0.14909367263317108,
+        "skill": 0.01752580804219639
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.1660981598990595,
+        "baseline_mse": 0.17103557288646698,
+        "skill": 0.02886775484235049
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.15902276187645892,
+        "baseline_mse": 0.16227185726165771,
+        "skill": 0.02002254389656577
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.3099249005317688,
+        "baseline_mse": 1.0318472385406494,
+        "skill": 0.6996407133190585
+      }
+    ],
+    "parameters": 47568,
+    "active_gradient_parameters": 47568,
+    "training_seconds": 3.815068244934082,
+    "elapsed_seconds": 5.954952716827393,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__graph__raw_coordinates",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "graph",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.1939602494239807,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.7922991620513237
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.3018995523452759,
+        "baseline_mse": 0.3064047396183014,
+        "skill": 0.014703386372670879
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.3238532245159149,
+        "baseline_mse": 0.32715779542922974,
+        "skill": 0.01010084723483129
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.15061300992965698,
+        "baseline_mse": 0.1504616141319275,
+        "skill": -0.0010062087835689404
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.3032466769218445,
+        "baseline_mse": 0.306051105260849,
+        "skill": 0.00916326813005397
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.14903509616851807,
+        "baseline_mse": 0.14909367263317108,
+        "skill": 0.0003928836389800461
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.17101703584194183,
+        "baseline_mse": 0.17103557288646698,
+        "skill": 0.00010838122276146667
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.16233108937740326,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.00036501779633946185
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.18577660526714443,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.8010625543128648
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.226018677720678,
+        "baseline_mse": 0.3064047396183014,
+        "skill": 0.26235254062245583
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.262174743082999,
+        "baseline_mse": 0.32715779542922974,
+        "skill": 0.19862908129996792
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.1442920466469797,
+        "baseline_mse": 0.1504616141319275,
+        "skill": 0.04100426225348219
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.25964833406129434,
+        "baseline_mse": 0.306051105260849,
+        "skill": 0.1516177213606379
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.14605963618998954,
+        "baseline_mse": 0.14909367263317108,
+        "skill": 0.020349867231766794
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.16838072715116292,
+        "baseline_mse": 0.17103557288646698,
+        "skill": 0.015522184598792954
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.16247677495213242,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.0012628048629792499
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.20096181333065033,
+        "baseline_mse": 1.0318472385406494,
+        "skill": 0.8052407315496891
+      }
+    ],
+    "parameters": 47568,
+    "active_gradient_parameters": 47568,
+    "training_seconds": 3.842055559158325,
+    "elapsed_seconds": 5.969948053359985,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__tree__mobius",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.4195726215839386,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.5507038924619341
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.339174747467041,
+        "baseline_mse": 0.3064047396183014,
+        "skill": -0.10695006836239651
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.3474254310131073,
+        "baseline_mse": 0.32715779542922974,
+        "skill": -0.061950642372089915
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.16773062944412231,
+        "baseline_mse": 0.1504616141319275,
+        "skill": -0.11477356142845196
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.33920517563819885,
+        "baseline_mse": 0.306051105260849,
+        "skill": -0.10832854319899443
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.16131946444511414,
+        "baseline_mse": 0.14909367263317108,
+        "skill": -0.08200074219127518
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.18653495609760284,
+        "baseline_mse": 0.17103557288646698,
+        "skill": -0.09062081618204831
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.19836317002773285,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.22241264366549496
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.25999960070850925,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.7215814317941274
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.2835651014710711,
+        "baseline_mse": 0.3064047396183014,
+        "skill": 0.07454074690777424
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.30365249800678606,
+        "baseline_mse": 0.32715779542922974,
+        "skill": 0.07184697338972101
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.15089137252731888,
+        "baseline_mse": 0.1504616141319275,
+        "skill": -0.0028562660175541765
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.2880491817244712,
+        "baseline_mse": 0.306051105260849,
+        "skill": 0.05881999191290188
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.14938438461591738,
+        "baseline_mse": 0.14909367263317108,
+        "skill": -0.0019498613027097988
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.17179226436545988,
+        "baseline_mse": 0.17103557288646698,
+        "skill": -0.0044241760133443275
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.1628249174536217,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.0034082323410657978
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.27851003408432007,
+        "baseline_mse": 1.0318472385406494,
+        "skill": 0.7300859820313914
+      }
+    ],
+    "parameters": 110819,
+    "active_gradient_parameters": 48443,
+    "training_seconds": 4.476898193359375,
+    "elapsed_seconds": 6.603699207305908,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__tree__raw_coordinates",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.19488650560379028,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.7913072877612415
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.3052961230278015,
+        "baseline_mse": 0.3064047396183014,
+        "skill": 0.0036181443925472623
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.3248436152935028,
+        "baseline_mse": 0.32715779542922974,
+        "skill": 0.007073590078117253
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.15067997574806213,
+        "baseline_mse": 0.1504616141319275,
+        "skill": -0.0014512779049624669
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.30357253551483154,
+        "baseline_mse": 0.306051105260849,
+        "skill": 0.008098548586860876
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.14917485415935516,
+        "baseline_mse": 0.14909367263317108,
+        "skill": -0.0005445001437707209
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.17099347710609436,
+        "baseline_mse": 0.17103557288646698,
+        "skill": 0.0002461229536183662
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.16231799125671387,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.00028430065345075306
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.24618635489952878,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.7363732395889547
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.30175308186264627,
+        "baseline_mse": 0.3064047396183014,
+        "skill": 0.015181415801367337
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.32263279953316587,
+        "baseline_mse": 0.32715779542922974,
+        "skill": 0.013831233610457239
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.1506468753902866,
+        "baseline_mse": 0.1504616141319275,
+        "skill": -0.0012312858626961631
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.3061363642788808,
+        "baseline_mse": 0.306051105260849,
+        "skill": -0.00027857771648664986
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.15056919916063566,
+        "baseline_mse": 0.14909367263317108,
+        "skill": -0.009896640825898473
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.1724471280304134,
+        "baseline_mse": 0.17103557288646698,
+        "skill": -0.0082529915860452
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.16306495799465232,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.004887481701252527
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.19954606890678406,
+        "baseline_mse": 1.0318472385406494,
+        "skill": 0.8066127800186742
+      }
+    ],
+    "parameters": 110819,
+    "active_gradient_parameters": 48443,
+    "training_seconds": 4.450897455215454,
+    "elapsed_seconds": 6.569688558578491,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__mif__mobius",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.34254002571105957,
+        "baseline_mse": 0.525012195110321,
+        "skill": 0.3475579636029569
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.03330624848604202,
+        "baseline_mse": 0.009919407777488232,
+        "skill": -2.3576851797170244
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.033924710005521774,
+        "baseline_mse": 0.009989331476390362,
+        "skill": -2.3960941315945243
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.020950354635715485,
+        "baseline_mse": 0.004608821589499712,
+        "skill": -3.5457074501314443
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.03632355108857155,
+        "baseline_mse": 0.01042992528527975,
+        "skill": -2.4826281200534295
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.021871963515877724,
+        "baseline_mse": 0.004860403947532177,
+        "skill": -3.500029987627469
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.02160460688173771,
+        "baseline_mse": 0.0048736040480434895,
+        "skill": -3.4329836131047387
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.021821878850460052,
+        "baseline_mse": 0.004910590592771769,
+        "skill": -3.4438399899558227
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.04135029078140285,
+        "baseline_mse": 0.525012195110321,
+        "skill": 0.9212393708822061
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.009328483962586766,
+        "baseline_mse": 0.009919407777488232,
+        "skill": 0.059572489422458075
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.009278699849829401,
+        "baseline_mse": 0.009989331476390362,
+        "skill": 0.0711390575275761
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.004600402647721099,
+        "baseline_mse": 0.004608821589499712,
+        "skill": 0.0018267016015099946
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.009462879234293868,
+        "baseline_mse": 0.01042992528527975,
+        "skill": 0.0927184063677543
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.004868976470882992,
+        "baseline_mse": 0.004860403947532177,
+        "skill": -0.0017637470966107571
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.004844829311903374,
+        "baseline_mse": 0.0048736040480434895,
+        "skill": 0.005904200640112989
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.004904497675269549,
+        "baseline_mse": 0.004910590592771769,
+        "skill": 0.0012407708170963927
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.19866926968097687,
+        "baseline_mse": 0.4774003028869629,
+        "skill": 0.5838518147567722
+      }
+    ],
+    "parameters": 44433,
+    "active_gradient_parameters": 44433,
+    "training_seconds": 3.6270406246185303,
+    "elapsed_seconds": 5.664220571517944,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__mif__raw_coordinates",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.10043799132108688,
+        "baseline_mse": 0.525012195110321,
+        "skill": 0.808693984146441
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.00990996789187193,
+        "baseline_mse": 0.009919407777488232,
+        "skill": 0.0009516581864621454
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.009987600147724152,
+        "baseline_mse": 0.009989331476390362,
+        "skill": 0.00017331777109430568
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.004626497160643339,
+        "baseline_mse": 0.004608821589499712,
+        "skill": -0.00383516063713496
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.01043701171875,
+        "baseline_mse": 0.01042992528527975,
+        "skill": -0.0006794328124526405
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.004886775743216276,
+        "baseline_mse": 0.004860403947532177,
+        "skill": -0.00542584442955385
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.00494120828807354,
+        "baseline_mse": 0.0048736040480434895,
+        "skill": -0.013871508510665764
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.0049833375960588455,
+        "baseline_mse": 0.004910590592771769,
+        "skill": -0.014814308363266582
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.03571274212635015,
+        "baseline_mse": 0.525012195110321,
+        "skill": 0.9319773093673647
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.009309771134398508,
+        "baseline_mse": 0.009919407777488232,
+        "skill": 0.06145897585471527
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.009279017231916131,
+        "baseline_mse": 0.009989331476390362,
+        "skill": 0.07110728542275813
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.004603939521299849,
+        "baseline_mse": 0.004608821589499712,
+        "skill": 0.0010592877387541888
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.00945481739973156,
+        "baseline_mse": 0.01042992528527975,
+        "skill": 0.09349135865090108
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.004876174368175087,
+        "baseline_mse": 0.004860403947532177,
+        "skill": -0.003244672832371842
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.004847129144719318,
+        "baseline_mse": 0.0048736040480434895,
+        "skill": 0.005432304935564125
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.004907945694445601,
+        "baseline_mse": 0.004910590592771769,
+        "skill": 0.0005386110440688263
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.0931723490357399,
+        "baseline_mse": 0.4774003028869629,
+        "skill": 0.804833913023719
+      }
+    ],
+    "parameters": 44433,
+    "active_gradient_parameters": 44433,
+    "training_seconds": 3.629981517791748,
+    "elapsed_seconds": 5.649301767349243,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__mif__self_time",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_time"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.34400367736816406,
+        "baseline_mse": 0.525012195110321,
+        "skill": 0.3447701204428625
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.03303811699151993,
+        "baseline_mse": 0.009919407777488232,
+        "skill": -2.330654181442046
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.03354284167289734,
+        "baseline_mse": 0.009989331476390362,
+        "skill": -2.3578665151091793
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.020870529115200043,
+        "baseline_mse": 0.004608821589499712,
+        "skill": -3.5283872916125487
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.035993147641420364,
+        "baseline_mse": 0.01042992528527975,
+        "skill": -2.4509497102744544
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.021778592839837074,
+        "baseline_mse": 0.004860403947532177,
+        "skill": -3.4808195110809557
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.02155991457402706,
+        "baseline_mse": 0.0048736040480434895,
+        "skill": -3.4238133343397683
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.02169789932668209,
+        "baseline_mse": 0.004910590592771769,
+        "skill": -3.4185926146278005
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.04909942568950723,
+        "baseline_mse": 0.525012195110321,
+        "skill": 0.906479456769209
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.009356476263308492,
+        "baseline_mse": 0.009919407777488232,
+        "skill": 0.056750516442856
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.00930197313571563,
+        "baseline_mse": 0.009989331476390362,
+        "skill": 0.06880924337121996
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.004600014568823428,
+        "baseline_mse": 0.004608821589499712,
+        "skill": 0.0019109050991145127
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.009472614185658017,
+        "baseline_mse": 0.01042992528527975,
+        "skill": 0.09178503905227697
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.00486927318877542,
+        "baseline_mse": 0.004860403947532177,
+        "skill": -0.0018247950867842366
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.00484630388531174,
+        "baseline_mse": 0.0048736040480434895,
+        "skill": 0.005601637404809012
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.00490655233773983,
+        "baseline_mse": 0.004910590592771769,
+        "skill": 0.0008223562839636545
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.2017807513475418,
+        "baseline_mse": 0.4774003028869629,
+        "skill": 0.5773342619865938
+      }
+    ],
+    "parameters": 44433,
+    "active_gradient_parameters": 44433,
+    "training_seconds": 3.758204698562622,
+    "elapsed_seconds": 5.8355185985565186,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__mif__self_entity",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_entity"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.34254923462867737,
+        "baseline_mse": 0.525012195110321,
+        "skill": 0.3475404232149363
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.033291399478912354,
+        "baseline_mse": 0.009919407777488232,
+        "skill": -2.3561882146297166
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.03385624662041664,
+        "baseline_mse": 0.009989331476390362,
+        "skill": -2.389240481250961
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.020995693281292915,
+        "baseline_mse": 0.004608821589499712,
+        "skill": -3.5555448119596225
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.03625050187110901,
+        "baseline_mse": 0.01042992528527975,
+        "skill": -2.475624309818505
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.022011863067746162,
+        "baseline_mse": 0.004860403947532177,
+        "skill": -3.5288135112560903
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.02163136936724186,
+        "baseline_mse": 0.0048736040480434895,
+        "skill": -3.4384749261536305
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.022207973524928093,
+        "baseline_mse": 0.004910590592771769,
+        "skill": -3.522464885917697
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.038953245550391764,
+        "baseline_mse": 0.525012195110321,
+        "skill": 0.9258050652667097
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.009328813806857595,
+        "baseline_mse": 0.009919407777488232,
+        "skill": 0.059539237006766776
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.009279443024229716,
+        "baseline_mse": 0.009989331476390362,
+        "skill": 0.0710646607171318
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.004599591153315312,
+        "baseline_mse": 0.004608821589499712,
+        "skill": 0.002002775764943898
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.009457463569538334,
+        "baseline_mse": 0.01042992528527975,
+        "skill": 0.0932376492776893
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.0048698951904361425,
+        "baseline_mse": 0.004860403947532177,
+        "skill": -0.0019527683308677712
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.004841085930567466,
+        "baseline_mse": 0.0048736040480434895,
+        "skill": 0.006672293677422947
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.004904761445557261,
+        "baseline_mse": 0.004910590592771769,
+        "skill": 0.0011870562418883068
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.1964622139930725,
+        "baseline_mse": 0.4774003028869629,
+        "skill": 0.5884748861594458
+      }
+    ],
+    "parameters": 44433,
+    "active_gradient_parameters": 44433,
+    "training_seconds": 3.8307113647460938,
+    "elapsed_seconds": 5.897157669067383,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__mif__self_coalition",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_coalition"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.34263721108436584,
+        "baseline_mse": 0.525012195110321,
+        "skill": 0.347372852906079
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.033214375376701355,
+        "baseline_mse": 0.009919407777488232,
+        "skill": -2.348423224628418
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.033906202763319016,
+        "baseline_mse": 0.009989331476390362,
+        "skill": -2.3942414308160487
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.020742984488606453,
+        "baseline_mse": 0.004608821589499712,
+        "skill": -3.5007132703650843
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.03622918948531151,
+        "baseline_mse": 0.01042992528527975,
+        "skill": -2.4735809216623523
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.02163715474307537,
+        "baseline_mse": 0.004860403947532177,
+        "skill": -3.45171944073937
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.021367842331528664,
+        "baseline_mse": 0.0048736040480434895,
+        "skill": -3.3844026147562793
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.02157742530107498,
+        "baseline_mse": 0.004910590592771769,
+        "skill": -3.3940591041811263
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.040531123643277545,
+        "baseline_mse": 0.525012195110321,
+        "skill": 0.9227996529970875
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.009322558086571233,
+        "baseline_mse": 0.009919407777488232,
+        "skill": 0.060169891621103644
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.00927515394623856,
+        "baseline_mse": 0.009989331476390362,
+        "skill": 0.0714940265862386
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.0046006205262428745,
+        "baseline_mse": 0.004608821589499712,
+        "skill": 0.0017794273650171277
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.009454454827809516,
+        "baseline_mse": 0.01042992528527975,
+        "skill": 0.09352612130855453
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.004869577478218821,
+        "baseline_mse": 0.004860403947532177,
+        "skill": -0.0018874008797771236
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.004843029041096613,
+        "baseline_mse": 0.0048736040480434895,
+        "skill": 0.006273592734549527
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.004904004400510834,
+        "baseline_mse": 0.004910590592771769,
+        "skill": 0.0013412220254381824
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.19807599484920502,
+        "baseline_mse": 0.4774003028869629,
+        "skill": 0.5850945346046319
+      }
+    ],
+    "parameters": 44433,
+    "active_gradient_parameters": 44433,
+    "training_seconds": 3.513152599334717,
+    "elapsed_seconds": 5.63076639175415,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s40_n700__tree__upward_only",
+      "suite": {
+        "id": "mpe_s40_n700",
+        "env": "mpe",
+        "seed": 40,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "upward_only"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.41941365599632263,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.5508741195360428
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.3385801613330841,
+        "baseline_mse": 0.3064047396183014,
+        "skill": -0.10500954311237054
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.3473864793777466,
+        "baseline_mse": 0.32715779542922974,
+        "skill": -0.06183158167445435
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.16756226122379303,
+        "baseline_mse": 0.1504616141319275,
+        "skill": -0.11365455030192195
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.3390156030654907,
+        "baseline_mse": 0.306051105260849,
+        "skill": -0.10770912843639602
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.16103202104568481,
+        "baseline_mse": 0.14909367263317108,
+        "skill": -0.08007280390688853
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.18622621893882751,
+        "baseline_mse": 0.17103557288646698,
+        "skill": -0.08881571123478538
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.19890137016773224,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.22572930096566712
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.26309684271147904,
+        "baseline_mse": 0.9338443279266357,
+        "skill": 0.7182647740704077
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.2845657589733306,
+        "baseline_mse": 0.3064047396183014,
+        "skill": 0.07127494395868794
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.3049847709560728,
+        "baseline_mse": 0.32715779542922974,
+        "skill": 0.06777470927772333
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.15113061442452674,
+        "baseline_mse": 0.1504616141319275,
+        "skill": -0.004446318726932352
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.2884102298228304,
+        "baseline_mse": 0.306051105260849,
+        "skill": 0.05764029318888819
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.14938319367504038,
+        "baseline_mse": 0.14909367263317108,
+        "skill": -0.0019418734326950293
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.17191905062565616,
+        "baseline_mse": 0.17103557288646698,
+        "skill": -0.005165461922799208
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.162851696131249,
+        "baseline_mse": 0.16227185726165771,
+        "skill": -0.0035732558890746446
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.2777795195579529,
+        "baseline_mse": 1.0318472385406494,
+        "skill": 0.7307939497412244
+      }
+    ],
+    "parameters": 110819,
+    "active_gradient_parameters": 42122,
+    "training_seconds": 3.714116096496582,
+    "elapsed_seconds": 5.815114498138428,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__simple__mobius",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "simple",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.43007007241249084,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.600365368189024
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.28050899505615234,
+        "baseline_mse": 0.2199224829673767,
+        "skill": -0.2754903058172684
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.2803914546966553,
+        "baseline_mse": 0.221375972032547,
+        "skill": -0.2665848606886376
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.13347133994102478,
+        "baseline_mse": 0.12105640023946762,
+        "skill": -0.10255500474984025
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.3052848279476166,
+        "baseline_mse": 0.24852359294891357,
+        "skill": -0.22839374855799233
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.1294538676738739,
+        "baseline_mse": 0.11754338443279266,
+        "skill": -0.10132840141157629
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.11791510879993439,
+        "baseline_mse": 0.10541067272424698,
+        "skill": -0.11862590146254792
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.1264856606721878,
+        "baseline_mse": 0.10563488304615021,
+        "skill": -0.19738534303037203
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.2125079935909347,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.8025308915377207
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.20205661426704702,
+        "baseline_mse": 0.2199224829673767,
+        "skill": 0.0812371180029825
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.19964904942410255,
+        "baseline_mse": 0.221375972032547,
+        "skill": 0.09814489986858255
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12124716642426438,
+        "baseline_mse": 0.12105640023946762,
+        "skill": -0.0015758455101868574
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.22193169469900847,
+        "baseline_mse": 0.24852359294891357,
+        "skill": 0.10699949221871796
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.11844105384840437,
+        "baseline_mse": 0.11754338443279266,
+        "skill": -0.007636919933379671
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10547268877086532,
+        "baseline_mse": 0.10541067272424698,
+        "skill": -0.0005883279654288476
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10604437626860101,
+        "baseline_mse": 0.10563488304615021,
+        "skill": -0.003876496197490864
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.3174095153808594,
+        "baseline_mse": 1.1182847023010254,
+        "skill": 0.7161639475817335
+      }
+    ],
+    "parameters": 30536,
+    "active_gradient_parameters": 30536,
+    "training_seconds": 1.7905280590057373,
+    "elapsed_seconds": 3.6706602573394775,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__simple__raw_coordinates",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "simple",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.1595361828804016,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.8517539633755596
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.22033792734146118,
+        "baseline_mse": 0.2199224829673767,
+        "skill": -0.0018890491253051866
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.2193073183298111,
+        "baseline_mse": 0.221375972032547,
+        "skill": 0.00934452679639397
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.12129265815019608,
+        "baseline_mse": 0.12105640023946762,
+        "skill": -0.001951635025170928
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.24398910999298096,
+        "baseline_mse": 0.24852359294891357,
+        "skill": 0.018245684050064104
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.11803895980119705,
+        "baseline_mse": 0.11754338443279266,
+        "skill": -0.0042161060003147455
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.10564322024583817,
+        "baseline_mse": 0.10541067272424698,
+        "skill": -0.0022061098329153594
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10587331652641296,
+        "baseline_mse": 0.10563488304615021,
+        "skill": -0.0022571471978491964
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.24234031177297277,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.774809763615776
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.19873485602278249,
+        "baseline_mse": 0.2199224829673767,
+        "skill": 0.09634134108851977
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.2031156773230078,
+        "baseline_mse": 0.221375972032547,
+        "skill": 0.0824854411338487
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.11862918534117661,
+        "baseline_mse": 0.12105640023946762,
+        "skill": 0.020050281467891118
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.2224061969137856,
+        "baseline_mse": 0.24852359294891357,
+        "skill": 0.10509020783590817
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.11668824073639526,
+        "baseline_mse": 0.11754338443279266,
+        "skill": 0.007275132501279535
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10436747777992655,
+        "baseline_mse": 0.10541067272424698,
+        "skill": 0.009896483129838374
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10616047708911663,
+        "baseline_mse": 0.10563488304615021,
+        "skill": -0.004975572725695265
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.1708994358778,
+        "baseline_mse": 1.1182847023010254,
+        "skill": 0.8471771673830906
+      }
+    ],
+    "parameters": 30536,
+    "active_gradient_parameters": 30536,
+    "training_seconds": 1.776555061340332,
+    "elapsed_seconds": 3.647456645965576,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__graph__mobius",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "graph",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.47796058654785156,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.5558639968744286
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.26826611161231995,
+        "baseline_mse": 0.2199224829673767,
+        "skill": -0.21982122060760156
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.2750186622142792,
+        "baseline_mse": 0.221375972032547,
+        "skill": -0.24231487134405705
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.1480870544910431,
+        "baseline_mse": 0.12105640023946762,
+        "skill": -0.2232897574858066
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.291628897190094,
+        "baseline_mse": 0.24852359294891357,
+        "skill": -0.17344552172976635
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.14172866940498352,
+        "baseline_mse": 0.11754338443279266,
+        "skill": -0.20575624131376946
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.13014760613441467,
+        "baseline_mse": 0.10541067272424698,
+        "skill": -0.23467200019564638
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.1370498389005661,
+        "baseline_mse": 0.10563488304615021,
+        "skill": -0.2973918742418751
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.19857759152646323,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.8154754590794362
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.17839200144551753,
+        "baseline_mse": 0.2199224829673767,
+        "skill": 0.18884145432288435
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.18511073967938735,
+        "baseline_mse": 0.221375972032547,
+        "skill": 0.16381738279991775
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.11767317632724689,
+        "baseline_mse": 0.12105640023946762,
+        "skill": 0.027947501375625072
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.19042183155773917,
+        "baseline_mse": 0.24852359294891357,
+        "skill": 0.2337877088519229
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.11417561529821824,
+        "baseline_mse": 0.11754338443279266,
+        "skill": 0.02865128608322487
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.101539230509988,
+        "baseline_mse": 0.10541067272424698,
+        "skill": 0.03672723182771653
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10300831522756311,
+        "baseline_mse": 0.10563488304615021,
+        "skill": 0.02486458774645106
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.29531002044677734,
+        "baseline_mse": 1.1182847023010254,
+        "skill": 0.7359259052376053
+      }
+    ],
+    "parameters": 47568,
+    "active_gradient_parameters": 47568,
+    "training_seconds": 3.4349775314331055,
+    "elapsed_seconds": 5.512966632843018,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__graph__raw_coordinates",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "graph",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.16313473880290985,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.8484100720811115
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.2180098295211792,
+        "baseline_mse": 0.2199224829673767,
+        "skill": 0.008696943670289614
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.21997566521167755,
+        "baseline_mse": 0.221375972032547,
+        "skill": 0.006325468875472917
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.12097420543432236,
+        "baseline_mse": 0.12105640023946762,
+        "skill": 0.0006789794259756121
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.24426189064979553,
+        "baseline_mse": 0.24852359294891357,
+        "skill": 0.01714807937769547
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.11791934072971344,
+        "baseline_mse": 0.11754338443279266,
+        "skill": -0.0031984470987878044
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.10530181229114532,
+        "baseline_mse": 0.10541067272424698,
+        "skill": 0.0010327268604615192
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10562825202941895,
+        "baseline_mse": 0.10563488304615021,
+        "skill": 6.27729831287338e-05
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.19395938064680868,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.8197668458159353
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.1981098970444193,
+        "baseline_mse": 0.2199224829673767,
+        "skill": 0.09918306499928464
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.19751278605936606,
+        "baseline_mse": 0.221375972032547,
+        "skill": 0.10779483317038818
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.1185669162951713,
+        "baseline_mse": 0.12105640023946762,
+        "skill": 0.020564661920986826
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.21442413197853227,
+        "baseline_mse": 0.24852359294891357,
+        "skill": 0.1372081441675872
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.1155634702911848,
+        "baseline_mse": 0.11754338443279266,
+        "skill": 0.016844113781153802
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10261862724204421,
+        "baseline_mse": 0.10541067272424698,
+        "skill": 0.026487313002040436
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10551884152052521,
+        "baseline_mse": 0.10563488304615021,
+        "skill": 0.0010985152089798556
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.16555458307266235,
+        "baseline_mse": 1.1182847023010254,
+        "skill": 0.8519566772826178
+      }
+    ],
+    "parameters": 47568,
+    "active_gradient_parameters": 47568,
+    "training_seconds": 3.4666850566864014,
+    "elapsed_seconds": 5.532025337219238,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__tree__mobius",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.43766677379608154,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.5933062744386051
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.2701629400253296,
+        "baseline_mse": 0.2199224829673767,
+        "skill": -0.22844620695468199
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.27064013481140137,
+        "baseline_mse": 0.221375972032547,
+        "skill": -0.22253617827869543
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.1425291895866394,
+        "baseline_mse": 0.12105640023946762,
+        "skill": -0.17737838978108877
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.29109126329421997,
+        "baseline_mse": 0.24852359294891357,
+        "skill": -0.17128221043406766
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.13715572655200958,
+        "baseline_mse": 0.11754338443279266,
+        "skill": -0.16685194333867925
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.12360479682683945,
+        "baseline_mse": 0.10541067272424698,
+        "skill": -0.17260229569151941
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.1474982500076294,
+        "baseline_mse": 0.10563488304615021,
+        "skill": -0.39630248791196876
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.2772575538336611,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.7423635645661614
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.21093643866840173,
+        "baseline_mse": 0.2199224829673767,
+        "skill": 0.04086005295014772
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.20708848261979929,
+        "baseline_mse": 0.221375972032547,
+        "skill": 0.06453947680756944
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.1202009508160752,
+        "baseline_mse": 0.12105640023946762,
+        "skill": 0.007066536107964705
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.22959728509982902,
+        "baseline_mse": 0.24852359294891357,
+        "skill": 0.07615497436082475
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.11693432344774607,
+        "baseline_mse": 0.11754338443279266,
+        "skill": 0.0051815845526792526
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10437641379596152,
+        "baseline_mse": 0.10541067272424698,
+        "skill": 0.00981170977810819
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10575168092727835,
+        "baseline_mse": 0.10563488304615021,
+        "skill": -0.0011056753011893239
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.2577349543571472,
+        "baseline_mse": 1.1182847023010254,
+        "skill": 0.769526531278822
+      }
+    ],
+    "parameters": 110819,
+    "active_gradient_parameters": 48443,
+    "training_seconds": 4.480572938919067,
+    "elapsed_seconds": 6.695006847381592,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__tree__raw_coordinates",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.1595357358455658,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.851754378774383
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.2180466651916504,
+        "baseline_mse": 0.2199224829673767,
+        "skill": 0.008529449788017285
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.21848107874393463,
+        "baseline_mse": 0.221375972032547,
+        "skill": 0.01307681796733906
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.12104816734790802,
+        "baseline_mse": 0.12105640023946762,
+        "skill": 6.800872604273422e-05
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.2436145842075348,
+        "baseline_mse": 0.24852359294891357,
+        "skill": 0.019752686990920365
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.11794920265674591,
+        "baseline_mse": 0.11754338443279266,
+        "skill": -0.0034524973558616168
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.10525000095367432,
+        "baseline_mse": 0.10541067272424698,
+        "skill": 0.0015242457563379164
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.10563274472951889,
+        "baseline_mse": 0.10563488304615021,
+        "skill": 2.0242523772973087e-05
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.24859992558527383,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.7689931336719038
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.21691799894711628,
+        "baseline_mse": 0.2199224829673767,
+        "skill": 0.01366155919904799
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.21699356032635975,
+        "baseline_mse": 0.221375972032547,
+        "skill": 0.019796239248326963
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12097863298468775,
+        "baseline_mse": 0.12105640023946762,
+        "skill": 0.0006424051485591775
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.23958525769055955,
+        "baseline_mse": 0.24852359294891357,
+        "skill": 0.03596574132980357
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.11733309267367112,
+        "baseline_mse": 0.11754338443279266,
+        "skill": 0.001789056526969257
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10512993143065424,
+        "baseline_mse": 0.10541067272424698,
+        "skill": 0.002663309950854287
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.106071334216921,
+        "baseline_mse": 0.10563488304615021,
+        "skill": -0.004131695498541976
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.16309139132499695,
+        "baseline_mse": 1.1182847023010254,
+        "skill": 0.8541593290246984
+      }
+    ],
+    "parameters": 110819,
+    "active_gradient_parameters": 48443,
+    "training_seconds": 4.512578725814819,
+    "elapsed_seconds": 6.713983774185181,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__mif__mobius",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "mobius"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.3791389465332031,
+        "baseline_mse": 0.566824734210968,
+        "skill": 0.3311178506333664
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.03170812502503395,
+        "baseline_mse": 0.008230314590036869,
+        "skill": -2.8526018268387854
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.03284744918346405,
+        "baseline_mse": 0.00859852135181427,
+        "skill": -2.8201276521262937
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.02189839631319046,
+        "baseline_mse": 0.004287642892450094,
+        "skill": -4.10732746697499
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.03281569108366966,
+        "baseline_mse": 0.009187784045934677,
+        "skill": -2.5716654766379317
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.021563248708844185,
+        "baseline_mse": 0.004333337768912315,
+        "skill": -3.9761292238838433
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.021209152415394783,
+        "baseline_mse": 0.003846053034067154,
+        "skill": -4.514524169981703
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.01921883039176464,
+        "baseline_mse": 0.003958764020353556,
+        "skill": -3.8547552450595965
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.05323317037297445,
+        "baseline_mse": 0.566824734210968,
+        "skill": 0.9060853079266624
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.007700533900976517,
+        "baseline_mse": 0.008230314590036869,
+        "skill": 0.06436943366680936
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.00800460839129911,
+        "baseline_mse": 0.00859852135181427,
+        "skill": 0.06907152244145398
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.004286126510482403,
+        "baseline_mse": 0.004287642892450094,
+        "skill": 0.00035366330772579335
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.00856271224729411,
+        "baseline_mse": 0.009187784045934677,
+        "skill": 0.06803292235815472
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.00433329510579854,
+        "baseline_mse": 0.004333337768912315,
+        "skill": 9.845323870494305e-06
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.0038591577162308947,
+        "baseline_mse": 0.003846053034067154,
+        "skill": -0.003407306671973531
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.0039709163299202176,
+        "baseline_mse": 0.003958764020353556,
+        "skill": -0.003069723152019588
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.2337731570005417,
+        "baseline_mse": 0.5258416533470154,
+        "skill": 0.5554305074302106
+      }
+    ],
+    "parameters": 44433,
+    "active_gradient_parameters": 44433,
+    "training_seconds": 3.7272729873657227,
+    "elapsed_seconds": 5.7752368450164795,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__mif__raw_coordinates",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "raw_coordinates"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.1436329483985901,
+        "baseline_mse": 0.566824734210968,
+        "skill": 0.7466007749317253
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.008225551806390285,
+        "baseline_mse": 0.008230314590036869,
+        "skill": 0.0005786879218868668
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.008569952100515366,
+        "baseline_mse": 0.00859852135181427,
+        "skill": 0.0033225772350820026
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.004278384614735842,
+        "baseline_mse": 0.004287642892450094,
+        "skill": 0.0021592931003080462
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.009176895022392273,
+        "baseline_mse": 0.009187784045934677,
+        "skill": 0.0011851632001758095
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.00433736527338624,
+        "baseline_mse": 0.004333337768912315,
+        "skill": -0.0009294231580141421
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.003848919877782464,
+        "baseline_mse": 0.003846053034067154,
+        "skill": -0.000745398903737593
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.003964446019381285,
+        "baseline_mse": 0.003958764020353556,
+        "skill": -0.0014352962183439288
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.05290748156061681,
+        "baseline_mse": 0.566824734210968,
+        "skill": 0.9066598926134282
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.007692798734967594,
+        "baseline_mse": 0.008230314590036869,
+        "skill": 0.06530927210485482
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.007982382375864813,
+        "baseline_mse": 0.00859852135181427,
+        "skill": 0.0716563872716851
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.0042852375728114145,
+        "baseline_mse": 0.004287642892450094,
+        "skill": 0.0005609887994438845
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.008555046888753285,
+        "baseline_mse": 0.009187784045934677,
+        "skill": 0.0688672213036352
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.00434230951935093,
+        "baseline_mse": 0.004333337768912315,
+        "skill": -0.0020704018281194614
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.0038582199338471506,
+        "baseline_mse": 0.003846053034067154,
+        "skill": -0.003163476861142156
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.0039719880004148,
+        "baseline_mse": 0.003958764020353556,
+        "skill": -0.003340431506716479
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.13642114400863647,
+        "baseline_mse": 0.5258416533470154,
+        "skill": 0.7405661131249165
+      }
+    ],
+    "parameters": 44433,
+    "active_gradient_parameters": 44433,
+    "training_seconds": 3.6902735233306885,
+    "elapsed_seconds": 5.713595151901245,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__mif__self_time",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_time"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.3826025426387787,
+        "baseline_mse": 0.566824734210968,
+        "skill": 0.3250073266979616
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.031176522374153137,
+        "baseline_mse": 0.008230314590036869,
+        "skill": -2.7880110210967617
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.03237905725836754,
+        "baseline_mse": 0.00859852135181427,
+        "skill": -2.765654108835309
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.021858451887965202,
+        "baseline_mse": 0.004287642892450094,
+        "skill": -4.098011293443935
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.03235141932964325,
+        "baseline_mse": 0.009187784045934677,
+        "skill": -2.5211340588656737
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.02152864634990692,
+        "baseline_mse": 0.004333337768912315,
+        "skill": -3.9681440723026524
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.021217187866568565,
+        "baseline_mse": 0.003846053034067154,
+        "skill": -4.516613442049095
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.019118452444672585,
+        "baseline_mse": 0.003958764020353556,
+        "skill": -3.829399364644403
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.06361560829333596,
+        "baseline_mse": 0.566824734210968,
+        "skill": 0.8877684680046819
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.007710706514365523,
+        "baseline_mse": 0.008230314590036869,
+        "skill": 0.06313344040340241
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.007990348592325558,
+        "baseline_mse": 0.00859852135181427,
+        "skill": 0.07072992373978215
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.004280319802247072,
+        "baseline_mse": 0.004287642892450094,
+        "skill": 0.0017079524546964597
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.008562522175801201,
+        "baseline_mse": 0.009187784045934677,
+        "skill": 0.06805360977222097
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.0043319043743588635,
+        "baseline_mse": 0.004333337768912315,
+        "skill": 0.0003307830199009709
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.003854970958950965,
+        "baseline_mse": 0.003846053034067154,
+        "skill": -0.002318721246123978
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.003968031718236305,
+        "baseline_mse": 0.003958764020353556,
+        "skill": -0.0023410584301313264
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.2410709112882614,
+        "baseline_mse": 0.5258416533470154,
+        "skill": 0.5415522719551983
+      }
+    ],
+    "parameters": 44433,
+    "active_gradient_parameters": 44433,
+    "training_seconds": 3.759296417236328,
+    "elapsed_seconds": 5.942605495452881,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__mif__self_entity",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_entity"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.37956270575523376,
+        "baseline_mse": 0.566824734210968,
+        "skill": 0.33037024877964605
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.03156505897641182,
+        "baseline_mse": 0.008230314590036869,
+        "skill": -2.8352190102942854
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.03271216154098511,
+        "baseline_mse": 0.00859852135181427,
+        "skill": -2.8043938256992185
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.021872296929359436,
+        "baseline_mse": 0.004287642892450094,
+        "skill": -4.101240350000538
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.032681796699762344,
+        "baseline_mse": 0.009187784045934677,
+        "skill": -2.557092388803269
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.021529411897063255,
+        "baseline_mse": 0.004333337768912315,
+        "skill": -3.9683207368502043
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.021195387467741966,
+        "baseline_mse": 0.003846053034067154,
+        "skill": -4.51094518978281
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.019368775188922882,
+        "baseline_mse": 0.003958764020353556,
+        "skill": -3.8926319147442046
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.05198797779443983,
+        "baseline_mse": 0.566824734210968,
+        "skill": 0.9082820938172217
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.007691481781204165,
+        "baseline_mse": 0.008230314590036869,
+        "skill": 0.06546928467169211
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.007998771365144717,
+        "baseline_mse": 0.00859852135181427,
+        "skill": 0.06975036312993599
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.004282025417673896,
+        "baseline_mse": 0.004287642892450094,
+        "skill": 0.0013101545341123177
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.00856351248111146,
+        "baseline_mse": 0.009187784045934677,
+        "skill": 0.06794582477147348
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.004330366747019183,
+        "baseline_mse": 0.004333337768912315,
+        "skill": 0.0006856197350796345
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.003856907601784719,
+        "baseline_mse": 0.003846053034067154,
+        "skill": -0.0028222615812674157
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.003968866046971654,
+        "baseline_mse": 0.003958764020353556,
+        "skill": -0.002551813284691784
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.23211216926574707,
+        "baseline_mse": 0.5258416533470154,
+        "skill": 0.5585892296885604
+      }
+    ],
+    "parameters": 44433,
+    "active_gradient_parameters": 44433,
+    "training_seconds": 3.800522804260254,
+    "elapsed_seconds": 5.931617498397827,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__mif__self_coalition",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "mif",
+      "variant": "self_coalition"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.38093459606170654,
+        "baseline_mse": 0.566824734210968,
+        "skill": 0.3279499410131149
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.03139844164252281,
+        "baseline_mse": 0.008230314590036869,
+        "skill": -2.8149746645810967
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.032604895532131195,
+        "baseline_mse": 0.00859852135181427,
+        "skill": -2.791918889083369
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.02203359268605709,
+        "baseline_mse": 0.004287642892450094,
+        "skill": -4.13885909781689
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.03259023651480675,
+        "baseline_mse": 0.009187784045934677,
+        "skill": -2.5471269624830772
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.021742766723036766,
+        "baseline_mse": 0.004333337768912315,
+        "skill": -4.017556415523613
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.02144099958240986,
+        "baseline_mse": 0.003846053034067154,
+        "skill": -4.574806013461615
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.019322725012898445,
+        "baseline_mse": 0.003958764020353556,
+        "skill": -3.8809994517361357
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.05341866308233526,
+        "baseline_mse": 0.566824734210968,
+        "skill": 0.9057580591349896
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.00771080013544112,
+        "baseline_mse": 0.008230314590036869,
+        "skill": 0.06312206525187292
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.007999830602803142,
+        "baseline_mse": 0.00859852135181427,
+        "skill": 0.0696271747798598
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.00428949467492818,
+        "baseline_mse": 0.004287642892450094,
+        "skill": -0.0004318882249607636
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.00856568061060032,
+        "baseline_mse": 0.009187784045934677,
+        "skill": 0.06770984518401035
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.004336917530717451,
+        "baseline_mse": 0.004333337768912315,
+        "skill": -0.0008260980325183187
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.0038603836930322165,
+        "baseline_mse": 0.003846053034067154,
+        "skill": -0.0037260689954419224
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.003973158426384571,
+        "baseline_mse": 0.003958764020353556,
+        "skill": -0.003636085898782504
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.23631520569324493,
+        "baseline_mse": 0.5258416533470154,
+        "skill": 0.5505962599404521
+      }
+    ],
+    "parameters": 44433,
+    "active_gradient_parameters": 44433,
+    "training_seconds": 3.5144948959350586,
+    "elapsed_seconds": 5.5439612865448,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  },
+  {
+    "complete": true,
+    "job": {
+      "id": "mpe_s41_n700__tree__upward_only",
+      "suite": {
+        "id": "mpe_s41_n700",
+        "env": "mpe",
+        "seed": 41,
+        "n": 700,
+        "budgets": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      "model": "tree",
+      "variant": "upward_only"
+    },
+    "rows": [
+      {
+        "kind": "native",
+        "group": "empty",
+        "mse": 0.43915700912475586,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.5919215009212437
+      },
+      {
+        "kind": "native",
+        "group": "1",
+        "mse": 0.26917552947998047,
+        "baseline_mse": 0.2199224829673767,
+        "skill": -0.22395639521726363
+      },
+      {
+        "kind": "native",
+        "group": "2",
+        "mse": 0.2703555226325989,
+        "baseline_mse": 0.221375972032547,
+        "skill": -0.22125052755432217
+      },
+      {
+        "kind": "native",
+        "group": "1,2",
+        "mse": 0.14192473888397217,
+        "baseline_mse": 0.12105640023946762,
+        "skill": -0.17238525681602845
+      },
+      {
+        "kind": "native",
+        "group": "3",
+        "mse": 0.29044264554977417,
+        "baseline_mse": 0.24852359294891357,
+        "skill": -0.16867232645182884
+      },
+      {
+        "kind": "native",
+        "group": "1,3",
+        "mse": 0.13675066828727722,
+        "baseline_mse": 0.11754338443279266,
+        "skill": -0.16340591133367122
+      },
+      {
+        "kind": "native",
+        "group": "2,3",
+        "mse": 0.123090460896492,
+        "baseline_mse": 0.10541067272424698,
+        "skill": -0.16772294223465534
+      },
+      {
+        "kind": "native",
+        "group": "1,2,3",
+        "mse": 0.1476464569568634,
+        "baseline_mse": 0.10563488304615021,
+        "skill": -0.39770549935061705
+      },
+      {
+        "kind": "linear",
+        "group": "empty",
+        "mse": 0.2771411044632588,
+        "baseline_mse": 1.0761581659317017,
+        "skill": 0.7424717729820697
+      },
+      {
+        "kind": "linear",
+        "group": "1",
+        "mse": 0.21063530558495586,
+        "baseline_mse": 0.2199224829673767,
+        "skill": 0.04222932215529107
+      },
+      {
+        "kind": "linear",
+        "group": "2",
+        "mse": 0.2077836944195981,
+        "baseline_mse": 0.221375972032547,
+        "skill": 0.061399064623646415
+      },
+      {
+        "kind": "linear",
+        "group": "1,2",
+        "mse": 0.12043479772321587,
+        "baseline_mse": 0.12105640023946762,
+        "skill": 0.005134817448909201
+      },
+      {
+        "kind": "linear",
+        "group": "3",
+        "mse": 0.2291616193375905,
+        "baseline_mse": 0.24852359294891357,
+        "skill": 0.07790799006878646
+      },
+      {
+        "kind": "linear",
+        "group": "1,3",
+        "mse": 0.11702919214934046,
+        "baseline_mse": 0.11754338443279266,
+        "skill": 0.004374489350748578
+      },
+      {
+        "kind": "linear",
+        "group": "2,3",
+        "mse": 0.10451036368186592,
+        "baseline_mse": 0.10541067272424698,
+        "skill": 0.008540966669819627
+      },
+      {
+        "kind": "linear",
+        "group": "1,2,3",
+        "mse": 0.10578960476309046,
+        "baseline_mse": 0.10563488304615021,
+        "skill": -0.001464683942260514
+      },
+      {
+        "kind": "edge",
+        "group": "all",
+        "mse": 0.257920503616333,
+        "baseline_mse": 1.1182847023010254,
+        "skill": 0.7693606081835638
+      }
+    ],
+    "parameters": 110819,
+    "active_gradient_parameters": 42122,
+    "training_seconds": 3.7168402671813965,
+    "elapsed_seconds": 5.745612859725952,
+    "init_equal": true,
+    "native_action_labels_read": 0,
+    "simulator_queries": 0
+  }
+]

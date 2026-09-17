@@ -1,0 +1,92 @@
+{
+  "frozen_copies_exact": {
+    "common.py": true,
+    "unified_models.py": true,
+    "training_profiles.py": true
+  },
+  "functions_checked": 124,
+  "syntax_equivalent": 118,
+  "removed_duplicate_or_unused_symbols": [],
+  "imports": {
+    "modules": 43,
+    "errors": []
+  },
+  "cpu_parity": {
+    "entity_projection_max_error": 0.0,
+    "mpe_endpoint_views_exact": true,
+    "action_probe_max_error": 0.0,
+    "frozen_pair_max_error": 0.0,
+    "history_batch_step_max_error": 3.725290298461914e-08,
+    "mobius_inverse": true
+  },
+  "full_gpu_retraining_performed": false,
+  "reviewed_glue_changes": [
+    {
+      "output": "evaluation/mamujoco.py",
+      "symbol": "evaluate",
+      "source": "mamujoco_observation_only_v2_2026_09_10/grounding.py",
+      "source_symbol": "evaluate",
+      "line": 248,
+      "validation": "reviewed_import_or_io_routing_change",
+      "review_note": "Teacher gate is an explicit argument instead of reading a historical protocol path; same GroundedPolicy, evaluator, seeds and rewards."
+    },
+    {
+      "output": "visual/official.py",
+      "symbol": "load_augmenter",
+      "source": "visual_multiagent_2026_09_10/pixel_pipeline_v1/official.py",
+      "source_symbol": "load_augmenter",
+      "line": 25,
+      "validation": "reviewed_import_or_io_routing_change",
+      "review_note": "Use installed torchvision instead of an old vendor path. Official augmentation class remains unchanged."
+    },
+    {
+      "output": "visual/train.py",
+      "symbol": "progress",
+      "source": "visual_multiagent_2026_09_10/mte_visual_pilot_v1/run.py",
+      "source_symbol": "progress",
+      "line": 24,
+      "validation": "reviewed_import_or_io_routing_change",
+      "review_note": "Single progress file for the consolidated runtime; no numerical operation."
+    },
+    {
+      "output": "visual/train.py",
+      "symbol": "source",
+      "source": "visual_multiagent_2026_09_10/mte_visual_family_v1/run.py",
+      "source_symbol": "source",
+      "line": 29,
+      "validation": "reviewed_import_or_io_routing_change",
+      "review_note": "All final five-seed checkpoints share the configured runtime, replacing old REUSED path routing."
+    },
+    {
+      "output": "visual/train.py",
+      "symbol": "policy_paths",
+      "source": "visual_multiagent_2026_09_10/mte_visual_auxiliary_v1/run.py",
+      "source_symbol": "policy_paths",
+      "line": 24,
+      "validation": "reviewed_import_or_io_routing_change",
+      "review_note": "Enumerate all eleven final latent policies, rather than the smaller earlier auxiliary list."
+    },
+    {
+      "output": "visual/rollout.py",
+      "symbol": "evaluate",
+      "source": "visual_multiagent_2026_09_10/mte_visual_auxiliary_v1/run.py",
+      "source_symbol": "evaluate",
+      "line": 146,
+      "validation": "reviewed_import_or_io_routing_change",
+      "review_note": "Bind final MSAA0/dither-off target-camera renderer, report 27 new conditions plus all30, and correct episode-count/scope metadata; unchanged action and native reward computation."
+    }
+  ],
+  "grounding_contract": {
+    "environments": [
+      "mpe",
+      "mamujoco"
+    ],
+    "actual_frozen_gru_features_equal": true,
+    "fit_validation_prefix_preserved": true,
+    "decoder_updates": {
+      "mpe": 1000,
+      "mamujoco": 800
+    }
+  },
+  "small_gpu_smoke": "passed; see smoke_report.json"
+}

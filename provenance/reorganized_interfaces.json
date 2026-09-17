@@ -1,0 +1,32 @@
+{
+  "scope": "New explicit IO/dispatch interfaces composed from the listed original final pathways; not covered by symbol-level AST identity; grounding checked with actual CPU GRUs, no full GPU rerun.",
+  "interfaces": {
+    "experiments/limited_labels.py": [
+      "reference_lam_mte_bridge_2026_09_10/worker.py:pretrain",
+      "observation_scale_restore_2026_09_10/worker.py:alternate",
+      "mamujoco_independent_branch_audit_2026_09_12/repair.py",
+      "mamujoco_mte_recovery_2026_09_12/worker.py:pre"
+    ],
+    "training/control.py": [
+      "observation_scale_restore_2026_09_10/worker.py:ground",
+      "mamujoco_mte_recovery_2026_09_12/worker.py:ground"
+    ],
+    "experiments/route_ablation.py": [
+      "mte_global_aux_scope_2026_09_16/run.py:worker"
+    ],
+    "experiments/coordinate_pilot.py": [
+      "mte_attribution_resolution_2026_09_12/coordinate_ablation.py:worker"
+    ],
+    "experiments/partner_interactions.py:readout": [
+      "mte_attribution_resolution_2026_09_12/agent_resolved_probe.py:main"
+    ],
+    "experiments/visual_control.py": [
+      "visual_multiagent_2026_09_10/seed5_v1/worker.py:main",
+      "visual_multiagent_2026_09_10/seed5_render_repair/run.py"
+    ],
+    "utils/artifacts.py": [
+      "observation_mte_attribution_2026_09_11/worker.py:data",
+      "observation_mte_structural_v3_2026_09_12/worker.py:rich_inputs"
+    ]
+  }
+}

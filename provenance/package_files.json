@@ -1,0 +1,458 @@
+[
+  {
+    "path": ".gitignore",
+    "bytes": 66
+  },
+  {
+    "path": "closed_loop_lam_v1/__init__.py",
+    "bytes": 55
+  },
+  {
+    "path": "closed_loop_lam_v1/common.py",
+    "bytes": 74580
+  },
+  {
+    "path": "closed_loop_lam_v1/MAMUJOCO_FORMAL_1M_CAPACITY.json",
+    "bytes": 30473
+  },
+  {
+    "path": "closed_loop_lam_v1/training_profiles.py",
+    "bytes": 4545
+  },
+  {
+    "path": "closed_loop_lam_v1/unified_models.py",
+    "bytes": 19594
+  },
+  {
+    "path": "configs/coordinate_pilot.json",
+    "bytes": 141
+  },
+  {
+    "path": "configs/numeric.json",
+    "bytes": 186071
+  },
+  {
+    "path": "configs/resource_controls.json",
+    "bytes": 7438
+  },
+  {
+    "path": "configs/route_ablation.json",
+    "bytes": 4678
+  },
+  {
+    "path": "configs/route_representation.json",
+    "bytes": 7024
+  },
+  {
+    "path": "configs/visual_config.json",
+    "bytes": 1545
+  },
+  {
+    "path": "configs/visual_design.json",
+    "bytes": 2701
+  },
+  {
+    "path": "DEPENDENCIES.md",
+    "bytes": 1115
+  },
+  {
+    "path": "environments/__init__.py",
+    "bytes": 55
+  },
+  {
+    "path": "environments/mamujoco.py",
+    "bytes": 6065
+  },
+  {
+    "path": "environments/mpe.py",
+    "bytes": 3813
+  },
+  {
+    "path": "environments/native_particle.py",
+    "bytes": 33221
+  },
+  {
+    "path": "environments/teacher.py",
+    "bytes": 2353
+  },
+  {
+    "path": "evaluation/__init__.py",
+    "bytes": 55
+  },
+  {
+    "path": "evaluation/mamujoco.py",
+    "bytes": 2375
+  },
+  {
+    "path": "evaluation/mpe.py",
+    "bytes": 1972
+  },
+  {
+    "path": "evaluation/probes.py",
+    "bytes": 1296
+  },
+  {
+    "path": "experiments/__init__.py",
+    "bytes": 55
+  },
+  {
+    "path": "experiments/action_information.py",
+    "bytes": 556
+  },
+  {
+    "path": "experiments/coordinate_pilot.py",
+    "bytes": 5390
+  },
+  {
+    "path": "experiments/limited_labels.py",
+    "bytes": 4341
+  },
+  {
+    "path": "experiments/partner_interactions.py",
+    "bytes": 1636
+  },
+  {
+    "path": "experiments/resource_controls.py",
+    "bytes": 390
+  },
+  {
+    "path": "experiments/route_ablation.py",
+    "bytes": 1297
+  },
+  {
+    "path": "experiments/unlabelled_scaling.py",
+    "bytes": 705
+  },
+  {
+    "path": "experiments/visual_control.py",
+    "bytes": 2327
+  },
+  {
+    "path": "mte/__init__.py",
+    "bytes": 55
+  },
+  {
+    "path": "mte/coordinate_controls.py",
+    "bytes": 1498
+  },
+  {
+    "path": "mte/endpoints_mamujoco.py",
+    "bytes": 7366
+  },
+  {
+    "path": "mte/endpoints_mpe.py",
+    "bytes": 6046
+  },
+  {
+    "path": "mte/entity_view.py",
+    "bytes": 855
+  },
+  {
+    "path": "mte/frontends.py",
+    "bytes": 4808
+  },
+  {
+    "path": "mte/quality.py",
+    "bytes": 2206
+  },
+  {
+    "path": "mte/structured_controls.py",
+    "bytes": 6465
+  },
+  {
+    "path": "provenance/environment_versions.json",
+    "bytes": 459
+  },
+  {
+    "path": "provenance/evidence_sources.json",
+    "bytes": 511
+  },
+  {
+    "path": "provenance/function_sources.json",
+    "bytes": 32641
+  },
+  {
+    "path": "provenance/reorganized_interfaces.json",
+    "bytes": 1408
+  },
+  {
+    "path": "provenance/result_audit.json",
+    "bytes": 167
+  },
+  {
+    "path": "provenance/result_lineage.json",
+    "bytes": 957118
+  },
+  {
+    "path": "provenance/smoke_report.json",
+    "bytes": 4310
+  },
+  {
+    "path": "provenance/validation.json",
+    "bytes": 3450
+  },
+  {
+    "path": "README.md",
+    "bytes": 4237
+  },
+  {
+    "path": "requirements.txt",
+    "bytes": 169
+  },
+  {
+    "path": "results/interactions/agent_readout/access.json",
+    "bytes": 32302
+  },
+  {
+    "path": "results/interactions/agent_readout/complete.json",
+    "bytes": 152
+  },
+  {
+    "path": "results/interactions/agent_readout/protocol.json",
+    "bytes": 1436
+  },
+  {
+    "path": "results/interactions/agent_readout/rows.json",
+    "bytes": 858262
+  },
+  {
+    "path": "results/interactions/coordinate_pilot/access_audits.json",
+    "bytes": 44783
+  },
+  {
+    "path": "results/interactions/coordinate_pilot/all_results.json",
+    "bytes": 188847
+  },
+  {
+    "path": "results/interactions/coordinate_pilot/complete.json",
+    "bytes": 71
+  },
+  {
+    "path": "results/interactions/coordinate_pilot/paired_contrasts.json",
+    "bytes": 13366
+  },
+  {
+    "path": "results/interactions/coordinate_pilot/protocol.json",
+    "bytes": 18963
+  },
+  {
+    "path": "results/interactions/coordinate_pilot/verification.json",
+    "bytes": 279
+  },
+  {
+    "path": "results/interactions/entity_interface/access.json",
+    "bytes": 7432
+  },
+  {
+    "path": "results/interactions/entity_interface/checks.json",
+    "bytes": 3342
+  },
+  {
+    "path": "results/interactions/entity_interface/entity_interface_checks.json",
+    "bytes": 443
+  },
+  {
+    "path": "results/interactions/entity_interface/protocol.json",
+    "bytes": 646
+  },
+  {
+    "path": "results/interactions/entity_interface/rows.json",
+    "bytes": 278665
+  },
+  {
+    "path": "results/numeric/limited_labels.json",
+    "bytes": 205136
+  },
+  {
+    "path": "results/numeric/unlabelled_scaling.json",
+    "bytes": 22277
+  },
+  {
+    "path": "results/probes/mamujoco_action.json",
+    "bytes": 198499
+  },
+  {
+    "path": "results/probes/mpe_action.json",
+    "bytes": 25783
+  },
+  {
+    "path": "results/route/common_comparison.json",
+    "bytes": 6430
+  },
+  {
+    "path": "results/route/paired_mif_all5.json",
+    "bytes": 21273
+  },
+  {
+    "path": "results/structural/primary_holm.json",
+    "bytes": 2285
+  },
+  {
+    "path": "results/visual/summary.json",
+    "bytes": 26600
+  },
+  {
+    "path": "run.py",
+    "bytes": 1802
+  },
+  {
+    "path": "tests/check_grounding_contract.py",
+    "bytes": 2357
+  },
+  {
+    "path": "tests/check_imports.py",
+    "bytes": 1188
+  },
+  {
+    "path": "third_party/laom/LICENSE",
+    "bytes": 11412
+  },
+  {
+    "path": "third_party/laom/README.md",
+    "bytes": 7184
+  },
+  {
+    "path": "third_party/laom/src/augmentations.py",
+    "bytes": 3709
+  },
+  {
+    "path": "third_party/laom/src/dcs/background.py",
+    "bytes": 11643
+  },
+  {
+    "path": "third_party/laom/src/dcs/camera.py",
+    "bytes": 13171
+  },
+  {
+    "path": "third_party/laom/src/dcs/color.py",
+    "bytes": 3476
+  },
+  {
+    "path": "third_party/laom/src/dcs/suite.py",
+    "bytes": 6967
+  },
+  {
+    "path": "third_party/laom/src/dcs/suite_utils.py",
+    "bytes": 3006
+  },
+  {
+    "path": "third_party/laom/src/nn.py",
+    "bytes": 20298
+  },
+  {
+    "path": "third_party/laom/src/utils.py",
+    "bytes": 9433
+  },
+  {
+    "path": "training/__init__.py",
+    "bytes": 55
+  },
+  {
+    "path": "training/composition.py",
+    "bytes": 1222
+  },
+  {
+    "path": "training/control.py",
+    "bytes": 2850
+  },
+  {
+    "path": "training/freeze.py",
+    "bytes": 731
+  },
+  {
+    "path": "training/grounding_mamujoco.py",
+    "bytes": 12246
+  },
+  {
+    "path": "training/grounding_mpe.py",
+    "bytes": 5245
+  },
+  {
+    "path": "training/history_mpe.py",
+    "bytes": 3362
+  },
+  {
+    "path": "training/representation_mamujoco.py",
+    "bytes": 11151
+  },
+  {
+    "path": "training/representation_mpe.py",
+    "bytes": 5095
+  },
+  {
+    "path": "training/route_representation.py",
+    "bytes": 9515
+  },
+  {
+    "path": "utils/__init__.py",
+    "bytes": 55
+  },
+  {
+    "path": "utils/access.py",
+    "bytes": 2475
+  },
+  {
+    "path": "utils/artifacts.py",
+    "bytes": 1937
+  },
+  {
+    "path": "utils/atomic.py",
+    "bytes": 559
+  },
+  {
+    "path": "utils/io.py",
+    "bytes": 519
+  },
+  {
+    "path": "visual/__init__.py",
+    "bytes": 55
+  },
+  {
+    "path": "visual/camera.py",
+    "bytes": 3443
+  },
+  {
+    "path": "visual/dcs_source.py",
+    "bytes": 3905
+  },
+  {
+    "path": "visual/history.py",
+    "bytes": 2328
+  },
+  {
+    "path": "visual/official.py",
+    "bytes": 1480
+  },
+  {
+    "path": "visual/render.py",
+    "bytes": 2295
+  },
+  {
+    "path": "visual/rollout.py",
+    "bytes": 3185
+  },
+  {
+    "path": "visual/scene.py",
+    "bytes": 5546
+  },
+  {
+    "path": "visual/train.py",
+    "bytes": 28856
+  },
+  {
+    "path": "\u5192\u70df\u6d4b\u8bd5\u8bf4\u660e.md",
+    "bytes": 1554
+  },
+  {
+    "path": "\u6a21\u578b\u4e0e\u6570\u636e\u8fb9\u754c.md",
+    "bytes": 3277
+  },
+  {
+    "path": "\u7248\u672c\u5f52\u5e76\u8bf4\u660e.md",
+    "bytes": 2989
+  },
+  {
+    "path": "\u9605\u8bfb\u987a\u5e8f.md",
+    "bytes": 1271
+  }
+]

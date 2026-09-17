@@ -1,0 +1,10 @@
+{
+  "numeric/limited_labels.json": "numeric_summary.json",
+  "numeric/unlabelled_scaling.json": "numeric_scaling.json",
+  "visual/summary.json": "visual_summary.json",
+  "route/common_comparison.json": "global_aux/common_comparison.json",
+  "route/paired_mif_all5.json": "global_aux/paired_mif_all5.json",
+  "probes/mamujoco_action.json": "repaired/action_probe_scores.json",
+  "probes/mpe_action.json": "action_probe.json",
+  "structural/primary_holm.json": "repaired/primary_structural_holm.json"
+}
