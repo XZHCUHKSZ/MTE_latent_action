@@ -14,6 +14,7 @@ FOLDERS = ('closed_loop_lam_v1', 'configs', 'docs', 'environments', 'evaluation'
            'training', 'utils', 'visual')
 EXCLUDE = {'experiments/visual_supervision_inventory_resume.py',
            'tests/check_visual_supervision_resume.py'}
+EXCLUDE.update({'docs/review_response_experiment_plan_2026_09_17.md', 'docs/evidence_synthesis_and_remaining_2026_09_19.md', 'docs/review_gap_check_2026_09_19.md', 'docs/review_wording_response_2026_09_19.md', 'docs/visual_supervision_resume_2026_09_19.md', 'docs/review_remaining_and_next_2026_09_18.md', 'docs/weak_controls_audit_2026_09_19.md', 'docs/mpe_post_repair_evidence_audit_2026_09_18.md', 'docs/review_actions_2026_09_19_evening.md'})
 # Integration refers to the manuscript snapshot shipped with this release index.
 RUNS = [
  ('mpe_temporal_full_scale_5seeds', 'mpe_temporal_scale', 'paper', 'MPE temporal structural controls'),
@@ -353,7 +354,7 @@ inspector. Frozen and Adapt results are indexed separately.
 Scientific Python/config files are copied byte-for-byte from the accepted code
 baseline. Only machine-specific paths in textual evidence are normalized.
 `release_manifest.json` records original and published hashes for every exported
-file. Dataset/checkpoint/log/cache files and the one-off process-recovery script
+file. Internal review/editing plans, dataset/checkpoint/log/cache files and the one-off process-recovery script
 are excluded. Its associated recovery test is also excluded; the scientific
 supervision runner and its qualification records remain included.
 
@@ -373,7 +374,7 @@ The manuscript PDF and figures have not been edited by this code release.
     import subprocess
     tracked=subprocess.check_output(['git','-C',str(destination),'ls-files','-z']).decode().split('\0')
     for rel in tracked:
-        if rel and rel not in inventory and rel not in ('provenance/release_manifest.json','provenance/release_validation.json') and (destination/rel).is_file():
+        if rel and rel not in inventory and rel not in EXCLUDE and rel not in ('provenance/release_manifest.json','provenance/release_validation.json') and (destination/rel).is_file():
             data=(destination/rel).read_bytes()
             inventory[rel]=dict(path=rel,published_sha256=sha(data),bytes=len(data),origin='previous_publication',source_sha256=sha(data),transform='retained')
     manifest=dict(release='2026-09-20',files=list(sorted(inventory.values(),key=lambda x:x['path'])),

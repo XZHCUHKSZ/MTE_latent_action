@@ -1,12 +1,12 @@
 {
   "date": "2026-09-20T03:17:00.205176+08:00",
   "status": "pass",
-  "release_manifest_sha256": "016e29f8d7b90fa7bcfddc4cfaffe90d6ac4f4f18671922a53493ee402065a1b",
+  "release_manifest_sha256": "4182b923d5bb47d78304f209390ae53aab6e2fa054cd79b887462468adea1c69",
   "checks": [
     {
       "command": "python inspect_release.py --verify",
       "exit_code": 0,
-      "stdout": "{\"status\": \"pass\", \"files_checked\": 360, \"scope\": \"Published integrity and syntax; no training or replay\"}",
+      "stdout": "{\"status\": \"pass\", \"files_checked\": 351, \"scope\": \"Published integrity and syntax; no training or replay\"}",
       "stderr": ""
     },
     {
@@ -63,6 +63,8 @@
     "gymnasium-robotics": "1.4.2"
   },
   "scope": "Publication integrity, imports and small interface checks; no full retraining or formal performance rerun",
-  "clean_staged_export_integrity": "pass, 360 files; no private assets present",
-  "whitespace_review": "Original CRLF preserved; three original extra EOF blank lines retained to preserve exact scientific/evidence bytes."
+  "clean_staged_export_integrity": "pass, 351 files; no private assets present",
+  "whitespace_review": "Original CRLF preserved; three original extra EOF blank lines retained to preserve exact scientific/evidence bytes.",
+  "curation_review": "Internal review/editing plans and process-recovery notes excluded from current code delivery; scientific summaries and all comparison directions retained.",
+  "curation_review_time": "2026-09-20T03:20:27.377623+08:00"
 }
