@@ -49,7 +49,7 @@ python evaluation/reproduce_paper_figures.py --rgb /path/to/illustration_rgb.npy
 
 - MPE 使用修正后的 t+2 逆模型和直接多时域读出；原混合 worker 的旧 MPE 路径不是当前入口。MaMuJoCo 原始方法通过独立 frozen-control 分发器保留。
 - 论文早期源码名 frontend.py/worker.py 是历史来源定位；现发布对应 mte/frontends.py 和各环境 experiments/training 入口。provenance/function_sources.json、reorganized_interfaces.json 保留历史沿革，不是当前运行选择器。
-- Base 是全系统分支；MTE-Aux 是 Base 与 MTE 分支组合；Global16 是另一个全系统表示路线。三者不得因改称系统分支而混成同一对照。
+- Base 是目标原始 transition code 的 history 预测；主路线 MTE-Aux 为 Base＋MTE，对照 Global-Joint16-Aux 为相同 Base＋全系统 Global16。全系统分支替换的是 MTE 分支，不是 Base；原独立局部分支也不等同 Global16。
 - MaMuJoCo 875 路线 MIF 与原生 masked MIF 的训练目标不同；500 遮蔽×坐标研究及微调研究保留各自协议。raw/random 对照仍保留 MTE 输入，不是删除整个 MTE。
 - 620 视觉库存、跨方法微调、MTE 微调扩展、分支归因属于已完成后续证据，尚未合入本 PDF；Frozen 和 Adapt 分开报告，不择优替换原表。
 - 原 EVIDENCE_MAP 的早期待办段有历史状态；以该文件末尾低标签合入记录和本发布 catalogue 的 paper/followup 标识为准。

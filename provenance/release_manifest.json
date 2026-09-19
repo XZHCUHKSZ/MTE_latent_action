@@ -267,10 +267,10 @@
     },
     {
       "path": "docs/MANUSCRIPT_ALIGNMENT_CN.md",
-      "published_sha256": "64f1bf2cdd6a6a52295f5d90a9b158736e9de308030b3abc74b3420d8d9489fb",
-      "bytes": 8843,
+      "published_sha256": "83ff24aa0c76ce357ce2e9044dc95d18d0de11f43c6dfdd9054e9bc40450da51",
+      "bytes": 8932,
       "origin": "package/docs/MANUSCRIPT_ALIGNMENT_CN.md",
-      "source_sha256": "64f1bf2cdd6a6a52295f5d90a9b158736e9de308030b3abc74b3420d8d9489fb",
+      "source_sha256": "83ff24aa0c76ce357ce2e9044dc95d18d0de11f43c6dfdd9054e9bc40450da51",
       "transform": "exact"
     },
     {
