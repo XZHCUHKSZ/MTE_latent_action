@@ -5,6 +5,8 @@ ROOT=Path(__file__).resolve().parent
 def read(p): return json.loads(p.read_text(encoding="utf-8-sig"))
 def verify():
     manifest=read(ROOT/"provenance/release_manifest.json")
+    for retired in manifest["excluded"]:
+        assert not (ROOT/retired).exists(), ("retired file present", retired)
     for row in manifest["files"]:
         p=ROOT/row["path"]
         assert p.is_file(),row["path"]

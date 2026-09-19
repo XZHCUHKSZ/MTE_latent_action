@@ -26,6 +26,9 @@ python tests/check_grounding_contract.py
 The first checks imports and unresolved global references. The second is a CPU
 contract check with actual recurrent networks and a recording decoder stub;
 it tests label partitioning, feature routing and update budgets, not performance.
+`tests/check_mamujoco_frozen_dispatch.py --reference <archived-limited_labels.py>`
+checks fifteen original MaMuJoCo paths with two real updates using synthetic
+observations; obtain the reference from commit `2a784fa` or the original archive.
 Other `tests/check_*.py` scripts include real GPU training/replays and require
 the assets below. They use new output paths and reject existing partial runs.
 
@@ -77,8 +80,9 @@ simulator/oracle diagnostics are explicitly separated from deployable policies.
 
 ## Historical records
 
-The original `provenance/package_files.json`, `validation.json`, `smoke_report.json`
-and Chinese September 17 guides describe that earlier snapshot. The current file
-inventory is `provenance/release_manifest.json`; current checks are in
-`provenance/release_validation.json`. Recorded historical PASS results are evidence
-from their original runs, not a claim that this publication reran all experiments.
+September 17 mixed-MPE reports and obsolete delivery guides have been removed
+from the current checkout. They remain available in Git history and original
+archives. The current file inventory is `provenance/release_manifest.json`;
+current checks are in `provenance/release_validation.json`. Per-experiment
+qualification records retain their original scientific meaning. The retirement
+list gives each removed path, its reason and replacement.

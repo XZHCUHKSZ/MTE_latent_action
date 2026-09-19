@@ -1,8 +1,8 @@
 # Paper-to-code and evidence map
 
 The manuscript snapshot and hashes are recorded in `provenance/manuscript_snapshot.json`.
-Current plotted/table exports are in `results/manuscript_snapshot/`. Historical MPE values in
-`results/numeric/` belong to the earlier release; use the completed MPE inventory for current claims.
+Current plotted/table exports are in `results/manuscript_snapshot/`. The original mixed reports
+are retired. Use the completed MPE inventory and `results/current/mamujoco_controls.json`.
 
 | Experiment/question | Entry point | Evidence | Manuscript status |
 |---|---|---|---|

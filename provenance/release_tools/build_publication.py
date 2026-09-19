@@ -15,6 +15,8 @@ FOLDERS = ('closed_loop_lam_v1', 'configs', 'docs', 'environments', 'evaluation'
 EXCLUDE = {'experiments/visual_supervision_inventory_resume.py',
            'tests/check_visual_supervision_resume.py'}
 EXCLUDE.update({'docs/review_response_experiment_plan_2026_09_17.md', 'docs/evidence_synthesis_and_remaining_2026_09_19.md', 'docs/review_gap_check_2026_09_19.md', 'docs/review_wording_response_2026_09_19.md', 'docs/visual_supervision_resume_2026_09_19.md', 'docs/review_remaining_and_next_2026_09_18.md', 'docs/weak_controls_audit_2026_09_19.md', 'docs/mpe_post_repair_evidence_audit_2026_09_18.md', 'docs/review_actions_2026_09_19_evening.md'})
+RETIREMENTS = json.loads((Path(__file__).with_name('retirements.json')).read_text(encoding='utf-8'))['files']
+EXCLUDE.update(r['path'] for r in RETIREMENTS)
 # Integration refers to the manuscript snapshot shipped with this release index.
 RUNS = [
  ('mpe_temporal_full_scale_5seeds', 'mpe_temporal_scale', 'paper', 'MPE temporal structural controls'),
@@ -76,10 +78,11 @@ python inspect_release.py --report visual_branch_attribution_2026_09_20
 python run.py --check-results
 ```
 
-`inspect_release.py` is the current evidence index. The original `run.py`
-retains the September 17 report interface; its numeric MPE report is historical.
-Use the current manuscript exports in `results/manuscript_snapshot/` and the
-completed MPE inventory for current MPE values.
+`run.py` now selects current MPE, MaMuJoCo, visual and route evidence explicitly.
+For example, `python run.py --report mpe` reads the corrected 1,305-cell MPE
+inventory. `python run.py --report mamujoco` reads only MaMuJoCo main controls.
+See [the implementation lineage audit](docs/METHOD_LINEAGE_AUDIT_CN.md) for
+superseded entry points and the exact meanings of Base, MTE-Aux and Global16.
 
 ## Organization
 
@@ -145,6 +148,9 @@ python tests/check_grounding_contract.py
 The first checks imports and unresolved global references. The second is a CPU
 contract check with actual recurrent networks and a recording decoder stub;
 it tests label partitioning, feature routing and update budgets, not performance.
+`tests/check_mamujoco_frozen_dispatch.py --reference <archived-limited_labels.py>`
+checks fifteen original MaMuJoCo paths with two real updates using synthetic
+observations; obtain the reference from commit `2a784fa` or the original archive.
 Other `tests/check_*.py` scripts include real GPU training/replays and require
 the assets below. They use new output paths and reject existing partial runs.
 
@@ -196,11 +202,12 @@ simulator/oracle diagnostics are explicitly separated from deployable policies.
 
 ## Historical records
 
-The original `provenance/package_files.json`, `validation.json`, `smoke_report.json`
-and Chinese September 17 guides describe that earlier snapshot. The current file
-inventory is `provenance/release_manifest.json`; current checks are in
-`provenance/release_validation.json`. Recorded historical PASS results are evidence
-from their original runs, not a claim that this publication reran all experiments.
+September 17 mixed-MPE reports and obsolete delivery guides have been removed
+from the current checkout. They remain available in Git history and original
+archives. The current file inventory is `provenance/release_manifest.json`;
+current checks are in `provenance/release_validation.json`. Per-experiment
+qualification records retain their original scientific meaning. The retirement
+list gives each removed path, its reason and replacement.
 '''
 
 INSPECTOR = '''"""Read-only release integrity and experiment catalogue inspector."""
@@ -210,6 +217,8 @@ ROOT=Path(__file__).resolve().parent
 def read(p): return json.loads(p.read_text(encoding="utf-8-sig"))
 def verify():
     manifest=read(ROOT/"provenance/release_manifest.json")
+    for retired in manifest["excluded"]:
+        assert not (ROOT/retired).exists(), ("retired file present", retired)
     for row in manifest["files"]:
         p=ROOT/row["path"]
         assert p.is_file(),row["path"]
@@ -270,6 +279,7 @@ def build(source, manuscript, destination):
                                transform=transform)
 
     def export(src, path, origin):
+        if path in EXCLUDE: return
         data=src.read_bytes();published=data
         if src.suffix=='.json':
             raw=json.loads(data.decode('utf-8-sig'));sanitized=clean(raw)
@@ -293,6 +303,7 @@ def build(source, manuscript, destination):
     document('README.md',README)
     document('docs/REPRODUCIBILITY.md',REPRODUCTION)
     document('inspect_release.py',INSPECTOR)
+    export(source/'provenance/release_tools/current_run.py', 'run.py', 'package/provenance/release_tools/current_run.py')
     document('.gitattributes','* -text\n')
     document('requirements-reproduction.txt','-r requirements.txt\npsutil==7.2.2\n')
     document('.gitignore','__pycache__/\n*.pyc\noutputs/\nlocal_assets/\n*.pt\n*.npz\n*.npy\n.venv*/\n*.log\n.env\n.env.*\n')
@@ -315,8 +326,12 @@ def build(source, manuscript, destination):
             if (source/relative).exists():row[key]=relative
         experiments.append(row)
     metadata('provenance/experiment_catalog.json',dict(release='2026-09-20',
-        manuscript_snapshot=manuscript.name,experiments=experiments))
+        manuscript_snapshot=manuscript.name,experiments=experiments,
+        supporting_entry_points=[dict(entry='experiments/mamujoco_frozen_control.py', scope='Original repaired MaMuJoCo main-method representation/history API; rejects MPE'), dict(entry='experiments/visual_control.py', scope='Original visual frontend and frozen-control stage API')]))
 
+    metadata('provenance/retirement_audit.json', dict(scope='Retired from current delivery; original archives preserved', files=RETIREMENTS))
+    numeric=json.loads((manuscript/'evidence/unchanged_numeric_summary.json').read_text(encoding='utf-8'))
+    metadata('results/current/mamujoco_controls.json', [r for r in numeric if r['environment']=='mamujoco'])
     evidence=[]
     for f in sorted((manuscript/'evidence').iterdir()):
         if f.is_file() and f.suffix in ('.json','.tex','.md'):
@@ -327,8 +342,8 @@ def build(source, manuscript, destination):
         evidence=evidence,adaptation_integrated=False))
     mapping=['# Paper-to-code and evidence map','',
              'The manuscript snapshot and hashes are recorded in `provenance/manuscript_snapshot.json`.',
-             'Current plotted/table exports are in `results/manuscript_snapshot/`. Historical MPE values in',
-             '`results/numeric/` belong to the earlier release; use the completed MPE inventory for current claims.','',
+             'Current plotted/table exports are in `results/manuscript_snapshot/`. The original mixed reports',
+             'are retired. Use the completed MPE inventory and `results/current/mamujoco_controls.json`.','',
              '| Experiment/question | Entry point | Evidence | Manuscript status |','|---|---|---|---|']
     for r in experiments:
         mapping.append(f"| {r['question']} | [{r['entry']}](../{r['entry']}) | [{r['id']}](../{r['summary']}) | {r['manuscript_status']} |")
@@ -352,15 +367,18 @@ records, current manuscript numerical exports, and a standard-library evidence
 inspector. Frozen and Adapt results are indexed separately.
 
 Scientific Python/config files are copied byte-for-byte from the accepted code
-baseline. Only machine-specific paths in textual evidence are normalized.
+baseline. A new MaMuJoCo-only dispatcher removes the obsolete MPE branch from
+the mixed dispatcher; its fifteen original method paths passed actual two-update
+checkpoint parity with zero tensor differences. The current report launcher and
+retirement map replace superseded default entry points. Only machine-specific paths in textual evidence are normalized.
 `release_manifest.json` records original and published hashes for every exported
 file. Internal review/editing plans, dataset/checkpoint/log/cache files and the one-off process-recovery script
 are excluded. Its associated recovery test is also excluded; the scientific
 supervision runner and its qualification records remain included.
 
 The source archive and completed formal results remain unchanged. In particular,
-the shared core files and historic protocol hashes are preserved. September 17
-provenance reports retain their historical meaning; current publication checks
+the shared core files and historic protocol hashes are preserved. Retired September 17
+reports remain in original archives and Git history; current publication checks
 are recorded in `provenance/release_validation.json`.
 
 This publication performs integrity, import/interface and small synthetic checks.

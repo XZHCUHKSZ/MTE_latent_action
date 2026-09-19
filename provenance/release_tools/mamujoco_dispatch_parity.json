@@ -1,0 +1,93 @@
+{
+  "scope": "Actual two-update synthetic-observation MaMuJoCo dispatch parity against the archived mixed dispatcher; no native labels or simulator; not a performance test",
+  "mpe_rejected_before_io": true,
+  "checks": [
+    {
+      "method": "entity_target",
+      "checkpoints": 1,
+      "tensors": 8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "method": "entity_joint",
+      "checkpoints": 1,
+      "tensors": 8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "method": "lapo_joint",
+      "checkpoints": 1,
+      "tensors": 8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "method": "laom_joint_k3",
+      "checkpoints": 1,
+      "tensors": 8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "method": "continuous_lam",
+      "checkpoints": 1,
+      "tensors": 8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "method": "lapo_state_adapter",
+      "checkpoints": 1,
+      "tensors": 8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "method": "laom_state_adapter",
+      "checkpoints": 1,
+      "tensors": 8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "method": "edge_cara_h1",
+      "checkpoints": 1,
+      "tensors": 8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "method": "edge_cara_h3",
+      "checkpoints": 1,
+      "tensors": 8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "method": "edge_cara_mobius_simple",
+      "checkpoints": 1,
+      "tensors": 8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "method": "edge_cara_mobius_graph",
+      "checkpoints": 1,
+      "tensors": 8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "method": "edge_cara_mif",
+      "checkpoints": 2,
+      "tensors": 52,
+      "max_abs_error": 0.0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "original_dispatch_sha256": "06d00b578562726046778a3c17c7c3a2b376a13d4601530320b79d87e17331b3",
+  "new_dispatch_sha256": "74536cde8b3201150c30a9a1725f3b8a0ebddfc767aeccc5ec487de889b5dbfa"
+}

@@ -1,24 +1,24 @@
 {
-  "date": "2026-09-20T03:17:00.205176+08:00",
+  "date": "2026-09-20T03:34:21.984660+08:00",
   "status": "pass",
-  "release_manifest_sha256": "4182b923d5bb47d78304f209390ae53aab6e2fa054cd79b887462468adea1c69",
+  "scope": "Current-entry retirement audit, imports, numerical contracts and fifteen-path synthetic two-update MaMuJoCo dispatch parity; no formal experiments rerun",
   "checks": [
     {
       "command": "python inspect_release.py --verify",
       "exit_code": 0,
-      "stdout": "{\"status\": \"pass\", \"files_checked\": 351, \"scope\": \"Published integrity and syntax; no training or replay\"}",
+      "stdout": "{\"status\": \"pass\", \"files_checked\": 335, \"scope\": \"Published integrity and syntax; no training or replay\"}",
       "stderr": ""
     },
     {
       "command": "python run.py --check-results",
       "exit_code": 0,
-      "stdout": "{\"references_checked\": 2664, \"unique_source_files\": 2264, \"max_abs_error\": 5.684341886080802e-14}",
+      "stdout": "{\"status\": \"pass\", \"files_checked\": 335, \"scope\": \"Published integrity and syntax; no training or replay\"}\nPASS: current report sources; historical MPE is excluded from default reports",
       "stderr": ""
     },
     {
       "command": "python tests/check_imports.py",
       "exit_code": 0,
-      "stdout": "{\n  \"modules\": 84,\n  \"errors\": []\n}",
+      "stdout": "{\n  \"modules\": 81,\n  \"errors\": []\n}",
       "stderr": "AdroitHandRelocateDense-v1, AdroitHandHammerDense-v1, AdroitHandDoorDense-v1 environment's reward functions were updated in v1.2.1 without an environment version update. Therefore, use gymnasium-robotics==1.2.0 for v1 reproducibility or use v2 in gymnasium-robotics>=1.4.3. See https://github.com/Farama-Foundation/Gymnasium-Robotics/pull/220 for more details"
     },
     {
@@ -44,27 +44,24 @@
       "exit_code": 0,
       "stdout": "PASS: physical-horizon edge view, zero action placeholders, Simple raw parameter parity, 330 new rows, donor-bank bounds and disjoint writes",
       "stderr": ""
+    },
+    {
+      "command": "python tests/check_mamujoco_frozen_dispatch.py --reference ARCHIVE_PACKAGE_ROOT\\experiments\\limited_labels.py",
+      "exit_code": 0,
+      "stdout": "PASS entity_target 0.0\nPASS entity_joint 0.0\nPASS lapo_joint 0.0\nPASS laom_joint_k3 0.0\nPASS continuous_lam 0.0\nPASS lapo_state_adapter 0.0\nPASS laom_state_adapter 0.0\nPASS edge_cara_h1 0.0\nPASS edge_cara_h3 0.0\nPASS edge_cara_mobius_simple 0.0\nPASS edge_cara_mobius_graph 0.0\nPASS edge_cara_mif 0.0\nPASS edge_cara_mobius_tree 0.0\nPASS random_edge_encoder 0.0\nPASS matched_cf_deepsets 0.0\n{\"passed\": true, \"methods\": 15}",
+      "stderr": ""
     }
   ],
-  "scientific_python_and_configs_byte_identical": 150,
-  "json_numeric_and_boolean_leaf_sequences_unchanged": 161,
-  "frozen_core_identical": [
-    "common.py",
-    "unified_models.py",
-    "training_profiles.py"
+  "current_reports_checked": [
+    "mpe",
+    "mamujoco",
+    "visual",
+    "route"
   ],
-  "foundation_verifier": "FROZEN FOUNDATION CHECK: PASS (11 files)",
+  "retired_files": 25,
+  "published_files": 335,
+  "scientific_python_and_configs_byte_identical_to_baseline": 144,
   "sensitive_pattern_findings": [],
-  "tested_versions": {
-    "psutil": "7.2.2",
-    "torch": "2.13.0+cu130",
-    "numpy": "2.3.5",
-    "scipy": "1.18.0",
-    "gymnasium-robotics": "1.4.2"
-  },
-  "scope": "Publication integrity, imports and small interface checks; no full retraining or formal performance rerun",
-  "clean_staged_export_integrity": "pass, 351 files; no private assets present",
-  "whitespace_review": "Original CRLF preserved; three original extra EOF blank lines retained to preserve exact scientific/evidence bytes.",
-  "curation_review": "Internal review/editing plans and process-recovery notes excluded from current code delivery; scientific summaries and all comparison directions retained.",
-  "curation_review_time": "2026-09-20T03:20:27.377623+08:00"
+  "foundation_verifier": "FROZEN FOUNDATION CHECK: PASS (11 files)",
+  "release_manifest_sha256": "ca3264a3fcf4891c554881264fccd1715ce0ef885e1e930506492a6d20cffb31"
 }

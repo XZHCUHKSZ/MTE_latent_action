@@ -1,9 +1,0 @@
-{
-  "updates": 400,
-  "batch": 64,
-  "train_max": 2048,
-  "dev_max": 256,
-  "learning_rate": 0.001,
-  "latent": 16,
-  "hidden": 128
-}

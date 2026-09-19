@@ -173,5 +173,15 @@
       "documentation": "docs/visual_branch_attribution.md",
       "report": "results/visual_branch_attribution_2026_09_20/RESULTS_CN.md"
     }
+  ],
+  "supporting_entry_points": [
+    {
+      "entry": "experiments/mamujoco_frozen_control.py",
+      "scope": "Original repaired MaMuJoCo main-method representation/history API; rejects MPE"
+    },
+    {
+      "entry": "experiments/visual_control.py",
+      "scope": "Original visual frontend and frozen-control stage API"
+    }
   ]
 }

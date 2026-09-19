@@ -1,0 +1,130 @@
+{
+  "scope": "Excluded from the current public delivery only. Original files, completed evidence and previous releases remain immutable.",
+  "files": [
+    {
+      "path": "experiments/limited_labels.py",
+      "reason": "Mixed old MPE/MaMuJoCo dispatcher advertises superseded MPE timing as final.",
+      "replacement": "experiments/mpe_inventory_completion.py; experiments/mamujoco_frozen_control.py"
+    },
+    {
+      "path": "experiments/unlabelled_scaling.py",
+      "reason": "Mixed old MPE/MaMuJoCo dispatcher advertises superseded MPE timing as final.",
+      "replacement": "experiments/mpe_inventory_completion.py; experiments/mamujoco_frozen_control.py"
+    },
+    {
+      "path": "experiments/coordinate_pilot.py",
+      "reason": "Two-seed coordinate pilot is historical evidence, not the complete current paired experiment.",
+      "replacement": "experiments/mpe_evidence_completion.py; experiments/mamujoco_route_completion.py"
+    },
+    {
+      "path": "configs/coordinate_pilot.json",
+      "reason": "Two-seed coordinate pilot is historical evidence, not the complete current paired experiment.",
+      "replacement": "experiments/mpe_evidence_completion.py; experiments/mamujoco_route_completion.py"
+    },
+    {
+      "path": "mte/endpoints_mpe.py",
+      "reason": "Unreferenced old recursive MPE endpoint builder; current protocol directly predicts h1/h2/h3 after t+2 inverse inference.",
+      "replacement": "mte/temporal_mpe.py"
+    },
+    {
+      "path": "configs/route_ablation.json",
+      "reason": "Superseded development route schedule; current formal route configuration is separately frozen.",
+      "replacement": "configs/mamujoco_route_completion.json; configs/mpe_temporal_full_scale.json"
+    },
+    {
+      "path": "configs/route_representation.json",
+      "reason": "Superseded development route schedule; current formal route configuration is separately frozen.",
+      "replacement": "configs/mamujoco_route_completion.json; configs/mpe_temporal_full_scale.json"
+    },
+    {
+      "path": "configs/mpe_evidence_completion_smoke.json",
+      "reason": "Historical smoke protocol artifact, not a current formal experiment entry.",
+      "replacement": "tests/check_temporal_completion.py; tests/check_mpe_inventory.py"
+    },
+    {
+      "path": "configs/mpe_inventory_completion_smoke.json",
+      "reason": "Historical smoke protocol artifact, not a current formal experiment entry.",
+      "replacement": "tests/check_temporal_completion.py; tests/check_mpe_inventory.py"
+    },
+    {
+      "path": "results/numeric/limited_labels.json",
+      "reason": "Mixed or superseded MPE evidence from the September 17 snapshot.",
+      "replacement": "results/completed_runs/mpe_inventory_completion_2026_09_18/summary.json; results/manuscript_snapshot/"
+    },
+    {
+      "path": "results/numeric/unlabelled_scaling.json",
+      "reason": "Mixed or superseded MPE evidence from the September 17 snapshot.",
+      "replacement": "results/completed_runs/mpe_inventory_completion_2026_09_18/summary.json; results/manuscript_snapshot/"
+    },
+    {
+      "path": "results/probes/mpe_action.json",
+      "reason": "Mixed or superseded MPE evidence from the September 17 snapshot.",
+      "replacement": "results/completed_runs/mpe_inventory_completion_2026_09_18/summary.json; results/manuscript_snapshot/"
+    },
+    {
+      "path": "results/route/common_comparison.json",
+      "reason": "Earlier route subset replaced by complete matched/raw/Global16 evidence.",
+      "replacement": "results/completed_runs/mamujoco_route_completion_2026_09_19/summary.json"
+    },
+    {
+      "path": "results/route/paired_mif_all5.json",
+      "reason": "Earlier route subset replaced by complete matched/raw/Global16 evidence.",
+      "replacement": "results/completed_runs/mamujoco_route_completion_2026_09_19/summary.json"
+    },
+    {
+      "path": "provenance/package_files.json",
+      "reason": "September 17 delivery manifest/report is not an index or verification of current manuscript evidence.",
+      "replacement": "provenance/release_manifest.json; provenance/experiment_catalog.json; provenance/release_validation.json"
+    },
+    {
+      "path": "provenance/result_lineage.json",
+      "reason": "September 17 delivery manifest/report is not an index or verification of current manuscript evidence.",
+      "replacement": "provenance/release_manifest.json; provenance/experiment_catalog.json; provenance/release_validation.json"
+    },
+    {
+      "path": "provenance/result_audit.json",
+      "reason": "September 17 delivery manifest/report is not an index or verification of current manuscript evidence.",
+      "replacement": "provenance/release_manifest.json; provenance/experiment_catalog.json; provenance/release_validation.json"
+    },
+    {
+      "path": "provenance/validation.json",
+      "reason": "September 17 delivery manifest/report is not an index or verification of current manuscript evidence.",
+      "replacement": "provenance/release_manifest.json; provenance/experiment_catalog.json; provenance/release_validation.json"
+    },
+    {
+      "path": "provenance/smoke_report.json",
+      "reason": "September 17 delivery manifest/report is not an index or verification of current manuscript evidence.",
+      "replacement": "provenance/release_manifest.json; provenance/experiment_catalog.json; provenance/release_validation.json"
+    },
+    {
+      "path": "provenance/evidence_sources.json",
+      "reason": "September 17 delivery manifest/report is not an index or verification of current manuscript evidence.",
+      "replacement": "provenance/release_manifest.json; provenance/experiment_catalog.json; provenance/release_validation.json"
+    },
+    {
+      "path": "版本归并说明.md",
+      "reason": "Old reading guide contains superseded entry points and paper references.",
+      "replacement": "README.md; docs/PAPER_CODE_MAP.md; docs/METHOD_LINEAGE_AUDIT_CN.md"
+    },
+    {
+      "path": "冒烟测试说明.md",
+      "reason": "Old reading guide contains superseded entry points and paper references.",
+      "replacement": "README.md; docs/PAPER_CODE_MAP.md; docs/METHOD_LINEAGE_AUDIT_CN.md"
+    },
+    {
+      "path": "模型与数据边界.md",
+      "reason": "Old reading guide contains superseded entry points and paper references.",
+      "replacement": "README.md; docs/PAPER_CODE_MAP.md; docs/METHOD_LINEAGE_AUDIT_CN.md"
+    },
+    {
+      "path": "阅读顺序.md",
+      "reason": "Old reading guide contains superseded entry points and paper references.",
+      "replacement": "README.md; docs/PAPER_CODE_MAP.md; docs/METHOD_LINEAGE_AUDIT_CN.md"
+    },
+    {
+      "path": "docs/README_PRE_RELEASE_ARCHIVE.md",
+      "reason": "Old reading guide contains superseded entry points and paper references.",
+      "replacement": "README.md; docs/PAPER_CODE_MAP.md; docs/METHOD_LINEAGE_AUDIT_CN.md"
+    }
+  ]
+}

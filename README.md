@@ -38,10 +38,11 @@ python inspect_release.py --report visual_branch_attribution_2026_09_20
 python run.py --check-results
 ```
 
-`inspect_release.py` is the current evidence index. The original `run.py`
-retains the September 17 report interface; its numeric MPE report is historical.
-Use the current manuscript exports in `results/manuscript_snapshot/` and the
-completed MPE inventory for current MPE values.
+`run.py` now selects current MPE, MaMuJoCo, visual and route evidence explicitly.
+For example, `python run.py --report mpe` reads the corrected 1,305-cell MPE
+inventory. `python run.py --report mamujoco` reads only MaMuJoCo main controls.
+See [the implementation lineage audit](docs/METHOD_LINEAGE_AUDIT_CN.md) for
+superseded entry points and the exact meanings of Base, MTE-Aux and Global16.
 
 ## Organization
 
