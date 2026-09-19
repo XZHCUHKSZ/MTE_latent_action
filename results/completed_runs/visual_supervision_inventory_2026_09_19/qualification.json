@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "b8_decoder_checks": 80,
+  "independent_episode_replays": 80,
+  "frozen_adapter_checks": 40,
+  "low_budget_smokes": 8,
+  "weight_tolerance": 1e-06,
+  "replay": "exact actions and rewards",
+  "time": 1789817617.4461322
+}

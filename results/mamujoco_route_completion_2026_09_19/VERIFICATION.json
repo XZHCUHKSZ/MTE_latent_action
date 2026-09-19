@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "control_unique": 875,
+  "reused": 278,
+  "new": 597,
+  "pretraining_reused": 14,
+  "pretraining_new": 21,
+  "evaluation_episodes_per_cell": 50,
+  "access_audits": 910,
+  "paired_checks": [
+    {
+      "seed": 0,
+      "model": "mif",
+      "parameters": 55737,
+      "normalization": "33fa562076fbf06fd5b855c8ce58bb371905f109e1db955d66de9a5dc01f35c4"
+    },
+    {
+      "seed": 0,
+      "model": "graph",
+      "parameters": 72497,
+      "normalization": "c5ae13024c0a4d806d94d876da20ccdaada7805d6e33f77969fa5b3f02361520"
+    },
+    {
+      "seed": 0,
+      "model": "simple",
+      "parameters": 55465,
+      "normalization": "c5ae13024c0a4d806d94d876da20ccdaada7805d6e33f77969fa5b3f02361520"
+    },
+    {
+      "seed": 1,
+      "model": "mif",
+      "parameters": 55737,
+      "normalization": "f9e818ec9ad0c5502229d7aed5b9f5899ddae34031d73de751057651e1c9e38b"
+    },
+    {
+      "seed": 1,
+      "model": "graph",
+      "parameters": 72497,
+      "normalization": "a23d590ea2878bc1c1470ef07c2688c8dae0a99e5ca44aaee0e676d96d5adf05"
+    },
+    {
+      "seed": 1,
+      "model": "simple",
+      "parameters": 55465,
+      "normalization": "a23d590ea2878bc1c1470ef07c2688c8dae0a99e5ca44aaee0e676d96d5adf05"
+    },
+    {
+      "seed": 2,
+      "model": "mif",
+      "parameters": 55737,
+      "normalization": "16fe72fc44874aef486d1a8c08fc3feac832605f6f5b4a64908d6f946a7f6e3b"
+    },
+    {
+      "seed": 2,
+      "model": "graph",
+      "parameters": 72497,
+      "normalization": "c3c1958d7ed68a4b6b711f278b2891f6e267f58076da36338c8e5b67091e55e7"
+    },
+    {
+      "seed": 2,
+      "model": "simple",
+      "parameters": 55465,
+      "normalization": "c3c1958d7ed68a4b6b711f278b2891f6e267f58076da36338c8e5b67091e55e7"
+    },
+    {
+      "seed": 3,
+      "model": "mif",
+      "parameters": 55737,
+      "normalization": "65ed6dd6f837338d66c2d0e78766acd46e4e70d0ec25a5502215e949141b69e6"
+    },
+    {
+      "seed": 3,
+      "model": "graph",
+      "parameters": 72497,
+      "normalization": "fa53598bfe612ddc2452e966804a2b2257058220fd6a25ad733b3ee29d15213b"
+    },
+    {
+      "seed": 3,
+      "model": "simple",
+      "parameters": 55465,
+      "normalization": "fa53598bfe612ddc2452e966804a2b2257058220fd6a25ad733b3ee29d15213b"
+    },
+    {
+      "seed": 4,
+      "model": "mif",
+      "parameters": 55737,
+      "normalization": "3fd3fc078fc0a0317a376ebeeb37bb533dc72a0f9e1ac47b5221ff5035e984a8"
+    },
+    {
+      "seed": 4,
+      "model": "graph",
+      "parameters": 72497,
+      "normalization": "03c2f6b153ecff06119cede52c32ca254f707ef44407845225bb0aa811fc7486"
+    },
+    {
+      "seed": 4,
+      "model": "simple",
+      "parameters": 55465,
+      "normalization": "03c2f6b153ecff06119cede52c32ca254f707ef44407845225bb0aa811fc7486"
+    }
+  ],
+  "statistics_recomputed": true,
+  "code_hashes": 101,
+  "input_hashes": 479,
+  "frozen_policy_hashes": 40,
+  "baseline_reference_cells": 100,
+  "active_seconds": 2644.5780806541443,
+  "source_hashes": {
+    "protocol.json": "9a016b026b16e089d8712151cc53c01f42f25274137b46c04aec406a9003e1d3",
+    "manifest.json": "afc4b9ff98cb72c6cf2e027d3b4948b1525e8f310c3b27dd80753e791377c06a",
+    "summary.json": "921658901caa35722bfc2dd1eacc416c95318d99a8c0d3b4256fdb5b2419207b",
+    "freeze.json": "03b289c8306f8c9d0455d0601b1601f1bccc6b348786d7f44d8b994cff773564"
+  }
+}

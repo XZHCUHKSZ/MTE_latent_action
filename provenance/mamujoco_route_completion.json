@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-19",
+  "entry": "experiments/mamujoco_route_completion.py",
+  "config": "configs/mamujoco_route_completion.json",
+  "documentation": "docs/mamujoco_route_completion.md",
+  "tests": "tests/check_mamujoco_route_completion.py",
+  "run": "outputs/mamujoco_route_completion_2026_09_19",
+  "smoke": "outputs/mamujoco_route_completion_smoke_2026_09_19",
+  "existing_science_reused": [
+    "training/route_representation.py",
+    "experiments/route_ablation.py",
+    "training/representation_mamujoco.py",
+    "training/grounding_mamujoco.py",
+    "training/composition.py",
+    "evaluation/mamujoco.py",
+    "environments/mamujoco.py"
+  ],
+  "changes": "New experiment orchestration, artifact routing, identity registration of already implemented raw mode, reuse integrity and paired reports. No shared method, loss, normalization, data split or frozen-foundation edit.",
+  "seeds": [0, 1, 2, 3, 4],
+  "pretraining_total": 35,
+  "pretraining_reused": 14,
+  "pretraining_new": 21,
+  "control_total": 875,
+  "control_reused": 278,
+  "control_new": 597,
+  "evidence": "Repeated-development extension; old seeds0/1 already inspected. Decoder repetitions nested within upstream seeds. Complete-route and within-model coordinate effects analyzed separately.",
+  "launch_validation": "7 pretraining paths and3 grounding/evaluation paths passed; equal matched/raw parameters, normalization and paired initialization; archived controller200-step replay exact on2episodes; foundation PASS11files",
+  "paper_updated": false,
+  "github_uploaded": false
+}

@@ -1,0 +1,622 @@
+{
+  "rows": [
+    {
+      "agents": 4,
+      "partners": 3,
+      "contexts": 8,
+      "model": "Simple",
+      "width_kind": "fixed8",
+      "input_width": 8,
+      "parameters": 30280,
+      "parameter_bytes": 121120,
+      "registered_buffer_bytes": 640,
+      "input_bytes": 16384,
+      "constructor_seconds": 0.020619700000679586,
+      "forward_ms": [
+        0.6307000003289431,
+        0.6070000017643906,
+        0.7008999964455143,
+        0.6179000047268346,
+        0.625100001343526,
+        0.5824000036227517,
+        0.5928999962634407
+      ],
+      "backward_ms": [
+        1.0493999943719245,
+        0.887200003489852,
+        0.8174000031431206,
+        0.785399999585934,
+        0.8328999974764884,
+        0.7886999956099316,
+        0.8317000028910115
+      ],
+      "median_forward_ms": 0.6179000047268346,
+      "median_backward_ms": 0.8317000028910115
+    },
+    {
+      "agents": 4,
+      "partners": 3,
+      "contexts": 8,
+      "model": "Graph",
+      "width_kind": "fixed8",
+      "input_width": 8,
+      "parameters": 47296,
+      "parameter_bytes": 189184,
+      "registered_buffer_bytes": 1036,
+      "input_bytes": 16384,
+      "constructor_seconds": 0.0014176999975461513,
+      "forward_ms": [
+        1.4981000058469363,
+        1.607700003660284,
+        1.8266999977640808,
+        2.5547999975970015,
+        1.9242000053054653,
+        2.9155000011087395,
+        2.0806000029551797
+      ],
+      "backward_ms": [
+        1.9897999954991974,
+        2.4300000004586764,
+        3.1766000029165298,
+        2.8954000008525327,
+        2.59389999700943,
+        2.634800002851989,
+        2.4722000016481616
+      ],
+      "median_forward_ms": 1.9242000053054653,
+      "median_backward_ms": 2.59389999700943
+    },
+    {
+      "agents": 4,
+      "partners": 3,
+      "contexts": 8,
+      "model": "Simple",
+      "width_kind": "two_per_agent",
+      "input_width": 8,
+      "parameters": 30280,
+      "parameter_bytes": 121120,
+      "registered_buffer_bytes": 640,
+      "input_bytes": 16384,
+      "constructor_seconds": 0.0009403000003658235,
+      "forward_ms": [
+        0.7530000002589077,
+        0.7030999986454844,
+        0.6632000004174188,
+        0.7149999946705066,
+        0.6878000058350153,
+        0.6917999999132007,
+        0.9586999949533492
+      ],
+      "backward_ms": [
+        0.8903999987524003,
+        0.8557000037399121,
+        0.8773000008659437,
+        0.9800000043469481,
+        0.8721999984118156,
+        0.8879000015440397,
+        1.9504000010783784
+      ],
+      "median_forward_ms": 0.7030999986454844,
+      "median_backward_ms": 0.8879000015440397
+    },
+    {
+      "agents": 4,
+      "partners": 3,
+      "contexts": 8,
+      "model": "Graph",
+      "width_kind": "two_per_agent",
+      "input_width": 8,
+      "parameters": 47296,
+      "parameter_bytes": 189184,
+      "registered_buffer_bytes": 1036,
+      "input_bytes": 16384,
+      "constructor_seconds": 0.0017197999986819923,
+      "forward_ms": [
+        2.236500004073605,
+        2.457500006130431,
+        2.006000002438668,
+        3.1758000041008927,
+        2.058400001260452,
+        2.504399999452289,
+        2.242699993075803
+      ],
+      "backward_ms": [
+        3.389099998457823,
+        2.875300000596326,
+        2.5286000018240884,
+        2.885699999751523,
+        2.5093000003835186,
+        2.7369000017642975,
+        2.789199999824632
+      ],
+      "median_forward_ms": 2.242699993075803,
+      "median_backward_ms": 2.789199999824632
+    },
+    {
+      "agents": 6,
+      "partners": 5,
+      "contexts": 32,
+      "model": "Simple",
+      "width_kind": "fixed8",
+      "input_width": 8,
+      "parameters": 30792,
+      "parameter_bytes": 123168,
+      "registered_buffer_bytes": 8960,
+      "input_bytes": 65536,
+      "constructor_seconds": 0.0038552999976673163,
+      "forward_ms": [
+        1.8462000007275492,
+        1.8927000055555254,
+        1.984700000321027,
+        1.7898000005516224,
+        2.0186999972793274,
+        1.9941999998991378,
+        1.738900005875621
+      ],
+      "backward_ms": [
+        3.0899000048520975,
+        2.6923999976133928,
+        2.7640000043902546,
+        3.1748999972478487,
+        2.660899997863453,
+        2.7131999959237874,
+        2.763999997114297
+      ],
+      "median_forward_ms": 1.8927000055555254,
+      "median_backward_ms": 2.763999997114297
+    },
+    {
+      "agents": 6,
+      "partners": 5,
+      "contexts": 32,
+      "model": "Graph",
+      "width_kind": "fixed8",
+      "input_width": 8,
+      "parameters": 47840,
+      "parameter_bytes": 191360,
+      "registered_buffer_bytes": 13844,
+      "input_bytes": 65536,
+      "constructor_seconds": 0.0015339000019594096,
+      "forward_ms": [
+        4.1103000039584,
+        4.592500001308508,
+        3.9154999976744875,
+        4.375699994852766,
+        6.016999999701511,
+        4.204400000162423,
+        4.320599997299723
+      ],
+      "backward_ms": [
+        5.694899999070913,
+        5.645400000503287,
+        6.913999997777864,
+        5.9422000049380586,
+        5.806700006360188,
+        6.265299998631235,
+        7.518099999288097
+      ],
+      "median_forward_ms": 4.320599997299723,
+      "median_backward_ms": 5.9422000049380586
+    },
+    {
+      "agents": 6,
+      "partners": 5,
+      "contexts": 32,
+      "model": "Simple",
+      "width_kind": "two_per_agent",
+      "input_width": 12,
+      "parameters": 31820,
+      "parameter_bytes": 127280,
+      "registered_buffer_bytes": 8960,
+      "input_bytes": 98304,
+      "constructor_seconds": 0.001256100003956817,
+      "forward_ms": [
+        1.930099999299273,
+        2.071099996101111,
+        1.979200002097059,
+        1.8089999939547852,
+        2.8003999977954663,
+        2.186299992899876,
+        1.9676000010804273
+      ],
+      "backward_ms": [
+        3.3070999998017214,
+        2.7266000033705495,
+        2.9147000022931024,
+        2.8091999993193895,
+        3.3225000006495975,
+        2.9359000036492944,
+        3.0504999958793633
+      ],
+      "median_forward_ms": 1.979200002097059,
+      "median_backward_ms": 2.9359000036492944
+    },
+    {
+      "agents": 6,
+      "partners": 5,
+      "contexts": 32,
+      "model": "Graph",
+      "width_kind": "two_per_agent",
+      "input_width": 12,
+      "parameters": 48868,
+      "parameter_bytes": 195472,
+      "registered_buffer_bytes": 13844,
+      "input_bytes": 98304,
+      "constructor_seconds": 0.0015636000025551766,
+      "forward_ms": [
+        4.413999995449558,
+        4.443999998329673,
+        5.3259999986039475,
+        4.37219999730587,
+        4.204799995932262,
+        4.331200005253777,
+        5.515299999387935
+      ],
+      "backward_ms": [
+        7.428000004438218,
+        5.723700000089593,
+        5.739700005506165,
+        7.482000000891276,
+        6.844399998954032,
+        6.038100000296254,
+        6.26419999753125
+      ],
+      "median_forward_ms": 4.413999995449558,
+      "median_backward_ms": 6.26419999753125
+    },
+    {
+      "agents": 8,
+      "partners": 7,
+      "contexts": 128,
+      "model": "Simple",
+      "width_kind": "fixed8",
+      "input_width": 8,
+      "parameters": 31304,
+      "parameter_bytes": 125216,
+      "registered_buffer_bytes": 135168,
+      "input_bytes": 262144,
+      "constructor_seconds": 0.0037854000038350932,
+      "forward_ms": [
+        7.626099999470171,
+        7.18839999899501,
+        7.214599994767923,
+        8.008099997823592,
+        6.916599995747674,
+        7.007799998973496,
+        6.555500003742054
+      ],
+      "backward_ms": [
+        9.642600001825485,
+        10.312500002328306,
+        11.045900006138254,
+        12.402400003338698,
+        11.886400003277231,
+        11.139599999296479,
+        11.586199994781055
+      ],
+      "median_forward_ms": 7.18839999899501,
+      "median_backward_ms": 11.139599999296479
+    },
+    {
+      "agents": 8,
+      "partners": 7,
+      "contexts": 128,
+      "model": "Graph",
+      "width_kind": "fixed8",
+      "input_width": 8,
+      "parameters": 48384,
+      "parameter_bytes": 193536,
+      "registered_buffer_bytes": 204828,
+      "input_bytes": 262144,
+      "constructor_seconds": 0.002579700005298946,
+      "forward_ms": [
+        13.860999999451451,
+        14.541699994879309,
+        14.848500002699438,
+        15.118200004508253,
+        15.841100001125596,
+        15.281899999536108,
+        15.113199995539617
+      ],
+      "backward_ms": [
+        22.952399995119777,
+        19.663500002934597,
+        20.29449999827193,
+        20.932300001732074,
+        22.76469999924302,
+        21.351399998820852,
+        21.467200000188313
+      ],
+      "median_forward_ms": 15.113199995539617,
+      "median_backward_ms": 21.351399998820852
+    },
+    {
+      "agents": 8,
+      "partners": 7,
+      "contexts": 128,
+      "model": "Simple",
+      "width_kind": "two_per_agent",
+      "input_width": 16,
+      "parameters": 33360,
+      "parameter_bytes": 133440,
+      "registered_buffer_bytes": 135168,
+      "input_bytes": 524288,
+      "constructor_seconds": 0.001713599995127879,
+      "forward_ms": [
+        7.7478999955928884,
+        7.564399995317217,
+        8.85480000579264,
+        7.639499999640975,
+        7.078300004650373,
+        6.827500001236331,
+        7.798699996783398
+      ],
+      "backward_ms": [
+        12.420799997926224,
+        12.036300002364442,
+        12.50609999988228,
+        11.492099998577032,
+        12.211599998408929,
+        12.438300000212621,
+        11.10540000081528
+      ],
+      "median_forward_ms": 7.639499999640975,
+      "median_backward_ms": 12.211599998408929
+    },
+    {
+      "agents": 8,
+      "partners": 7,
+      "contexts": 128,
+      "model": "Graph",
+      "width_kind": "two_per_agent",
+      "input_width": 16,
+      "parameters": 50440,
+      "parameter_bytes": 201760,
+      "registered_buffer_bytes": 204828,
+      "input_bytes": 524288,
+      "constructor_seconds": 0.002303399996890221,
+      "forward_ms": [
+        15.36119999946095,
+        15.61799999763025,
+        15.327699999033939,
+        15.264299996488262,
+        16.098300002340693,
+        15.307000001484994,
+        16.064700001152232
+      ],
+      "backward_ms": [
+        22.256000003835652,
+        21.732300003350247,
+        21.608099996228702,
+        21.14090000395663,
+        24.498699996911455,
+        21.44129999942379,
+        20.489399998041335
+      ],
+      "median_forward_ms": 15.36119999946095,
+      "median_backward_ms": 21.608099996228702
+    },
+    {
+      "agents": 10,
+      "partners": 9,
+      "contexts": 512,
+      "model": "Simple",
+      "width_kind": "fixed8",
+      "input_width": 8,
+      "parameters": 31816,
+      "parameter_bytes": 127264,
+      "registered_buffer_bytes": 2117632,
+      "input_bytes": 1048576,
+      "constructor_seconds": 0.023276499996427447,
+      "forward_ms": [
+        36.18090000236407,
+        33.73730000021169,
+        33.856800000648946,
+        32.035099997301586,
+        36.55750000325497,
+        35.410799995588604,
+        47.827100002905354
+      ],
+      "backward_ms": [
+        53.85589999787044,
+        50.26289999659639,
+        56.561199999123346,
+        61.07060000067577,
+        51.705199999560136,
+        53.53150000155438,
+        54.14780000137398
+      ],
+      "median_forward_ms": 35.410799995588604,
+      "median_backward_ms": 53.85589999787044
+    },
+    {
+      "agents": 10,
+      "partners": 9,
+      "contexts": 512,
+      "model": "Graph",
+      "width_kind": "fixed8",
+      "input_width": 8,
+      "parameters": 48928,
+      "parameter_bytes": 195712,
+      "registered_buffer_bytes": 3186724,
+      "input_bytes": 1048576,
+      "constructor_seconds": 0.020300700001826044,
+      "forward_ms": [
+        77.60559999587713,
+        78.35379999596626,
+        81.40990000538295,
+        78.88400000229012,
+        94.4208999935654,
+        77.60110000526765,
+        78.94870000018273
+      ],
+      "backward_ms": [
+        108.24249999859603,
+        111.14810000435682,
+        115.66239999956451,
+        118.26479999581352,
+        113.91700000240235,
+        114.92929999803891,
+        118.20520000037504
+      ],
+      "median_forward_ms": 78.88400000229012,
+      "median_backward_ms": 114.92929999803891
+    },
+    {
+      "agents": 10,
+      "partners": 9,
+      "contexts": 512,
+      "model": "Simple",
+      "width_kind": "two_per_agent",
+      "input_width": 20,
+      "parameters": 34900,
+      "parameter_bytes": 139600,
+      "registered_buffer_bytes": 2117632,
+      "input_bytes": 2621440,
+      "constructor_seconds": 0.01956600000266917,
+      "forward_ms": [
+        54.84920000162674,
+        52.569300001778174,
+        54.473100004543085,
+        48.36020000220742,
+        49.43199999979697,
+        50.30280000210041,
+        49.706899997545406
+      ],
+      "backward_ms": [
+        60.85949999396689,
+        71.64339999872027,
+        64.48709999676794,
+        71.62129999778699,
+        65.36290000076406,
+        66.58910000260221,
+        69.08819999807747
+      ],
+      "median_forward_ms": 50.30280000210041,
+      "median_backward_ms": 66.58910000260221
+    },
+    {
+      "agents": 10,
+      "partners": 9,
+      "contexts": 512,
+      "model": "Graph",
+      "width_kind": "two_per_agent",
+      "input_width": 20,
+      "parameters": 52012,
+      "parameter_bytes": 208048,
+      "registered_buffer_bytes": 3186724,
+      "input_bytes": 2621440,
+      "constructor_seconds": 0.020808799999940675,
+      "forward_ms": [
+        121.36800000007497,
+        124.95119999948656,
+        135.4594000003999,
+        116.71329999808222,
+        116.66600000171456,
+        119.67210000148043,
+        105.81220000312896
+      ],
+      "backward_ms": [
+        147.98180000070715,
+        135.38059999700636,
+        181.61369999870658,
+        148.82500000385335,
+        168.87979999592062,
+        152.54159999312833,
+        153.30230000108713
+      ],
+      "median_forward_ms": 119.67210000148043,
+      "median_backward_ms": 152.54159999312833
+    }
+  ],
+  "environment_interface_checks": [
+    {
+      "agents": 4,
+      "landmarks": 4,
+      "position_shape": [
+        4,
+        2
+      ],
+      "motion_l2": 0.48353835940361023,
+      "passed": true,
+      "scope": "four teacher-forced steps; no trained policy"
+    },
+    {
+      "agents": 6,
+      "landmarks": 6,
+      "position_shape": [
+        6,
+        2
+      ],
+      "motion_l2": 1.1806482076644897,
+      "passed": true,
+      "scope": "four teacher-forced steps; no trained policy"
+    },
+    {
+      "agents": 8,
+      "landmarks": 8,
+      "position_shape": [
+        8,
+        2
+      ],
+      "motion_l2": 1.1640552282333374,
+      "passed": true,
+      "scope": "four teacher-forced steps; no trained policy"
+    },
+    {
+      "agents": 10,
+      "landmarks": 10,
+      "position_shape": [
+        10,
+        2
+      ],
+      "motion_l2": 1.26971435546875,
+      "passed": true,
+      "scope": "four teacher-forced steps; no trained policy"
+    }
+  ],
+  "analytical": [
+    {
+      "partners": 3,
+      "contexts": 8,
+      "one_dense_float32_matrix_bytes": 256,
+      "mobius_plus_zeta_bytes": 512
+    },
+    {
+      "partners": 5,
+      "contexts": 32,
+      "one_dense_float32_matrix_bytes": 4096,
+      "mobius_plus_zeta_bytes": 8192
+    },
+    {
+      "partners": 7,
+      "contexts": 128,
+      "one_dense_float32_matrix_bytes": 65536,
+      "mobius_plus_zeta_bytes": 131072
+    },
+    {
+      "partners": 9,
+      "contexts": 512,
+      "one_dense_float32_matrix_bytes": 1048576,
+      "mobius_plus_zeta_bytes": 2097152
+    },
+    {
+      "partners": 10,
+      "contexts": 1024,
+      "one_dense_float32_matrix_bytes": 4194304,
+      "mobius_plus_zeta_bytes": 8388608
+    },
+    {
+      "partners": 20,
+      "contexts": 1048576,
+      "one_dense_float32_matrix_bytes": 4398046511104,
+      "mobius_plus_zeta_bytes": 8796093022208
+    }
+  ],
+  "source_checks": true,
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "torch": "2.13.0+cu130",
+  "device": "cpu",
+  "threads": 1,
+  "concurrency_note": "Other GPU experiment may contend for host CPU; timing descriptive, not a hardware-normalized leaderboard. Model initialization and matrix factorization measured separately; end-to-end table construction/history/decoder/simulator not timed."
+}

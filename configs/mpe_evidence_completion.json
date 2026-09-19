@@ -1,0 +1,21 @@
+{
+  "protocol": "mpe_temporal_evidence_completion_v1",
+  "source_run": "outputs/mpe_temporal_full_scale_5seeds",
+  "full_n": 700,
+  "scales": [32, 175],
+  "scaling_budget": 32,
+  "budgets": [8, 16, 32, 64, 128, 256],
+  "parallel": 4,
+  "overrides": {},
+  "full_original_arms": ["edge_h2", "edge_h3", "edge_h3_root", "tree"],
+  "scaling_original_arms": ["edge_h2", "edge_h3"],
+  "new_control_configs": ["edge_h2", "edge_h3", "tree", "base+edge_h2", "base+edge_h3", "base+tree", "base+edge_h3_root", "base+simple_raw"],
+  "scaling_control_configs": ["base", "lapo", "laom", "base+global16", "base+edge_h2", "base+edge_h3", "base+simple", "base+graph", "base+mif"],
+  "probe_methods": ["base", "lapo", "laom", "global16", "simple", "simple_raw", "graph", "graph_raw", "graph_complement", "mif", "mif_raw", "edge_h2", "edge_h3", "edge_h3_root", "tree"],
+  "probe_auxiliaries": ["simple", "graph", "mif", "global16", "edge_h2", "edge_h3", "tree"],
+  "probe_fit_transitions": 4096,
+  "donor_episodes": 64,
+  "donor_seed_start": 97330000,
+  "new_primary_contrasts": [["base+simple", "base+simple_raw"], ["base+edge_h3", "base+edge_h3_root"]],
+  "limits": "Fixed five seeds and full grids; no outcome-dependent stopping. New structure tests form a separate two-test family; nine N-scaling comparisons form a nine-test family. Prior three primary tests remain unchanged. No new held-out task or universal advantage claim."
+}

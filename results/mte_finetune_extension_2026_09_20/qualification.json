@@ -1,0 +1,503 @@
+{
+  "passed": true,
+  "smokes": 9,
+  "frozen_parities": 45,
+  "episode_replays": 45,
+  "checks": [
+    {
+      "job": [
+        "parity",
+        "visual",
+        908711,
+        "simple_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908711,
+        "simple_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908711,
+        "graph_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908711,
+        "graph_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908711,
+        "tree_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908711,
+        "tree_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908712,
+        "simple_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908712,
+        "simple_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908712,
+        "graph_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908712,
+        "graph_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908712,
+        "tree_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908712,
+        "tree_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908713,
+        "simple_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908713,
+        "simple_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908713,
+        "graph_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908713,
+        "graph_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908713,
+        "tree_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908713,
+        "tree_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908714,
+        "simple_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908714,
+        "simple_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908714,
+        "graph_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908714,
+        "graph_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908714,
+        "tree_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908714,
+        "tree_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908715,
+        "simple_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908715,
+        "simple_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908715,
+        "graph_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908715,
+        "graph_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908715,
+        "tree_solo_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "visual",
+        908715,
+        "tree_aux_pretrained_frozen",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        0,
+        "simple_matched",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        0,
+        "graph_matched",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        0,
+        "mif_native",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        1,
+        "simple_matched",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        1,
+        "graph_matched",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        1,
+        "mif_native",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        2,
+        "simple_matched",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        2,
+        "graph_matched",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        2,
+        "mif_native",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        3,
+        "simple_matched",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        3,
+        "graph_matched",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        3,
+        "mif_native",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        4,
+        "simple_matched",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        4,
+        "graph_matched",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    },
+    {
+      "job": [
+        "parity",
+        "mamujoco",
+        4,
+        "mif_native",
+        "ground"
+      ],
+      "decoder_max_abs": 0.0,
+      "passed": true
+    }
+  ]
+}

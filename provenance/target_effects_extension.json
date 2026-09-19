@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-17",
+  "role": "Evaluation-only extension for first three review priorities",
+  "new_files": [
+    "experiments/target_effects.py",
+    "environments/effect_evaluation.py",
+    "evaluation/effect_statistics.py",
+    "evaluation/frozen_effect_models.py",
+    "evaluation/report_target_effects.py",
+    "configs/target_effects_pilot.json",
+    "configs/target_effects_development.json",
+    "tests/check_target_effects.py",
+    "docs/target_effects_experiments.md"
+  ],
+  "method_definitions_changed": false,
+  "original_formal_results_changed": false,
+  "pretraining_simulator_or_action_access_added": false,
+  "read_only_source_reuse": {
+    "snapshots": "closed_loop_lam_v1/mamujoco_env.py snapshot/restore semantics; environments/native_particle.py original snapshot/restore",
+    "models": "existing bundled common/unified_models classes; archived route and repaired formal checkpoints"
+  },
+  "verification": [
+    "foundation PASS 11",
+    "imports PASS 48",
+    "grounding contract PASS MPE1000/Ma800",
+    "analytic edge and interaction sign PASS",
+    "reader test-label independence PASS",
+    "MPE action-pulse and exact replay PASS",
+    "MPE/Ma24episode pilot complete; 2 upstream seeds each",
+    "MPE/Ma96episode expansion complete; 2 upstream seeds each",
+    "all 19 source artifacts per suite unchanged"
+  ],
+  "run_location": "outputs/target_effects_development_2026_09_17",
+  "result_scope": "fixed development diagnostics, no retraining or confirmatory control claims",
+  "known_measurement_issue": "MPE position h1 effect zero because current force updates velocity after position; original inverse code unchanged",
+  "implementation_note": "After completed runs, added implementation source fingerprint export and explicit verification-step accounting for future runs. Completed simulator_steps counts collection/branch steps, excludes repeated verification steps; no score changes."
+}

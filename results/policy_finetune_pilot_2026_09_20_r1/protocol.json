@@ -1,0 +1,113 @@
+{
+  "name": "policy_finetune_pilot_2026_09_20_r1",
+  "workers": 4,
+  "visual": {
+    "seeds": [
+      908711,
+      908712,
+      908713,
+      908714,
+      908715
+    ],
+    "families": [
+      "lapo",
+      "laom"
+    ],
+    "compositions": [
+      "solo",
+      "aux"
+    ],
+    "budget": 2,
+    "updates": 600,
+    "evaluation_seeds": [
+      908601,
+      908602,
+      908603,
+      908604,
+      908605,
+      908606,
+      908607,
+      908608,
+      908609,
+      908610,
+      908611,
+      908612,
+      908613,
+      908614,
+      908615,
+      908616,
+      908617,
+      908618,
+      908619,
+      908620,
+      908621,
+      908622,
+      908623,
+      908624,
+      908625,
+      908626,
+      908627,
+      908628,
+      908629,
+      908630
+    ],
+    "primary_evaluation_seeds": [
+      908604,
+      908605,
+      908606,
+      908607,
+      908608,
+      908609,
+      908610,
+      908611,
+      908612,
+      908613,
+      908614,
+      908615,
+      908616,
+      908617,
+      908618,
+      908619,
+      908620,
+      908621,
+      908622,
+      908623,
+      908624,
+      908625,
+      908626,
+      908627,
+      908628,
+      908629,
+      908630
+    ],
+    "source": "outputs/visual_low_label_2026_09_19_r1",
+    "mif_reference": "outputs/visual_supervision_inventory_2026_09_19",
+    "scope": "Existing paper RGB state-adapter LAPO/LAOM policies; not official end-to-end pixel baseline reproduction"
+  },
+  "mpe": {
+    "seeds": [
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "methods": [
+      "base+graph",
+      "lapo",
+      "laom"
+    ],
+    "budget": 32,
+    "train_episodes": 700,
+    "updates": 1000,
+    "evaluation_seed_start": 97220000,
+    "evaluation_episodes": 100,
+    "source": "outputs/mpe_inventory_completion_2026_09_18",
+    "selection": "Same budget-internal validation episodes 0,4,...,28 and evaluation every 25 updates; same fit/val split and decoder RNG as original. Joint history/decoder checkpoint selected together."
+  },
+  "new_evaluations": 35,
+  "reused_frozen_controls": 35,
+  "qualification": "7 two-update smokes; 35 frozen weight/fit parity checks; 35 common-episode replays before new full training; all new grounding frozen before evaluation",
+  "statistics": "Exploratory fixed-budget pilot; paired five upstream seeds. Visual four within-arm finetuning gains one Holm family; MPE three gains another. MIF/BC and between-method comparisons descriptive. Report all signs, t95 and exact two-sided sign-flip p; min p=.0625.",
+  "scope": "No new frontends, latent encoder training, action labels, tasks or agent counts; observation-only upstream checkpoints unchanged. Downstream history plus decoder supervised adaptation only. No performance-dependent tuning or seed selection."
+}

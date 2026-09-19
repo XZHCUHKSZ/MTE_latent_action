@@ -5,3 +5,7 @@ local_assets/
 *.pt
 *.npz
 *.npy
+.venv*/
+*.log
+.env
+.env.*

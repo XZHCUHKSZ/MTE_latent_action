@@ -1,0 +1,21 @@
+{
+  "protocol":"mpe_matching_input_control_v1",
+  "source_run":"outputs/mpe_evidence_completion_2026_09_18/n700",
+  "seeds":[45,46,47,48,49],
+  "arms":["matched","context_mismatch","endpoints"],
+  "train_episodes":700,
+  "dev_episodes":150,
+  "budgets":[32],
+  "representation_updates":3200,
+  "representation_batch":64,
+  "history_updates":1200,
+  "decoder_updates":1000,
+  "evaluation_seed_start":97220000,
+  "evaluation_episodes":100,
+  "parallel_pretrain":2,
+  "parallel_ground":4,
+  "threads_per_process":2,
+  "primary_contrasts":[["base+matched","base+context_mismatch"],["base+matched","base+endpoints"]],
+  "primary_metric":"Paired per-upstream-seed mean control return, equal B32, two comparisons in one Holm family; exact two-sided sign permutation and t95 intervals. No adaptive enlargement or winner selection.",
+  "scope":"Mechanism control using unchanged Graph class with 16 input coordinates (two endpoint vectors), common endpoint reconstruction target and paired initialization. All arms retain identical endpoint information invertibly. Tests explicit matched differencing as an inductive bias, not a full removal of MTE, and does not replace original Graph8 main results. Reuses development data and evaluation episodes; not an independent task confirmation."
+}

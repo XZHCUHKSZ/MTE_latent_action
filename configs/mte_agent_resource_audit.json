@@ -1,0 +1,30 @@
+{
+  "name": "mte_agent_resource_audit_2026_09_19",
+  "agent_counts": [
+    4,
+    6,
+    8,
+    10
+  ],
+  "batch": 64,
+  "latent_dim": 16,
+  "hidden": 128,
+  "layers": 2,
+  "threads": 1,
+  "warmups": 2,
+  "repeats": 7,
+  "seed": 20260919,
+  "input_widths": [
+    "fixed8",
+    "two_per_agent"
+  ],
+  "scope": "CPU encoder-only synthetic-table resource measurement and environment stepping qualification; no learned multi-agent control performance",
+  "analytical_partner_counts": [
+    3,
+    5,
+    7,
+    9,
+    10,
+    20
+  ]
+}

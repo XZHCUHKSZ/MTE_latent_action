@@ -1,0 +1,22 @@
+{
+  "protocol": "mpe_frozen_partner_shift_v1",
+  "inventory": "outputs/mpe_inventory_completion_2026_09_18/summary.json",
+  "structural_sources": {"base+graph_raw": "outputs/mpe_temporal_full_scale_5seeds/seed{seed}/grounding/budget_32/b32_base__graph_raw.json"},
+  "n": 700,
+  "budget": 32,
+  "training_seeds": [45, 46, 47, 48, 49],
+  "methods": ["base+graph", "base+mif", "base+simple", "base+tree", "edge_h3", "base", "base+global16", "base+graph_raw", "lapo", "laom", "bc"],
+  "conditions": ["identity", "slow_0.5", "rotate_plus30", "rotate_minus30"],
+  "episode_seed_start": 97920000,
+  "episodes": 64,
+  "steps": 23,
+  "workers": 4,
+  "primary_method": "base+graph",
+  "primary_comparators": ["base", "base+global16", "base+graph_raw", "lapo", "laom"],
+  "primary_metric": "Mean return over all three nonidentity shifts within training seed, paired differences across five seeds",
+  "statistics": "Paired mean and t95 interval; exact two-sided sign-flip p, Holm over five primary contrasts. Five units cannot yield exact two-sided p below 0.0625; no guarantee of significance.",
+  "secondary": ["each condition", "coverage", "collisions", "change from identity", "all prespecified methods", "teacher/random reference difficulty"],
+  "training_updates": 0,
+  "scope": "Predeclared frozen-policy robustness evaluation on controlled partner-policy transforms and fresh rollout seeds. Existing training datasets and checkpoints; not new training seeds, new task, or unseen agent identity. No fine-tuning or selection from these results.",
+  "output": "outputs/mpe_partner_shift_2026_09_18_r1"
+}

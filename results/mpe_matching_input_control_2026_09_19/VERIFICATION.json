@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "unique_control_units": 15,
+  "evaluation_episodes_per_unit": 100,
+  "source_hashes_verified": 100,
+  "frozen_weights_verified": 35,
+  "paired_parameter_count": 49624,
+  "paired_checks": [
+    "parameters",
+    "init_hash",
+    "normalization_hash",
+    "target_hash",
+    "batch_hash"
+  ],
+  "seed_audits_without_violations": 5,
+  "zero_pretraining_action_labels": true,
+  "zero_pretraining_simulator_queries": true,
+  "independent_statistics_recalculated": true,
+  "foundation_verifier": "PASS (11 files)",
+  "source_summary_sha256": "acccf9b21caf1437215c578dc93171502963618f6f163afc340cc76ff56e4f16",
+  "paper_updated": false
+}

@@ -1,0 +1,1629 @@
+{
+  "records": [
+    {
+      "seed": 908711,
+      "family": "simple",
+      "mode": "frozen",
+      "mean_return": -4.002770191614977,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908711\\b2\\evaluate_anchor_plus_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "simple",
+      "mode": "baseonly",
+      "mean_return": 40.354940030767885,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908711\\evaluate_simple_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "simple",
+      "mode": "auxonly",
+      "mean_return": 54.850694004781815,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908711\\evaluate_simple_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "simple",
+      "mode": "trainable",
+      "mean_return": 69.46230970688028,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908711\\evaluate_simple_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "graph",
+      "mode": "frozen",
+      "mean_return": 39.15508204631803,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908711\\b2\\evaluate_anchor_plus_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "graph",
+      "mode": "baseonly",
+      "mean_return": 132.59857931662955,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908711\\evaluate_graph_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "graph",
+      "mode": "auxonly",
+      "mean_return": 57.99992376936957,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908711\\evaluate_graph_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "graph",
+      "mode": "trainable",
+      "mean_return": 82.11078284959662,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908711\\evaluate_graph_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "tree",
+      "mode": "frozen",
+      "mean_return": 22.053893373618713,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908711\\b2\\evaluate_anchor_plus_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "tree",
+      "mode": "baseonly",
+      "mean_return": 60.73678902779697,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908711\\evaluate_tree_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "tree",
+      "mode": "auxonly",
+      "mean_return": 75.00348908027985,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908711\\evaluate_tree_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "tree",
+      "mode": "trainable",
+      "mean_return": 106.76021861396192,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908711\\evaluate_tree_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "mif",
+      "mode": "frozen",
+      "mean_return": 87.35544574632006,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_low_label_2026_09_19_r1\\formal\\seed908711\\b2\\evaluate_anchor_plus_edge_cara_mif\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "mif",
+      "mode": "baseonly",
+      "mean_return": 109.22025182971714,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908711\\evaluate_mif_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "mif",
+      "mode": "auxonly",
+      "mean_return": 139.95227669778365,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908711\\evaluate_mif_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "mif",
+      "mode": "trainable",
+      "mean_return": 130.52779323736706,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908711\\b2\\evaluate_mif_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "laom",
+      "mode": "frozen",
+      "mean_return": 35.180962268213555,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_low_label_2026_09_19_r1\\formal\\seed908711\\b2\\evaluate_anchor_plus_laom_state_adapter\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "laom",
+      "mode": "baseonly",
+      "mean_return": 125.59607878743253,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908711\\evaluate_laom_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "laom",
+      "mode": "auxonly",
+      "mean_return": 117.77676214244202,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908711\\evaluate_laom_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908711,
+      "family": "laom",
+      "mode": "trainable",
+      "mean_return": 97.90097663178939,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\policy_finetune_pilot_2026_09_20_r1\\formal\\visual\\seed908711\\evaluate_laom_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "simple",
+      "mode": "frozen",
+      "mean_return": 82.2171968482233,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908712\\b2\\evaluate_anchor_plus_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "simple",
+      "mode": "baseonly",
+      "mean_return": 101.85217909412798,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908712\\evaluate_simple_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "simple",
+      "mode": "auxonly",
+      "mean_return": 37.007432036601074,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908712\\evaluate_simple_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "simple",
+      "mode": "trainable",
+      "mean_return": 102.99525345846735,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908712\\evaluate_simple_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "graph",
+      "mode": "frozen",
+      "mean_return": 51.793106890806214,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908712\\b2\\evaluate_anchor_plus_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "graph",
+      "mode": "baseonly",
+      "mean_return": 62.91539616810695,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908712\\evaluate_graph_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "graph",
+      "mode": "auxonly",
+      "mean_return": 73.35755213149803,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908712\\evaluate_graph_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "graph",
+      "mode": "trainable",
+      "mean_return": 64.46229743433207,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908712\\evaluate_graph_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "tree",
+      "mode": "frozen",
+      "mean_return": 77.44627981880707,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908712\\b2\\evaluate_anchor_plus_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "tree",
+      "mode": "baseonly",
+      "mean_return": 72.51031182255987,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908712\\evaluate_tree_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "tree",
+      "mode": "auxonly",
+      "mean_return": 75.0573881965903,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908712\\evaluate_tree_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "tree",
+      "mode": "trainable",
+      "mean_return": 105.61104856708945,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908712\\evaluate_tree_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "mif",
+      "mode": "frozen",
+      "mean_return": 112.55708732029585,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_low_label_2026_09_19_r1\\formal\\seed908712\\b2\\evaluate_anchor_plus_edge_cara_mif\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "mif",
+      "mode": "baseonly",
+      "mean_return": 128.53980443082853,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908712\\evaluate_mif_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "mif",
+      "mode": "auxonly",
+      "mean_return": 93.6007128644395,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908712\\evaluate_mif_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "mif",
+      "mode": "trainable",
+      "mean_return": 105.7671406395489,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908712\\b2\\evaluate_mif_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "laom",
+      "mode": "frozen",
+      "mean_return": 64.36404023830622,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_low_label_2026_09_19_r1\\formal\\seed908712\\b2\\evaluate_anchor_plus_laom_state_adapter\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "laom",
+      "mode": "baseonly",
+      "mean_return": 86.02114591154007,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908712\\evaluate_laom_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "laom",
+      "mode": "auxonly",
+      "mean_return": 69.2849231891926,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908712\\evaluate_laom_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908712,
+      "family": "laom",
+      "mode": "trainable",
+      "mean_return": 77.75117264806653,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\policy_finetune_pilot_2026_09_20_r1\\formal\\visual\\seed908712\\evaluate_laom_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "simple",
+      "mode": "frozen",
+      "mean_return": 50.67969677198998,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908713\\b2\\evaluate_anchor_plus_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "simple",
+      "mode": "baseonly",
+      "mean_return": 173.78386403488824,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908713\\evaluate_simple_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "simple",
+      "mode": "auxonly",
+      "mean_return": 151.30592458322693,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908713\\evaluate_simple_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "simple",
+      "mode": "trainable",
+      "mean_return": 118.7608416990546,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908713\\evaluate_simple_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "graph",
+      "mode": "frozen",
+      "mean_return": 30.80378611060828,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908713\\b2\\evaluate_anchor_plus_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "graph",
+      "mode": "baseonly",
+      "mean_return": 109.90155435294538,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908713\\evaluate_graph_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "graph",
+      "mode": "auxonly",
+      "mean_return": 127.02718593198597,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908713\\evaluate_graph_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "graph",
+      "mode": "trainable",
+      "mean_return": 102.16725243455676,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908713\\evaluate_graph_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "tree",
+      "mode": "frozen",
+      "mean_return": 47.47042252296242,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908713\\b2\\evaluate_anchor_plus_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "tree",
+      "mode": "baseonly",
+      "mean_return": 79.03203044194379,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908713\\evaluate_tree_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "tree",
+      "mode": "auxonly",
+      "mean_return": 21.67218500551499,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908713\\evaluate_tree_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "tree",
+      "mode": "trainable",
+      "mean_return": 147.83841733736028,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908713\\evaluate_tree_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "mif",
+      "mode": "frozen",
+      "mean_return": 74.29679312264813,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_low_label_2026_09_19_r1\\formal\\seed908713\\b2\\evaluate_anchor_plus_edge_cara_mif\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "mif",
+      "mode": "baseonly",
+      "mean_return": 140.98466523491146,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908713\\evaluate_mif_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "mif",
+      "mode": "auxonly",
+      "mean_return": 86.03566585304515,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908713\\evaluate_mif_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "mif",
+      "mode": "trainable",
+      "mean_return": 71.95861390318007,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908713\\b2\\evaluate_mif_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "laom",
+      "mode": "frozen",
+      "mean_return": 52.05440093556507,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_low_label_2026_09_19_r1\\formal\\seed908713\\b2\\evaluate_anchor_plus_laom_state_adapter\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "laom",
+      "mode": "baseonly",
+      "mean_return": 73.26565246026718,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908713\\evaluate_laom_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "laom",
+      "mode": "auxonly",
+      "mean_return": 102.89511566998914,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908713\\evaluate_laom_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908713,
+      "family": "laom",
+      "mode": "trainable",
+      "mean_return": 120.55382899114878,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\policy_finetune_pilot_2026_09_20_r1\\formal\\visual\\seed908713\\evaluate_laom_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "simple",
+      "mode": "frozen",
+      "mean_return": 102.11939333622492,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908714\\b2\\evaluate_anchor_plus_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "simple",
+      "mode": "baseonly",
+      "mean_return": 105.8043086493086,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908714\\evaluate_simple_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "simple",
+      "mode": "auxonly",
+      "mean_return": 81.61094411268257,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908714\\evaluate_simple_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "simple",
+      "mode": "trainable",
+      "mean_return": 129.42235282106972,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908714\\evaluate_simple_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "graph",
+      "mode": "frozen",
+      "mean_return": 88.02171326938245,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908714\\b2\\evaluate_anchor_plus_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "graph",
+      "mode": "baseonly",
+      "mean_return": 119.430648476446,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908714\\evaluate_graph_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "graph",
+      "mode": "auxonly",
+      "mean_return": 60.47606774839554,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908714\\evaluate_graph_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "graph",
+      "mode": "trainable",
+      "mean_return": 120.51268175389215,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908714\\evaluate_graph_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "tree",
+      "mode": "frozen",
+      "mean_return": 83.39046219772148,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908714\\b2\\evaluate_anchor_plus_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "tree",
+      "mode": "baseonly",
+      "mean_return": 134.78860059891238,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908714\\evaluate_tree_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "tree",
+      "mode": "auxonly",
+      "mean_return": 91.77356503100017,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908714\\evaluate_tree_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "tree",
+      "mode": "trainable",
+      "mean_return": 109.22105061643161,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908714\\evaluate_tree_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "mif",
+      "mode": "frozen",
+      "mean_return": 37.510261587781606,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_low_label_2026_09_19_r1\\formal\\seed908714\\b2\\evaluate_anchor_plus_edge_cara_mif\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "mif",
+      "mode": "baseonly",
+      "mean_return": 67.98743688115682,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908714\\evaluate_mif_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "mif",
+      "mode": "auxonly",
+      "mean_return": 91.09052616291137,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908714\\evaluate_mif_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "mif",
+      "mode": "trainable",
+      "mean_return": 143.5241612295067,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908714\\b2\\evaluate_mif_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "laom",
+      "mode": "frozen",
+      "mean_return": 86.85309303988095,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_low_label_2026_09_19_r1\\formal\\seed908714\\b2\\evaluate_anchor_plus_laom_state_adapter\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "laom",
+      "mode": "baseonly",
+      "mean_return": 88.35295883624849,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908714\\evaluate_laom_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "laom",
+      "mode": "auxonly",
+      "mean_return": 105.1054124996498,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908714\\evaluate_laom_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908714,
+      "family": "laom",
+      "mode": "trainable",
+      "mean_return": 94.00286101686903,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\policy_finetune_pilot_2026_09_20_r1\\formal\\visual\\seed908714\\evaluate_laom_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "simple",
+      "mode": "frozen",
+      "mean_return": 93.54174990826759,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908715\\b2\\evaluate_anchor_plus_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "simple",
+      "mode": "baseonly",
+      "mean_return": 163.48327256128727,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908715\\evaluate_simple_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "simple",
+      "mode": "auxonly",
+      "mean_return": 89.88635394739802,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908715\\evaluate_simple_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "simple",
+      "mode": "trainable",
+      "mean_return": 117.72892416124103,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908715\\evaluate_simple_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "graph",
+      "mode": "frozen",
+      "mean_return": 78.25845600908394,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908715\\b2\\evaluate_anchor_plus_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "graph",
+      "mode": "baseonly",
+      "mean_return": 135.82591787466296,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908715\\evaluate_graph_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "graph",
+      "mode": "auxonly",
+      "mean_return": 80.50471575015398,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908715\\evaluate_graph_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "graph",
+      "mode": "trainable",
+      "mean_return": 96.86554533994033,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908715\\evaluate_graph_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "tree",
+      "mode": "frozen",
+      "mean_return": 93.70255753154053,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908715\\b2\\evaluate_anchor_plus_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "tree",
+      "mode": "baseonly",
+      "mean_return": 120.53331172171748,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908715\\evaluate_tree_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "tree",
+      "mode": "auxonly",
+      "mean_return": 149.2731565735076,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908715\\evaluate_tree_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "tree",
+      "mode": "trainable",
+      "mean_return": 136.36330297584203,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\mte_finetune_extension_2026_09_20\\formal\\visual\\seed908715\\evaluate_tree_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "mif",
+      "mode": "frozen",
+      "mean_return": 73.62009731441236,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_low_label_2026_09_19_r1\\formal\\seed908715\\b2\\evaluate_anchor_plus_edge_cara_mif\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "mif",
+      "mode": "baseonly",
+      "mean_return": 119.37972851781514,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908715\\evaluate_mif_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "mif",
+      "mode": "auxonly",
+      "mean_return": 106.83783740807115,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908715\\evaluate_mif_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "mif",
+      "mode": "trainable",
+      "mean_return": 121.46905932960073,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908715\\b2\\evaluate_mif_aux_pretrained_trainable\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "laom",
+      "mode": "frozen",
+      "mean_return": 18.135973647068493,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\visual_low_label_2026_09_19_r1\\formal\\seed908715\\b2\\evaluate_anchor_plus_laom_state_adapter\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "laom",
+      "mode": "baseonly",
+      "mean_return": 99.3384070974708,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908715\\evaluate_laom_aux_pretrained_baseonly\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "laom",
+      "mode": "auxonly",
+      "mean_return": 100.81920626888666,
+      "reused": false,
+      "source": "PACKAGE_ROOT\\outputs\\visual_branch_attribution_2026_09_20\\formal\\visual\\seed908715\\evaluate_laom_aux_pretrained_auxonly\\result.json"
+    },
+    {
+      "seed": 908715,
+      "family": "laom",
+      "mode": "trainable",
+      "mean_return": 82.5394841570519,
+      "reused": true,
+      "source": "PACKAGE_ROOT\\outputs\\policy_finetune_pilot_2026_09_20_r1\\formal\\visual\\seed908715\\evaluate_laom_aux_pretrained_trainable\\result.json"
+    }
+  ],
+  "contrasts": [
+    {
+      "family": "simple",
+      "name": "base_update",
+      "test_family": "branch_simple",
+      "mean": 52.144659539457834,
+      "seed_differences": [
+        44.35771022238286,
+        19.63498224590468,
+        123.10416726289826,
+        3.6849153130836783,
+        69.94152265301967
+      ],
+      "positive_seeds": 5,
+      "t95": [
+        -6.153556333998743,
+        110.44287541291442
+      ],
+      "exact_p": 0.0625,
+      "holm_p": 0.3125
+    },
+    {
+      "family": "simple",
+      "name": "aux_update",
+      "test_family": "branch_simple",
+      "mean": 18.02121640231992,
+      "seed_differences": [
+        58.85346419639679,
+        -45.20976481162222,
+        100.62622781123694,
+        -20.508449223542343,
+        -3.655395960869569
+      ],
+      "positive_seeds": 2,
+      "t95": [
+        -56.59087849888196,
+        92.63331130352181
+      ],
+      "exact_p": 0.625,
+      "holm_p": 1.0
+    },
+    {
+      "family": "simple",
+      "name": "aux_update_given_base",
+      "test_family": "branch_simple",
+      "mean": -9.381776504733399,
+      "seed_differences": [
+        29.10736967611239,
+        1.1430743643393697,
+        -55.023022335833645,
+        23.618044171761127,
+        -45.75434840004624
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -57.81965377036208,
+        39.056100760895276
+      ],
+      "exact_p": 0.625,
+      "holm_p": 1.0
+    },
+    {
+      "family": "simple",
+      "name": "base_update_given_aux",
+      "test_family": "branch_simple",
+      "mean": 24.74166663240451,
+      "seed_differences": [
+        14.611615702098462,
+        65.98782142186627,
+        -32.54508288417233,
+        47.81140870838715,
+        27.842570213843004
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        -21.83092827118525,
+        71.31426153599426
+      ],
+      "exact_p": 0.25,
+      "holm_p": 1.0
+    },
+    {
+      "family": "simple",
+      "name": "interaction",
+      "test_family": "branch_simple",
+      "mean": -27.402992907053317,
+      "seed_differences": [
+        -29.7460945202844,
+        46.35283917596159,
+        -155.64925014707057,
+        44.12649339530347,
+        -42.09895243917667
+      ],
+      "positive_seeds": 2,
+      "t95": [
+        -129.84018626517047,
+        75.03420045106382
+      ],
+      "exact_p": 0.6875,
+      "holm_p": 1.0
+    },
+    {
+      "family": "graph",
+      "name": "base_update",
+      "test_family": "branch_graph",
+      "mean": 54.52799037251839,
+      "seed_differences": [
+        93.44349727031152,
+        11.122289277300737,
+        79.09776824233711,
+        31.40893520706355,
+        57.56746186557902
+      ],
+      "positive_seeds": 5,
+      "t95": [
+        12.669571334960324,
+        96.38640941007645
+      ],
+      "exact_p": 0.0625,
+      "holm_p": 0.3125
+    },
+    {
+      "family": "graph",
+      "name": "aux_update",
+      "test_family": "branch_graph",
+      "mean": 22.266660201040835,
+      "seed_differences": [
+        18.844841723051545,
+        21.56444524069181,
+        96.22339982137768,
+        -27.545645520986902,
+        2.246259741070034
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        -34.51107712888373,
+        79.0443975309654
+      ],
+      "exact_p": 0.4375,
+      "holm_p": 0.875
+    },
+    {
+      "family": "graph",
+      "name": "aux_update_given_base",
+      "test_family": "branch_graph",
+      "mean": -18.910707275294584,
+      "seed_differences": [
+        -50.487796467032936,
+        1.5469012662251203,
+        -7.734301918388624,
+        1.0820332774461576,
+        -38.96037253472264
+      ],
+      "positive_seeds": 2,
+      "t95": [
+        -48.956905008487745,
+        11.135490457898577
+      ],
+      "exact_p": 0.25,
+      "holm_p": 0.75
+    },
+    {
+      "family": "graph",
+      "name": "base_update_given_aux",
+      "test_family": "branch_graph",
+      "mean": 13.350622896182966,
+      "seed_differences": [
+        24.110859080227044,
+        -8.895254697165953,
+        -24.85993349742921,
+        60.03661400549661,
+        16.36082958978635
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -27.167174938582175,
+        53.8684207309481
+      ],
+      "exact_p": 0.5,
+      "holm_p": 0.875
+    },
+    {
+      "family": "graph",
+      "name": "interaction",
+      "test_family": "branch_graph",
+      "mean": -41.17736747633542,
+      "seed_differences": [
+        -69.33263819008448,
+        -20.01754397446669,
+        -103.95770173976632,
+        28.62767879843306,
+        -41.20663227579267
+      ],
+      "positive_seeds": 1,
+      "t95": [
+        -103.42974056298692,
+        21.075005610316083
+      ],
+      "exact_p": 0.1875,
+      "holm_p": 0.75
+    },
+    {
+      "family": "tree",
+      "name": "base_update",
+      "test_family": "branch_tree",
+      "mean": 28.707485633656052,
+      "seed_differences": [
+        38.68289565417826,
+        -4.9359679962472,
+        31.561607918981366,
+        51.398138401190906,
+        26.830754190176947
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        2.6774825532658717,
+        54.737488714046236
+      ],
+      "exact_p": 0.125,
+      "holm_p": 0.625
+    },
+    {
+      "family": "tree",
+      "name": "aux_update",
+      "test_family": "branch_tree",
+      "mean": 17.743233688448537,
+      "seed_differences": [
+        52.949595706661135,
+        -2.388891622216775,
+        -25.798237517447433,
+        8.383102833278699,
+        55.57059904196707
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -26.41521460593489,
+        61.90168198283196
+      ],
+      "exact_p": 0.375,
+      "holm_p": 0.75
+    },
+    {
+      "family": "tree",
+      "name": "aux_update_given_base",
+      "test_family": "branch_tree",
+      "mean": 27.638598899550963,
+      "seed_differences": [
+        46.02342958616495,
+        33.100736744529584,
+        68.8063868954165,
+        -25.56754998248077,
+        15.82999125412455
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        -16.40531297575842,
+        71.68251077486035
+      ],
+      "exact_p": 0.1875,
+      "holm_p": 0.625
+    },
+    {
+      "family": "tree",
+      "name": "base_update_given_aux",
+      "test_family": "branch_tree",
+      "mean": 38.60285084475847,
+      "seed_differences": [
+        31.756729533682076,
+        30.55366037049916,
+        126.1662323318453,
+        17.447485585431437,
+        -12.909853597665574
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        -26.154756292440645,
+        103.36045798195758
+      ],
+      "exact_p": 0.125,
+      "holm_p": 0.625
+    },
+    {
+      "family": "tree",
+      "name": "interaction",
+      "test_family": "branch_tree",
+      "mean": 9.89536521110242,
+      "seed_differences": [
+        -6.926166120496184,
+        35.48962836674636,
+        94.60462441286393,
+        -33.95065281575947,
+        -39.74060778784252
+      ],
+      "positive_seeds": 2,
+      "t95": [
+        -59.515462366925696,
+        79.30619278913053
+      ],
+      "exact_p": 0.8125,
+      "holm_p": 0.8125
+    },
+    {
+      "family": "mif",
+      "name": "base_update",
+      "test_family": "branch_mif",
+      "mean": 36.15444036059422,
+      "seed_differences": [
+        21.864806083397085,
+        15.982717110532676,
+        66.68787211226334,
+        30.47717529337522,
+        45.759631203402776
+      ],
+      "positive_seeds": 5,
+      "t95": [
+        10.79990511628041,
+        61.50897560490803
+      ],
+      "exact_p": 0.0625,
+      "holm_p": 0.3125
+    },
+    {
+      "family": "mif",
+      "name": "aux_update",
+      "test_family": "branch_mif",
+      "mean": 26.435466778958563,
+      "seed_differences": [
+        52.59683095146359,
+        -18.95637445585635,
+        11.73887273039702,
+        53.58026457512977,
+        33.21774009365879
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        -11.550449355680634,
+        64.42138291359777
+      ],
+      "exact_p": 0.1875,
+      "holm_p": 0.75
+    },
+    {
+      "family": "mif",
+      "name": "aux_update_given_base",
+      "test_family": "branch_mif",
+      "mean": 1.42697628895487,
+      "seed_differences": [
+        21.30754140764992,
+        -22.772663791279626,
+        -69.0260513317314,
+        75.53672434834986,
+        2.0893308117855867
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -64.96775381275059,
+        67.82170639066034
+      ],
+      "exact_p": 0.875,
+      "holm_p": 0.875
+    },
+    {
+      "family": "mif",
+      "name": "base_update_given_aux",
+      "test_family": "branch_mif",
+      "mean": 11.145949870590524,
+      "seed_differences": [
+        -9.424483460416582,
+        12.166427775109398,
+        -14.07705194986508,
+        52.433635066595315,
+        14.631221921529573
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -21.571389878816323,
+        43.863289619997374
+      ],
+      "exact_p": 0.4375,
+      "holm_p": 0.875
+    },
+    {
+      "family": "mif",
+      "name": "interaction",
+      "test_family": "branch_mif",
+      "mean": -25.008490490003695,
+      "seed_differences": [
+        -31.289289543813666,
+        -3.816289335423278,
+        -80.76492406212842,
+        21.956459773220097,
+        -31.128409281873203
+      ],
+      "positive_seeds": 1,
+      "t95": [
+        -72.45442672885181,
+        22.437445748844425
+      ],
+      "exact_p": 0.1875,
+      "holm_p": 0.75
+    },
+    {
+      "family": "laom",
+      "name": "base_update",
+      "test_family": "branch_laom",
+      "mean": 43.19715459278496,
+      "seed_differences": [
+        90.41511651921897,
+        21.657105673233858,
+        21.211251524702107,
+        1.4998657963675441,
+        81.20243345040231
+      ],
+      "positive_seeds": 5,
+      "t95": [
+        -6.313777673485141,
+        92.70808685905507
+      ],
+      "exact_p": 0.0625,
+      "holm_p": 0.3125
+    },
+    {
+      "family": "laom",
+      "name": "aux_update",
+      "test_family": "branch_laom",
+      "mean": 47.858589928225186,
+      "seed_differences": [
+        82.59579987422848,
+        4.92088295088638,
+        50.84071473442407,
+        18.252319459768856,
+        82.68323262181816
+      ],
+      "positive_seeds": 5,
+      "t95": [
+        3.3119991176338317,
+        92.40518073881654
+      ],
+      "exact_p": 0.0625,
+      "holm_p": 0.3125
+    },
+    {
+      "family": "laom",
+      "name": "aux_update_given_base",
+      "test_family": "branch_laom",
+      "mean": 0.03481607039331038,
+      "seed_differences": [
+        -27.69510215564314,
+        -8.269973263473545,
+        47.2881765308816,
+        5.649902180620543,
+        -16.798922940418905
+      ],
+      "positive_seeds": 2,
+      "t95": [
+        -36.08940186501989,
+        36.15903400580651
+      ],
+      "exact_p": 1.0,
+      "holm_p": 1.0
+    },
+    {
+      "family": "laom",
+      "name": "base_update_given_aux",
+      "test_family": "branch_laom",
+      "mean": -4.626619265046918,
+      "seed_differences": [
+        -19.875785510652634,
+        8.466249458873932,
+        17.658713321159638,
+        -11.102551482780768,
+        -18.279722111834758
+      ],
+      "positive_seeds": 2,
+      "t95": [
+        -25.486401178781165,
+        16.233162648687326
+      ],
+      "exact_p": 0.5,
+      "holm_p": 1.0
+    },
+    {
+      "family": "laom",
+      "name": "interaction",
+      "test_family": "branch_laom",
+      "mean": -47.82377385783188,
+      "seed_differences": [
+        -110.2909020298716,
+        -13.190856214359926,
+        -3.5525382035424684,
+        -12.602417279148312,
+        -99.48215556223707
+      ],
+      "positive_seeds": 0,
+      "t95": [
+        -112.85027506539483,
+        17.202727349731063
+      ],
+      "exact_p": 0.0625,
+      "holm_p": 0.3125
+    },
+    {
+      "family": "simple",
+      "name": "minus_laom_frozen",
+      "test_family": "matched_non_mte_control",
+      "mean": 13.593359308811305,
+      "seed_differences": [
+        -39.18373245982853,
+        17.85315660991708,
+        -1.374704163575089,
+        15.266300296343971,
+        75.4057762611991
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -37.794071352277925,
+        64.98078996990053
+      ],
+      "exact_p": 0.625,
+      "holm_p": 1.0
+    },
+    {
+      "family": "simple",
+      "name": "minus_laom_baseonly",
+      "test_family": "matched_non_mte_control",
+      "mean": 22.540864255484177,
+      "seed_differences": [
+        -85.24113875666464,
+        15.831033182587902,
+        100.51821157462106,
+        17.451349813060105,
+        64.14486546381646
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        -64.15192753533711,
+        109.23365604630547
+      ],
+      "exact_p": 0.5,
+      "holm_p": 1.0
+    },
+    {
+      "family": "simple",
+      "name": "minus_laom_auxonly",
+      "test_family": "matched_non_mte_control",
+      "mean": -16.244014217093962,
+      "seed_differences": [
+        -62.92606813766021,
+        -32.27749115259152,
+        48.41080891323779,
+        -23.494468386967228,
+        -10.932852321488639
+      ],
+      "positive_seeds": 1,
+      "t95": [
+        -67.05110189812011,
+        34.563073463932184
+      ],
+      "exact_p": 0.4375,
+      "holm_p": 1.0
+    },
+    {
+      "family": "simple",
+      "name": "minus_laom_trainable",
+      "test_family": "matched_non_mte_control",
+      "mean": 13.124271680357467,
+      "seed_differences": [
+        -28.438666924909114,
+        25.244080810400817,
+        -1.7929872920941818,
+        35.41949180420069,
+        35.18944000418912
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -21.335208210806933,
+        47.583751571521866
+      ],
+      "exact_p": 0.375,
+      "holm_p": 1.0
+    },
+    {
+      "family": "graph",
+      "name": "minus_laom_frozen",
+      "test_family": "matched_non_mte_control",
+      "mean": 6.288734839432925,
+      "seed_differences": [
+        3.9741197781044733,
+        -12.570933347500002,
+        -21.25061482495679,
+        1.1686202295014994,
+        60.12248236201545
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -33.19026562000924,
+        45.767735298875095
+      ],
+      "exact_p": 0.8125,
+      "holm_p": 1.0
+    },
+    {
+      "family": "graph",
+      "name": "minus_laom_baseonly",
+      "test_family": "matched_non_mte_control",
+      "mean": 17.619570619166353,
+      "seed_differences": [
+        7.002500529197022,
+        -23.105749743433122,
+        36.635901892678206,
+        31.077689640197505,
+        36.487510777192156
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        -14.4601763842076,
+        49.699317622540306
+      ],
+      "exact_p": 0.1875,
+      "holm_p": 1.0
+    },
+    {
+      "family": "graph",
+      "name": "minus_laom_auxonly",
+      "test_family": "matched_non_mte_control",
+      "mean": -19.303194887751427,
+      "seed_differences": [
+        -59.77683837307245,
+        4.072628942305428,
+        24.13207026199683,
+        -44.62934475125426,
+        -20.314490518732683
+      ],
+      "positive_seeds": 2,
+      "t95": [
+        -61.926844303611986,
+        23.320454528109135
+      ],
+      "exact_p": 0.375,
+      "holm_p": 1.0
+    },
+    {
+      "family": "graph",
+      "name": "minus_laom_trainable",
+      "test_family": "matched_non_mte_control",
+      "mean": -1.3259527265215412,
+      "seed_differences": [
+        -15.790193782192773,
+        -13.288875213734457,
+        -18.38657655659202,
+        26.50982073702312,
+        14.326061182888424
+      ],
+      "positive_seeds": 2,
+      "t95": [
+        -26.64498948197513,
+        23.993084028932046
+      ],
+      "exact_p": 0.875,
+      "holm_p": 1.0
+    },
+    {
+      "family": "tree",
+      "name": "minus_laom_frozen",
+      "test_family": "matched_non_mte_control",
+      "mean": 13.495029063123187,
+      "seed_differences": [
+        -13.127068894594842,
+        13.082239580500854,
+        -4.583978412602647,
+        -3.46263084215947,
+        75.56658388447204
+      ],
+      "positive_seeds": 2,
+      "t95": [
+        -31.171221531871016,
+        58.161279658117394
+      ],
+      "exact_p": 0.75,
+      "holm_p": 1.0
+    },
+    {
+      "family": "tree",
+      "name": "minus_laom_baseonly",
+      "test_family": "matched_non_mte_control",
+      "mean": -0.9946398960057167,
+      "seed_differences": [
+        -64.85928975963556,
+        -13.510834088980204,
+        5.766377981676612,
+        46.43564176266389,
+        21.194904624246675
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -53.022685733673306,
+        51.033405941661876
+      ],
+      "exact_p": 1.0,
+      "holm_p": 1.0
+    },
+    {
+      "family": "tree",
+      "name": "minus_laom_auxonly",
+      "test_family": "matched_non_mte_control",
+      "mean": -16.62032717665346,
+      "seed_differences": [
+        -42.773273062162176,
+        5.772465007397699,
+        -81.22293066447415,
+        -13.331847468649627,
+        48.453950304620946
+      ],
+      "positive_seeds": 2,
+      "t95": [
+        -77.46308505806738,
+        44.22243070476045
+      ],
+      "exact_p": 0.5,
+      "holm_p": 1.0
+    },
+    {
+      "family": "tree",
+      "name": "minus_laom_trainable",
+      "test_family": "matched_non_mte_control",
+      "mean": 26.609142933151936,
+      "seed_differences": [
+        8.859241982172534,
+        27.859875919022926,
+        27.284588346211507,
+        15.218189599562578,
+        53.82381881879013
+      ],
+      "positive_seeds": 5,
+      "t95": [
+        5.215449300085453,
+        48.00283656621842
+      ],
+      "exact_p": 0.0625,
+      "holm_p": 1.0
+    },
+    {
+      "family": "mif",
+      "name": "minus_laom_frozen",
+      "test_family": "matched_non_mte_control",
+      "mean": 25.750242992484743,
+      "seed_differences": [
+        52.1744834781065,
+        48.19304708198963,
+        22.242392187083055,
+        -49.34283145209934,
+        55.484123667343866
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        -28.859328389957852,
+        80.35981437492734
+      ],
+      "exact_p": 0.25,
+      "holm_p": 1.0
+    },
+    {
+      "family": "mif",
+      "name": "minus_laom_baseonly",
+      "test_family": "matched_non_mte_control",
+      "mean": 18.707528760294004,
+      "seed_differences": [
+        -16.37582695771539,
+        42.51865851928845,
+        67.71901277464428,
+        -20.365521955091666,
+        20.04132142034433
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -28.280962944348637,
+        65.69602046493665
+      ],
+      "exact_p": 0.375,
+      "holm_p": 1.0
+    },
+    {
+      "family": "mif",
+      "name": "minus_laom_auxonly",
+      "test_family": "matched_non_mte_control",
+      "mean": 4.327119843218119,
+      "seed_differences": [
+        22.17551455534162,
+        24.315789675246904,
+        -16.859449816943993,
+        -14.014886336738428,
+        6.018631139184492
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -19.767827148052277,
+        28.42206683448851
+      ],
+      "exact_p": 0.6875,
+      "holm_p": 1.0
+    },
+    {
+      "family": "mif",
+      "name": "minus_laom_trainable",
+      "test_family": "matched_non_mte_control",
+      "mean": 20.09968897885556,
+      "seed_differences": [
+        32.62681660557767,
+        28.01596799148237,
+        -48.59521508796871,
+        49.521300212637655,
+        38.92957517254882
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        -28.621907618462835,
+        68.82128557617395
+      ],
+      "exact_p": 0.3125,
+      "holm_p": 1.0
+    }
+  ],
+  "new_results": 50,
+  "reused_results": 50,
+  "source_and_weight_checks": true
+}

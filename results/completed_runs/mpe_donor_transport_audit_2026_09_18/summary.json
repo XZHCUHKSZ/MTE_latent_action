@@ -1,0 +1,90 @@
+{
+  "rows": [
+    {
+      "seed": 45,
+      "truth_energy": 0.0005195593387186637,
+      "predicted_energy": 0.032816431945495085,
+      "cross_moment": 0.0001572586684805066,
+      "mse": 0.03302147394725274,
+      "rms_ratio": 7.947455448437183,
+      "energy_normalized_alignment": 0.03808476996235258,
+      "partner_true_effect_max": 0.0,
+      "partner_predicted_energy_fraction": 0.017427385602965487,
+      "target_code_transport_gap": 0.9949084852123633,
+      "partner_code_change": 0.0,
+      "history_distance": 4.027584635652602
+    },
+    {
+      "seed": 46,
+      "truth_energy": 0.0004996064314222196,
+      "predicted_energy": 0.030941262126947235,
+      "cross_moment": 7.50408415027671e-05,
+      "mse": 0.03129078687536392,
+      "rms_ratio": 7.869642473435251,
+      "energy_normalized_alignment": 0.01908598915938158,
+      "partner_true_effect_max": 0.0,
+      "partner_predicted_energy_fraction": 0.020130889781275845,
+      "target_code_transport_gap": 0.7569982383065508,
+      "partner_code_change": 0.0,
+      "history_distance": 4.1345467464998364
+    },
+    {
+      "seed": 47,
+      "truth_energy": 0.000534062543633451,
+      "predicted_energy": 0.02850953360216964,
+      "cross_moment": 5.318009928359969e-05,
+      "mse": 0.028937235947235893,
+      "rms_ratio": 7.306325164125322,
+      "energy_normalized_alignment": 0.013628812840238038,
+      "partner_true_effect_max": 0.0,
+      "partner_predicted_energy_fraction": 0.017435134774582833,
+      "target_code_transport_gap": 0.6497924614104704,
+      "partner_code_change": 0.0,
+      "history_distance": 4.002453351859003
+    },
+    {
+      "seed": 48,
+      "truth_energy": 0.0005481355769675813,
+      "predicted_energy": 0.034497411058650874,
+      "cross_moment": 8.457925441732227e-05,
+      "mse": 0.034876388126783814,
+      "rms_ratio": 7.933215583042398,
+      "energy_normalized_alignment": 0.01945031347438887,
+      "partner_true_effect_max": 0.0,
+      "partner_predicted_energy_fraction": 0.01788704546312326,
+      "target_code_transport_gap": 0.7548734625524958,
+      "partner_code_change": 0.0,
+      "history_distance": 4.031575098633766
+    },
+    {
+      "seed": 49,
+      "truth_energy": 0.000514231875118578,
+      "predicted_energy": 0.0319751123732082,
+      "cross_moment": 5.580530920096641e-05,
+      "mse": 0.03237773362992484,
+      "rms_ratio": 7.885451103423613,
+      "energy_normalized_alignment": 0.013762267099469913,
+      "partner_true_effect_max": 0.0,
+      "partner_predicted_energy_fraction": 0.019601140334707168,
+      "target_code_transport_gap": 0.7626168519827843,
+      "partner_code_change": 0.0,
+      "history_distance": 4.050419881008565
+    }
+  ],
+  "sources": {
+    "outputs\\mpe_evidence_completion_2026_09_18\\n700\\seed45\\donor_effects.json": "f9a8a84b4d763e458f1b1d1bb22506cf992fd1457806042bd5eb07b6bf2567af",
+    "outputs\\mpe_evidence_completion_2026_09_18\\n700\\seed45\\donor_predictions_evaluation_only.npz": "cd3a86a6f8f61d839119678186276bdf799821fe9a4e52cf8104a773016ec51a",
+    "outputs\\mpe_evidence_completion_2026_09_18\\n700\\seed46\\donor_effects.json": "e538c1d5643cb4c2a46956603bc670204e9c66cf38195e831914ed2df56a77e8",
+    "outputs\\mpe_evidence_completion_2026_09_18\\n700\\seed46\\donor_predictions_evaluation_only.npz": "6d2cb6361848dc18e41d056adf69a6abbd7ef376a39b1e819c890afbff66caf8",
+    "outputs\\mpe_evidence_completion_2026_09_18\\n700\\seed47\\donor_effects.json": "a0c93cb9ad702b7443c02d1c66e0f0e27d435dc28b796eef238c161d289cfb4f",
+    "outputs\\mpe_evidence_completion_2026_09_18\\n700\\seed47\\donor_predictions_evaluation_only.npz": "8474b007d7f402ac231b858e172b4438e1f720a9235fdb70b6e09cd08341c251",
+    "outputs\\mpe_evidence_completion_2026_09_18\\n700\\seed48\\donor_effects.json": "f3e322a8f0f9a03a898f2a512fc9acc66c8a4ab046ca9276144a5af07eece33f",
+    "outputs\\mpe_evidence_completion_2026_09_18\\n700\\seed48\\donor_predictions_evaluation_only.npz": "f860541e5766f238296a5526825b0465603bd3602d8bed106585d78550738bbc",
+    "outputs\\mpe_evidence_completion_2026_09_18\\n700\\seed49\\donor_effects.json": "edeea5a11e8a67c56a745ff62545f233033bfcf8bb59691e0ed554a867db1d1e",
+    "outputs\\mpe_evidence_completion_2026_09_18\\n700\\seed49\\donor_predictions_evaluation_only.npz": "247b469d6a04a8362032d1b4d98a7873efff22965601019ffe920a933fd0ec40"
+  },
+  "source_values_verified": true,
+  "training_updates": 0,
+  "new_rollouts": 0,
+  "scope": "Post-hoc diagnosis of existing h2 nearest-donor data; no causal attribution or new confirmation."
+}

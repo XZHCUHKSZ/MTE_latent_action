@@ -1,0 +1,128 @@
+{
+  "status": "development_diagnostic_v2_mechanical_horizon_audit",
+  "scope": "First three review priorities: known-slot separation, native-effect semantics, history transfer",
+  "upstream_seeds": {
+    "mpe": [
+      40,
+      41
+    ],
+    "mamujoco": [
+      0,
+      1
+    ]
+  },
+  "episode_seeds": {
+    "mpe": [
+      97171000,
+      97171001,
+      97171002,
+      97171003,
+      97171004,
+      97171005,
+      97171006,
+      97171007,
+      97171008,
+      97171009,
+      97171010,
+      97171011,
+      97171012,
+      97171013,
+      97171014,
+      97171015,
+      97171016,
+      97171017,
+      97171018,
+      97171019,
+      97171020,
+      97171021,
+      97171022,
+      97171023
+    ],
+    "mamujoco": [
+      97172000,
+      97172001,
+      97172002,
+      97172003,
+      97172004,
+      97172005,
+      97172006,
+      97172007,
+      97172008,
+      97172009,
+      97172010,
+      97172011,
+      97172012,
+      97172013,
+      97172014,
+      97172015,
+      97172016,
+      97172017,
+      97172018,
+      97172019,
+      97172020,
+      97172021,
+      97172022,
+      97172023
+    ]
+  },
+  "decision_times": [
+    2,
+    6,
+    10,
+    14
+  ],
+  "splits": {
+    "fit_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "validation_ids": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "test_ids": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ]
+  },
+  "reader_alphas": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "restore_atol": 1e-06,
+  "teacher_gate": "closed_loop_lam_v1/runs/mamujoco_teacher/ant_sac_clean_1m_gate_20x500.json",
+  "freeze": "All observation-model and history checkpoints predate evaluation; no model/controller updates",
+  "reference": "Fixed native zero action; same-state diagnostic only, not historical nearest donor evaluation",
+  "primary": "mechanically aligned physical effect MSE: MPE h2, MaMuJoCo h1; all horizons retained",
+  "replications": "2 existing upstream seeds; episode samples and reader splits are not new model seeds",
+  "stopping": "Complete both environments and both existing checkpoints independent of outcome direction",
+  "physical_primary_horizon": {
+    "mpe": 2,
+    "mamujoco": 1
+  },
+  "horizon_rationale": {
+    "mpe": "Source audit + pulse test: installed mpe2 integrates position before applying current force to velocity. h1 position effect is identically zero; use h2 while retaining h1/h3. Original one-step code inference is NOT altered.",
+    "mamujoco": "Native control affects first-step kinematics; h1 retained."
+  },
+  "supersedes": "v1 h1 MPE is a degenerate zero-effect diagnostic; retained under outputs/target_effects_pilot_2026_09_17, never overwritten"
+}

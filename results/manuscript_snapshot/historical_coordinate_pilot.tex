@@ -1,0 +1,62 @@
+\paragraph{Controlled coordinate and propagation pilot.}
+\label{app:coordinatepilot}
+Within each frozen Simple, Graph, Tree or MIF class, the control
+replaces only M\"obius/inverse-zeta buffers with identities, retaining
+the complete input information and equal allocated parameters.
+Simple/Graph/Tree use h3 edges; MIF uses the three-horizon
+endpoint-plus-edge interface. Separate MIF controls replace one time,
+coalition or entity propagation matrix; Tree's upward-only switch
+reduces active computation.
+This historical two-seed development design comprises 12 configurations and 48 tasks; its MPE rows predate the two-step protocol and are not new control evidence.
+Each has 400 updates, batch 64, learning rate $10^{-3}$, hidden width
+128, latent width 16 and at most 2,048 fitting/256 development
+transitions. Paired arms share initialization, samples and optimizer.
+The objective is value-coordinate reconstruction MSE, variance floor,
+and $0.02$ times off-diagonal covariance penalty; no extra coefficient
+loss. This symmetric pilot differs from the formal masked objectives.
+It reports learned coefficient reconstruction, linear readout and
+whole-edge error; it trains no history policy or decoder.
+
+% ===== Begin sections/coordinate_pilot_tables.tex =====
+\begin{table}[!htbp]\centering
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Fixed 400-update coordinate/propagation pilot. Absolute single-partner linear skill (\%) and paired difference (percentage points), averaged over two development seeds. $+$ counts seeds with original structure above control; small positive differences between negative scores are not evidence of useful prediction.}
+\label{tab:coordinatepilot}
+\begin{tabular}{lllrrrr}\toprule
+Environment & Model & Control & Original & Control & Difference & $+$\\\midrule
+MaMuJoCo & Simple & Raw coordinates & 4.740 & 3.302 & +1.437 & 2/2\\
+MaMuJoCo & Graph & Raw coordinates & 3.351 & 2.049 & +1.302 & 2/2\\
+MaMuJoCo & Tree & Raw coordinates & -0.499 & -0.597 & +0.098 & 1/2\\
+MaMuJoCo & Tree & Upward only & -0.499 & -0.501 & +0.002 & 1/2\\
+MaMuJoCo & MIF & Raw coordinates & -0.097 & 0.602 & -0.699 & 0/2\\
+MaMuJoCo & MIF & Self-time & -0.097 & -0.105 & +0.008 & 1/2\\
+MaMuJoCo & MIF & Self-entity & -0.097 & -0.102 & +0.005 & 2/2\\
+MaMuJoCo & MIF & Self-coalition & -0.097 & 0.766 & -0.862 & 0/2\\
+MPE & Simple & Raw coordinates & 11.667 & 9.854 & +1.813 & 2/2\\
+MPE & Graph & Raw coordinates & 21.109 & 15.987 & +5.122 & 2/2\\
+MPE & Tree & Raw coordinates & 6.483 & 1.667 & +4.816 & 2/2\\
+MPE & Tree & Upward only & 6.483 & 6.343 & +0.140 & 1/2\\
+MPE & MIF & Raw coordinates & 7.100 & 7.216 & -0.116 & 0/2\\
+MPE & MIF & Self-time & 7.100 & 7.007 & +0.092 & 1/2\\
+MPE & MIF & Self-entity & 7.100 & 7.134 & -0.034 & 0/2\\
+MPE & MIF & Self-coalition & 7.100 & 7.113 & -0.013 & 1/2\\
+\bottomrule\end{tabular}
+\end{table}
+% ===== End sections/coordinate_pilot_tables.tex =====
+
+
+In this historical pilot, Simple/Graph coordinate effects are positive in both environments
+and both pilot seeds; MPE Tree also benefits. MaMuJoCo Tree's absolute
+skill is negative, and MIF shows no consistent coordinate or axis
+benefit. The pilot tests architecture-specific compression, without
+establishing convergence or MIF-Aux downstream attribution.
+
+\paragraph{Evidence and reproduction.}
+Protocols, per-seed errors and 48 task/access records: \texttt{evidence/interaction}.
+{\raggedright\noindent\path{mte_attribution_resolution_2026_09_12/}:
+\path{agent_resolved_probe.py}, \path{mamujoco_probe_audit.py},
+\path{coordinate_ablation.py}.\par}
+The diagnostics use frozen observations/checkpoints, no native-action
+labels and no edits to formal results.
+

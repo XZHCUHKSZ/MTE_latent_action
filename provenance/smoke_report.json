@@ -150,7 +150,7 @@
       3
     ],
     "samples": 0,
-    "external_davis": "D:\\WhoseMove_LAM_PettingZoo_MPE_V2_1_Multistep_Project\\whosmove_lam_pettingzoo_mpe_v2_1_multistep_project\\visual_multiagent_2026_09_10\\laom_complexity_v1\\assets\\DAVIS\\JPEGImages\\480p"
+    "external_davis": "WORKSPACE_ROOT\\visual_multiagent_2026_09_10\\laom_complexity_v1\\assets\\DAVIS\\JPEGImages\\480p"
   },
   "limitations": [
     "Numerical fixtures reuse final learned endpoints; this smoke does not rebuild all endpoint banks.",

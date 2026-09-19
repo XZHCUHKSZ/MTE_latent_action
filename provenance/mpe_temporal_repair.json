@@ -1,0 +1,22 @@
+{
+  "extension": "MPE temporal alignment development",
+  "original_outputs_modified": false,
+  "frozen_core_modified": false,
+  "foundation_before": "PASS 11",
+  "foundation_after_implementation": "PASS 11",
+  "cause": "Five archived MPE datasets obey position update with old velocity. Position-only one-step inverse input cannot distinguish the current action under a same-state intervention.",
+  "new_files": [
+    "mte/temporal_mpe.py",
+    "training/temporal_family_mpe.py",
+    "experiments/mpe_temporal_repair.py",
+    "evaluation/temporal_mpe_effects.py",
+    "tests/check_mpe_temporal_repair.py",
+    "configs/mpe_temporal_repair.json",
+    "docs/mpe_temporal_repair.md"
+  ],
+  "reused_classes": ["LAPOStateAdapter", "LAOMStateAdapter", "ObservationReadout", "MobiusSimple", "MobiusGraphEdgeCARA", "MIFCARAIncidenceFlow", "RecurrentPolicy", "ActionDecoder"],
+  "changed_protocol": ["MPE inverse/feature target physical offset 2", "direct prediction heads for physical horizons 1,2,3", "explicit offset1 paired development control", "small route-objective training and grounding matrix"],
+  "smoke": {"updates": 2, "training_seed_count": 1, "control_rows": 16, "expected_control_rows": 16, "numeric_access_violations": [], "frozen_checkpoint_count": 26, "frozen_weights_unchanged_during_grounding": true, "physical_replay_exact": true},
+  "development": {"output": "outputs/mpe_temporal_repair_development", "training_seeds": [40,41], "training_episodes": 256, "development_episodes": 64, "label_budgets": [8,32], "control_configurations": 16, "expected_control_rows": 64, "status_source": "outputs/mpe_temporal_repair_development/status.json"},
+  "interpretation": "Development evidence only. No manuscript results replaced. Matching, coordinate structure, history transfer, and control are separate claims. Resource matching applies to paired family ablations, not all native baseline architectures."
+}

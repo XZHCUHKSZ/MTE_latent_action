@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "controls": 500,
+  "upstream_configurations": 20,
+  "access_audits_without_violations": 520,
+  "episode_returns_recomputed": 25000,
+  "code_input_freeze_hashes_unchanged": true,
+  "native_and_pair_checks": [
+    {
+      "seed": 0,
+      "native_weight_max_error": {
+        "representation.pt": 0.0,
+        "policy/policy.pt": 0.0
+      },
+      "paired_masks_initialization_normalization_parameters": true
+    },
+    {
+      "seed": 1,
+      "native_weight_max_error": {
+        "representation.pt": 0.0,
+        "policy/policy.pt": 0.0
+      },
+      "paired_masks_initialization_normalization_parameters": true
+    },
+    {
+      "seed": 2,
+      "native_weight_max_error": {
+        "representation.pt": 0.0,
+        "policy/policy.pt": 0.0
+      },
+      "paired_masks_initialization_normalization_parameters": true
+    },
+    {
+      "seed": 3,
+      "native_weight_max_error": {
+        "representation.pt": 0.0,
+        "policy/policy.pt": 0.0
+      },
+      "paired_masks_initialization_normalization_parameters": true
+    },
+    {
+      "seed": 4,
+      "native_weight_max_error": {
+        "representation.pt": 0.0,
+        "policy/policy.pt": 0.0
+      },
+      "paired_masks_initialization_normalization_parameters": true
+    }
+  ],
+  "contrasts_independently_recomputed": [
+    {
+      "name": "masked",
+      "mean": -0.5726038133626161,
+      "ci95": [
+        -12.859046642566986,
+        11.713839015841755
+      ],
+      "seed_differences": [
+        1.4641935175342269,
+        7.589380024828415,
+        -0.7513902401882433,
+        -17.215674404656284,
+        6.050472035668804
+      ],
+      "positive_seeds": 3,
+      "exact_p": 0.9375,
+      "holm_p": 1
+    },
+    {
+      "name": "visible",
+      "mean": 1.16954383233101,
+      "ci95": [
+        -5.813959548661485,
+        8.153047213323505
+      ],
+      "seed_differences": [
+        6.137117124683641,
+        2.737305401633421,
+        -6.879302346962049,
+        -2.1643919617289384,
+        6.016990944028976
+      ],
+      "positive_seeds": 3,
+      "exact_p": 0.75,
+      "holm_p": 1
+    },
+    {
+      "name": "masking_interaction",
+      "mean": -1.7421476456936262,
+      "ci95": [
+        -12.39257409712952,
+        8.908278805742269
+      ],
+      "seed_differences": [
+        -4.672923607149414,
+        4.852074623194994,
+        6.127912106773806,
+        -15.051282442927345,
+        0.033481091639828264
+      ],
+      "positive_seeds": 3,
+      "exact_p": 0.875,
+      "holm_p": 1
+    }
+  ],
+  "budget_means": {
+    "masked_mobius": {
+      "4": 662.1451599040242,
+      "8": 688.0424143561117,
+      "16": 704.854258632566,
+      "32": 711.0272135230877,
+      "64": 723.6405728905094
+    },
+    "masked_raw": {
+      "4": 666.9068501491265,
+      "8": 692.6227171535415,
+      "16": 704.9316710395028,
+      "32": 705.0281675988044,
+      "64": 723.0832324321362
+    },
+    "visible_mobius": {
+      "4": 670.5137804406257,
+      "8": 686.0495951761259,
+      "16": 705.2213478826961,
+      "32": 704.0921303167785,
+      "64": 721.0431846868903
+    },
+    "visible_raw": {
+      "4": 666.6150358010725,
+      "8": 686.1931761184003,
+      "16": 701.8464975814281,
+      "32": 707.4889077869545,
+      "64": 718.9287020536068
+    }
+  },
+  "arm_means": {
+    "masked_mobius": 697.9419238612597,
+    "masked_raw": 698.5145276746223,
+    "visible_mobius": 697.3840077006233,
+    "visible_raw": 696.2144638682923
+  },
+  "foundation": "FROZEN FOUNDATION CHECK: PASS (11 files)",
+  "verified_at": 1789800495.696622,
+  "paper_and_figures_modified": false
+}

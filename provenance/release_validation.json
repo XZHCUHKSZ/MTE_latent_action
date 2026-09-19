@@ -1,0 +1,68 @@
+{
+  "date": "2026-09-20T03:17:00.205176+08:00",
+  "status": "pass",
+  "release_manifest_sha256": "016e29f8d7b90fa7bcfddc4cfaffe90d6ac4f4f18671922a53493ee402065a1b",
+  "checks": [
+    {
+      "command": "python inspect_release.py --verify",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"pass\", \"files_checked\": 360, \"scope\": \"Published integrity and syntax; no training or replay\"}",
+      "stderr": ""
+    },
+    {
+      "command": "python run.py --check-results",
+      "exit_code": 0,
+      "stdout": "{\"references_checked\": 2664, \"unique_source_files\": 2264, \"max_abs_error\": 5.684341886080802e-14}",
+      "stderr": ""
+    },
+    {
+      "command": "python tests/check_imports.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"modules\": 84,\n  \"errors\": []\n}",
+      "stderr": "AdroitHandRelocateDense-v1, AdroitHandHammerDense-v1, AdroitHandDoorDense-v1 environment's reward functions were updated in v1.2.1 without an environment version update. Therefore, use gymnasium-robotics==1.2.0 for v1 reproducibility or use v2 in gymnasium-robotics>=1.4.3. See https://github.com/Farama-Foundation/Gymnasium-Robotics/pull/220 for more details"
+    },
+    {
+      "command": "python tests/check_grounding_contract.py",
+      "exit_code": 0,
+      "stdout": "[{'environment': 'mpe', 'decoder_updates': 1000, 'feature_parity': True, 'fit': 6, 'validation': 2}, {'environment': 'mamujoco', 'decoder_updates': 800, 'feature_parity': True, 'fit': 6, 'validation': 2}]",
+      "stderr": ""
+    },
+    {
+      "command": "python tests/check_temporal_scale.py",
+      "exit_code": 0,
+      "stdout": "PASS: log-budget AUC, sign-symmetric paired statistics, Holm, disjoint budget writes, full matrix",
+      "stderr": ""
+    },
+    {
+      "command": "python tests/check_mpe_temporal_repair.py",
+      "exit_code": 0,
+      "stdout": "PASS: time bounds, target horizons, raw/matched identical trainable initialization and parameter count",
+      "stderr": ""
+    },
+    {
+      "command": "python tests/check_temporal_completion.py",
+      "exit_code": 0,
+      "stdout": "PASS: physical-horizon edge view, zero action placeholders, Simple raw parameter parity, 330 new rows, donor-bank bounds and disjoint writes",
+      "stderr": ""
+    }
+  ],
+  "scientific_python_and_configs_byte_identical": 150,
+  "json_numeric_and_boolean_leaf_sequences_unchanged": 161,
+  "frozen_core_identical": [
+    "common.py",
+    "unified_models.py",
+    "training_profiles.py"
+  ],
+  "foundation_verifier": "FROZEN FOUNDATION CHECK: PASS (11 files)",
+  "sensitive_pattern_findings": [],
+  "tested_versions": {
+    "psutil": "7.2.2",
+    "torch": "2.13.0+cu130",
+    "numpy": "2.3.5",
+    "scipy": "1.18.0",
+    "gymnasium-robotics": "1.4.2"
+  },
+  "scope": "Publication integrity, imports and small interface checks; no full retraining or formal performance rerun",
+  "clean_staged_export_integrity": "pass, 360 files; no private assets present",
+  "whitespace_review": "Original CRLF preserved; three original extra EOF blank lines retained to preserve exact scientific/evidence bytes."
+}

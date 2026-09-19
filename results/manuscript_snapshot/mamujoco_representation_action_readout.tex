@@ -1,0 +1,15 @@
+\begin{table}[!htbp]\centering\small
+\setlength{\tabcolsep}{3pt}
+\caption{MaMuJoCo representation native-action readout skill (percent): mean (seed SD). Frozen probes; old rows diagnose the repair only.}
+
+\begin{tabular}{lrrrrr}\toprule
+Features & B4 & B8 & B16 & B32 & B64 \\\midrule
+Base & 72.25 (1.54) & 72.58 (1.26) & 72.89 (1.16) & 72.97 (1.20) & 73.00 (1.18)  \\
+Independent & 71.32 (1.27) & 71.58 (1.37) & 71.83 (1.46) & 72.02 (1.48) & 72.04 (1.52)  \\
+MIF (old interface) & 3.67 (2.25) & 4.59 (2.47) & 4.85 (2.11) & 5.20 (2.05) & 5.44 (1.93)  \\
+MIF (repaired) & 47.69 (2.47) & 48.33 (2.79) & 49.45 (1.10) & 49.51 (1.03) & 49.93 (1.38)  \\
+Base + old MIF & 71.86 (1.82) & 72.68 (1.28) & 73.16 (1.25) & 73.36 (1.28) & 73.39 (1.28)  \\
+Base + repaired MIF & 75.33 (2.76) & 76.82 (1.37) & 77.43 (1.31) & 77.76 (1.13) & 77.86 (1.10)  \\
+Base + independent & \textbf{78.40 (1.28)} & \textbf{79.42 (0.97)} & \textbf{79.80 (0.80)} & \textbf{79.94 (0.82)} & \textbf{80.04 (0.76)} \\
+\bottomrule\end{tabular}
+\end{table}

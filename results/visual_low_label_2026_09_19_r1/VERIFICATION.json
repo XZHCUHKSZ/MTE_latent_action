@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "unique_results": 180,
+  "new_results": 135,
+  "reused_results": 45,
+  "source_hashes_verified": 1327,
+  "frozen_hashes_verified": 150,
+  "qualification_parities_passed": 90,
+  "smokes_passed": 6,
+  "clean_formal_access_audits": 270,
+  "primary_contrasts_recalculated": 5,
+  "secondary_contrasts_recalculated": 3,
+  "all_per_seed_means_t95_exact_p_holm_verified": true,
+  "foundation_read_only_verifier": "PASS (11 files), rerun at completion",
+  "summary_sha256": "c26391a57eb313d338c19bba53818e228f1c5dfca00dab955f19c29ceb1fee4a",
+  "scope": "Read-only recomputation; no results or protocols changed; no manuscript update."
+}

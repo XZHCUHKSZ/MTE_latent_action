@@ -1,0 +1,47 @@
+{
+  "directory": "iclr2027_mpe_completed_revision_2026_09_18",
+  "files": [
+    {
+      "path": "main.tex",
+      "sha256": "fdcef1c73869aba21591cefa1a8a0decb088ec8d9da4010d39b560898e789a93"
+    },
+    {
+      "path": "main.pdf",
+      "sha256": "52e01af2b1a6921a203498e962fcc20f46f7a6d8610bff9554443d47af987f5b"
+    },
+    {
+      "path": "EVIDENCE_MAP.md",
+      "sha256": "483fa38cbc5f1c65b4fb95c441d2235b027b26a9ae86024b493a11cea80a546a"
+    }
+  ],
+  "evidence": [
+    "results/manuscript_snapshot/control_ablation_current.json",
+    "results/manuscript_snapshot/cross_setting_control_gains_2026_09_19.json",
+    "results/manuscript_snapshot/figure2_ablation_update_audit.json",
+    "results/manuscript_snapshot/figure2_data.json",
+    "results/manuscript_snapshot/figure_numeric_current.json",
+    "results/manuscript_snapshot/figure_scaling_current.json",
+    "results/manuscript_snapshot/historical_action_probe.json",
+    "results/manuscript_snapshot/historical_coordinate_pilot.tex",
+    "results/manuscript_snapshot/historical_correspondence.json",
+    "results/manuscript_snapshot/historical_native_metrics_all_seeds.json",
+    "results/manuscript_snapshot/historical_secondary_tables.tex",
+    "results/manuscript_snapshot/mamujoco_mif_visibility_2026_09_19.json",
+    "results/manuscript_snapshot/mamujoco_representation_action_readout.tex",
+    "results/manuscript_snapshot/mamujoco_route_completion_2026_09_19.json",
+    "results/manuscript_snapshot/mpe_completed.json",
+    "results/manuscript_snapshot/mpe_donor_zero_audit_2026_09_19.json",
+    "results/manuscript_snapshot/mpe_matching_input_control_2026_09_19.json",
+    "results/manuscript_snapshot/reference_composite_data.json",
+    "results/manuscript_snapshot/route_comparison_current.json",
+    "results/manuscript_snapshot/unchanged_numeric_scaling.json",
+    "results/manuscript_snapshot/unchanged_numeric_summary.json",
+    "results/manuscript_snapshot/unchanged_visual_summary.json",
+    "results/manuscript_snapshot/visual_frame_provenance.json",
+    "results/manuscript_snapshot/visual_low_label_RESULTS_CN.md",
+    "results/manuscript_snapshot/visual_low_label_summary.json",
+    "results/manuscript_snapshot/visual_low_label_VERIFICATION.json",
+    "results/manuscript_snapshot/visual_summary.json"
+  ],
+  "adaptation_integrated": false
+}

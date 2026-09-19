@@ -1,0 +1,452 @@
+[
+  {
+    "job": [
+      "formal",
+      "visual",
+      908711,
+      "simple_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908711,
+      "simple_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908711,
+      "graph_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908711,
+      "graph_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908711,
+      "tree_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908711,
+      "tree_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908712,
+      "simple_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908712,
+      "simple_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908712,
+      "graph_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908712,
+      "graph_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908712,
+      "tree_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908712,
+      "tree_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908713,
+      "simple_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908713,
+      "simple_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908713,
+      "graph_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908713,
+      "graph_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908713,
+      "tree_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908713,
+      "tree_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908714,
+      "simple_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908714,
+      "simple_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908714,
+      "graph_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908714,
+      "graph_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908714,
+      "tree_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908714,
+      "tree_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908715,
+      "simple_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908715,
+      "simple_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908715,
+      "graph_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908715,
+      "graph_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908715,
+      "tree_solo_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "visual",
+      908715,
+      "tree_aux_pretrained_trainable",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      0,
+      "simple_matched",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      0,
+      "graph_matched",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      0,
+      "mif_native",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      1,
+      "simple_matched",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      1,
+      "graph_matched",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      1,
+      "mif_native",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      2,
+      "simple_matched",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      2,
+      "graph_matched",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      2,
+      "mif_native",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      3,
+      "simple_matched",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      3,
+      "graph_matched",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      3,
+      "mif_native",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      4,
+      "simple_matched",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      4,
+      "graph_matched",
+      "ground"
+    ],
+    "passed": true
+  },
+  {
+    "job": [
+      "formal",
+      "mamujoco",
+      4,
+      "mif_native",
+      "ground"
+    ],
+    "passed": true
+  }
+]

@@ -1,0 +1,4679 @@
+{
+  "status": "complete",
+  "seeds": [
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "episodes_per_seed": 64,
+  "means": [
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.008392116000915299,
+      "zero_mse": 0.0,
+      "standardized_mse": 1.0579055996610875,
+      "seed_mses": [
+        0.008822105803997803,
+        0.008161123238499893,
+        0.007526825536345343,
+        0.009065245146187074,
+        0.008385280279546383
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.030446850123278735,
+      "zero_mse": 0.0,
+      "standardized_mse": 3.8521220724568224,
+      "seed_mses": [
+        0.029074644031431625,
+        0.030980267953722586,
+        0.028800532497901137,
+        0.03274375413616901,
+        0.030635051997169302
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 9.383249924345348e-05,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.011819998067827256,
+      "seed_mses": [
+        9.326528666212582e-05,
+        8.703201363273631e-05,
+        0.00010080848643546396,
+        9.756516876312959e-05,
+        9.04915407238117e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "all",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.033055852053110915,
+      "zero_mse": 0.0,
+      "standardized_mse": 4.166727131822762,
+      "seed_mses": [
+        0.034770275790949295,
+        0.032097024306934896,
+        0.0296809005549898,
+        0.03572057392995257,
+        0.033010485682727984
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "all",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.030756461977342765,
+      "zero_mse": 0.0,
+      "standardized_mse": 3.877203076508304,
+      "seed_mses": [
+        0.032012331901093156,
+        0.029924791411523516,
+        0.02779570468491168,
+        0.033615775147947786,
+        0.030433706741237673
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "all",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00036589817242069765,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.046086845765602,
+      "seed_mses": [
+        0.0003645406917045013,
+        0.0003385176431983276,
+        0.0003951669066625281,
+        0.0003794196058378487,
+        0.00035184601470028223
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "all",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.007490816773986162,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.945967920819377,
+      "seed_mses": [
+        0.007950913539606069,
+        0.007722654251788337,
+        0.005720982295324374,
+        0.009593047518868532,
+        0.00646648626434349
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.028806604521589157,
+      "zero_mse": 0.0,
+      "standardized_mse": 3.6467242366573878,
+      "seed_mses": [
+        0.030547036154077528,
+        0.029013107397150864,
+        0.02732617386959329,
+        0.032232695395251004,
+        0.024914009791873103
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 9.201629287422137e-05,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.011599184630826048,
+      "seed_mses": [
+        8.757650771878272e-05,
+        9.280809964175804e-05,
+        0.00010501825572589234,
+        9.858461951633591e-05,
+        7.609398176833775e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.02953039621281186,
+      "zero_mse": 0.0,
+      "standardized_mse": 3.729118053448609,
+      "seed_mses": [
+        0.03136340740184328,
+        0.030455384586219214,
+        0.022589202781402536,
+        0.03781959632099614,
+        0.02542438997359812
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.028281607361521705,
+      "zero_mse": 0.0,
+      "standardized_mse": 3.5712562768155225,
+      "seed_mses": [
+        0.029538406065179334,
+        0.028450171343985912,
+        0.021538144905607917,
+        0.037084990075025324,
+        0.024796324417810035
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00035916523709075544,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.045271005593594746,
+      "seed_mses": [
+        0.00034260561022615547,
+        0.00036146921398998334,
+        0.0004125952803321557,
+        0.0003833423136177244,
+        0.0002958137672877582
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.009066734499248039,
+      "zero_mse": 0.0,
+      "standardized_mse": 1.1424572264162962,
+      "seed_mses": [
+        0.01000247766197288,
+        0.008992814497543206,
+        0.009059635493570799,
+        0.008960180325478182,
+        0.008318564517675129
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.030500356675536744,
+      "zero_mse": 0.0,
+      "standardized_mse": 3.857936058339482,
+      "seed_mses": [
+        0.029565838345804604,
+        0.03353962427098271,
+        0.02734477169044481,
+        0.03253110899440386,
+        0.02952044007604774
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 9.166510560818089e-05,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.011550903607752664,
+      "seed_mses": [
+        0.00010000307523918604,
+        8.317338799766759e-05,
+        9.903243883293796e-05,
+        9.854657211979867e-05,
+        7.757005385131419e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.03572356877970013,
+      "zero_mse": 0.0,
+      "standardized_mse": 4.501054057844174,
+      "seed_mses": [
+        0.03945079919169362,
+        0.03534191496107951,
+        0.03576790031707862,
+        0.0353096604438588,
+        0.03274756898479009
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.03324939596853719,
+      "zero_mse": 0.0,
+      "standardized_mse": 4.189781991305819,
+      "seed_mses": [
+        0.03671073581844056,
+        0.03305124546045121,
+        0.03356590411264811,
+        0.032716664035597,
+        0.03020243041554907
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0003565209976051914,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.04491935496352881,
+      "seed_mses": [
+        0.00038903753615290626,
+        0.000322307827746464,
+        0.0003874268735076774,
+        0.00038397915041841633,
+        0.00029985360020049303
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.0082531163097006,
+      "zero_mse": 0.0,
+      "standardized_mse": 1.0406890932128974,
+      "seed_mses": [
+        0.008445173321851584,
+        0.0077436262125597025,
+        0.00838276518749357,
+        0.00869688158618477,
+        0.007997135240413372
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.03242313485055397,
+      "zero_mse": 0.0,
+      "standardized_mse": 4.10365870198937,
+      "seed_mses": [
+        0.0282182921540563,
+        0.0328799475655743,
+        0.030699878203872082,
+        0.03553645769518239,
+        0.03478109863408476
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 9.547810658583079e-05,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.012022786859879744,
+      "seed_mses": [
+        9.208786741034426e-05,
+        8.584619779363453e-05,
+        9.812653419125444e-05,
+        9.254895977186658e-05,
+        0.00010878097376205406
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.03248551245617898,
+      "zero_mse": 0.0,
+      "standardized_mse": 4.095924813311302,
+      "seed_mses": [
+        0.03324706696740867,
+        0.030428379479895643,
+        0.0329849775832169,
+        0.03424584437868929,
+        0.03152129387168436
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.02959683020471777,
+      "zero_mse": 0.0,
+      "standardized_mse": 3.7316035353193096,
+      "seed_mses": [
+        0.02995753684120869,
+        0.028301347081422658,
+        0.029692193869907013,
+        0.03168553665529056,
+        0.028347536575759936
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00037264337859326294,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.04691919039231885,
+      "seed_mses": [
+        0.0003602095285107994,
+        0.0003345246234392192,
+        0.00038493050437099084,
+        0.0003594689092557146,
+        0.0004240833273895908
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.008757796420726396,
+      "zero_mse": 0.0,
+      "standardized_mse": 1.1025081581957799,
+      "seed_mses": [
+        0.00888985869256068,
+        0.008185397992108325,
+        0.0069439191689926304,
+        0.00901087115421681,
+        0.010758935095753538
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.030057304445435057,
+      "zero_mse": 0.0,
+      "standardized_mse": 3.8001692928410478,
+      "seed_mses": [
+        0.027967409471788066,
+        0.028488392581182465,
+        0.029831306227694365,
+        0.030674754459838773,
+        0.033324659486671605
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 9.61704919055809e-05,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.012107117172850576,
+      "seed_mses": [
+        9.339369628019029e-05,
+        8.630036909788508e-05,
+        0.00010105671699177109,
+        0.0001005805236445172,
+        9.952115351354081e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.03448393076375268,
+      "zero_mse": 0.0,
+      "standardized_mse": 4.3408116026869665,
+      "seed_mses": [
+        0.035019829602851604,
+        0.032162418200545204,
+        0.02738152153826115,
+        0.03550719457626607,
+        0.04234868990083936
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.031898014374594386,
+      "zero_mse": 0.0,
+      "standardized_mse": 4.016170502592565,
+      "seed_mses": [
+        0.031842648879544036,
+        0.029896401760234288,
+        0.026386575851483685,
+        0.032975909825878266,
+        0.03838853555583166
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0003752630763935806,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.047237832112965575,
+      "seed_mses": [
+        0.0003663100919281439,
+        0.00033576890761764376,
+        0.00039571496843928853,
+        0.00039088805005953967,
+        0.0003876333639232869
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.03210072370531224,
+      "zero_mse": 0.0005231191531720987,
+      "standardized_mse": 1.06358039269151,
+      "seed_mses": [
+        0.03302147394725274,
+        0.03129078687536392,
+        0.028937235947235893,
+        0.034876388126783814,
+        0.03237773362992484
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.11623668192013603,
+      "zero_mse": 0.0005231191531720987,
+      "standardized_mse": 3.865970654565822,
+      "seed_mses": [
+        0.1104981350289019,
+        0.11817822010636056,
+        0.11008099383457486,
+        0.12576650803923667,
+        0.11665955259160611
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 4.8077098085521815e-05,
+      "zero_mse": 0.0005231191531720987,
+      "standardized_mse": 0.0015937834254813362,
+      "seed_mses": [
+        4.9221118540801166e-05,
+        4.708693804135422e-05,
+        3.8916260970881046e-05,
+        4.882309911175602e-05,
+        5.633807376281664e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0005231191531720987,
+      "zero_mse": 0.0005231191531720987,
+      "standardized_mse": 0.017321928336127192,
+      "seed_mses": [
+        0.0005195593387186637,
+        0.0004996064314222196,
+        0.000534062543633451,
+        0.0005481355769675813,
+        0.000514231875118578
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "all",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.12605437263186933,
+      "zero_mse": 0.0020924766126883946,
+      "standardized_mse": 4.176156967231554,
+      "seed_mses": [
+        0.12979827733450047,
+        0.12267164695117112,
+        0.11376067354608627,
+        0.13703732546727065,
+        0.12700393986031822
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "all",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.11798241292971545,
+      "zero_mse": 0.0020924766126883946,
+      "standardized_mse": 3.909124141066119,
+      "seed_mses": [
+        0.12112237497257523,
+        0.11462724929751304,
+        0.10693369445333953,
+        0.1296036106853295,
+        0.1176251352398199
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "all",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00015278321791626785,
+      "zero_mse": 0.0020924766126883946,
+      "standardized_mse": 0.005061171122933033,
+      "seed_mses": [
+        0.00016232907935134576,
+        0.00014838840112808315,
+        0.00012054113456224596,
+        0.0001514607724442793,
+        0.00018119670209538506
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "all",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0020924766126883946,
+      "zero_mse": 0.0020924766126883946,
+      "standardized_mse": 0.06928771334450876,
+      "seed_mses": [
+        0.002078237354874655,
+        0.001998425725688878,
+        0.002136250174533804,
+        0.002192542307870325,
+        0.0020569275004743122
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.029695703376247835,
+      "zero_mse": 3.339162033781154e-05,
+      "standardized_mse": 0.9838156951745403,
+      "seed_mses": [
+        0.032836759658535705,
+        0.028341332565983347,
+        0.02552440971410943,
+        0.031110954315603616,
+        0.03066506062700708
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.11125731095312694,
+      "zero_mse": 3.339162033781154e-05,
+      "standardized_mse": 3.697912814532039,
+      "seed_mses": [
+        0.10155814336340929,
+        0.11837821968392592,
+        0.0991089923857447,
+        0.12425652838817276,
+        0.112984670944382
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 2.964698867922118e-06,
+      "zero_mse": 3.339162033781154e-05,
+      "standardized_mse": 9.837951525335271e-05,
+      "seed_mses": [
+        2.3430936760725547e-06,
+        3.2970710697985244e-06,
+        2.3956501042537826e-06,
+        3.120973648506547e-06,
+        3.666705840979182e-06
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 3.339162033781154e-05,
+      "zero_mse": 3.339162033781154e-05,
+      "standardized_mse": 0.0011066131303152371,
+      "seed_mses": [
+        3.0387986246898262e-05,
+        2.8373758834367407e-05,
+        2.922736107053262e-05,
+        3.961947274913055e-05,
+        3.9349522788128874e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.1164833121222412,
+      "zero_mse": 0.00013356648135124616,
+      "standardized_mse": 3.8587112065001774,
+      "seed_mses": [
+        0.12899397640121296,
+        0.1108161340684622,
+        0.10016411664673891,
+        0.12226415744024584,
+        0.12017817605454606
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.10885971290948127,
+      "zero_mse": 0.00013356648135124616,
+      "standardized_mse": 3.605901428595993,
+      "seed_mses": [
+        0.11655327884809358,
+        0.10391904198840615,
+        0.09524565266408788,
+        0.11278224667173634,
+        0.11579834437508243
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 9.285950348930647e-06,
+      "zero_mse": 0.00013356648135124616,
+      "standardized_mse": 0.00030792250125139247,
+      "seed_mses": [
+        7.276544753347647e-06,
+        1.1285450590463244e-05,
+        7.27703362253287e-06,
+        8.919832092263258e-06,
+        1.1670890686046219e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.00013356648135124616,
+      "zero_mse": 0.00013356648135124616,
+      "standardized_mse": 0.0044264525212609485,
+      "seed_mses": [
+        0.00012155194498759303,
+        0.00011349503533746963,
+        0.00011690944428213048,
+        0.0001584778909965222,
+        0.0001573980911525155
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.031205986218816463,
+      "zero_mse": 0.00023172663465349618,
+      "standardized_mse": 1.033556094607489,
+      "seed_mses": [
+        0.03271894511487036,
+        0.0331032211473846,
+        0.03041244442303013,
+        0.03320470538539125,
+        0.02659061502340599
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.11832837977635972,
+      "zero_mse": 0.00023172663465349618,
+      "standardized_mse": 3.9367802271421803,
+      "seed_mses": [
+        0.11116436133657484,
+        0.12247913601220019,
+        0.11943888656841514,
+        0.12395627607809759,
+        0.11460323888651089
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 2.0887055725066175e-05,
+      "zero_mse": 0.00023172663465349618,
+      "standardized_mse": 0.0006926551484451353,
+      "seed_mses": [
+        2.2651085729450347e-05,
+        2.6233329293489426e-05,
+        1.4859248077366063e-05,
+        2.311164060426296e-05,
+        1.7579974920762076e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.00023172663465349618,
+      "zero_mse": 0.00023172663465349618,
+      "standardized_mse": 0.007670482498835458,
+      "seed_mses": [
+        0.00022177346346421116,
+        0.00023312554050962283,
+        0.00021430763071957488,
+        0.0002664638015362341,
+        0.0002229627370378381
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.12257332990099105,
+      "zero_mse": 0.0009269065386139847,
+      "standardized_mse": 4.059211107355103,
+      "seed_mses": [
+        0.12906476594823277,
+        0.12953079079779,
+        0.11931295488033124,
+        0.13042178669156826,
+        0.10453635118703308
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.11701566077315542,
+      "zero_mse": 0.0009269065386139847,
+      "standardized_mse": 3.8773643381983205,
+      "seed_mses": [
+        0.12237681921978624,
+        0.12224522992812346,
+        0.11409931693994274,
+        0.1313211307299734,
+        0.09503580704795124
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 6.671341921882942e-05,
+      "zero_mse": 0.0009269065386139847,
+      "standardized_mse": 0.0022106740810147615,
+      "seed_mses": [
+        7.609708520971746e-05,
+        8.88119796372717e-05,
+        4.207603908268587e-05,
+        7.321523625881631e-05,
+        5.336675590565578e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0009269065386139847,
+      "zero_mse": 0.0009269065386139847,
+      "standardized_mse": 0.030681929995341833,
+      "seed_mses": [
+        0.0008870938538568446,
+        0.0009325021620384913,
+        0.0008572305228782995,
+        0.0010658552061449363,
+        0.0008918509481513524
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.03127351480570234,
+      "zero_mse": 0.0006867670646578741,
+      "standardized_mse": 1.0365504397896455,
+      "seed_mses": [
+        0.027969655113625168,
+        0.028986547914340348,
+        0.027070149385273468,
+        0.038421583935588574,
+        0.03391963767968416
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.11890394323080625,
+      "zero_mse": 0.0006867670646578741,
+      "standardized_mse": 3.9563358860191506,
+      "seed_mses": [
+        0.11490218156421408,
+        0.11563013709820692,
+        0.10961324314831318,
+        0.13659777139755605,
+        0.11777638294574098
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 5.992643020642555e-05,
+      "zero_mse": 0.0006867670646578741,
+      "standardized_mse": 0.001989157219115456,
+      "seed_mses": [
+        4.981924450322751e-05,
+        5.9533895674888845e-05,
+        5.5901419582129375e-05,
+        7.776852674283501e-05,
+        5.660906452904699e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0006867670646578741,
+      "zero_mse": 0.0006867670646578741,
+      "standardized_mse": 0.022742550417313476,
+      "seed_mses": [
+        0.0006768524943583045,
+        0.0006246999333411683,
+        0.0007192195118864914,
+        0.0007490232375042803,
+        0.0006640401461991263
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.12270126905432714,
+      "zero_mse": 0.0027470682586314965,
+      "standardized_mse": 4.066640045456781,
+      "seed_mses": [
+        0.10938089276873655,
+        0.1139507708513213,
+        0.10659166476859713,
+        0.15076325509795963,
+        0.13281976178502106
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.11367200271904614,
+      "zero_mse": 0.0027470682586314965,
+      "standardized_mse": 3.767567642550066,
+      "seed_mses": [
+        0.10521598101023688,
+        0.1058215867877511,
+        0.09639700115557068,
+        0.14295159466196677,
+        0.11797384997970518
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0001849820282176752,
+      "zero_mse": 0.0027470682586314965,
+      "standardized_mse": 0.006136182234866111,
+      "seed_mses": [
+        0.00014715764316656794,
+        0.0001897823892368604,
+        0.00017443850785211267,
+        0.0002500871453375341,
+        0.00016344445549530096
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0027470682586314965,
+      "zero_mse": 0.0027470682586314965,
+      "standardized_mse": 0.0909702016692539,
+      "seed_mses": [
+        0.002707409977433218,
+        0.002498799733364673,
+        0.0028768780475459657,
+        0.002996092950017121,
+        0.002656160584796505
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.036227690420482316,
+      "zero_mse": 0.0011405912930392132,
+      "standardized_mse": 1.2003993411943643,
+      "seed_mses": [
+        0.03856053590197972,
+        0.03473204587374738,
+        0.03274194026653054,
+        0.0367683088705518,
+        0.038335621189602154
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.11645709372025115,
+      "zero_mse": 0.0011405912930392132,
+      "standardized_mse": 3.872853690569918,
+      "seed_mses": [
+        0.11436785385140937,
+        0.1162253876311092,
+        0.11216285323582639,
+        0.11825545629312022,
+        0.12127391758979056
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.00010853020754267343,
+      "zero_mse": 0.0011405912930392132,
+      "standardized_mse": 0.0035949418191114,
+      "seed_mses": [
+        0.00012207105025445426,
+        9.928345612724005e-05,
+        8.250872611977495e-05,
+        9.129125545141956e-05,
+        0.00014749654976047832
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0011405912930392132,
+      "zero_mse": 0.0011405912930392132,
+      "standardized_mse": 0.03776806729804459,
+      "seed_mses": [
+        0.001149223410805241,
+        0.0011122264930037195,
+        0.0011734956708572054,
+        0.0011374357960806806,
+        0.0011305750944492188
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.142459579449918,
+      "zero_mse": 0.004562365172156852,
+      "standardized_mse": 4.720065509614159,
+      "seed_mses": [
+        0.1517534742198196,
+        0.136388892087111,
+        0.12897395788867777,
+        0.14470010263930896,
+        0.15048147041467275
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.13238227531717892,
+      "zero_mse": 0.004562365172156852,
+      "standardized_mse": 4.385663154920097,
+      "seed_mses": [
+        0.14034342081218432,
+        0.12652313848577143,
+        0.12199280705375687,
+        0.1313594706776413,
+        0.14169253955654076
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0003501514738796361,
+      "zero_mse": 0.004562365172156852,
+      "standardized_mse": 0.011589905674599874,
+      "seed_mses": [
+        0.00041878504427575,
+        0.00030367378504773723,
+        0.0002583729576916524,
+        0.0002736208760885035,
+        0.0004963047062945373
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.004562365172156852,
+      "zero_mse": 0.004562365172156852,
+      "standardized_mse": 0.15107226919217837,
+      "seed_mses": [
+        0.004596893643220964,
+        0.004448905972014877,
+        0.0046939826834288215,
+        0.004549743184322721,
+        0.004522300377796875
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.03210072370531224,
+      "zero_mse": 0.0005231191531720987,
+      "standardized_mse": 1.06358039269151,
+      "seed_mses": [
+        0.03302147394725274,
+        0.03129078687536392,
+        0.028937235947235893,
+        0.034876388126783814,
+        0.03237773362992484
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.11623668192013603,
+      "zero_mse": 0.0005231191531720987,
+      "standardized_mse": 3.865970654565822,
+      "seed_mses": [
+        0.1104981350289019,
+        0.11817822010636056,
+        0.11008099383457486,
+        0.12576650803923667,
+        0.11665955259160611
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 4.8077098085521815e-05,
+      "zero_mse": 0.0005231191531720987,
+      "standardized_mse": 0.0015937834254813362,
+      "seed_mses": [
+        4.9221118540801166e-05,
+        4.708693804135422e-05,
+        3.8916260970881046e-05,
+        4.882309911175602e-05,
+        5.633807376281664e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0005231191531720987,
+      "zero_mse": 0.0005231191531720987,
+      "standardized_mse": 0.017321928336127192,
+      "seed_mses": [
+        0.0005195593387186637,
+        0.0004996064314222196,
+        0.000534062543633451,
+        0.0005481355769675813,
+        0.000514231875118578
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.12605437263186933,
+      "zero_mse": 0.0020924766126883946,
+      "standardized_mse": 4.176156967231554,
+      "seed_mses": [
+        0.12979827733450047,
+        0.12267164695117112,
+        0.11376067354608627,
+        0.13703732546727065,
+        0.12700393986031822
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.11798241292971545,
+      "zero_mse": 0.0020924766126883946,
+      "standardized_mse": 3.909124141066119,
+      "seed_mses": [
+        0.12112237497257523,
+        0.11462724929751304,
+        0.10693369445333953,
+        0.1296036106853295,
+        0.1176251352398199
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00015278321791626785,
+      "zero_mse": 0.0020924766126883946,
+      "standardized_mse": 0.005061171122933033,
+      "seed_mses": [
+        0.00016232907935134576,
+        0.00014838840112808315,
+        0.00012054113456224596,
+        0.0001514607724442793,
+        0.00018119670209538506
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0020924766126883946,
+      "zero_mse": 0.0020924766126883946,
+      "standardized_mse": 0.06928771334450876,
+      "seed_mses": [
+        0.002078237354874655,
+        0.001998425725688878,
+        0.002136250174533804,
+        0.002192542307870325,
+        0.0020569275004743122
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.060229597650052424,
+      "zero_mse": 0.0016020524164944375,
+      "standardized_mse": 0.9559595275927817,
+      "seed_mses": [
+        0.06139862747795356,
+        0.058905765113568764,
+        0.05456507774141505,
+        0.06575987978554909,
+        0.06051863813177569
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.21854162930332272,
+      "zero_mse": 0.0016020524164944375,
+      "standardized_mse": 3.4839323173348085,
+      "seed_mses": [
+        0.20741944856678485,
+        0.22200073011874752,
+        0.20770348397074845,
+        0.23695236536598863,
+        0.21863211849434408
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.00028953660262552594,
+      "zero_mse": 0.0016020524164944375,
+      "standardized_mse": 0.00459602780794203,
+      "seed_mses": [
+        0.00029443728605526795,
+        0.00028551142244515466,
+        0.0002590813521021119,
+        0.0002974247526994412,
+        0.00031122819982565373
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0016020524164944375,
+      "zero_mse": 0.0016020524164944375,
+      "standardized_mse": 0.02541378505742422,
+      "seed_mses": [
+        0.0015911505050175095,
+        0.0015300447507488176,
+        0.0016355664773495223,
+        0.0016786652849424871,
+        0.0015748350644138511
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "all",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.23515459456968593,
+      "zero_mse": 0.00640820966597775,
+      "standardized_mse": 3.7318270842759254,
+      "seed_mses": [
+        0.24015842622402983,
+        0.22950893871182698,
+        0.21342549532479688,
+        0.2564824739822916,
+        0.23619763860548426
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "all",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.22210684830015898,
+      "zero_mse": 0.00640820966597775,
+      "standardized_mse": 3.5250722706507767,
+      "seed_mses": [
+        0.22746300152335888,
+        0.21528774779954196,
+        0.20304745050169326,
+        0.24381244791001644,
+        0.22092359376618428
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "all",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0010676009298343837,
+      "zero_mse": 0.00640820966597775,
+      "standardized_mse": 0.016940943431680393,
+      "seed_mses": [
+        0.0011001473329088174,
+        0.0010501720431461722,
+        0.000951978089906392,
+        0.0010875464904340278,
+        0.001148160692776509
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "all",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.00640820966597775,
+      "zero_mse": 0.00640820966597775,
+      "standardized_mse": 0.10165514022969688,
+      "seed_mses": [
+        0.006364602020070038,
+        0.006120179002995271,
+        0.006542265909398089,
+        0.006714661139769949,
+        0.0062993402576554045
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.055113355371165185,
+      "zero_mse": 0.00010226186856113983,
+      "standardized_mse": 0.8746315793929089,
+      "seed_mses": [
+        0.060489382800071725,
+        0.05277292247623522,
+        0.04723218974986636,
+        0.05819105540707156,
+        0.056881226422581053
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.20872555107557816,
+      "zero_mse": 0.00010226186856113983,
+      "standardized_mse": 3.32570047252497,
+      "seed_mses": [
+        0.18968637050448123,
+        0.2223053507784705,
+        0.18560424583963875,
+        0.23330718882758736,
+        0.21272459942771302
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 1.7798940678842957e-05,
+      "zero_mse": 0.00010226186856113983,
+      "standardized_mse": 0.0002826858209212822,
+      "seed_mses": [
+        1.4711036526091275e-05,
+        1.7909421273869583e-05,
+        1.4831489347925437e-05,
+        1.9141914046726697e-05,
+        2.2400842199601795e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.00010226186856113983,
+      "zero_mse": 0.00010226186856113983,
+      "standardized_mse": 0.0016232215402271083,
+      "seed_mses": [
+        9.306323401507346e-05,
+        8.689462803225311e-05,
+        8.950881755063708e-05,
+        0.00012133468307113657,
+        0.00012050798013659897
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.21495146308909022,
+      "zero_mse": 0.00040904747424455937,
+      "standardized_mse": 3.4107257474776054,
+      "seed_mses": [
+        0.23606262430520308,
+        0.2050946488973691,
+        0.18442783393758055,
+        0.22708458335374748,
+        0.22208762495155085
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.20331937718728188,
+      "zero_mse": 0.00040904747424455937,
+      "standardized_mse": 3.225626748902689,
+      "seed_mses": [
+        0.21515374216608368,
+        0.19271412607827512,
+        0.18063850693071393,
+        0.20993106211475093,
+        0.2181594486465857
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 6.536603700769664e-05,
+      "zero_mse": 0.00040904747424455937,
+      "standardized_mse": 0.0010378455430156814,
+      "seed_mses": [
+        5.353898523503214e-05,
+        6.732916429592984e-05,
+        5.426835967820891e-05,
+        6.872824972462067e-05,
+        8.296542610469164e-05
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.00040904747424455937,
+      "zero_mse": 0.00040904747424455937,
+      "standardized_mse": 0.006492886160908433,
+      "seed_mses": [
+        0.0003722529360602939,
+        0.0003475785121290125,
+        0.0003580352702025483,
+        0.00048533873228454624,
+        0.0004820319205463959
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.05829207153302422,
+      "zero_mse": 0.0007096628961539979,
+      "standardized_mse": 0.9249251044646378,
+      "seed_mses": [
+        0.06063900443351441,
+        0.06198735087464671,
+        0.05669678118373686,
+        0.06240412423850132,
+        0.04973309693472184
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.22232023219148678,
+      "zero_mse": 0.0007096628961539979,
+      "standardized_mse": 3.5446409229057094,
+      "seed_mses": [
+        0.20800288500672456,
+        0.2305611527147911,
+        0.2252576671804645,
+        0.2331445465977613,
+        0.21463490945769248
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.0001254142363886637,
+      "zero_mse": 0.0007096628961539979,
+      "standardized_mse": 0.0019909057806471097,
+      "seed_mses": [
+        0.0001285077848441488,
+        0.00014576500942059637,
+        9.705638446685504e-05,
+        0.00014460055300687672,
+        0.00011114145020484159
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0007096628961539979,
+      "zero_mse": 0.0007096628961539979,
+      "standardized_mse": 0.011253765974456343,
+      "seed_mses": [
+        0.0006791813082391631,
+        0.0007139471206129308,
+        0.0006563170746538835,
+        0.0008160455880671254,
+        0.0006828233891968869
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.22764258362227716,
+      "zero_mse": 0.0028386515846159917,
+      "standardized_mse": 3.6113773788462367,
+      "seed_mses": [
+        0.2382028735964174,
+        0.24113384240206484,
+        0.22118279220431458,
+        0.24334081376430775,
+        0.19435259614428135
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.2202467036247874,
+      "zero_mse": 0.0028386515846159917,
+      "standardized_mse": 3.495739190557772,
+      "seed_mses": [
+        0.23003317309316973,
+        0.2295180888593433,
+        0.21638941727320882,
+        0.24716021191427665,
+        0.17813262698393856
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0004625889711847705,
+      "zero_mse": 0.0028386515846159917,
+      "standardized_mse": 0.0073408703978101635,
+      "seed_mses": [
+        0.0004838468944376119,
+        0.0005439311613986453,
+        0.00034783469591061,
+        0.0005299264793427365,
+        0.0004074056248342489
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0028386515846159917,
+      "zero_mse": 0.0028386515846159917,
+      "standardized_mse": 0.04501506389782536,
+      "seed_mses": [
+        0.0027167252329566524,
+        0.0028557884824517233,
+        0.002625268298615534,
+        0.0032641823522685013,
+        0.0027312935567875476
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.05913995240153169,
+      "zero_mse": 0.0021032240184294276,
+      "standardized_mse": 0.9388169174530633,
+      "seed_mses": [
+        0.052150105937205884,
+        0.05537106602308196,
+        0.051747492057093336,
+        0.07317341137188495,
+        0.06325768661839232
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.2243829579065651,
+      "zero_mse": 0.0021032240184294276,
+      "standardized_mse": 3.5784520580564716,
+      "seed_mses": [
+        0.2165731839074706,
+        0.21705309673282103,
+        0.20879260175842057,
+        0.25946794913141324,
+        0.2200279580027
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.0003701268682742339,
+      "zero_mse": 0.0021032240184294276,
+      "standardized_mse": 0.005878318976195097,
+      "seed_mses": [
+        0.0003286179605888164,
+        0.0003614574809521743,
+        0.0003715887910718069,
+        0.00044403462225709475,
+        0.0003449354865012769
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0021032240184294276,
+      "zero_mse": 0.0021032240184294276,
+      "standardized_mse": 0.03336467011985475,
+      "seed_mses": [
+        0.0020728609286458175,
+        0.0019131432624827013,
+        0.0022026095050242814,
+        0.0022938835661427477,
+        0.0020336228298515895
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.23076557596899816,
+      "zero_mse": 0.00841289607371771,
+      "standardized_mse": 3.662871615900964,
+      "seed_mses": [
+        0.20318066463411952,
+        0.21630114180387652,
+        0.20263569242993784,
+        0.2854354367668941,
+        0.24627494421016288
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.21561405509435097,
+      "zero_mse": 0.00841289607371771,
+      "standardized_mse": 3.42281835134292,
+      "seed_mses": [
+        0.1995329019749159,
+        0.20197500556477263,
+        0.18378940100307734,
+        0.2735516632990102,
+        0.21922130362997866
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0013546087551676307,
+      "zero_mse": 0.00841289607371771,
+      "standardized_mse": 0.021505940657920553,
+      "seed_mses": [
+        0.001201232785028657,
+        0.0013322889107696234,
+        0.0013612204793725584,
+        0.001634686289867977,
+        0.0012436153107993374
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.00841289607371771,
+      "zero_mse": 0.00841289607371771,
+      "standardized_mse": 0.13345868047941897,
+      "seed_mses": [
+        0.00829144371458327,
+        0.007652573049930805,
+        0.008810438020097126,
+        0.009175534264570991,
+        0.008134491319406358
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.06837301129448864,
+      "zero_mse": 0.003493060882833185,
+      "standardized_mse": 1.085464509060517,
+      "seed_mses": [
+        0.07231601674102228,
+        0.06549172108031118,
+        0.06258384797496366,
+        0.06927092812473849,
+        0.07220254255140757
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.21873777603966071,
+      "zero_mse": 0.003493060882833185,
+      "standardized_mse": 3.4869358158520827,
+      "seed_mses": [
+        0.21541535484846291,
+        0.21808332024890734,
+        0.2111594211044699,
+        0.22188977690719255,
+        0.22714100708927085
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.000644806365160363,
+      "zero_mse": 0.003493060882833185,
+      "standardized_mse": 0.010232200654004629,
+      "seed_mses": [
+        0.0007059123622620155,
+        0.0006169137781339782,
+        0.0005528487435218602,
+        0.0005819219214870664,
+        0.0007664350203968948
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.003493060882833185,
+      "zero_mse": 0.003493060882833185,
+      "standardized_mse": 0.05541348259515869,
+      "seed_mses": [
+        0.0035194965491699834,
+        0.0034061939918673856,
+        0.0035938305121692876,
+        0.003483397302488939,
+        0.0034623860584703293
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.2672587555983781,
+      "zero_mse": 0.01397224353133274,
+      "standardized_mse": 4.242333594878896,
+      "seed_mses": [
+        0.28318754236037924,
+        0.25550612174399745,
+        0.24545566272735456,
+        0.2700690620442172,
+        0.28207538911594193
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.24924725729421562,
+      "zero_mse": 0.01397224353133274,
+      "standardized_mse": 3.956104791799723,
+      "seed_mses": [
+        0.26513218885926626,
+        0.23694377069577674,
+        0.23137247679977296,
+        0.24460685431202797,
+        0.26818099580423416
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.002387839955977436,
+      "zero_mse": 0.01397224353133274,
+      "standardized_mse": 0.03787911712797517,
+      "seed_mses": [
+        0.0026619706669339677,
+        0.00225713893612049,
+        0.0020445888246641906,
+        0.0021168449428007772,
+        0.002858656409367758
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.01397224353133274,
+      "zero_mse": 0.01397224353133274,
+      "standardized_mse": 0.22165393038063472,
+      "seed_mses": [
+        0.014077986196679933,
+        0.01362477596746954,
+        0.01437532204867715,
+        0.013933589209955756,
+        0.013849544233881317
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.060229597650052424,
+      "zero_mse": 0.0016020524164944375,
+      "standardized_mse": 0.9559595275927817,
+      "seed_mses": [
+        0.06139862747795356,
+        0.058905765113568764,
+        0.05456507774141505,
+        0.06575987978554909,
+        0.06051863813177569
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.21854162930332272,
+      "zero_mse": 0.0016020524164944375,
+      "standardized_mse": 3.4839323173348085,
+      "seed_mses": [
+        0.20741944856678485,
+        0.22200073011874752,
+        0.20770348397074845,
+        0.23695236536598863,
+        0.21863211849434408
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.00028953660262552594,
+      "zero_mse": 0.0016020524164944375,
+      "standardized_mse": 0.00459602780794203,
+      "seed_mses": [
+        0.00029443728605526795,
+        0.00028551142244515466,
+        0.0002590813521021119,
+        0.0002974247526994412,
+        0.00031122819982565373
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0016020524164944375,
+      "zero_mse": 0.0016020524164944375,
+      "standardized_mse": 0.02541378505742422,
+      "seed_mses": [
+        0.0015911505050175095,
+        0.0015300447507488176,
+        0.0016355664773495223,
+        0.0016786652849424871,
+        0.0015748350644138511
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.23515459456968593,
+      "zero_mse": 0.00640820966597775,
+      "standardized_mse": 3.7318270842759254,
+      "seed_mses": [
+        0.24015842622402983,
+        0.22950893871182698,
+        0.21342549532479688,
+        0.2564824739822916,
+        0.23619763860548426
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.22210684830015898,
+      "zero_mse": 0.00640820966597775,
+      "standardized_mse": 3.5250722706507767,
+      "seed_mses": [
+        0.22746300152335888,
+        0.21528774779954196,
+        0.20304745050169326,
+        0.24381244791001644,
+        0.22092359376618428
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0010676009298343837,
+      "zero_mse": 0.00640820966597775,
+      "standardized_mse": 0.016940943431680393,
+      "seed_mses": [
+        0.0011001473329088174,
+        0.0010501720431461722,
+        0.000951978089906392,
+        0.0010875464904340278,
+        0.001148160692776509
+      ]
+    },
+    {
+      "kind": "nearest_history",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.00640820966597775,
+      "zero_mse": 0.00640820966597775,
+      "standardized_mse": 0.10165514022969688,
+      "seed_mses": [
+        0.006364602020070038,
+        0.006120179002995271,
+        0.006542265909398089,
+        0.006714661139769949,
+        0.0062993402576554045
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.02132270797607024,
+      "zero_mse": 0.0,
+      "standardized_mse": 2.6869077603915628,
+      "seed_mses": [
+        0.019692847371264813,
+        0.02120751396860479,
+        0.022640129873684516,
+        0.021180172695065988,
+        0.021892875971731077
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.06845441533538224,
+      "zero_mse": 0.0,
+      "standardized_mse": 8.65592427175519,
+      "seed_mses": [
+        0.06622122360306315,
+        0.07055064471717862,
+        0.0641307643154861,
+        0.07126946876537407,
+        0.07009997527580925
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.0001137521960009414,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.014316357778768196,
+      "seed_mses": [
+        0.0001224378309305379,
+        0.0001092726616236548,
+        0.00011823207939184178,
+        0.00010596960786760573,
+        0.00011284880019106684
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "all",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.08406274751528944,
+      "zero_mse": 0.0,
+      "standardized_mse": 10.592231021989184,
+      "seed_mses": [
+        0.077699353427131,
+        0.08344562224073902,
+        0.08945203975942406,
+        0.08345102575736368,
+        0.08626569639178944
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "all",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.07212599493938723,
+      "zero_mse": 0.0,
+      "standardized_mse": 9.089709403925786,
+      "seed_mses": [
+        0.06537995894466121,
+        0.07345653062008503,
+        0.0751949311471977,
+        0.07263795591092434,
+        0.07396059807406782
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "all",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00044384992291829193,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.05585307719655661,
+      "seed_mses": [
+        0.0004786467266027193,
+        0.0004253999536133606,
+        0.0004615537848964256,
+        0.00041335432708832236,
+        0.00044029482239063176
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "all",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.022786042061260885,
+      "zero_mse": 0.0,
+      "standardized_mse": 2.8704267167463393,
+      "seed_mses": [
+        0.018173442634392613,
+        0.02371137284185699,
+        0.025428498400116555,
+        0.023733396890515575,
+        0.022883499539422696
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.07053316188174497,
+      "zero_mse": 0.0,
+      "standardized_mse": 8.914245206070643,
+      "seed_mses": [
+        0.06727352639684923,
+        0.0750150586201117,
+        0.06339792109758978,
+        0.07469814477570837,
+        0.07228115851846575
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.0001096761150667896,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.013811691314832768,
+      "seed_mses": [
+        0.0001077209082979954,
+        0.00010313412654313874,
+        0.00012622807258532407,
+        9.75685312161779e-05,
+        0.00011372893669131195
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.08988185586156448,
+      "zero_mse": 0.0,
+      "standardized_mse": 11.322112581722056,
+      "seed_mses": [
+        0.07172980543685543,
+        0.09344104944594038,
+        0.10055719557383425,
+        0.09345088661328467,
+        0.0902303422379077
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.07828277692511647,
+      "zero_mse": 0.0,
+      "standardized_mse": 9.863542503596943,
+      "seed_mses": [
+        0.06145088864522154,
+        0.08382750496728149,
+        0.08723380555220486,
+        0.08379449396942604,
+        0.0751071914914484
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00042847431576959524,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.05395253611580053,
+      "seed_mses": [
+        0.0004216150544624506,
+        0.0004021169729874778,
+        0.0004937349552087413,
+        0.0003791892806824733,
+        0.00044571531550683286
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.021763585663306766,
+      "zero_mse": 0.0,
+      "standardized_mse": 2.741043285086002,
+      "seed_mses": [
+        0.020633081360958032,
+        0.02218130865368513,
+        0.02254245736689461,
+        0.02208444270329144,
+        0.021376638231704617
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.06847945296724281,
+      "zero_mse": 0.0,
+      "standardized_mse": 8.66400268495334,
+      "seed_mses": [
+        0.06531004480897963,
+        0.07029788425046367,
+        0.06804147284862211,
+        0.07094820907810043,
+        0.0677996538500482
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.00011121566547022581,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.013991947558302378,
+      "seed_mses": [
+        0.00012110118680436991,
+        0.00012027991209038517,
+        0.00010834641540204276,
+        0.00010816663497968576,
+        9.818417807464544e-05
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.08580885055132019,
+      "zero_mse": 0.0,
+      "standardized_mse": 10.806642374222491,
+      "seed_mses": [
+        0.08134310866236547,
+        0.087121438208392,
+        0.08903380201647595,
+        0.08715040851687844,
+        0.08439549535248905
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.07137914816502582,
+      "zero_mse": 0.0,
+      "standardized_mse": 8.991802449483666,
+      "seed_mses": [
+        0.06420355715324433,
+        0.07392698395237735,
+        0.07389479796381207,
+        0.07326894644220872,
+        0.07160145531348663
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00043306143152457757,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.05447290527257147,
+      "seed_mses": [
+        0.000471745973851955,
+        0.00046732927744186044,
+        0.00042234961487728107,
+        0.00042197718754262756,
+        0.00038190510390916375
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.019509986535475803,
+      "zero_mse": 0.0,
+      "standardized_mse": 2.4580584224516793,
+      "seed_mses": [
+        0.019137291758962525,
+        0.019706750539579078,
+        0.02041501940788018,
+        0.018016615356090074,
+        0.020274255614867155
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.06716252432866808,
+      "zero_mse": 0.0,
+      "standardized_mse": 8.486499400981561,
+      "seed_mses": [
+        0.06550340891972425,
+        0.06772328039028462,
+        0.061094723544980044,
+        0.07233133086413857,
+        0.06915987792421291
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.00011593207316471158,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.014582183782381112,
+      "seed_mses": [
+        0.00013597219855589242,
+        0.00010512107096512261,
+        0.00012634419670763835,
+        9.850168891639084e-05,
+        0.00011372121067851372
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.07681030439538457,
+      "zero_mse": 0.0,
+      "standardized_mse": 9.676613823626287,
+      "seed_mses": [
+        0.07555341388467568,
+        0.07747803295712168,
+        0.08042456555875845,
+        0.07087721142645181,
+        0.07971829814991518
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.06682671613508133,
+      "zero_mse": 0.0,
+      "standardized_mse": 8.420823687449621,
+      "seed_mses": [
+        0.06534796612399996,
+        0.07143480743608324,
+        0.06604197164528831,
+        0.061686699930271094,
+        0.06962213553976404
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00045255785206226186,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.056915254617386966,
+      "seed_mses": [
+        0.0005314794424503501,
+        0.0004087360719188366,
+        0.0004936187494214729,
+        0.00038457948958245077,
+        0.00044437550693819856
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.021231217644237493,
+      "zero_mse": 0.0,
+      "standardized_mse": 2.6781026172822298,
+      "seed_mses": [
+        0.02082757373074608,
+        0.01923062383929797,
+        0.02217454431984671,
+        0.02088623583036686,
+        0.02303711050092985
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.06764252216387309,
+      "zero_mse": 0.0,
+      "standardized_mse": 8.558949795015211,
+      "seed_mses": [
+        0.06679791428669951,
+        0.06916635560785446,
+        0.06398893977075246,
+        0.06710019034354894,
+        0.07115921081051012
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.00011818493030203862,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.014879608459556515,
+      "seed_mses": [
+        0.00012495703006389376,
+        0.00010855553689597267,
+        0.00011200963287236194,
+        0.0001196415763581684,
+        0.00012576087531979623
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.08374997925288855,
+      "zero_mse": 0.0,
+      "standardized_mse": 10.563555308385897,
+      "seed_mses": [
+        0.08217108572462742,
+        0.07574196835150204,
+        0.08779259588862759,
+        0.08232559647283982,
+        0.09071864982684583
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.0720153385323253,
+      "zero_mse": 0.0,
+      "standardized_mse": 9.082668975172915,
+      "seed_mses": [
+        0.07051742385617904,
+        0.06463682612459803,
+        0.07360914942748559,
+        0.07180168330179154,
+        0.07951160995157222
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0004613060923167331,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.058071612780467484,
+      "seed_mses": [
+        0.0004897464356461215,
+        0.0004234174921052675,
+        0.00043651182007820705,
+        0.00046767135054573785,
+        0.0004891833632083318
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 1,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0,
+      "zero_mse": 0.0,
+      "standardized_mse": 0.0,
+      "seed_mses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.0833327217607446,
+      "zero_mse": 0.000636372570050581,
+      "standardized_mse": 2.7594014611342415,
+      "seed_mses": [
+        0.07567349202306978,
+        0.08300528163126483,
+        0.08785853403807169,
+        0.08319056514643744,
+        0.08693573596487926
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.26128890853841413,
+      "zero_mse": 0.000636372570050581,
+      "standardized_mse": 8.684231067846033,
+      "seed_mses": [
+        0.25242033443862855,
+        0.26876824256984433,
+        0.2460263419620544,
+        0.27210353001787313,
+        0.26712609370367046
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 6.057263936742323e-05,
+      "zero_mse": 0.000636372570050581,
+      "standardized_mse": 0.0020069925250098845,
+      "seed_mses": [
+        6.136302129420966e-05,
+        7.050081764251246e-05,
+        5.666528986258305e-05,
+        5.494880193286796e-05,
+        5.938526610494306e-05
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.000636372570050581,
+      "zero_mse": 0.000636372570050581,
+      "standardized_mse": 0.02105142197088246,
+      "seed_mses": [
+        0.0006693588443354869,
+        0.00064579436704284,
+        0.0006470570858622484,
+        0.0005923976102359856,
+        0.0006272549427763438
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "all",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.3276568077509858,
+      "zero_mse": 0.002545490280202324,
+      "standardized_mse": 10.848891989767603,
+      "seed_mses": [
+        0.29780877060325567,
+        0.32564535768697583,
+        0.346071834930542,
+        0.32712132277019845,
+        0.34163675276395733
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "all",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.2823694291231412,
+      "zero_mse": 0.002545490280202324,
+      "standardized_mse": 9.350865190755911,
+      "seed_mses": [
+        0.25539542174844054,
+        0.2840914213250967,
+        0.29481494021761795,
+        0.2849242761979812,
+        0.29262108612656934
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "all",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0001956646952303332,
+      "zero_mse": 0.002545490280202324,
+      "standardized_mse": 0.006476764107420446,
+      "seed_mses": [
+        0.0001986559639781924,
+        0.0002344331227762814,
+        0.00017857415732666572,
+        0.00017726871502047207,
+        0.00018939151705005437
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "all",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.002545490280202324,
+      "zero_mse": 0.002545490280202324,
+      "standardized_mse": 0.08420568788352983,
+      "seed_mses": [
+        0.0026774353773419478,
+        0.00258317746817136,
+        0.0025882283434489938,
+        0.0023695904409439424,
+        0.0025090197711053752
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.07887142697629854,
+      "zero_mse": 6.98927143914367e-05,
+      "standardized_mse": 2.613611179397581,
+      "seed_mses": [
+        0.0638959786495589,
+        0.08664870213941145,
+        0.07388523857190583,
+        0.08053548779665616,
+        0.08939172772396035
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.252843267428912,
+      "zero_mse": 6.98927143914367e-05,
+      "standardized_mse": 8.399832282975733,
+      "seed_mses": [
+        0.2279848840943624,
+        0.28344622306647055,
+        0.22766129300388618,
+        0.2600301705294781,
+        0.265093766450363
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 6.243731468264961e-06,
+      "zero_mse": 6.98927143914367e-05,
+      "standardized_mse": 0.0002070878945683985,
+      "seed_mses": [
+        1.0056055791836927e-05,
+        5.670715632622713e-06,
+        4.801041000488073e-06,
+        6.166918312914733e-06,
+        4.523926603462362e-06
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 6.98927143914367e-05,
+      "zero_mse": 6.98927143914367e-05,
+      "standardized_mse": 0.002314822910482811,
+      "seed_mses": [
+        8.61241289121821e-05,
+        6.538748370714764e-05,
+        7.98172648280679e-05,
+        6.952854279531202e-05,
+        4.860615171447384e-05
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.310386059842653,
+      "zero_mse": 0.0002795708575657468,
+      "standardized_mse": 10.284842727440521,
+      "seed_mses": [
+        0.2515715199521883,
+        0.3408507366644131,
+        0.2909497880949299,
+        0.316447825953863,
+        0.35211042854787067
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.27213988242757825,
+      "zero_mse": 0.0002795708575657468,
+      "standardized_mse": 9.019797843012928,
+      "seed_mses": [
+        0.22253671240236872,
+        0.3010641079277362,
+        0.24876037032182233,
+        0.2787966201235257,
+        0.3095416013624384
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 1.9989515635440942e-05,
+      "zero_mse": 0.0002795708575657468,
+      "standardized_mse": 0.0006619379610700901,
+      "seed_mses": [
+        3.450079839926011e-05,
+        1.7727890643901415e-05,
+        1.388868340495235e-05,
+        1.86397537498153e-05,
+        1.519045197927555e-05
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0002795708575657468,
+      "zero_mse": 0.0002795708575657468,
+      "standardized_mse": 0.009259291641931244,
+      "seed_mses": [
+        0.0003444965156487284,
+        0.00026154993482859054,
+        0.0003192690593122716,
+        0.0002781141711812481,
+        0.00019442460685789535
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.0748436585391086,
+      "zero_mse": 0.0004095175277683434,
+      "standardized_mse": 2.4767897678094917,
+      "seed_mses": [
+        0.06952495176389854,
+        0.06678875778429466,
+        0.08132638216618349,
+        0.08002237063284555,
+        0.0765558303483207
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.25841057240753773,
+      "zero_mse": 0.0004095175277683434,
+      "standardized_mse": 8.582573857922126,
+      "seed_mses": [
+        0.2444940287706355,
+        0.2599626912630113,
+        0.24327034847648937,
+        0.2636907858855789,
+        0.28063500764197336
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 3.703601487416749e-05,
+      "zero_mse": 0.0004095175277683434,
+      "standardized_mse": 0.0012263310946133824,
+      "seed_mses": [
+        4.575750026868259e-05,
+        3.628913329130797e-05,
+        3.9941939773744314e-05,
+        2.839136718058644e-05,
+        3.4800133856516155e-05
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0004095175277683434,
+      "zero_mse": 0.0004095175277683434,
+      "standardized_mse": 0.013548195727189367,
+      "seed_mses": [
+        0.00046722177964811373,
+        0.00038171158903699205,
+        0.00043364974724738087,
+        0.00036357798888374173,
+        0.00040142653402548857
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.29440455157463996,
+      "zero_mse": 0.0016380701110733735,
+      "standardized_mse": 9.741617895652428,
+      "seed_mses": [
+        0.2733887736540145,
+        0.2621051758875411,
+        0.3209119002399744,
+        0.3149607408190509,
+        0.3006561672726188
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.2484559626687075,
+      "zero_mse": 0.0016380701110733735,
+      "standardized_mse": 8.224145848868929,
+      "seed_mses": [
+        0.22590626911795014,
+        0.21946421334399424,
+        0.272237548667313,
+        0.2755324044476628,
+        0.24913937776661732
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00011632701830918918,
+      "zero_mse": 0.0016380701110733735,
+      "standardized_mse": 0.003846808312392888,
+      "seed_mses": [
+        0.0001519433316419732,
+        0.00011163301322892455,
+        0.0001257167340301564,
+        8.760367016383885e-05,
+        0.0001047383424810529
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0016380701110733735,
+      "zero_mse": 0.0016380701110733735,
+      "standardized_mse": 0.05419278290875747,
+      "seed_mses": [
+        0.001868887118592455,
+        0.0015268463561479684,
+        0.0017345989889895235,
+        0.001454311955534967,
+        0.0016057061361019545
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.08607315293402469,
+      "zero_mse": 0.0008776945648953632,
+      "standardized_mse": 2.8499611222270786,
+      "seed_mses": [
+        0.08171523720128769,
+        0.08066356989896263,
+        0.10296814455282244,
+        0.0843932637082937,
+        0.080625549308757
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.26070747984553966,
+      "zero_mse": 0.0008776945648953632,
+      "standardized_mse": 8.669053246896343,
+      "seed_mses": [
+        0.27156693440019625,
+        0.2561016928959996,
+        0.2617876708997878,
+        0.2737772977928721,
+        0.2403038032388422
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 8.741807849063803e-05,
+      "zero_mse": 0.0008776945648953632,
+      "standardized_mse": 0.002896912549480808,
+      "seed_mses": [
+        0.0001047142240084892,
+        9.607112654572717e-05,
+        8.064350545878065e-05,
+        7.240354252024583e-05,
+        8.325799391994731e-05
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0008776945648953632,
+      "zero_mse": 0.0008776945648953632,
+      "standardized_mse": 0.0290261395133641,
+      "seed_mses": [
+        0.0009272083804987402,
+        0.0009255251607091494,
+        0.0008842390993011974,
+        0.0007832430572514636,
+        0.0008682571267162646
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.3380727429188089,
+      "zero_mse": 0.0035107782595814527,
+      "standardized_mse": 11.193303200261344,
+      "seed_mses": [
+        0.321712848636812,
+        0.3159101113276013,
+        0.4051471289803519,
+        0.33128104128704355,
+        0.31631258436223586
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.2906076771728238,
+      "zero_mse": 0.0035107782595814527,
+      "standardized_mse": 9.62142979210203,
+      "seed_mses": [
+        0.2797323307872458,
+        0.282640666247292,
+        0.33779903763452235,
+        0.2842770252854972,
+        0.26858932590956175
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00028642840507252996,
+      "zero_mse": 0.0035107782595814527,
+      "standardized_mse": 0.009482617087688472,
+      "seed_mses": [
+        0.0003563626122166663,
+        0.0003184215161079379,
+        0.00025595694030632955,
+        0.00023116592151160945,
+        0.00027023503522010674
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0035107782595814527,
+      "zero_mse": 0.0035107782595814527,
+      "standardized_mse": 0.1161045580534564,
+      "seed_mses": [
+        0.003708833521994961,
+        0.003702100642836598,
+        0.0035369563972047894,
+        0.0031329722290058546,
+        0.0034730285068650586
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.09354264859354655,
+      "zero_mse": 0.0011883854731471806,
+      "standardized_mse": 3.0972437751028146,
+      "seed_mses": [
+        0.08755780047753398,
+        0.09792009670239055,
+        0.09325437086137497,
+        0.08781113844795431,
+        0.10116983647847899
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.27319431447166737,
+      "zero_mse": 0.0011883854731471806,
+      "standardized_mse": 9.085464883589935,
+      "seed_mses": [
+        0.2656354904893201,
+        0.2755623630538957,
+        0.25138605546805415,
+        0.29091586586356355,
+        0.2824717974835034
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.00011159273263662247,
+      "zero_mse": 0.0011883854731471806,
+      "standardized_mse": 0.003697638561376949,
+      "seed_mses": [
+        8.492430510782991e-05,
+        0.00014397229510039198,
+        0.00010127467321731915,
+        0.00011283337971772484,
+        0.00011495901003984643
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0011883854731471806,
+      "zero_mse": 0.0011883854731471806,
+      "standardized_mse": 0.03931652973249354,
+      "seed_mses": [
+        0.0011968810882829117,
+        0.001210553234718071,
+        0.0011905222320723473,
+        0.001153240852013425,
+        0.001190729958649148
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.3677638766678415,
+      "zero_mse": 0.004753541892588723,
+      "standardized_mse": 12.17580413571612,
+      "seed_mses": [
+        0.34456194017000796,
+        0.38371540686834776,
+        0.36727852240691183,
+        0.3457956830208363,
+        0.39746783087310394
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.318274194223455,
+      "zero_mse": 0.004753541892588723,
+      "standardized_mse": 10.538087279039761,
+      "seed_mses": [
+        0.29340637468619746,
+        0.3331966977813642,
+        0.32046280424681406,
+        0.3010910549352394,
+        0.34321403946765994
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0003599138419041727,
+      "zero_mse": 0.004753541892588723,
+      "standardized_mse": 0.011915693068530336,
+      "seed_mses": [
+        0.00025181711365487,
+        0.0004899500711243617,
+        0.0003187342715652246,
+        0.0003716655146566247,
+        0.0003674022385197824
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.004753541892588723,
+      "zero_mse": 0.004753541892588723,
+      "standardized_mse": 0.15726611892997416,
+      "seed_mses": [
+        0.004787524353131647,
+        0.004842212938872284,
+        0.00476208892828939,
+        0.0046129634080537,
+        0.004762919834596592
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.0833327217607446,
+      "zero_mse": 0.000636372570050581,
+      "standardized_mse": 2.7594014611342415,
+      "seed_mses": [
+        0.07567349202306978,
+        0.08300528163126483,
+        0.08785853403807169,
+        0.08319056514643744,
+        0.08693573596487926
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.26128890853841413,
+      "zero_mse": 0.000636372570050581,
+      "standardized_mse": 8.684231067846033,
+      "seed_mses": [
+        0.25242033443862855,
+        0.26876824256984433,
+        0.2460263419620544,
+        0.27210353001787313,
+        0.26712609370367046
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 6.057263936742323e-05,
+      "zero_mse": 0.000636372570050581,
+      "standardized_mse": 0.0020069925250098845,
+      "seed_mses": [
+        6.136302129420966e-05,
+        7.050081764251246e-05,
+        5.666528986258305e-05,
+        5.494880193286796e-05,
+        5.938526610494306e-05
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.000636372570050581,
+      "zero_mse": 0.000636372570050581,
+      "standardized_mse": 0.02105142197088246,
+      "seed_mses": [
+        0.0006693588443354869,
+        0.00064579436704284,
+        0.0006470570858622484,
+        0.0005923976102359856,
+        0.0006272549427763438
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.3276568077509858,
+      "zero_mse": 0.002545490280202324,
+      "standardized_mse": 10.848891989767603,
+      "seed_mses": [
+        0.29780877060325567,
+        0.32564535768697583,
+        0.346071834930542,
+        0.32712132277019845,
+        0.34163675276395733
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.2823694291231412,
+      "zero_mse": 0.002545490280202324,
+      "standardized_mse": 9.350865190755911,
+      "seed_mses": [
+        0.25539542174844054,
+        0.2840914213250967,
+        0.29481494021761795,
+        0.2849242761979812,
+        0.29262108612656934
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0001956646952303332,
+      "zero_mse": 0.002545490280202324,
+      "standardized_mse": 0.006476764107420446,
+      "seed_mses": [
+        0.0001986559639781924,
+        0.0002344331227762814,
+        0.00017857415732666572,
+        0.00017726871502047207,
+        0.00018939151705005437
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 2,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.002545490280202324,
+      "zero_mse": 0.002545490280202324,
+      "standardized_mse": 0.08420568788352983,
+      "seed_mses": [
+        0.0026774353773419478,
+        0.00258317746817136,
+        0.0025882283434489938,
+        0.0023695904409439424,
+        0.0025090197711053752
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.15721463110525838,
+      "zero_mse": 0.0019488910004097717,
+      "standardized_mse": 2.49343306435743,
+      "seed_mses": [
+        0.1419232399130286,
+        0.1574574509698868,
+        0.16722837725454995,
+        0.15656223813125691,
+        0.16290184925756956
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.4887818818322634,
+      "zero_mse": 0.0019488910004097717,
+      "standardized_mse": 7.785747277534165,
+      "seed_mses": [
+        0.47377076635957516,
+        0.5032560889159314,
+        0.46059354607551206,
+        0.5060922247510319,
+        0.5001967830592666
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.00035917767602701683,
+      "zero_mse": 0.0019488910004097717,
+      "standardized_mse": 0.005696770051630866,
+      "seed_mses": [
+        0.0003683247143471499,
+        0.00039605999856690244,
+        0.0003461163260712521,
+        0.000330534412890488,
+        0.0003548529282592917
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "all",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0019488910004097717,
+      "zero_mse": 0.0019488910004097717,
+      "standardized_mse": 0.030884455346249444,
+      "seed_mses": [
+        0.0020499115081089882,
+        0.001977745180892769,
+        0.001981612361959515,
+        0.0018142176689269498,
+        0.0019209682821606361
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "all",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.6152448713917585,
+      "zero_mse": 0.007795564001639087,
+      "standardized_mse": 9.756585196393129,
+      "seed_mses": [
+        0.5560861480423587,
+        0.6145743341230148,
+        0.6560165276824561,
+        0.6115112539178793,
+        0.6380360931930835
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "all",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.5306213187598268,
+      "zero_mse": 0.007795564001639087,
+      "standardized_mse": 8.416024985519135,
+      "seed_mses": [
+        0.4805452830112876,
+        0.53637022097567,
+        0.557039555110884,
+        0.5309491856282745,
+        0.5482023490730172
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "all",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0013294206502034943,
+      "zero_mse": 0.007795564001639087,
+      "standardized_mse": 0.021075732945353556,
+      "seed_mses": [
+        0.0013679644285409579,
+        0.001475449303205594,
+        0.0012728611397678574,
+        0.0012211573452511554,
+        0.0013096710342519083
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "all",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.007795564001639087,
+      "zero_mse": 0.007795564001639087,
+      "standardized_mse": 0.12353782138499778,
+      "seed_mses": [
+        0.008199646032435955,
+        0.007910980723571076,
+        0.007926449447838059,
+        0.007256870675707799,
+        0.0076838731286425445
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.14710282282149445,
+      "zero_mse": 0.00021404642656285613,
+      "standardized_mse": 2.3354609489366123,
+      "seed_mses": [
+        0.11844732193180749,
+        0.16108518589318005,
+        0.14108902505678572,
+        0.14980707883818378,
+        0.16508550238751518
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.469356722375459,
+      "zero_mse": 0.00021404642656285613,
+      "standardized_mse": 7.473809920200425,
+      "seed_mses": [
+        0.42374115469960455,
+        0.5276829542478154,
+        0.4240926442629222,
+        0.4786491206765999,
+        0.4926177379903525
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 3.8079517036737974e-05,
+      "zero_mse": 0.00021404642656285613,
+      "standardized_mse": 0.0006046474408290237,
+      "seed_mses": [
+        5.471777698745331e-05,
+        3.5021144382085154e-05,
+        3.463062735451377e-05,
+        3.811134910443912e-05,
+        2.7916687355198507e-05
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.00021404642656285613,
+      "zero_mse": 0.00021404642656285613,
+      "standardized_mse": 0.003396572207658271,
+      "seed_mses": [
+        0.00026375520822962133,
+        0.0002002491407378902,
+        0.0002444403159297971,
+        0.00021293115969356932,
+        0.0001488563082234027
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.5757762409598991,
+      "zero_mse": 0.0008561857062514245,
+      "standardized_mse": 9.14029631102039,
+      "seed_mses": [
+        0.46399438584306063,
+        0.6301152247468438,
+        0.5530116985119681,
+        0.5836237044013961,
+        0.6481361912962269
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.5018602322597867,
+      "zero_mse": 0.0008561857062514245,
+      "standardized_mse": 7.969107870411517,
+      "seed_mses": [
+        0.41113607000136865,
+        0.5586978612222251,
+        0.46583764634642755,
+        0.5105861914669558,
+        0.5630433922619563
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.00014075334209134318,
+      "zero_mse": 0.0008561857062514245,
+      "standardized_mse": 0.0022335721457684304,
+      "seed_mses": [
+        0.00020561658402246943,
+        0.00012894638721987065,
+        0.00012625443754885242,
+        0.00013837572565764843,
+        0.00010457357600787496
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_1",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.0008561857062514245,
+      "zero_mse": 0.0008561857062514245,
+      "standardized_mse": 0.013586288830633083,
+      "seed_mses": [
+        0.0010550208329184853,
+        0.0008009965629515608,
+        0.0009777612637191884,
+        0.0008517246387742773,
+        0.0005954252328936108
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.14142907900676854,
+      "zero_mse": 0.0012541474069851016,
+      "standardized_mse": 2.2415382494934577,
+      "seed_mses": [
+        0.1309347762917477,
+        0.12665917218991984,
+        0.1538601534799428,
+        0.15130032410381455,
+        0.14439096896841788
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.48400029228765107,
+      "zero_mse": 0.0012541474069851016,
+      "standardized_mse": 7.704550872746279,
+      "seed_mses": [
+        0.4591249525436887,
+        0.48154257827395863,
+        0.45661462426603033,
+        0.4946131804829186,
+        0.5281061258716592
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.00022338944078558482,
+      "zero_mse": 0.0012541474069851016,
+      "standardized_mse": 0.0035417821726525466,
+      "seed_mses": [
+        0.00027674451526869527,
+        0.0002095608915353531,
+        0.00023415257947663365,
+        0.00017992798443040826,
+        0.00021656123321683375
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0012541474069851016,
+      "zero_mse": 0.0012541474069851016,
+      "standardized_mse": 0.019877202478058832,
+      "seed_mses": [
+        0.0014308668418658015,
+        0.0011689917354212433,
+        0.0013280522848790957,
+        0.0011134573776050657,
+        0.0012293687951543024
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.5540866517320927,
+      "zero_mse": 0.005016589627940406,
+      "standardized_mse": 8.780409499664417,
+      "seed_mses": [
+        0.5134663537247047,
+        0.49456487608648997,
+        0.6052263248120446,
+        0.5919656627129686,
+        0.5652100413242553
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.4659482193391932,
+      "zero_mse": 0.005016589627940406,
+      "standardized_mse": 7.386342719530307,
+      "seed_mses": [
+        0.42372493935830946,
+        0.4032291417025102,
+        0.515202703722539,
+        0.5184554148123517,
+        0.4691288971002561
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0008218388801104493,
+      "zero_mse": 0.005016589627940406,
+      "standardized_mse": 0.013023875579669478,
+      "seed_mses": [
+        0.0010384229746935392,
+        0.0007620483148669719,
+        0.0008624575142097289,
+        0.0006625800582494601,
+        0.0007836855385325468
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_2",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.005016589627940406,
+      "zero_mse": 0.005016589627940406,
+      "standardized_mse": 0.07950880991223533,
+      "seed_mses": [
+        0.005723467367463206,
+        0.004675966941684973,
+        0.005312209139516383,
+        0.004453829510420263,
+        0.00491747518061721
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.16311747209146313,
+      "zero_mse": 0.002687939519068565,
+      "standardized_mse": 2.5867345963188533,
+      "seed_mses": [
+        0.15330180625036458,
+        0.1551994080376848,
+        0.19677559963774727,
+        0.1590197479404672,
+        0.15129079859105185
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.4876301912355128,
+      "zero_mse": 0.002687939519068565,
+      "standardized_mse": 7.771025217914445,
+      "seed_mses": [
+        0.5080819777376728,
+        0.4838073341549253,
+        0.49223254663272276,
+        0.5061190785902359,
+        0.4479100190620071
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.000506801076986779,
+      "zero_mse": 0.002687939519068565,
+      "standardized_mse": 0.00803745518200065,
+      "seed_mses": [
+        0.0005782563099705075,
+        0.0005457560244154606,
+        0.000474704466224018,
+        0.00043946730439194386,
+        0.0004958212799319653
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.002687939519068565,
+      "zero_mse": 0.002687939519068565,
+      "standardized_mse": 0.04258702346009881,
+      "seed_mses": [
+        0.0028395754419032935,
+        0.0028344206023151993,
+        0.0027079820742769937,
+        0.0023986821072405464,
+        0.002659037369606792
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.6381517353640846,
+      "zero_mse": 0.01075175807627426,
+      "standardized_mse": 10.118833039825969,
+      "seed_mses": [
+        0.6012120381174566,
+        0.605191405195346,
+        0.7713965313937455,
+        0.620922021665985,
+        0.5920366804478898
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.549942843746818,
+      "zero_mse": 0.01075175807627426,
+      "standardized_mse": 8.720162323611508,
+      "seed_mses": [
+        0.5254283393932535,
+        0.546730276308341,
+        0.6430705383201429,
+        0.5290296583993432,
+        0.505455406313009
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0018805473238168052,
+      "zero_mse": 0.01075175807627426,
+      "standardized_mse": 0.029810179829650268,
+      "seed_mses": [
+        0.0021700038309251817,
+        0.002033069761014511,
+        0.001742061702677899,
+        0.0016156111551733658,
+        0.0018419901692930682
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_3",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.01075175807627426,
+      "zero_mse": 0.01075175807627426,
+      "standardized_mse": 0.17034809384039523,
+      "seed_mses": [
+        0.011358301767613174,
+        0.011337682409260797,
+        0.010831928297107973,
+        0.009594728428962186,
+        0.010636149478427169
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.17720915050130734,
+      "zero_mse": 0.003639430649022564,
+      "standardized_mse": 2.8099984626807966,
+      "seed_mses": [
+        0.16500905517819459,
+        0.1868860377587626,
+        0.17718873084372397,
+        0.16612180164256218,
+        0.19084012708329331
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.514140321430431,
+      "zero_mse": 0.003639430649022564,
+      "standardized_mse": 8.193603099275506,
+      "seed_mses": [
+        0.5041349804573347,
+        0.5199914889870263,
+        0.46943436914037295,
+        0.5449875192543732,
+        0.5321532493130474
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.0006684406692989655,
+      "zero_mse": 0.003639430649022564,
+      "standardized_mse": 0.010603195411041244,
+      "seed_mses": [
+        0.0005635802551619436,
+        0.000793901933934711,
+        0.0006409776312298427,
+        0.000664631013635161,
+        0.0006791125125331691
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.003639430649022564,
+      "zero_mse": 0.003639430649022564,
+      "standardized_mse": 0.05767702323918187,
+      "seed_mses": [
+        0.0036654485404372366,
+        0.003707319245096745,
+        0.0036459747727521736,
+        0.003531800031168618,
+        0.003646610655658047
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.6929648575109575,
+      "zero_mse": 0.014557722596090256,
+      "standardized_mse": 10.986801935061738,
+      "seed_mses": [
+        0.6456718144842126,
+        0.728425830463379,
+        0.6944315560120664,
+        0.6495336268911678,
+        0.7467614597039617
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.6047339796935088,
+      "zero_mse": 0.014557722596090256,
+      "standardized_mse": 9.588487028523208,
+      "seed_mses": [
+        0.5618917832922188,
+        0.6368236046696039,
+        0.6040473320544268,
+        0.5657254778344475,
+        0.6551817006168474
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0024745430547953805,
+      "zero_mse": 0.014557722596090256,
+      "standardized_mse": 0.03923530422632604,
+      "seed_mses": [
+        0.002057814324522641,
+        0.002977732749721022,
+        0.002360670904634949,
+        0.002468062441924147,
+        0.0025084348531741437
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "truth_energy_quartile_4",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.014557722596090256,
+      "zero_mse": 0.014557722596090256,
+      "standardized_mse": 0.2307080929567275,
+      "seed_mses": [
+        0.014661794161748946,
+        0.01482927698038698,
+        0.014583899091008694,
+        0.014127200124674472,
+        0.014586442622632189
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "matched",
+      "mse": 0.15721463110525838,
+      "zero_mse": 0.0019488910004097717,
+      "standardized_mse": 2.49343306435743,
+      "seed_mses": [
+        0.1419232399130286,
+        0.1574574509698868,
+        0.16722837725454995,
+        0.15656223813125691,
+        0.16290184925756956
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "mismatched",
+      "mse": 0.4887818818322634,
+      "zero_mse": 0.0019488910004097717,
+      "standardized_mse": 7.785747277534165,
+      "seed_mses": [
+        0.47377076635957516,
+        0.5032560889159314,
+        0.46059354607551206,
+        0.5060922247510319,
+        0.5001967830592666
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "query_reencoded",
+      "mse": 0.00035917767602701683,
+      "zero_mse": 0.0019488910004097717,
+      "standardized_mse": 0.005696770051630866,
+      "seed_mses": [
+        0.0003683247143471499,
+        0.00039605999856690244,
+        0.0003461163260712521,
+        0.000330534412890488,
+        0.0003548529282592917
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "all_agents",
+      "method": "zero",
+      "mse": 0.0019488910004097717,
+      "zero_mse": 0.0019488910004097717,
+      "standardized_mse": 0.030884455346249444,
+      "seed_mses": [
+        0.0020499115081089882,
+        0.001977745180892769,
+        0.001981612361959515,
+        0.0018142176689269498,
+        0.0019209682821606361
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "matched",
+      "mse": 0.6152448713917585,
+      "zero_mse": 0.007795564001639087,
+      "standardized_mse": 9.756585196393129,
+      "seed_mses": [
+        0.5560861480423587,
+        0.6145743341230148,
+        0.6560165276824561,
+        0.6115112539178793,
+        0.6380360931930835
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "mismatched",
+      "mse": 0.5306213187598268,
+      "zero_mse": 0.007795564001639087,
+      "standardized_mse": 8.416024985519135,
+      "seed_mses": [
+        0.4805452830112876,
+        0.53637022097567,
+        0.557039555110884,
+        0.5309491856282745,
+        0.5482023490730172
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "query_reencoded",
+      "mse": 0.0013294206502034943,
+      "zero_mse": 0.007795564001639087,
+      "standardized_mse": 0.021075732945353556,
+      "seed_mses": [
+        0.0013679644285409579,
+        0.001475449303205594,
+        0.0012728611397678574,
+        0.0012211573452511554,
+        0.0013096710342519083
+      ]
+    },
+    {
+      "kind": "random_donor",
+      "horizon": 3,
+      "group": "effect_nonzero_1e-7",
+      "scope": "target_only",
+      "method": "zero",
+      "mse": 0.007795564001639087,
+      "zero_mse": 0.007795564001639087,
+      "standardized_mse": 0.12353782138499778,
+      "seed_mses": [
+        0.008199646032435955,
+        0.007910980723571076,
+        0.007926449447838059,
+        0.007256870675707799,
+        0.0076838731286425445
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "method": "matched",
+      "metric": "zero MSE minus method MSE; positive is better",
+      "mean": -0.031577604552140134,
+      "ci95": [
+        -0.034297785938709656,
+        -0.028857423165570613
+      ],
+      "exact_two_sided_p": 0.0625,
+      "seed_deltas": [
+        -0.03250191460853407,
+        -0.0307911804439417,
+        -0.02840317340360244,
+        -0.03432825254981623,
+        -0.03186350175480626
+      ],
+      "scope": "diagnostic, not confirmatory superiority test"
+    },
+    {
+      "method": "query_reencoded",
+      "metric": "zero MSE minus method MSE; positive is better",
+      "mean": 0.00047504205508657686,
+      "ci95": [
+        0.0004485805679271062,
+        0.0005015035422460475
+      ],
+      "exact_two_sided_p": 0.0625,
+      "seed_deltas": [
+        0.0004703382201778626,
+        0.0004525194933808653,
+        0.00049514628266257,
+        0.0004993124778558252,
+        0.00045789380135576133
+      ],
+      "scope": "diagnostic, not confirmatory superiority test"
+    }
+  ],
+  "source_and_weight_checks": true,
+  "all_legacy_values_verified": true,
+  "training_updates": 0,
+  "scope": "Post-hoc evaluation-only diagnostic. Preserve all original episodes/donors/metrics. Audit target-only and every effect-energy quartile without replacing all-sample primary MSE. Query-state re-encoding is a simulator oracle, not observation-only training or a deployed method. No new task, no outcome-based selection, no scale fitting."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "rows": 135,
+  "metrics_recomputed_rows": 135,
+  "legacy_replay_rows": 30,
+  "code_and_input_hashes_verified": true,
+  "simulator_replay_error": 0,
+  "training_updates": 0,
+  "sources": {
+    "outputs\\mamujoco_frozen_matching_audit_2026_09_19\\protocol.json": "3ec9bc121863f60c240f122e784893881c3604d0cc5098a322adfb7e1ae0ec8f",
+    "outputs\\mamujoco_frozen_matching_audit_2026_09_19\\summary.json": "b2d0062b4135fcd318930d87ea9916557e059a98aee25b940ea27be872dd0fa4",
+    "outputs\\mamujoco_frozen_matching_audit_2026_09_19\\physical_evaluation_only.npz": "192f46ac8bfff4dbcab95bae53c9391902fc5b5f06eb38011ce8a60530500bbc",
+    "outputs\\mamujoco_frozen_matching_audit_2026_09_19\\source_manifest.json": "200ddcf84e1f88de2ed7d4fd94b6adcb801d88b04235ad763f053f42d0027929"
+  }
+}

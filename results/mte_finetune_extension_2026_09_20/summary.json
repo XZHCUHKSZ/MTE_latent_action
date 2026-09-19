@@ -1,0 +1,603 @@
+{
+  "records": [
+    {
+      "suite": "visual",
+      "seed": 908711,
+      "arm": "simple_solo_pretrained_trainable",
+      "frozen": 98.08240548301798,
+      "finetuned": 117.48448639700203,
+      "delta": 19.40208091398405,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908711\\b2\\evaluate_anchor_solo_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908711,
+      "arm": "simple_aux_pretrained_trainable",
+      "frozen": -4.002770191614977,
+      "finetuned": 69.46230970688028,
+      "delta": 73.46507989849525,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908711\\b2\\evaluate_anchor_plus_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908711,
+      "arm": "graph_solo_pretrained_trainable",
+      "frozen": 121.91511552725132,
+      "finetuned": 74.54423376003439,
+      "delta": -47.37088176721693,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908711\\b2\\evaluate_anchor_solo_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908711,
+      "arm": "graph_aux_pretrained_trainable",
+      "frozen": 39.15508204631803,
+      "finetuned": 82.11078284959662,
+      "delta": 42.95570080327859,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908711\\b2\\evaluate_anchor_plus_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908711,
+      "arm": "tree_solo_pretrained_trainable",
+      "frozen": 143.93414649858107,
+      "finetuned": 86.38730940601589,
+      "delta": -57.546837092565184,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908711\\b2\\evaluate_anchor_solo_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908711,
+      "arm": "tree_aux_pretrained_trainable",
+      "frozen": 22.053893373618713,
+      "finetuned": 106.76021861396192,
+      "delta": 84.7063252403432,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908711\\b2\\evaluate_anchor_plus_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908712,
+      "arm": "simple_solo_pretrained_trainable",
+      "frozen": 70.70471860489135,
+      "finetuned": 24.472603381475757,
+      "delta": -46.2321152234156,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908712\\b2\\evaluate_anchor_solo_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908712,
+      "arm": "simple_aux_pretrained_trainable",
+      "frozen": 82.2171968482233,
+      "finetuned": 102.99525345846735,
+      "delta": 20.77805661024405,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908712\\b2\\evaluate_anchor_plus_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908712,
+      "arm": "graph_solo_pretrained_trainable",
+      "frozen": 65.54209930747905,
+      "finetuned": 82.28939387661403,
+      "delta": 16.74729456913498,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908712\\b2\\evaluate_anchor_solo_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908712,
+      "arm": "graph_aux_pretrained_trainable",
+      "frozen": 51.793106890806214,
+      "finetuned": 64.46229743433207,
+      "delta": 12.669190543525858,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908712\\b2\\evaluate_anchor_plus_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908712,
+      "arm": "tree_solo_pretrained_trainable",
+      "frozen": 80.14200330577425,
+      "finetuned": 87.30722945984326,
+      "delta": 7.165226154069003,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908712\\b2\\evaluate_anchor_solo_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908712,
+      "arm": "tree_aux_pretrained_trainable",
+      "frozen": 77.44627981880707,
+      "finetuned": 105.61104856708945,
+      "delta": 28.164768748282384,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908712\\b2\\evaluate_anchor_plus_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908713,
+      "arm": "simple_solo_pretrained_trainable",
+      "frozen": 112.31773620226187,
+      "finetuned": 47.07277851085541,
+      "delta": -65.24495769140646,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908713\\b2\\evaluate_anchor_solo_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908713,
+      "arm": "simple_aux_pretrained_trainable",
+      "frozen": 50.67969677198998,
+      "finetuned": 118.7608416990546,
+      "delta": 68.08114492706461,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908713\\b2\\evaluate_anchor_plus_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908713,
+      "arm": "graph_solo_pretrained_trainable",
+      "frozen": 56.69008972109996,
+      "finetuned": 104.29477100320334,
+      "delta": 47.60468128210338,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908713\\b2\\evaluate_anchor_solo_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908713,
+      "arm": "graph_aux_pretrained_trainable",
+      "frozen": 30.80378611060828,
+      "finetuned": 102.16725243455676,
+      "delta": 71.36346632394847,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908713\\b2\\evaluate_anchor_plus_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908713,
+      "arm": "tree_solo_pretrained_trainable",
+      "frozen": 74.0835099554915,
+      "finetuned": 88.19667923806608,
+      "delta": 14.113169282574589,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908713\\b2\\evaluate_anchor_solo_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908713,
+      "arm": "tree_aux_pretrained_trainable",
+      "frozen": 47.47042252296242,
+      "finetuned": 147.83841733736028,
+      "delta": 100.36799481439786,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908713\\b2\\evaluate_anchor_plus_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908714,
+      "arm": "simple_solo_pretrained_trainable",
+      "frozen": 99.20145861828009,
+      "finetuned": 120.30607810333969,
+      "delta": 21.1046194850596,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908714\\b2\\evaluate_anchor_solo_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908714,
+      "arm": "simple_aux_pretrained_trainable",
+      "frozen": 102.11939333622492,
+      "finetuned": 129.42235282106972,
+      "delta": 27.302959484844806,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908714\\b2\\evaluate_anchor_plus_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908714,
+      "arm": "graph_solo_pretrained_trainable",
+      "frozen": 135.40083279958117,
+      "finetuned": 113.9703600147879,
+      "delta": -21.430472784793267,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908714\\b2\\evaluate_anchor_solo_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908714,
+      "arm": "graph_aux_pretrained_trainable",
+      "frozen": 88.02171326938245,
+      "finetuned": 120.51268175389215,
+      "delta": 32.49096848450971,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908714\\b2\\evaluate_anchor_plus_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908714,
+      "arm": "tree_solo_pretrained_trainable",
+      "frozen": 140.48395265985957,
+      "finetuned": 161.11437279445897,
+      "delta": 20.630420134599404,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908714\\b2\\evaluate_anchor_solo_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908714,
+      "arm": "tree_aux_pretrained_trainable",
+      "frozen": 83.39046219772148,
+      "finetuned": 109.22105061643161,
+      "delta": 25.830588418710136,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908714\\b2\\evaluate_anchor_plus_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908715,
+      "arm": "simple_solo_pretrained_trainable",
+      "frozen": 87.83108485806731,
+      "finetuned": 134.6134865021802,
+      "delta": 46.78240164411288,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908715\\b2\\evaluate_anchor_solo_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908715,
+      "arm": "simple_aux_pretrained_trainable",
+      "frozen": 93.54174990826759,
+      "finetuned": 117.72892416124103,
+      "delta": 24.187174252973435,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908715\\b2\\evaluate_anchor_plus_edge_cara_mobius_simple\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908715,
+      "arm": "graph_solo_pretrained_trainable",
+      "frozen": 72.60731078085857,
+      "finetuned": 34.886596374141924,
+      "delta": -37.720714406716645,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908715\\b2\\evaluate_anchor_solo_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908715,
+      "arm": "graph_aux_pretrained_trainable",
+      "frozen": 78.25845600908394,
+      "finetuned": 96.86554533994033,
+      "delta": 18.607089330856383,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908715\\b2\\evaluate_anchor_plus_edge_cara_mobius_graph\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908715,
+      "arm": "tree_solo_pretrained_trainable",
+      "frozen": 51.35849966306918,
+      "finetuned": 82.80201591990783,
+      "delta": 31.44351625683865,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908715\\b2\\evaluate_anchor_solo_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "suite": "visual",
+      "seed": 908715,
+      "arm": "tree_aux_pretrained_trainable",
+      "frozen": 93.70255753154053,
+      "finetuned": 136.36330297584203,
+      "delta": 42.6607454443015,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\visual_supervision_inventory_2026_09_19\\formal\\seed908715\\b2\\evaluate_anchor_plus_edge_cara_mobius_tree\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 0,
+      "arm": "simple_matched",
+      "frozen": 713.5793935293472,
+      "finetuned": 688.4437677733629,
+      "delta": -25.13562575598428,
+      "frozen_source": "WORKSPACE_ROOT\\mte_history_edge_transfer_2026_09_16\\runtime\\mamujoco_s0_n90__B8_simple_matched__latent_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 0,
+      "arm": "graph_matched",
+      "frozen": 687.8007880815587,
+      "finetuned": 701.2071716281034,
+      "delta": 13.406383546544703,
+      "frozen_source": "WORKSPACE_ROOT\\mte_history_edge_transfer_2026_09_16\\runtime\\mamujoco_s0_n90__B8_graph_matched__latent_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 0,
+      "arm": "mif_native",
+      "frozen": 671.4850254940307,
+      "finetuned": 701.2819333167922,
+      "delta": 29.79690782276157,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\mamujoco_mif_visibility_2026_09_19\\grounding\\seed0_B8_masked_mobius_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 1,
+      "arm": "simple_matched",
+      "frozen": 714.72275019037,
+      "finetuned": 707.0793254862865,
+      "delta": -7.643424704083486,
+      "frozen_source": "WORKSPACE_ROOT\\mte_history_edge_transfer_2026_09_16\\runtime\\mamujoco_s1_n90__B8_simple_matched__latent_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 1,
+      "arm": "graph_matched",
+      "frozen": 678.7798617552329,
+      "finetuned": 720.5386584408499,
+      "delta": 41.75879668561697,
+      "frozen_source": "WORKSPACE_ROOT\\mte_history_edge_transfer_2026_09_16\\runtime\\mamujoco_s1_n90__B8_graph_matched__latent_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 1,
+      "arm": "mif_native",
+      "frozen": 718.7550715183847,
+      "finetuned": 685.7554496163681,
+      "delta": -32.999621902016656,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\mamujoco_mif_visibility_2026_09_19\\grounding\\seed1_B8_masked_mobius_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 2,
+      "arm": "simple_matched",
+      "frozen": 692.4670227452644,
+      "finetuned": 685.1593630909232,
+      "delta": -7.307659654341251,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\mamujoco_route_completion_2026_09_19\\grounding\\seed2_B8_simple_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 2,
+      "arm": "graph_matched",
+      "frozen": 672.250226810596,
+      "finetuned": 700.9864139094403,
+      "delta": 28.73618709884431,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\mamujoco_route_completion_2026_09_19\\grounding\\seed2_B8_graph_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 2,
+      "arm": "mif_native",
+      "frozen": 707.2318051186952,
+      "finetuned": 709.8566515643486,
+      "delta": 2.624846445653361,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\mamujoco_mif_visibility_2026_09_19\\grounding\\seed2_B8_masked_mobius_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 3,
+      "arm": "simple_matched",
+      "frozen": 686.9803682682739,
+      "finetuned": 640.2413620043044,
+      "delta": -46.739006263969486,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\mamujoco_route_completion_2026_09_19\\grounding\\seed3_B8_simple_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 3,
+      "arm": "graph_matched",
+      "frozen": 681.2844768414866,
+      "finetuned": 684.1223328998008,
+      "delta": 2.8378560583141734,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\mamujoco_route_completion_2026_09_19\\grounding\\seed3_B8_graph_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 3,
+      "arm": "mif_native",
+      "frozen": 663.7225023062338,
+      "finetuned": 646.9055030431613,
+      "delta": -16.81699926307249,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\mamujoco_mif_visibility_2026_09_19\\grounding\\seed3_B8_masked_mobius_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 4,
+      "arm": "simple_matched",
+      "frozen": 695.8519171108351,
+      "finetuned": 720.5017657441837,
+      "delta": 24.649848633348597,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\mamujoco_route_completion_2026_09_19\\grounding\\seed4_B8_simple_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 4,
+      "arm": "graph_matched",
+      "frozen": 738.6734315172325,
+      "finetuned": 703.4740667190995,
+      "delta": -35.19936479813305,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\mamujoco_route_completion_2026_09_19\\grounding\\seed4_B8_graph_matched_d202609160\\result.json"
+    },
+    {
+      "suite": "mamujoco",
+      "seed": 4,
+      "arm": "mif_native",
+      "frozen": 706.8277760214952,
+      "finetuned": 719.2919714649631,
+      "delta": 12.46419544346793,
+      "frozen_source": "PACKAGE_ROOT\\outputs\\mamujoco_mif_visibility_2026_09_19\\grounding\\seed4_B8_masked_mobius_d202609160\\result.json"
+    }
+  ],
+  "contrasts": [
+    {
+      "suite": "visual",
+      "arm": "graph_aux_pretrained_trainable",
+      "frozen": 57.606428865239785,
+      "finetuned": 93.22371196246358,
+      "mean_delta": 35.617283097223805,
+      "seed_deltas": [
+        42.95570080327859,
+        12.669190543525858,
+        71.36346632394847,
+        32.49096848450971,
+        18.607089330856383
+      ],
+      "positive_seeds": 5,
+      "t95": [
+        6.781140564322126,
+        64.45342563012548
+      ],
+      "exact_p": 0.0625,
+      "holm_p": 0.375
+    },
+    {
+      "suite": "visual",
+      "arm": "graph_solo_pretrained_trainable",
+      "frozen": 90.43108962725401,
+      "finetuned": 81.99707100575631,
+      "mean_delta": -8.434018621497696,
+      "seed_deltas": [
+        -47.37088176721693,
+        16.74729456913498,
+        47.60468128210338,
+        -21.430472784793267,
+        -37.720714406716645
+      ],
+      "positive_seeds": 2,
+      "t95": [
+        -57.77798689729987,
+        40.909949654304484
+      ],
+      "exact_p": 0.6875,
+      "holm_p": 1.0
+    },
+    {
+      "suite": "visual",
+      "arm": "simple_aux_pretrained_trainable",
+      "frozen": 64.91105333461817,
+      "finetuned": 107.6739363693426,
+      "mean_delta": 42.762883034724425,
+      "seed_deltas": [
+        73.46507989849525,
+        20.77805661024405,
+        68.08114492706461,
+        27.302959484844806,
+        24.187174252973435
+      ],
+      "positive_seeds": 5,
+      "t95": [
+        10.797340857997206,
+        74.72842521145165
+      ],
+      "exact_p": 0.0625,
+      "holm_p": 0.375
+    },
+    {
+      "suite": "visual",
+      "arm": "simple_solo_pretrained_trainable",
+      "frozen": 93.62748075330371,
+      "finetuned": 88.78988657897062,
+      "mean_delta": -4.837594174333103,
+      "seed_deltas": [
+        19.40208091398405,
+        -46.2321152234156,
+        -65.24495769140646,
+        21.1046194850596,
+        46.78240164411288
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -64.66898835764238,
+        54.99380000897617
+      ],
+      "exact_p": 0.9375,
+      "holm_p": 1.0
+    },
+    {
+      "suite": "visual",
+      "arm": "tree_aux_pretrained_trainable",
+      "frozen": 64.81272308893004,
+      "finetuned": 121.15880762213706,
+      "mean_delta": 56.34608453320701,
+      "seed_deltas": [
+        84.7063252403432,
+        28.164768748282384,
+        100.36799481439786,
+        25.830588418710136,
+        42.6607454443015
+      ],
+      "positive_seeds": 5,
+      "t95": [
+        13.988675833961487,
+        98.70349323245253
+      ],
+      "exact_p": 0.0625,
+      "holm_p": 0.375
+    },
+    {
+      "suite": "visual",
+      "arm": "tree_solo_pretrained_trainable",
+      "frozen": 98.00042241655512,
+      "finetuned": 101.16152136365841,
+      "mean_delta": 3.161098947103292,
+      "seed_deltas": [
+        -57.546837092565184,
+        7.165226154069003,
+        14.113169282574589,
+        20.630420134599404,
+        31.44351625683865
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        -40.414526745292974,
+        46.736724639499556
+      ],
+      "exact_p": 0.875,
+      "holm_p": 1.0
+    },
+    {
+      "suite": "mamujoco",
+      "arm": "graph_matched",
+      "frozen": 691.7577570012213,
+      "finetuned": 702.0657287194588,
+      "mean_delta": 10.307971718237422,
+      "seed_deltas": [
+        13.406383546544703,
+        41.75879668561697,
+        28.73618709884431,
+        2.8378560583141734,
+        -35.19936479813305
+      ],
+      "positive_seeds": 4,
+      "t95": [
+        -26.23722875765196,
+        46.8531721941268
+      ],
+      "exact_p": 0.4375,
+      "holm_p": 0.9375
+    },
+    {
+      "suite": "mamujoco",
+      "arm": "mif_native",
+      "frozen": 693.6044360917679,
+      "finetuned": 692.6183018011267,
+      "mean_delta": -0.9861342906412573,
+      "seed_deltas": [
+        29.79690782276157,
+        -32.999621902016656,
+        2.624846445653361,
+        -16.81699926307249,
+        12.46419544346793
+      ],
+      "positive_seeds": 3,
+      "t95": [
+        -31.50825785551579,
+        29.535989274233277
+      ],
+      "exact_p": 0.875,
+      "holm_p": 0.9375
+    },
+    {
+      "suite": "mamujoco",
+      "arm": "simple_matched",
+      "frozen": 700.720290368818,
+      "finetuned": 688.2851168198121,
+      "mean_delta": -12.435173549005981,
+      "seed_deltas": [
+        -25.13562575598428,
+        -7.643424704083486,
+        -7.307659654341251,
+        -46.739006263969486,
+        24.649848633348597
+      ],
+      "positive_seeds": 1,
+      "t95": [
+        -45.06641024080324,
+        20.19606314279128
+      ],
+      "exact_p": 0.3125,
+      "holm_p": 0.9375
+    }
+  ],
+  "new_results": 45,
+  "reused_results": 45,
+  "source_and_weight_checks": true
+}
