@@ -1,6 +1,7 @@
 # Paper-to-code and evidence map
 
 The manuscript snapshot and hashes are recorded in `provenance/manuscript_snapshot.json`.
+See [the per-table alignment audit](MANUSCRIPT_ALIGNMENT_CN.md) for all 21 tables, included figures, numerical checks and remaining replay gaps.
 Current plotted/table exports are in `results/manuscript_snapshot/`. The original mixed reports
 are retired. Use the completed MPE inventory and `results/current/mamujoco_controls.json`.
 

@@ -51,6 +51,10 @@ September 18–20 to the original September 17 code release.
 [reproduction instructions](docs/REPRODUCIBILITY.md), and
 [the experiment catalogue](provenance/experiment_catalog.json).**
 
+The [manuscript alignment audit](docs/MANUSCRIPT_ALIGNMENT_CN.md) binds all 21
+tables and three included figures to the accepted PDF. It records 371 recomputed
+mean/SD cells, 1,570 checked figure input values, and the limits of that verification.
+
 ## Two evaluation routes
 
 | Route | Observation-only stage | Action-labelled stage | Evidence |
@@ -236,7 +240,19 @@ def verify():
         for key in ("entry", "summary", "status"):
             assert (ROOT/row[key]).is_file(),(row["id"],key)
         assert read(ROOT/row["status"])["status"]=="complete",row["id"]
-    print(json.dumps({"status":"pass","files_checked":len(manifest["files"]),"scope":"Published integrity and syntax; no training or replay"}))
+    bindings=read(ROOT/"provenance/manuscript_bindings_2026_09_20.json")
+    numeric=read(ROOT/"provenance/manuscript_numeric_verification_2026_09_20.json")
+    snapshot=read(ROOT/"provenance/manuscript_snapshot.json")
+    assert bindings["manuscript"]==snapshot["files"]==numeric["manuscript"]["files"]
+    assert not bindings["adaptation_integrated"] and not snapshot["adaptation_integrated"]
+    assert [r["index"] for r in bindings["tables"]]==list(range(1,22))
+    for row, original in zip(bindings["tables"],numeric["table_inventory"]):
+        assert all(row[key]==original[key] for key in original)
+        for path in row["evidence"]+row["implementation"]:
+            assert (ROOT/path).is_file(),path
+    assert hashlib.sha256((ROOT/bindings["figure_script"]).read_bytes()).hexdigest()==numeric["figure_script"]["sha256"]
+    assert bindings["figure_artifacts"]==numeric["figure_artifacts"]
+    print(json.dumps({"status":"pass","files_checked":len(manifest["files"]),"table_bindings":21,"figure_bindings":3,"scope":"Published integrity, syntax and manuscript bindings; no training or replay"}))
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--list",action="store_true");ap.add_argument("--verify",action="store_true");ap.add_argument("--report")
@@ -349,6 +365,7 @@ def build(source, manuscript, destination):
         evidence=evidence,adaptation_integrated=False))
     mapping=['# Paper-to-code and evidence map','',
              'The manuscript snapshot and hashes are recorded in `provenance/manuscript_snapshot.json`.',
+             'See [the per-table alignment audit](MANUSCRIPT_ALIGNMENT_CN.md) for all 21 tables, included figures, numerical checks and remaining replay gaps.',
              'Current plotted/table exports are in `results/manuscript_snapshot/`. The original mixed reports',
              'are retired. Use the completed MPE inventory and `results/current/mamujoco_controls.json`.','',
              '| Experiment/question | Entry point | Evidence | Manuscript status |','|---|---|---|---|']

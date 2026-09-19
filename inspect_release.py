@@ -17,7 +17,19 @@ def verify():
         for key in ("entry", "summary", "status"):
             assert (ROOT/row[key]).is_file(),(row["id"],key)
         assert read(ROOT/row["status"])["status"]=="complete",row["id"]
-    print(json.dumps({"status":"pass","files_checked":len(manifest["files"]),"scope":"Published integrity and syntax; no training or replay"}))
+    bindings=read(ROOT/"provenance/manuscript_bindings_2026_09_20.json")
+    numeric=read(ROOT/"provenance/manuscript_numeric_verification_2026_09_20.json")
+    snapshot=read(ROOT/"provenance/manuscript_snapshot.json")
+    assert bindings["manuscript"]==snapshot["files"]==numeric["manuscript"]["files"]
+    assert not bindings["adaptation_integrated"] and not snapshot["adaptation_integrated"]
+    assert [r["index"] for r in bindings["tables"]]==list(range(1,22))
+    for row, original in zip(bindings["tables"],numeric["table_inventory"]):
+        assert all(row[key]==original[key] for key in original)
+        for path in row["evidence"]+row["implementation"]:
+            assert (ROOT/path).is_file(),path
+    assert hashlib.sha256((ROOT/bindings["figure_script"]).read_bytes()).hexdigest()==numeric["figure_script"]["sha256"]
+    assert bindings["figure_artifacts"]==numeric["figure_artifacts"]
+    print(json.dumps({"status":"pass","files_checked":len(manifest["files"]),"table_bindings":21,"figure_bindings":3,"scope":"Published integrity, syntax and manuscript bindings; no training or replay"}))
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--list",action="store_true");ap.add_argument("--verify",action="store_true");ap.add_argument("--report")

@@ -1,0 +1,358 @@
+{
+  "manuscript": [
+    {
+      "path": "main.tex",
+      "sha256": "fdcef1c73869aba21591cefa1a8a0decb088ec8d9da4010d39b560898e789a93"
+    },
+    {
+      "path": "main.pdf",
+      "sha256": "52e01af2b1a6921a203498e962fcc20f46f7a6d8610bff9554443d47af987f5b"
+    },
+    {
+      "path": "EVIDENCE_MAP.md",
+      "sha256": "483fa38cbc5f1c65b4fb95c441d2235b027b26a9ae86024b493a11cea80a546a"
+    }
+  ],
+  "tables": [
+    {
+      "index": 1,
+      "line": 838,
+      "labels": [],
+      "block_sha256": "4f86f335460bc266fbb07782644c83087c3369d7ed6ae2c285c380a7b1287d08",
+      "title": "MPE main returns I",
+      "evidence": [
+        "results/manuscript_snapshot/mpe_completed.json"
+      ],
+      "implementation": [
+        "experiments/mpe_inventory_completion.py"
+      ],
+      "verification": "numeric_recomputed"
+    },
+    {
+      "index": 2,
+      "line": 861,
+      "labels": [],
+      "block_sha256": "fa311e765cdb2be8ebb9cbc8cf2dad2105e0b0abafb24c31b1d729ef0d03886a",
+      "title": "MPE main returns II",
+      "evidence": [
+        "results/manuscript_snapshot/mpe_completed.json"
+      ],
+      "implementation": [
+        "experiments/mpe_inventory_completion.py"
+      ],
+      "verification": "numeric_recomputed"
+    },
+    {
+      "index": 3,
+      "line": 883,
+      "labels": [],
+      "block_sha256": "7f14b319c5ff2b1e1ffda963f294e264419c78084757ddd9e3d1d831f656b5b1",
+      "title": "MaMuJoCo main returns I",
+      "evidence": [
+        "results/current/mamujoco_controls.json"
+      ],
+      "implementation": [
+        "experiments/mamujoco_frozen_control.py",
+        "training/grounding_mamujoco.py"
+      ],
+      "verification": "numeric_recomputed"
+    },
+    {
+      "index": 4,
+      "line": 908,
+      "labels": [],
+      "block_sha256": "bcf6011958af05217caa47247f7299713fed5814d97db5ea9aad5f6be2216c21",
+      "title": "MaMuJoCo main returns II",
+      "evidence": [
+        "results/current/mamujoco_controls.json"
+      ],
+      "implementation": [
+        "experiments/mamujoco_frozen_control.py",
+        "training/grounding_mamujoco.py"
+      ],
+      "verification": "numeric_recomputed"
+    },
+    {
+      "index": 5,
+      "line": 932,
+      "labels": [
+        "app:visualtable"
+      ],
+      "block_sha256": "15bf2a97ad9033906c3b90596f9822f4d4148a4fb35f8e732f4a39b96dc155a7",
+      "title": "Visual B8 and low-label returns",
+      "evidence": [
+        "results/manuscript_snapshot/visual_summary.json",
+        "results/manuscript_snapshot/visual_low_label_summary.json"
+      ],
+      "implementation": [
+        "experiments/visual_control.py",
+        "experiments/visual_low_label.py"
+      ],
+      "verification": "numeric_recomputed"
+    },
+    {
+      "index": 6,
+      "line": 977,
+      "labels": [],
+      "block_sha256": "7ba0b1c12f93fcab6fdb4a890603d2896e9794db57c957aa7e618427211d70bb",
+      "title": "MPE native outcomes",
+      "evidence": [
+        "results/manuscript_snapshot/mpe_completed.json"
+      ],
+      "implementation": [
+        "experiments/mpe_inventory_completion.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 7,
+      "line": 1009,
+      "labels": [],
+      "block_sha256": "5c686118b6594cd75934c548a546ea427d0984cc4478be0aa9e4bd1b8accf936",
+      "title": "MPE data scaling",
+      "evidence": [
+        "results/manuscript_snapshot/mpe_completed.json"
+      ],
+      "implementation": [
+        "experiments/mpe_inventory_completion.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 8,
+      "line": 1045,
+      "labels": [],
+      "block_sha256": "055731c839ec694d5785a9ca5b0e51f0743b54d0ac6461e403bb6c98e0dda52c",
+      "title": "MaMuJoCo scaling endpoints",
+      "evidence": [
+        "results/manuscript_snapshot/unchanged_numeric_scaling.json"
+      ],
+      "implementation": [
+        "experiments/mamujoco_frozen_control.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 9,
+      "line": 1083,
+      "labels": [],
+      "block_sha256": "87db7c9960600b1afa944a48a49f55db39e02c9e0e31ad02ab53d26414fdb300",
+      "title": "MPE history action/skill probes",
+      "evidence": [
+        "results/manuscript_snapshot/mpe_completed.json"
+      ],
+      "implementation": [
+        "experiments/mpe_inventory_completion.py",
+        "evaluation/probes.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 10,
+      "line": 1128,
+      "labels": [],
+      "block_sha256": "e13f86e2952887b7159444333a11305b93bce8c5144fdb778a58d46c45b02bc4",
+      "title": "MaMuJoCo history action/skill probes",
+      "evidence": [
+        "results/probes/mamujoco_action.json"
+      ],
+      "implementation": [
+        "experiments/action_information.py",
+        "evaluation/probes.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 11,
+      "line": 1170,
+      "labels": [
+        "tab:repairedcorrespondence"
+      ],
+      "block_sha256": "d61ff854d286fd39321fc51a6dd0bf14ce23763e9215fb7eac264ebf8f2f4374",
+      "title": "MaMuJoCo correspondence reassignment",
+      "evidence": [
+        "results/manuscript_snapshot/historical_correspondence.json",
+        "results/manuscript_snapshot/historical_secondary_tables.tex"
+      ],
+      "implementation": [],
+      "verification": "archived_numeric_record_no_dedicated_current_runner"
+    },
+    {
+      "index": 12,
+      "line": 1190,
+      "labels": [
+        "tab:basecontrast"
+      ],
+      "block_sha256": "832ea2da3d8ce3721b1ed2ab8bfc5e38e81a3ae073abcf7f485ef27d920913a8",
+      "title": "MIF versus formal Base",
+      "evidence": [
+        "results/manuscript_snapshot/cross_setting_control_gains_2026_09_19.json"
+      ],
+      "implementation": [
+        "training/composition.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 13,
+      "line": 1239,
+      "labels": [
+        "tab:literatureaccess"
+      ],
+      "block_sha256": "83d133d6f07f1b4df72104570b395ca1de9ebf49fa6e296d084b1041b412d92a",
+      "title": "Literature and access comparison",
+      "evidence": [],
+      "implementation": [],
+      "verification": "literature_table_not_executed_baselines"
+    },
+    {
+      "index": 14,
+      "line": 1275,
+      "labels": [
+        "tab:bcgrounding"
+      ],
+      "block_sha256": "b46a512a6f985f755efe0d4ee17b26298ff319e68878f0c674c4c62fe98a1f37",
+      "title": "Visual supervision and parameter counts",
+      "evidence": [
+        "results/manuscript_snapshot/visual_summary.json"
+      ],
+      "implementation": [
+        "experiments/visual_control.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 15,
+      "line": 1329,
+      "labels": [
+        "tab:primarystructure"
+      ],
+      "block_sha256": "fac3ac19a318340ca64e70ffd36a65f3393f7b0ad3235185f29227cabc9bb47c",
+      "title": "MPE structural and matching contrasts",
+      "evidence": [
+        "results/manuscript_snapshot/mpe_completed.json",
+        "results/manuscript_snapshot/mpe_matching_input_control_2026_09_19.json"
+      ],
+      "implementation": [
+        "experiments/mpe_temporal_scale.py",
+        "experiments/mpe_evidence_completion.py",
+        "experiments/mpe_matching_input_control.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 16,
+      "line": 1345,
+      "labels": [],
+      "block_sha256": "0e2bc615809c17c6fee853acd5007e8b72a1179d5e224638b2e85a53ab5bbbb6",
+      "title": "MPE structural budget returns",
+      "evidence": [
+        "results/manuscript_snapshot/mpe_completed.json"
+      ],
+      "implementation": [
+        "experiments/mpe_temporal_scale.py",
+        "experiments/mpe_evidence_completion.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 17,
+      "line": 1379,
+      "labels": [],
+      "block_sha256": "88366cab3c45801bd097122163adcb0f64d1c7238882885ea6a3b342b16c4a9c",
+      "title": "MaMuJoCo original structural controls",
+      "evidence": [
+        "results/manuscript_snapshot/historical_secondary_tables.tex",
+        "results/structural/primary_holm.json"
+      ],
+      "implementation": [
+        "experiments/resource_controls.py",
+        "mte/structured_controls.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 18,
+      "line": 1429,
+      "labels": [],
+      "block_sha256": "18c142af764d39c23a4a2ea58f0e36db0aa0ae9c428a3f2124cd403265c21ef3",
+      "title": "MPE physical donor and query-state oracle",
+      "evidence": [
+        "results/manuscript_snapshot/mpe_completed.json",
+        "results/manuscript_snapshot/mpe_donor_zero_audit_2026_09_19.json"
+      ],
+      "implementation": [
+        "experiments/mpe_donor_zero_audit.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 19,
+      "line": 1456,
+      "labels": [
+        "tab:routegain"
+      ],
+      "block_sha256": "2b9be40a9a0cb4fb780cfad63258e95216b2a49e2119023fab20472af4949199",
+      "title": "MPE routes versus Global16",
+      "evidence": [
+        "results/manuscript_snapshot/route_comparison_current.json"
+      ],
+      "implementation": [
+        "experiments/mpe_inventory_completion.py"
+      ],
+      "verification": "figure_input_recomputed"
+    },
+    {
+      "index": 20,
+      "line": 1585,
+      "labels": [
+        "tab:coefficientmpe"
+      ],
+      "block_sha256": "4d56f6ac4704034b9c9a253fb21e69b0945bc242446394a2cd0414a1ab1f7187",
+      "title": "MPE representation/history coefficient readout",
+      "evidence": [
+        "results/manuscript_snapshot/mpe_completed.json"
+      ],
+      "implementation": [
+        "experiments/mpe_inventory_completion.py"
+      ],
+      "verification": "source_bound"
+    },
+    {
+      "index": 21,
+      "line": 1603,
+      "labels": [
+        "tab:coefficientmamujoco"
+      ],
+      "block_sha256": "3b706e5c9072425bba38b988f4c6554933d06c265922f4d84920512d9fa116f7",
+      "title": "MaMuJoCo coefficient readout",
+      "evidence": [
+        "results/interactions/agent_readout/rows.json",
+        "results/manuscript_snapshot/mamujoco_representation_action_readout.tex"
+      ],
+      "implementation": [
+        "experiments/partner_interactions.py",
+        "evaluation/probes.py"
+      ],
+      "verification": "source_bound"
+    }
+  ],
+  "figure_artifacts": [
+    {
+      "path": "pictures/fig1_mte.pdf",
+      "sha256": "d405654046f3124688afb222280048490e95e89d42d997fee0a3e3d91d8a2978"
+    },
+    {
+      "path": "pictures/fig2_results_composite.pdf",
+      "sha256": "2825f4b96448b534d18820f7cf54c65c7f5089aa22b409830869ac295fb5509e"
+    },
+    {
+      "path": "pictures/fig3_resource_performance.pdf",
+      "sha256": "27186a0566a65cb045d2a76028c71d10707f639780a3d7151b9b369c6a1db084"
+    }
+  ],
+  "figure_script": "provenance/manuscript_sources/draw_reference_composites.py",
+  "figure_reproducer": "evaluation/reproduce_paper_figures.py",
+  "adaptation_integrated": false,
+  "scope": "Bindings are traceability links, not independent reproduction of every secondary table. Table 11 has archival numerical evidence but no dedicated current runner; Table 13 is literature only. Figure 1 is an accepted design asset identified by hash, not generated by the composite script."
+}

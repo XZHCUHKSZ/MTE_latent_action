@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "audited_series": 56,
+  "script_sha256": "2446fa1e7179085177f5c6c548d89e07ebf0be7fe4d74b6ca7163b69c1ba613a",
+  "recorded_rgb_sha256": "c8d2aa20cb1bb25f4f26867cc0f7d51e5414b44058bdbea9323efdca4356ea17",
+  "scope": "Exact accepted script executed; Fig2 current audit and Fig3 accepted audit matched. Figure 1 is a separate accepted design asset. No pixel-level or PDF-byte identity claim."
+}

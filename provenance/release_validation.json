@@ -1,24 +1,24 @@
 {
-  "date": "2026-09-19T20:00:14.260367+00:00",
+  "date": "2026-09-19T20:20:39.645972+00:00",
   "status": "pass",
-  "scope": "Read-only archived evidence audit, current-result selection and visual 180-to-620 overlap checks; no scientific runner or original result changed",
+  "scope": "Manuscript hash and table/figure bindings; exact original composite plot replay; no scientific runner or original result changed",
   "checks": [
     {
       "command": "python inspect_release.py --verify",
       "exit_code": 0,
-      "stdout": "{\"status\": \"pass\", \"files_checked\": 339, \"scope\": \"Published integrity and syntax; no training or replay\"}",
+      "stdout": "{\"status\": \"pass\", \"files_checked\": 346, \"table_bindings\": 21, \"figure_bindings\": 3, \"scope\": \"Published integrity, syntax and manuscript bindings; no training or replay\"}",
       "stderr": ""
     },
     {
       "command": "python run.py --check-results",
       "exit_code": 0,
-      "stdout": "{\"status\": \"pass\", \"files_checked\": 339, \"scope\": \"Published integrity and syntax; no training or replay\"}\nPASS: current reports; all 180 visual manuscript cells preserved inside the full 620-cell inventory; no winner selection",
+      "stdout": "{\"status\": \"pass\", \"files_checked\": 346, \"table_bindings\": 21, \"figure_bindings\": 3, \"scope\": \"Published integrity, syntax and manuscript bindings; no training or replay\"}\nPASS: current reports; all 180 visual manuscript cells preserved inside the full 620-cell inventory; no winner selection",
       "stderr": ""
     },
     {
       "command": "python tests/check_imports.py",
       "exit_code": 0,
-      "stdout": "{\n  \"modules\": 81,\n  \"errors\": []\n}",
+      "stdout": "{\n  \"modules\": 82,\n  \"errors\": []\n}",
       "stderr": "AdroitHandRelocateDense-v1, AdroitHandHammerDense-v1, AdroitHandDoorDense-v1 environment's reward functions were updated in v1.2.1 without an environment version update. Therefore, use gymnasium-robotics==1.2.0 for v1 reproducibility or use v2 in gymnasium-robotics>=1.4.3. See https://github.com/Farama-Foundation/Gymnasium-Robotics/pull/220 for more details"
     }
   ],
@@ -38,9 +38,22 @@
     "published_file_hashes": "provenance/release_manifest.json"
   },
   "retired_files": 25,
-  "published_files": 339,
-  "scientific_python_and_configs_byte_identical_to_baseline": 110,
+  "published_files": 346,
+  "scientific_python_and_configs_byte_identical_to_baseline": 112,
   "foundation_verifier": "FROZEN FOUNDATION CHECK: PASS (11 files)",
   "prior_scientific_smoke_validation_commit": "5efad112233aeb7a638a6876bfe099defbb8b889",
-  "release_manifest_sha256": "416e539bb2c171c63aa0cc698dac33c0997d57e62df6b5c516064d633e86ba29"
+  "release_manifest_sha256": "b83d8421a1aaa1023055e92e5eb99fb98e2ef2944d9ee8e44c0d803bf8d72d27",
+  "previous_validation_commit": "9d3e60db992780a8e09afe0ff859ff24e5eca02b",
+  "manuscript_numeric_verification": {
+    "report": "provenance/manuscript_numeric_verification_2026_09_20.json",
+    "main_mean_sd_cells": 371,
+    "figure_seed_values": 1570,
+    "table_bindings": 21,
+    "figure_artifacts": 3
+  },
+  "figure_script_replay": {
+    "report": "provenance/manuscript_figure_replay_2026_09_20.json",
+    "matched_series": 56,
+    "status": "pass"
+  }
 }

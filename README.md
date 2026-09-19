@@ -9,6 +9,10 @@ September 18–20 to the original September 17 code release.
 [reproduction instructions](docs/REPRODUCIBILITY.md), and
 [the experiment catalogue](provenance/experiment_catalog.json).**
 
+The [manuscript alignment audit](docs/MANUSCRIPT_ALIGNMENT_CN.md) binds all 21
+tables and three included figures to the accepted PDF. It records 371 recomputed
+mean/SD cells, 1,570 checked figure input values, and the limits of that verification.
+
 ## Two evaluation routes
 
 | Route | Observation-only stage | Action-labelled stage | Evidence |
