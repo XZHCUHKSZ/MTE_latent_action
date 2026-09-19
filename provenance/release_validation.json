@@ -1,18 +1,18 @@
 {
-  "date": "2026-09-20T03:34:21.984660+08:00",
+  "date": "2026-09-19T20:00:14.260367+00:00",
   "status": "pass",
-  "scope": "Current-entry retirement audit, imports, numerical contracts and fifteen-path synthetic two-update MaMuJoCo dispatch parity; no formal experiments rerun",
+  "scope": "Read-only archived evidence audit, current-result selection and visual 180-to-620 overlap checks; no scientific runner or original result changed",
   "checks": [
     {
       "command": "python inspect_release.py --verify",
       "exit_code": 0,
-      "stdout": "{\"status\": \"pass\", \"files_checked\": 335, \"scope\": \"Published integrity and syntax; no training or replay\"}",
+      "stdout": "{\"status\": \"pass\", \"files_checked\": 339, \"scope\": \"Published integrity and syntax; no training or replay\"}",
       "stderr": ""
     },
     {
       "command": "python run.py --check-results",
       "exit_code": 0,
-      "stdout": "{\"status\": \"pass\", \"files_checked\": 335, \"scope\": \"Published integrity and syntax; no training or replay\"}\nPASS: current report sources; historical MPE is excluded from default reports",
+      "stdout": "{\"status\": \"pass\", \"files_checked\": 339, \"scope\": \"Published integrity and syntax; no training or replay\"}\nPASS: current reports; all 180 visual manuscript cells preserved inside the full 620-cell inventory; no winner selection",
       "stderr": ""
     },
     {
@@ -20,48 +20,27 @@
       "exit_code": 0,
       "stdout": "{\n  \"modules\": 81,\n  \"errors\": []\n}",
       "stderr": "AdroitHandRelocateDense-v1, AdroitHandHammerDense-v1, AdroitHandDoorDense-v1 environment's reward functions were updated in v1.2.1 without an environment version update. Therefore, use gymnasium-robotics==1.2.0 for v1 reproducibility or use v2 in gymnasium-robotics>=1.4.3. See https://github.com/Farama-Foundation/Gymnasium-Robotics/pull/220 for more details"
-    },
-    {
-      "command": "python tests/check_grounding_contract.py",
-      "exit_code": 0,
-      "stdout": "[{'environment': 'mpe', 'decoder_updates': 1000, 'feature_parity': True, 'fit': 6, 'validation': 2}, {'environment': 'mamujoco', 'decoder_updates': 800, 'feature_parity': True, 'fit': 6, 'validation': 2}]",
-      "stderr": ""
-    },
-    {
-      "command": "python tests/check_temporal_scale.py",
-      "exit_code": 0,
-      "stdout": "PASS: log-budget AUC, sign-symmetric paired statistics, Holm, disjoint budget writes, full matrix",
-      "stderr": ""
-    },
-    {
-      "command": "python tests/check_mpe_temporal_repair.py",
-      "exit_code": 0,
-      "stdout": "PASS: time bounds, target horizons, raw/matched identical trainable initialization and parameter count",
-      "stderr": ""
-    },
-    {
-      "command": "python tests/check_temporal_completion.py",
-      "exit_code": 0,
-      "stdout": "PASS: physical-horizon edge view, zero action placeholders, Simple raw parameter parity, 330 new rows, donor-bank bounds and disjoint writes",
-      "stderr": ""
-    },
-    {
-      "command": "python tests/check_mamujoco_frozen_dispatch.py --reference ARCHIVE_PACKAGE_ROOT\\experiments\\limited_labels.py",
-      "exit_code": 0,
-      "stdout": "PASS entity_target 0.0\nPASS entity_joint 0.0\nPASS lapo_joint 0.0\nPASS laom_joint_k3 0.0\nPASS continuous_lam 0.0\nPASS lapo_state_adapter 0.0\nPASS laom_state_adapter 0.0\nPASS edge_cara_h1 0.0\nPASS edge_cara_h3 0.0\nPASS edge_cara_mobius_simple 0.0\nPASS edge_cara_mobius_graph 0.0\nPASS edge_cara_mif 0.0\nPASS edge_cara_mobius_tree 0.0\nPASS random_edge_encoder 0.0\nPASS matched_cf_deepsets 0.0\n{\"passed\": true, \"methods\": 15}",
-      "stderr": ""
     }
   ],
-  "current_reports_checked": [
-    "mpe",
-    "mamujoco",
-    "visual",
-    "route"
-  ],
+  "archive_audit": {
+    "report": "provenance/release_tools/current_state_audit_2026_09_20_r2.json",
+    "tool_sha256": "6db257b1d27869d70efd9a9f49bbf7ae8e6a2449066b9cd3620ac2339b3c12d4",
+    "status": "pass",
+    "completed_studies": 17,
+    "unique_files_hashed": 5166,
+    "declared_hash_references": 15767,
+    "access_audits": 3074,
+    "referenced_controller_means": 3740,
+    "exact_statistic_checks": 82,
+    "training_identity_groups": 145,
+    "failures": 0,
+    "archival_report_sha256": "b970db9097e703cdb4de318160fec19aee8be7cc6248960655df3520aef874a8",
+    "published_file_hashes": "provenance/release_manifest.json"
+  },
   "retired_files": 25,
-  "published_files": 335,
-  "scientific_python_and_configs_byte_identical_to_baseline": 144,
-  "sensitive_pattern_findings": [],
+  "published_files": 339,
+  "scientific_python_and_configs_byte_identical_to_baseline": 110,
   "foundation_verifier": "FROZEN FOUNDATION CHECK: PASS (11 files)",
-  "release_manifest_sha256": "ca3264a3fcf4891c554881264fccd1715ce0ef885e1e930506492a6d20cffb31"
+  "prior_scientific_smoke_validation_commit": "5efad112233aeb7a638a6876bfe099defbb8b889",
+  "release_manifest_sha256": "416e539bb2c171c63aa0cc698dac33c0997d57e62df6b5c516064d633e86ba29"
 }

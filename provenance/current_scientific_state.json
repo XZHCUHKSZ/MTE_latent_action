@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-19T19:58:21.530582+00:00",
+  "selection_rule": "Latest completed valid protocol-consistent evidence; no selection by largest return; keep all signs and separate Frozen/Adapt/diagnostics.",
+  "latest_results": [
+    {
+      "role": "mpe_frozen",
+      "run_id": "mpe_inventory_completion_2026_09_18",
+      "manuscript_status": "paper",
+      "cells": 1305,
+      "scope": "corrected t+2; complete Frozen inventory",
+      "summary": "results/completed_runs/mpe_inventory_completion_2026_09_18/summary.json",
+      "archival_summary_sha256": "2f302e9b2d07a33f5c4eafacfff0a9316bfcdeac08e2b6057b66f19aeba0a20c"
+    },
+    {
+      "role": "mamujoco_route",
+      "run_id": "mamujoco_route_completion_2026_09_19",
+      "manuscript_status": "paper",
+      "cells": 875,
+      "scope": "Full-visibility route MIF; five decoder repeats",
+      "summary": "results/completed_runs/mamujoco_route_completion_2026_09_19/summary.json",
+      "archival_summary_sha256": "921658901caa35722bfc2dd1eacc416c95318d99a8c0d3b4256fdb5b2419207b"
+    },
+    {
+      "role": "mamujoco_native_coordinates",
+      "run_id": "mamujoco_mif_visibility_2026_09_19",
+      "manuscript_status": "paper",
+      "cells": 500,
+      "scope": "Native masked/visible x Mobius/raw; distinct from route full-table objective",
+      "summary": "results/completed_runs/mamujoco_mif_visibility_2026_09_19/summary.json",
+      "archival_summary_sha256": "92dc6a048982d14b6611cd3fffecf66a15ab540d4f8dd2c683821a72478333d5"
+    },
+    {
+      "role": "visual_complete",
+      "run_id": "visual_supervision_inventory_2026_09_19",
+      "manuscript_status": "followup",
+      "cells": 620,
+      "scope": "500 original configuration cells + 120 MIF supervision factorial cells",
+      "summary": "results/completed_runs/visual_supervision_inventory_2026_09_19/summary.json",
+      "archival_summary_sha256": "f298b43ca6e38b1533d13766ca2d97864dd9a352b16d321b458eb8837fb42af9"
+    },
+    {
+      "role": "visual_paper_subset",
+      "run_id": "visual_low_label_2026_09_19_r1",
+      "manuscript_status": "paper",
+      "cells": 180,
+      "scope": "Subset of visual_complete; do not double count",
+      "summary": "results/completed_runs/visual_low_label_2026_09_19_r1/summary.json",
+      "archival_summary_sha256": "c26391a57eb313d338c19bba53818e228f1c5dfca00dab955f19c29ceb1fee4a"
+    },
+    {
+      "role": "adapt_cross_method",
+      "run_id": "policy_finetune_pilot_2026_09_20_r1",
+      "manuscript_status": "followup",
+      "cells": 70,
+      "scope": "35 new + 35 Frozen pairs; visual B2, MPE B32",
+      "summary": "results/completed_runs/policy_finetune_pilot_2026_09_20_r1/summary.json",
+      "archival_summary_sha256": "58af091cb569cf217d9e9952c58f43eb51da038f7d4fa015f1ea63a6b4934183"
+    },
+    {
+      "role": "adapt_mte",
+      "run_id": "mte_finetune_extension_2026_09_20",
+      "manuscript_status": "followup",
+      "cells": 90,
+      "scope": "45 new + 45 Frozen pairs; visual B2, MaMuJoCo B8 with one decoder seed",
+      "summary": "results/completed_runs/mte_finetune_extension_2026_09_20/summary.json",
+      "archival_summary_sha256": "9bb26f3ba75cad7b2684d443b6717bc1ef89ba55606f8c5f0af19015632b96c1"
+    },
+    {
+      "role": "visual_branches",
+      "run_id": "visual_branch_attribution_2026_09_20",
+      "manuscript_status": "followup",
+      "cells": 100,
+      "scope": "50 new + 50 reused; five sources, four update modes, visual B2",
+      "summary": "results/completed_runs/visual_branch_attribution_2026_09_20/summary.json",
+      "archival_summary_sha256": "e2addffe41408ff5d55cf84f7180aa38e539f9458a3c8ed803a04c9c493a55aa"
+    }
+  ],
+  "manuscript_snapshot": "iclr2027_mpe_completed_revision_2026_09_18",
+  "adaptation_integrated_into_manuscript": false,
+  "audit": {
+    "report": "provenance/release_tools/current_state_audit_2026_09_20_r2.json",
+    "tool_sha256": "6db257b1d27869d70efd9a9f49bbf7ae8e6a2449066b9cd3620ac2339b3c12d4",
+    "status": "pass",
+    "completed_studies": 17,
+    "unique_files_hashed": 5166,
+    "declared_hash_references": 15767,
+    "access_audits": 3074,
+    "referenced_controller_means": 3740,
+    "exact_statistic_checks": 82,
+    "training_identity_groups": 145,
+    "failures": 0,
+    "archival_report_sha256": "b970db9097e703cdb4de318160fec19aee8be7cc6248960655df3520aef874a8",
+    "published_file_hashes": "provenance/release_manifest.json"
+  },
+  "visual_overlap": {
+    "old_cells": 180,
+    "complete_cells": 620,
+    "matched_source_and_mean_cells": 180,
+    "independent_sum_invalid": 800
+  },
+  "main_report": "docs/CURRENT_SCIENTIFIC_STATE_CN.md",
+  "retirement_map": "provenance/retirement_audit.json",
+  "remaining": [
+    "Full-budget Adapt main/ablation matrix",
+    "New task control validation",
+    "More-agent control validation",
+    "Entity-aligned visual slots",
+    "Official structured baseline validation",
+    "Deployable donor/history improvement"
+  ],
+  "unchanged": [
+    "Completed scientific outputs",
+    "Original source manifests and freeze baselines",
+    "Shared core method definitions",
+    "Manuscript PDF and figures"
+  ]
+}

@@ -17,6 +17,8 @@ EXCLUDE = {'experiments/visual_supervision_inventory_resume.py',
 EXCLUDE.update({'docs/review_response_experiment_plan_2026_09_17.md', 'docs/evidence_synthesis_and_remaining_2026_09_19.md', 'docs/review_gap_check_2026_09_19.md', 'docs/review_wording_response_2026_09_19.md', 'docs/visual_supervision_resume_2026_09_19.md', 'docs/review_remaining_and_next_2026_09_18.md', 'docs/weak_controls_audit_2026_09_19.md', 'docs/mpe_post_repair_evidence_audit_2026_09_18.md', 'docs/review_actions_2026_09_19_evening.md'})
 RETIREMENTS = json.loads((Path(__file__).with_name('retirements.json')).read_text(encoding='utf-8'))['files']
 EXCLUDE.update(r['path'] for r in RETIREMENTS)
+# Local audit development records remain in the archive, not the curated delivery.
+EXCLUDE.update({'provenance/release_tools/current_state_audit_2026_09_20.json', 'provenance/release_tools/current_state_audit_2026_09_20_r1.json'})
 # Integration refers to the manuscript snapshot shipped with this release index.
 RUNS = [
  ('mpe_temporal_full_scale_5seeds', 'mpe_temporal_scale', 'paper', 'MPE temporal structural controls'),
@@ -81,6 +83,11 @@ python run.py --check-results
 `run.py` now selects current MPE, MaMuJoCo, visual and route evidence explicitly.
 For example, `python run.py --report mpe` reads the corrected 1,305-cell MPE
 inventory. `python run.py --report mamujoco` reads only MaMuJoCo main controls.
+`python run.py --report visual` reads the full 620-cell visual inventory;
+`--report visual-paper` retains the 180-cell manuscript subset. `--report adapt`
+and `--report branches` expose the separate completed adaptation studies.
+Use `--report current` and [the current-state audit](docs/CURRENT_SCIENTIFIC_STATE_CN.md)
+for selection decisions, verified overlaps and remaining coverage.
 See [the implementation lineage audit](docs/METHOD_LINEAGE_AUDIT_CN.md) for
 superseded entry points and the exact meanings of Base, MTE-Aux and Global16.
 

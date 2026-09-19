@@ -1,0 +1,395 @@
+{
+  "status": "pass",
+  "runs": [
+    {
+      "id": "mpe_temporal_full_scale_5seeds",
+      "status": "complete",
+      "summary_sha256": "01a866428c85e878ac37933d7df46945a0972e9c56e8033bf8f23c84fe6808f8",
+      "declared_hash_references": 186,
+      "access_audits": 5,
+      "result_references": 0,
+      "mean_values_checked": 0,
+      "qualification_files": [],
+      "exact_statistic_checks": 0,
+      "protocol_sha256": "6771bbb03e8d2990801f58f0eb365cb4837cf8efe20393655737daae8df78c06",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 0.5938410758972168
+    },
+    {
+      "id": "mpe_evidence_completion_2026_09_18",
+      "status": "complete",
+      "summary_sha256": "58fdf444e8f52a2fc2603bce3241c659d3b3e231867a6ca6ea870a82fa5cf813",
+      "declared_hash_references": 391,
+      "access_audits": 20,
+      "result_references": 0,
+      "mean_values_checked": 0,
+      "qualification_files": [],
+      "exact_statistic_checks": 0,
+      "protocol_sha256": "2aea4cefe377db5581129769434fbed6ee56851505fad68a9cb29b6f5e8ca2ff",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 1.1387360095977783
+    },
+    {
+      "id": "mpe_inventory_completion_2026_09_18",
+      "status": "complete",
+      "summary_sha256": "2f302e9b2d07a33f5c4eafacfff0a9316bfcdeac08e2b6057b66f19aeba0a20c",
+      "declared_hash_references": 983,
+      "access_audits": 40,
+      "result_references": 1305,
+      "mean_values_checked": 1305,
+      "qualification_files": [],
+      "exact_statistic_checks": 0,
+      "identity_check": {
+        "rows": 1305,
+        "unique": 1305,
+        "fields": [
+          "n",
+          "seed",
+          "budget",
+          "method"
+        ],
+        "paired_frozen_and_adapt": false
+      },
+      "protocol_sha256": "7f5c1904c0b8319804d21d1e22ba7604a1d36289420e33cd3871804247118e39",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 2.756377935409546
+    },
+    {
+      "id": "mpe_partner_shift_2026_09_18_r1",
+      "status": "complete",
+      "summary_sha256": "fc2aff6006010bd13a9dab55c4d3018f12e1401bcac61ee3078386ba0b07e1ef",
+      "declared_hash_references": 62,
+      "access_audits": 0,
+      "result_references": 0,
+      "mean_values_checked": 0,
+      "qualification_files": [],
+      "exact_statistic_checks": 0,
+      "protocol_sha256": "82ddcd53cb45aec37761575a5b55175da0677d03ea2326d3abbd34c764a9c352",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 0.20883631706237793
+    },
+    {
+      "id": "mpe_physical_interaction_onset_2026_09_18",
+      "status": "complete",
+      "summary_sha256": "e56c2ce0ef2085296d60b0c18309c3e81475d391fb68ac2cd08fc1a38e4b1f58",
+      "declared_hash_references": 0,
+      "access_audits": 0,
+      "result_references": 0,
+      "mean_values_checked": 0,
+      "qualification_files": [],
+      "exact_statistic_checks": 0,
+      "protocol_sha256": "5ac99cd09f31f8378edeb4690064aa7da5758d7a18f3a6372216ef7bab84207d",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 0.016526460647583008
+    },
+    {
+      "id": "mpe_donor_transport_audit_2026_09_18",
+      "status": "complete",
+      "summary_sha256": "cab84dcca6d55da94e57f125b3e43344edcad768c4692464f9e6592dba1079b1",
+      "declared_hash_references": 0,
+      "access_audits": 0,
+      "result_references": 0,
+      "mean_values_checked": 0,
+      "qualification_files": [],
+      "exact_statistic_checks": 0,
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 0.003191232681274414
+    },
+    {
+      "id": "mpe_donor_zero_audit_2026_09_19",
+      "status": "complete",
+      "summary_sha256": "c9d2d3da54ac8664b8b8621e033f44e23997e97470ac75bb7b9a72870a0b46c9",
+      "declared_hash_references": 58,
+      "access_audits": 0,
+      "result_references": 0,
+      "mean_values_checked": 0,
+      "qualification_files": [],
+      "exact_statistic_checks": 0,
+      "protocol_sha256": "3d554dbccd2d92ecf6dd556f94b117e653c7f2a6ff8ebead7f3642bb9554c121",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 0.03691697120666504
+    },
+    {
+      "id": "mpe_matching_input_control_2026_09_19",
+      "status": "complete",
+      "summary_sha256": "acccf9b21caf1437215c578dc93171502963618f6f163afc340cc76ff56e4f16",
+      "declared_hash_references": 170,
+      "access_audits": 5,
+      "result_references": 0,
+      "mean_values_checked": 0,
+      "qualification_files": [],
+      "exact_statistic_checks": 2,
+      "identity_check": {
+        "rows": 15,
+        "unique": 15,
+        "fields": [
+          "seed",
+          "method"
+        ],
+        "paired_frozen_and_adapt": false
+      },
+      "protocol_sha256": "03bb9d356b6a5f1ae4d39f73e54f313d4f77c04b930de96d7c9b3d9a024ccbe1",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 1.0746877193450928
+    },
+    {
+      "id": "mamujoco_route_completion_2026_09_19",
+      "status": "complete",
+      "summary_sha256": "921658901caa35722bfc2dd1eacc416c95318d99a8c0d3b4256fdb5b2419207b",
+      "declared_hash_references": 620,
+      "access_audits": 618,
+      "result_references": 875,
+      "mean_values_checked": 875,
+      "qualification_files": [],
+      "exact_statistic_checks": 6,
+      "identity_check": {
+        "rows": 875,
+        "unique": 875,
+        "fields": [
+          "seed",
+          "arm",
+          "budget",
+          "decoder_seed"
+        ],
+        "paired_frozen_and_adapt": false
+      },
+      "protocol_sha256": "9a016b026b16e089d8712151cc53c01f42f25274137b46c04aec406a9003e1d3",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 3.6186022758483887
+    },
+    {
+      "id": "mamujoco_mif_visibility_2026_09_19",
+      "status": "complete",
+      "summary_sha256": "92dc6a048982d14b6611cd3fffecf66a15ab540d4f8dd2c683821a72478333d5",
+      "declared_hash_references": 212,
+      "access_audits": 520,
+      "result_references": 500,
+      "mean_values_checked": 500,
+      "qualification_files": [],
+      "exact_statistic_checks": 3,
+      "identity_check": {
+        "rows": 500,
+        "unique": 500,
+        "fields": [
+          "seed",
+          "arm",
+          "budget",
+          "decoder_seed"
+        ],
+        "paired_frozen_and_adapt": false
+      },
+      "protocol_sha256": "10caf7a6bb82c0d35c8c055e3549db84b66fa80d2722bb208cb0f508339ff5e2",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 0.6169438362121582
+    },
+    {
+      "id": "mamujoco_frozen_matching_audit_2026_09_19",
+      "status": "complete",
+      "summary_sha256": "b2d0062b4135fcd318930d87ea9916557e059a98aee25b940ea27be872dd0fa4",
+      "declared_hash_references": 23,
+      "access_audits": 0,
+      "result_references": 0,
+      "mean_values_checked": 0,
+      "qualification_files": [],
+      "exact_statistic_checks": 0,
+      "protocol_sha256": "3ec9bc121863f60c240f122e784893881c3604d0cc5098a322adfb7e1ae0ec8f",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 0.04411005973815918
+    },
+    {
+      "id": "mte_agent_resource_audit_2026_09_19",
+      "status": "complete",
+      "summary_sha256": "cad14963661fb7b476ffb08215f8fb19946cb5a544e694c229f617fc2e4f4d1e",
+      "declared_hash_references": 5,
+      "access_audits": 0,
+      "result_references": 0,
+      "mean_values_checked": 0,
+      "qualification_files": [],
+      "exact_statistic_checks": 0,
+      "protocol_sha256": "cd8a1af74fd04d28cac6143ddef0644bf2a231dc5614465ed26494c9c7e2993d",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 0.02535271644592285
+    },
+    {
+      "id": "visual_low_label_2026_09_19_r1",
+      "status": "complete",
+      "summary_sha256": "c26391a57eb313d338c19bba53818e228f1c5dfca00dab955f19c29ceb1fee4a",
+      "declared_hash_references": 1477,
+      "access_audits": 366,
+      "result_references": 180,
+      "mean_values_checked": 180,
+      "qualification_files": [
+        {
+          "path": "qualification.json",
+          "sha256": "ffdf4e71dcc537bf847ac160f040b9551b69f539a5461f86bcdeb17b942cf662"
+        }
+      ],
+      "exact_statistic_checks": 8,
+      "identity_check": {
+        "rows": 180,
+        "unique": 180,
+        "fields": [
+          "seed",
+          "budget",
+          "arm"
+        ],
+        "paired_frozen_and_adapt": false
+      },
+      "protocol_sha256": "aaea7da0cd22b49d53cc82a99a52adc30c06915de65284436268b2f8c0852f39",
+      "training_identity_groups_rechecked": 0,
+      "failures": [],
+      "seconds": 4.936231374740601
+    },
+    {
+      "id": "visual_supervision_inventory_2026_09_19",
+      "status": "complete",
+      "summary_sha256": "f298b43ca6e38b1533d13766ca2d97864dd9a352b16d321b458eb8837fb42af9",
+      "declared_hash_references": 2958,
+      "access_audits": 928,
+      "result_references": 620,
+      "mean_values_checked": 620,
+      "qualification_files": [
+        {
+          "path": "factorial_checks.json",
+          "sha256": "a7b2868b5e8028603d21c5902519da00d2c98a0d0908d74fa5433763d0d8e795"
+        },
+        {
+          "path": "qualification.json",
+          "sha256": "73eaf0ad9ca11592a0e9aa81f1fa598c240e25f8c7af8a31f1561525dd3a7543"
+        }
+      ],
+      "exact_statistic_checks": 6,
+      "identity_check": {
+        "rows": 620,
+        "unique": 620,
+        "fields": [
+          "seed",
+          "budget",
+          "arm"
+        ],
+        "paired_frozen_and_adapt": false
+      },
+      "protocol_sha256": "596b7c1240b6501365d789dfe2dc3ce005769ea07d030be53ea33a67d89f7f54",
+      "training_identity_groups_rechecked": 40,
+      "failures": [],
+      "seconds": 6.549752473831177
+    },
+    {
+      "id": "policy_finetune_pilot_2026_09_20_r1",
+      "status": "complete",
+      "summary_sha256": "58af091cb569cf217d9e9952c58f43eb51da038f7d4fa015f1ea63a6b4934183",
+      "declared_hash_references": 2729,
+      "access_audits": 154,
+      "result_references": 70,
+      "mean_values_checked": 70,
+      "qualification_files": [
+        {
+          "path": "pairing_checks.json",
+          "sha256": "8488b0874bff4b8d0c1ef3f58331f8a4fe5d966803c06393cbfbb2e343fadf00"
+        },
+        {
+          "path": "qualification.json",
+          "sha256": "07596fa57c5c4152bad39cf33e55fd343b2441a4cad2b4cf8212e1df8810ce14"
+        }
+      ],
+      "exact_statistic_checks": 7,
+      "identity_check": {
+        "rows": 35,
+        "unique": 35,
+        "fields": [
+          "suite",
+          "seed",
+          "arm"
+        ],
+        "paired_frozen_and_adapt": true
+      },
+      "protocol_sha256": "cc748dc95147ed8d4de673d196b6980313a6c0abb7797002002af2db0fef1365",
+      "training_identity_groups_rechecked": 35,
+      "failures": [],
+      "seconds": 1.5548055171966553
+    },
+    {
+      "id": "mte_finetune_extension_2026_09_20",
+      "status": "complete",
+      "summary_sha256": "9bb26f3ba75cad7b2684d443b6717bc1ef89ba55606f8c5f0af19015632b96c1",
+      "declared_hash_references": 2839,
+      "access_audits": 198,
+      "result_references": 90,
+      "mean_values_checked": 90,
+      "qualification_files": [
+        {
+          "path": "pairing_checks.json",
+          "sha256": "368593b934da0db3258ea6b82fef91eb8d5a9b5c69f2e06e6230c0bf4f17b1ef"
+        },
+        {
+          "path": "qualification.json",
+          "sha256": "6871a976d43350ad646e08c6411694380c1462177dd5ca67a8b2ac17e16e97d5"
+        }
+      ],
+      "exact_statistic_checks": 9,
+      "identity_check": {
+        "rows": 45,
+        "unique": 45,
+        "fields": [
+          "suite",
+          "seed",
+          "arm"
+        ],
+        "paired_frozen_and_adapt": true
+      },
+      "protocol_sha256": "741dc5a03a860edd671de29173720dc80cbd6e52ff110dcedff72126b385b6d1",
+      "training_identity_groups_rechecked": 45,
+      "failures": [],
+      "seconds": 1.9647023677825928
+    },
+    {
+      "id": "visual_branch_attribution_2026_09_20",
+      "status": "complete",
+      "summary_sha256": "e2addffe41408ff5d55cf84f7180aa38e539f9458a3c8ed803a04c9c493a55aa",
+      "declared_hash_references": 3054,
+      "access_audits": 220,
+      "result_references": 100,
+      "mean_values_checked": 100,
+      "qualification_files": [
+        {
+          "path": "pairing_checks.json",
+          "sha256": "e6be062239845f30436747168bd4d97ca89603229e97bf9e6777a6efcebd666b"
+        },
+        {
+          "path": "qualification.json",
+          "sha256": "7cd935051a64300800f1109472eb1f440ca6d98f0b6a2353c8762b2ce87d7d62"
+        }
+      ],
+      "exact_statistic_checks": 41,
+      "identity_check": {
+        "rows": 100,
+        "unique": 100,
+        "fields": [
+          "seed",
+          "family",
+          "mode"
+        ],
+        "paired_frozen_and_adapt": false
+      },
+      "protocol_sha256": "485e5a023805f10954c156c36ae544123e6e4e14ea0ba4cf938b7bf9109d78c0",
+      "training_identity_groups_rechecked": 25,
+      "failures": [],
+      "seconds": 2.111572742462158
+    }
+  ],
+  "unique_files_hashed": 5166,
+  "failures": [],
+  "scope": "Declared archive hash references, access audits, identity matrices, referenced return means and declared exact five-seed statistics. Does not retrain or certify every scientific assumption."
+}

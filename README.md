@@ -41,6 +41,11 @@ python run.py --check-results
 `run.py` now selects current MPE, MaMuJoCo, visual and route evidence explicitly.
 For example, `python run.py --report mpe` reads the corrected 1,305-cell MPE
 inventory. `python run.py --report mamujoco` reads only MaMuJoCo main controls.
+`python run.py --report visual` reads the full 620-cell visual inventory;
+`--report visual-paper` retains the 180-cell manuscript subset. `--report adapt`
+and `--report branches` expose the separate completed adaptation studies.
+Use `--report current` and [the current-state audit](docs/CURRENT_SCIENTIFIC_STATE_CN.md)
+for selection decisions, verified overlaps and remaining coverage.
 See [the implementation lineage audit](docs/METHOD_LINEAGE_AUDIT_CN.md) for
 superseded entry points and the exact meanings of Base, MTE-Aux and Global16.
 
