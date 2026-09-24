@@ -24,6 +24,8 @@ FRONTEND_METHODS={'entity_target','entity_joint','lapo_joint','laom_joint_k3'}
 def train_history(s, method, out, progress, p):
     """Original MaMuJoCo representation/history dispatch, restricted to MaMuJoCo.
 Caller supplies observation-only exports and installs the access guard."""
+    from mte.method_names import resolve_method
+    method = resolve_method(method)
     if s['env'] != 'mamujoco':
         raise ValueError('Use mpe_inventory_completion for the corrected MPE protocol')
     x, m, n = data(s)

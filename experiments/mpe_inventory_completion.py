@@ -12,18 +12,21 @@ import torch
 from experiments.mpe_temporal_stages import PACKAGE,digest,exports,load_x,ground
 
 from utils.atomic import atomic_json
+from mte.method_names import resolve_method, resolve_mpe_config
 
 def source(c,n):
     item=c['sources'].get(str(n))
     return (PACKAGE/item).resolve() if item else None
 
 def p_for(c,n):
+    c=resolve_mpe_config(c)
     p=json.loads((PACKAGE/'configs/mpe_temporal_full_scale.json').read_text());p.update(c['overrides'])
     p.update(train_episodes=n,budgets=c['budgets'] if n==c['full_n'] else [c['scaling_budget']],
              control_configs=c['methods'],primary_contrasts=[],scope='Full paper inventory on repaired temporal interface; existing valid cells reused.')
     return p
 
 def existing(c,n,seed,b,method):
+    method=resolve_method(method, "mpe")
     # Prefer the supplemental outputs; earlier full-scale cells live in their own immutable run.
     roots=[source(c,n)]
     if n==c['full_n']:roots.append((PACKAGE/c['original_full']).resolve())
@@ -34,6 +37,7 @@ def existing(c,n,seed,b,method):
     return None
 
 def setup(args,c):
+    c=resolve_mpe_config(c)
     for n in c['sizes']:
         p=p_for(c,n);dest=args.out/f'n{n}';exports(args.workspace,dest,p)
         if source(c,n):
@@ -52,6 +56,7 @@ def setup(args,c):
         atomic_json(dest/'protocol.json',p)
 
 def pretrain(root,p,c,progress):
+    c=resolve_mpe_config(c)
     from utils.access import guard
     from training.history_mpe import train_history_policy
     from training.composition import restore
@@ -121,6 +126,7 @@ def special_ground(root,p,method,b,progress):
     torch.save(dict(history=net.state_dict(),decoder=None if decoder is None else decoder.state_dict(),mean=mu,std=sd,method=method,budget=b),path.with_suffix('.pt'))
 
 def ground_missing(root,p,c,n,b,progress):
+    c=resolve_mpe_config(c)
     frozen=root/'pretrain';ck=json.loads((frozen/'complete.json').read_text())['checkpoints']
     assert all(digest(frozen/f)==h for f,h in ck.items())
     todo=[m for m in c['methods'] if existing(c,n,p['seed'],b,m) is None]
@@ -132,6 +138,7 @@ def ground_missing(root,p,c,n,b,progress):
     atomic_json(root/f'grounding/budget_{b}/inventory_complete.json',dict(new_methods=todo,reused=[m for m in c['methods'] if m not in todo],weights_unchanged=True))
 
 def worker(args,c):
+    c=resolve_mpe_config(c)
     root=args.out/f'n{args.n}/seed{args.seed}';p=dict(p_for(c,args.n),seed=args.seed)
     torch.set_num_threads(p['threads_per_process']);name=args.stage+(f'_b{args.budget}' if args.budget else '')
     def progress(stage,**kw):atomic_json(root/f'status_{name}.json',dict(stage=stage,time=time.time(),**kw))
@@ -145,6 +152,7 @@ def worker(args,c):
     except BaseException:atomic_json(root/f'failure_{name}.json',dict(traceback=traceback.format_exc()));raise
 
 def report(out,c):
+    c=resolve_mpe_config(c)
     records=[];newcount=0;missing=[];seeds=p_for(c,c['full_n'])['seeds']
     for n in c['sizes']:
         for s in seeds:

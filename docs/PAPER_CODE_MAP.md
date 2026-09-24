@@ -1,6 +1,6 @@
 # Manuscript-to-code map
 
-Scope: the 24 September 2026 professor-verbatim manuscript. This repository contains code and protocols only; no measured results, reports, or paper files.
+Scope: the accepted manuscript with the 25 September naming update; experiment coverage is unchanged. See [method names](METHOD_NAMES.md). This repository contains code and protocols only; no measured results, reports, or paper files.
 
 | Experiment or diagnostic | Manuscript labels | Entry | Configuration |
 |---|---|---|---|

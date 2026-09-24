@@ -1,7 +1,8 @@
-# MTE experimental code
+# Predictive-comparison experimental code
 
-Code and protocols corresponding to the 24 September 2026 professor-verbatim
-manuscript. **No experimental results, numeric result exports, reports, logs,
+Code and protocols corresponding to the current manuscript, including the
+25 September predictive-comparison naming update. See [method names](docs/METHOD_NAMES.md)
+for the exact mapping to compatible implementation IDs. **No experimental results, numeric result exports, reports, logs,
 weights, datasets, or manuscript files are included.**
 
 - MPE and MaMuJoCo method, budget, scaling, structural and readout experiments.
