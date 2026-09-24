@@ -2,6 +2,9 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
+from mte.method_names import normalize_config, normalize_job
+import copy
 
 import hashlib
 
@@ -49,6 +52,7 @@ def budget_root(out, phase, seed, budget):
     return out/phase/f'seed{seed}'/f'b{budget}'
 
 def job_path(out, job):
+    job = normalize_job(job, 3, "visual")
     phase, seed, budget, arm, kind = job
     return budget_root(out, phase, seed, budget)/(kind+'_'+arm)
 
@@ -74,6 +78,7 @@ def compare_checkpoint(new, old):
     return error
 
 def source_snapshot(out, p):
+    p = normalize_config(p, "visual")
     frozen = read(ARCHIVE/'global_freeze.json')
     assert frozen['complete'] and frozen['training_seeds'] == p['seeds']
     for f, h in frozen['source_hashes'].items():
@@ -132,6 +137,9 @@ def verify_snapshot(out):
         assert digest(f) == h, f'Source changed: {f}'
 
 def worker(a, p):
+    p = normalize_config(p, "visual")
+    a = copy.copy(a)
+    a.job = normalize_job(a.job, 3, "visual")
     import torch
     from training import visual_label_budget as B
     phase, seed, budget, arm, kind = a.job
@@ -181,6 +189,7 @@ def worker(a, p):
     atomic_json(dest/'result.json', r)
 
 def validate_result(out, job):
+    job = normalize_job(job, 3, "visual")
     dest = job_path(out, job); phase, seed, budget, arm, kind = job
     r = read(dest/'result.json'); audit = read(dest/'access_audit.json')
     assert r['complete'] and (r['training_seed'], r['budget'], r['arm']) == (seed, budget, arm)
@@ -220,6 +229,7 @@ def validate_result(out, job):
         assert all(checks.values()), f'Independent B8 replay differs: {dest}'
 
 def phases(p):
+    p = normalize_config(p, "visual")
     smoke=[('smoke',p['seeds'][0],1,f'mif_{c}_{i}_{a}','ground') for c in ['solo','aux'] for i in ['pretrained','random'] for a in ['frozen','trainable']]
     fair=[('fair_parity',s,b,f'mif_{c}_pretrained_frozen','ground') for s in p['seeds'] for b in p['budgets'] for c in ['solo','aux']]
     parity=[('parity',s,8,a,'ground') for s in p['seeds'] for a in p['missing_arms']]
@@ -236,6 +246,7 @@ def process_created(pid):
         return None
 
 def factorial_checks(out,p):
+    p = normalize_config(p, "visual")
     checks=[]
     for seed in p['seeds']:
         for budget in p['budgets']:
@@ -254,6 +265,7 @@ def factorial_checks(out,p):
     atomic_json(out/'factorial_checks.json',checks)
 
 def aggregate(out,p):
+    p = normalize_config(p, "visual")
     from scipy.stats import t
     from training.visual_supervision_control import base_arm
     records=[]
@@ -301,7 +313,7 @@ def aggregate(out,p):
     lines+=['','|预定比较|均值差|正向种子|t95|精确p|Holm p|','|---|---:|---:|---|---:|---:|']
     for r in contrasts:lines.append(f"|{r['composition']} {r['name']}|{r['mean_delta']:+.3f}|{r['positive_seeds']}/5|{r['t95']}|{r['exact_p']:.4f}|{r['holm_p']:.4f}|")
     lines+=['','先在每seed内等权平均B1/2/4与27主评价条件，再以5个上游seed配对；Solo三项一个Holm族，Aux三项另一个族。B8及家族逐格比较为描述性结果。','所有方向完整保留；五种子精确双侧p最低.0625。未新增环境、agent数、实体对齐视觉slot；新监督路线不替换原冻结MIF结果。论文图表不自动替换。']
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "control")+'\n',encoding='utf-8')
     dest=PACKAGE/'results'/p['name'];dest.mkdir(exist_ok=True,parents=True)
     for name in ['RESULTS_CN.md','summary.json','qualification.json','foundation_verification.json','protocol.json','factorial_checks.json']:
         assert not (dest/name).exists();shutil.copy2(out/name,dest/name)

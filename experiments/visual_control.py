@@ -8,7 +8,7 @@ import argparse,json
 from pathlib import Path
 
 from visual import train as V
-from mte.method_names import resolve_method
+from mte.method_names import resolve_visual_arm
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
@@ -19,7 +19,7 @@ def main():
     ap.add_argument('--method',help='PC-Mean/Set/Graph/Sweep/Field; append -Solo/-Aux for grounding; legacy IDs accepted');ap.add_argument('--global-freeze')
     a=ap.parse_args()
     if a.method is not None:
-        a.method=resolve_method(a.method, "visual")
+        a.method=resolve_visual_arm(a.method)
     V.configure(a.seed,a.run_dir,a.data_dir,a.asset_dir)
     # Preserve the final five-seed worker's process-level determinism settings.
     V.torch.set_num_threads(1);V.torch.set_num_interop_threads(1);V.C.seed_all(a.seed)

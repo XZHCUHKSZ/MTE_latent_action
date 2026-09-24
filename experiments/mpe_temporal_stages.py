@@ -2,6 +2,7 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import normalize_config
 
 import hashlib
 
@@ -63,6 +64,7 @@ def load_x(seedout, p):
     return np.concatenate(arrays), len(arrays[0])
 
 def pretrain(seedout, p, progress):
+    p = normalize_config(p, "mpe")
     out = seedout/'pretrain'; out.mkdir(exist_ok=True)
     from utils.access import guard
     audit = guard(out, [seedout/'data/train.npz', seedout/'data/dev.npz'], pretraining=True)
@@ -115,6 +117,7 @@ def pretrain(seedout, p, progress):
         simulator_queries=0, frozen_before_grounding=True, seed=p['seed']))
 
 def ground(seedout, p, progress):
+    p = normalize_config(p, "mpe")
     from training.composition import restore, FrozenPair
     from training.grounding_mpe import train_decoder, train_supervised_history, GroundedPolicy
     from evaluation.mpe import evaluate

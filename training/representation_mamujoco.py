@@ -1,3 +1,4 @@
+from mte.method_names import resolve_method
 import numpy as np
 import torch
 from torch import nn
@@ -37,6 +38,7 @@ def train_backend(positions, valid_mask, actual, reference, masks, method, seed,
     Original baseline history handling is retained, including LAPO's episode-
     local duplication of x0 when no earlier observation exists at t0.
     """
+    method = resolve_method(method)
     x, valid, target_mask = _geometry(positions, valid_mask, n_train)
     e, _, obs_dim = x.shape
     steps = x.shape[1]-1
@@ -108,6 +110,7 @@ def train_history_policy(positions, z, valid_mask, n_train, seed, updates,
     introduced and there is no temporal truncation.
     Returns diagnostics; writes policy.pt, latents.npz and history.json.
     """
+    method = resolve_method(method)
     x, valid, target_mask = _geometry(positions, valid_mask, n_train)
     z = np.asarray(z, np.float32)
     if z.ndim != 3 or z.shape[:2] != (len(x), x.shape[1]-1) or not np.isfinite(z).all():

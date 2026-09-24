@@ -2,6 +2,7 @@
 Derived from the accepted visual_supervision_control trainer: only gradient
 access differs; exact frozen and joint reproduction gates precede evaluation.
 """
+from mte.method_names import resolve_control
 import hashlib
 import numpy as np
 import torch
@@ -14,6 +15,7 @@ V = B.V
 
 
 def base_arm(arm):
+    arm = resolve_control(arm)
     family,composition,initialization,access=arm.split('_')
     assert family in ('simple','graph','tree','mif','laom') and composition=='aux' and initialization=='pretrained'
     method=('edge_cara_mobius_'+family) if family in ('simple','graph','tree') else ('edge_cara_mif' if family=='mif' else 'laom_state_adapter')
@@ -30,6 +32,7 @@ def fingerprint(items):
 
 def ground(out,arm):
     # Names: mif_{solo,aux}_{pretrained,random}_{frozen,trainable}.
+    arm = resolve_control(arm)
     _,composition,initialization,access=arm.split('_')
     assert composition in ('solo','aux') and initialization=='pretrained' and access in ('frozen','baseonly','auxonly','trainable')
     files=[B.SOURCE/'features/features.npz']+[B.LABELS/f'{i:04d}.npy' for i in range(B.BUDGET)]

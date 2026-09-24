@@ -3,6 +3,7 @@
 The random-history control retains the same frozen RGB frontend, PCA and
 pretrained-derived normalizer; it is not an entirely pretraining-free baseline.
 """
+from mte.method_names import resolve_control, resolve_visual_arm
 import hashlib
 import numpy as np
 import torch
@@ -15,6 +16,7 @@ V = B.V
 
 
 def base_arm(arm):
+    arm = resolve_control(arm)
     return 'anchor_'+('solo' if arm.split('_')[1]=='solo' else 'plus')+'_edge_cara_mif'
 
 
@@ -28,6 +30,7 @@ def fingerprint(items):
 
 def ground(out,arm):
     # Names: mif_{solo,aux}_{pretrained,random}_{frozen,trainable}.
+    arm = resolve_control(arm)
     _,composition,initialization,access=arm.split('_')
     assert composition in ('solo','aux') and initialization in ('pretrained','random') and access in ('frozen','trainable')
     files=[B.SOURCE/'features/features.npz']+[B.LABELS/f'{i:04d}.npy' for i in range(B.BUDGET)]
@@ -100,6 +103,7 @@ def ground(out,arm):
 
 
 def controller(arm):
+    arm = resolve_visual_arm(arm)
     d=torch.load(V.RT/('ground_'+arm)/'decoder.pt',map_location='cuda',weights_only=False)
     net,_=V.pair(d['base_arm']);net.load_state_dict(d['history_state_dict']);net.eval()
     decoder=C.ActionDecoder(d['latent_dim'],2,hidden=128).cuda();decoder.load_state_dict(d['state_dict']);decoder.eval()

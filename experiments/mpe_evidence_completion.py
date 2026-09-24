@@ -2,6 +2,7 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import normalize_config
 
 import json
 
@@ -24,6 +25,7 @@ from experiments.mpe_temporal_stages import PACKAGE, digest, exports, load_x, gr
 from utils.atomic import atomic_json
 
 def plan(config, n):
+    config = normalize_config(config, "mpe")
     p = json.loads((PACKAGE/'configs/mpe_temporal_full_scale.json').read_text())
     p.update(config['overrides'])
     p.update(train_episodes=n, inverse_offsets=[2], primary_contrasts=[],
@@ -35,6 +37,7 @@ def plan(config, n):
     return p
 
 def pretrain(root, p, config, progress):
+    config = normalize_config(config, "mpe")
     from utils.access import guard
     out = root/'pretrain'; out.mkdir(exist_ok=True)
     audit = guard(out, [root/'data/train.npz', root/'data/dev.npz'], pretraining=True)
@@ -84,6 +87,7 @@ def pretrain(root, p, config, progress):
         seed=p['seed'],native_action_labels_read=0,simulator_queries=0,frozen_before_grounding=True))
 
 def worker(args,c):
+    c = normalize_config(c, "mpe")
     p=dict(plan(c,args.n),seed=args.seed);root=args.out/f'n{args.n}'/f'seed{args.seed}'
     torch.set_num_threads(p['threads_per_process'])
     name=args.stage+(f'_b{args.budget}' if args.budget else '')
@@ -102,6 +106,7 @@ def worker(args,c):
         atomic_json(root/f'failure_{name}.json',dict(traceback=traceback.format_exc()));raise
 
 def prepare(args,c):
+    c = normalize_config(c, "mpe")
     source=Path(c['source_run']).resolve()
     assert source != args.out and not args.out.is_relative_to(source), 'New outputs must not modify completed source run'
     sp=json.loads((source/'protocol.json').read_text())
@@ -124,5 +129,6 @@ def prepare(args,c):
                 atomic_json(dest/f'seed{seed}'/'reused_source.json',dict(source=str(src),checkpoint_hashes=old['checkpoints']))
 
 def report(out,c):
+    c = normalize_config(c, "mpe")
     from evaluation.temporal_completion_report import summarize
     return summarize(out,c)

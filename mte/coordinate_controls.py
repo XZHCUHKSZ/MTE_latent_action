@@ -1,3 +1,4 @@
+from mte.method_names import resolve_control
 import numpy as np
 import torch
 from torch import nn
@@ -10,6 +11,7 @@ from .structured_controls import make_model
 # Final implementation source: mte_attribution_resolution_2026_09_12/coordinate_ablation.py:26
 
 def factory(model,variant,dim,masks,adj):
+    model = resolve_control(model)
     cm=torch.tensor(masks,device='cuda')
     if model=='simple':net=MobiusSimple(dim,cm,16,128).cuda()
     elif model=='graph':net=MobiusGraphEdgeCARA(dim,cm,16,128).cuda()
@@ -25,6 +27,7 @@ def factory(model,variant,dim,masks,adj):
 # Final implementation source: mte_attribution_resolution_2026_09_12/coordinate_ablation.py:39
 
 def forward(net,y,model):
+    model = resolve_control(model)
     if model=='mif':
         z,r,_=net(y,torch.ones(*y.shape[:-1],1,dtype=torch.bool,device=y.device))
     else:

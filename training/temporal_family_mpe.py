@@ -1,4 +1,5 @@
 """Small timing-repair experiment using unchanged family classes and route loss."""
+from mte.method_names import resolve_control
 from pathlib import Path
 import numpy as np
 import torch
@@ -9,6 +10,7 @@ from mte.structured_controls import complement_indices
 
 
 def train(x, a, b, masks, n, arm, p, out, progress):
+    arm = resolve_control(arm)
     model = arm.split('_')[0]
     variant = 'raw_coordinates' if arm.endswith('_raw') else 'mobius'
     if arm.endswith('_complement'): b = np.take(b, complement_indices(masks), axis=3)

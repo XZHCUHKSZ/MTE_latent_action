@@ -1,4 +1,5 @@
 """Missing temporal-MPE family members; reuse frozen scientific implementations."""
+from mte.method_names import resolve_control
 from pathlib import Path
 import numpy as np
 from closed_loop_lam_v1 import common as C
@@ -20,6 +21,7 @@ def edge_view(x, a, b, masks, horizon):
 
 
 def train_original(x, a, b, masks, n, arm, p, out, progress):
+    arm = resolve_control(arm)
     horizon = 2 if arm == 'edge_h2' else 3
     method = {'edge_h2': 'edge_cara', 'edge_h3': 'edge_cara',
               'edge_h3_root': 'edge_cara_root_only', 'tree': 'edge_cara_mobius_tree'}[arm]

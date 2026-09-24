@@ -2,6 +2,7 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import normalize_config
 
 import time
 
@@ -21,6 +22,7 @@ def paths(out,stage,seed,budget=None):
     return root,name,complete
 
 def worker(args,p):
+    p = normalize_config(p, "mpe")
     p=dict(p,seed=args.seed)
     root,name,complete=paths(args.out,args.stage,args.seed,args.budget)
     torch.set_num_threads(p['threads_per_process'])

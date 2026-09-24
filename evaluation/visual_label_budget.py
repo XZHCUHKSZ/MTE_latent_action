@@ -3,6 +3,7 @@
 The original rollout, renderer, recurrent controller and physical environment
 are called unchanged. Development actions are evaluation-only diagnostics.
 """
+from mte.method_names import resolve_visual_arm
 from pathlib import Path
 import atexit
 from training import visual_label_budget as B
@@ -12,6 +13,7 @@ from utils.io import read
 
 
 def evaluate(out, arm, seed, budget_root, assets, evaluation_seeds):
+    arm = resolve_visual_arm(arm)
     from visual import rollout as R, render as render_module, dcs_source
     from utils.access import guard
     source = B.ARCHIVE / str(seed)

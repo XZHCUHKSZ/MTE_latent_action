@@ -1,3 +1,4 @@
+from mte.method_names import resolve_method, resolve_visual_arm
 import numpy as np
 import torch
 from torch import nn
@@ -38,6 +39,7 @@ def progress(stage, **kw):
     put(RT / 'progress.json', dict(stage=stage, **kw))
 
 def source(method):
+    method = resolve_method(method)
     return RT / ('pre_' + method) / 'policy/policy.pt'
 
 def policy_paths():
@@ -260,6 +262,7 @@ def bridge(out):
     return dict(diagnostics=diagnostics, mean_absolute_edge=float(np.abs(aa - bb).mean()), native_action_labels_read=0, simulator_queries=0, horizon=1, endpoint='predicted standardized common visual-feature increments; not simulator outcomes', matching_checks='same history/partners; target-only replacement; training donors exclude same episode', unresolved='View-associated latent replacement is not established as isolated native-agent action replacement')
 
 def pretrain_base(out, method):
+    method = resolve_method(method)
     paths = [RT / 'features/features.npz']
     if method != 'visual_laom_target':
         paths.append(RT / 'bridge/endpoints.npz')
@@ -292,6 +295,7 @@ def read(p):
     return json.loads(p.read_text(encoding='utf-8'))
 
 def pair(arm):
+    arm = resolve_visual_arm(arm)
     if arm.startswith('anchor_solo_'):
         net, ck = restore(source(arm[len('anchor_solo_'):]))
         return (FrozenPair(net).cuda().eval(), ck)
@@ -373,6 +377,7 @@ def rich(out):
     return dict(native_action_labels_read=0, simulator_queries=0, shape=list(aa.shape), diagnostics=rows, entity_definition='four separately encoded camera views,32 shared-PCA coordinates each; not physical entity segmentation', adjacency='fixed complete view graph, no simulator topology or state read', horizon_definition='direct predicted standardized visual increments from same current history/code to t+h; no simulator rollout or fixed continuation claim', tails='readout fits only observed valid t+h; MIF inputs at last2 timestamps are model extrapolations, not copied future frames')
 
 def pretrain(out, m):
+    m = resolve_method(m)
     paths = [V.RT / 'features/features.npz']
     if m not in OBS:
         paths.append(V.RT / 'bridge/endpoints.npz')
@@ -459,6 +464,7 @@ def watch(out, paths, phase):
     return a
 
 def ground(out, arm):
+    arm = resolve_visual_arm(arm)
     assert read(RT / 'freeze/result.json')['all_sources_frozen']
     labels_paths = [V.OLD / f'labels/train/{i:04d}.npy' for i in range(8)]
     paths = [V.RT / 'features/features.npz'] + labels_paths
@@ -517,6 +523,7 @@ def ground(out, arm):
     return dict(arm=arm, budget_trajectories=8, native_action_labels_read=1600, partner_labels_read=0, simulator_queries=0, updates=600, supervised_vectors_per_update=1600 if arm == 'bc_full1600' else 256, total_label_presentations=600 * (1600 if arm == 'bc_full1600' else 256), trainable_parameters=sum((p.numel() for p in model.parameters())), frozen_policy_parameters=frozen_parameters, full_fit_action_mse=train_mse, fit_output_std=output_std, selection='fixed final update; no action-dev or return selection')
 
 def controller(arm):
+    arm = resolve_visual_arm(arm)
     d = torch.load(RT / ('ground_' + arm) / 'decoder.pt', map_location='cuda', weights_only=False)
     if arm.startswith('bc'):
         net = C.RecurrentPolicy(32, 2).cuda()
@@ -535,3 +542,15 @@ def controller(arm):
             z, h = net((features - torch.as_tensor(ck['obs_mean'], device='cuda')) / torch.as_tensor(ck['obs_std'], device='cuda'), h)
             return (decoder((z - d['mean']) / d['scale']), h)
     return predict
+
+
+def public_methods():
+    """Paper-facing encoder names; METHODS remains the checkpoint-ID catalog."""
+    from mte.method_names import display_name
+    return [display_name(m) for m in METHODS]
+
+
+def public_arms():
+    """Paper-facing compositions; ARMS remains the archived protocol catalog."""
+    from mte.method_names import display_name
+    return [display_name(a) for a in ARMS]

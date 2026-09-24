@@ -3,6 +3,7 @@
 Frozen-only publication API. Both cameras are causal observations for every method. Learned visual endpoints
 are predictions under latent replacements, never physical interventions.
 """
+from mte.method_names import resolve_coupled_arm, resolve_coupled_ground
 from pathlib import Path
 import copy,time,hashlib
 import numpy as np
@@ -110,12 +111,14 @@ def pretrain(c,seed,data,out,note):
 def compositions():return ['base']+[q+'_'+m for m in METHODS for q in ['solo','aux']]
 def arms():return [a+'__'+route for a in compositions() for route in ['Frozen']]+['bc','idm']
 def pair(pre,arm,dev):
+    arm = resolve_coupled_arm(arm)
     if arm=='base':net,ck=restore(pre/'base/policy/policy.pt');return FrozenPair(net).to(dev),ck
     route,method=arm.split('_',1);net,ck=restore(pre/method/'policy/policy.pt')
     if route=='solo':return FrozenPair(net).to(dev),ck
     base,bck=restore(pre/'base/policy/policy.pt');assert np.array_equal(ck['obs_mean'],bck['obs_mean']) and np.array_equal(ck['obs_std'],bck['obs_std']);return FrozenPair(base,net).to(dev),ck
 
 def ground(c,seed,pre,labelpath,out,arm,note):
+    arm = resolve_coupled_ground(arm)
     C.seed_all(seed);torch.set_num_threads(c['threads']);dev=c['device'];b=c['budget_episodes'];files=[pre/'features.npz',labelpath]+list(pre.glob('*/policy/policy.pt'))
     audit=guard(out,files,False);audit.update(phase='target_only_grounding',partner_labels_read=0,simulator_queries=0)
     x=np.load(pre/'features.npz')['x'].reshape(68,201,64);y=torch.as_tensor(np.load(labelpath),device=dev);assert y.shape==(b,200,6);net=None;curve=[];rng=np.random.default_rng(seed);stream=hashlib.sha256()
@@ -173,3 +176,9 @@ class Controller:
         else:v,self.hist=self.net(xx,self.hist);a=self.model((v-ck['mean'])/ck['scale'])
         return np.clip(a.reshape(-1).numpy(),-1,1)
     def act(self,rgb):return self.act_feature(self.feature(rgb))
+
+
+def public_arms():
+    """CLI-ready aliases for the existing Frozen-only arm list."""
+    from mte.method_names import paper_name
+    return [paper_name(a.split("__")[0]) + "__Frozen" if "__" in a else a for a in arms()]

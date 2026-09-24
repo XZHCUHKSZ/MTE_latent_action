@@ -2,6 +2,9 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
+from mte.method_names import normalize_config, normalize_job
+import copy
 
 import hashlib
 
@@ -47,6 +50,7 @@ def budget_root(out, phase, seed, budget):
     return out/phase/f'seed{seed}'/f'b{budget}'
 
 def job_path(out, job):
+    job = normalize_job(job, 3, "visual")
     phase, seed, budget, arm, kind = job
     return budget_root(out, phase, seed, budget)/(kind+'_'+arm)
 
@@ -72,6 +76,7 @@ def compare_checkpoint(new, old):
     return error
 
 def source_snapshot(out, p):
+    p = normalize_config(p, "visual")
     frozen = read(ARCHIVE/'global_freeze.json')
     assert frozen['complete'] and frozen['training_seeds'] == p['seeds']
     for f, h in frozen['source_hashes'].items():
@@ -124,6 +129,9 @@ def verify_snapshot(out):
         assert digest(f) == h, f'Source changed: {f}'
 
 def worker(a, p):
+    p = normalize_config(p, "visual")
+    a = copy.copy(a)
+    a.job = normalize_job(a.job, 3, "visual")
     import torch
     from training import visual_label_budget as B
     phase, seed, budget, arm, kind = a.job
@@ -161,6 +169,7 @@ def worker(a, p):
     atomic_json(dest/'result.json', r)
 
 def validate_result(out, job):
+    job = normalize_job(job, 3, "visual")
     dest = job_path(out, job); phase, seed, budget, arm, kind = job
     r = read(dest/'result.json'); audit = read(dest/'access_audit.json')
     assert r['complete'] and (r['training_seed'], r['budget'], r['arm']) == (seed, budget, arm)
@@ -188,6 +197,7 @@ def validate_result(out, job):
         assert all(checks.values()), f'Independent B8 replay differs: {dest}'
 
 def phases(p):
+    p = normalize_config(p, "visual")
     smoke = [('smoke',p['seeds'][0],b,a,'ground') for b in [1,4] for a in [p['main_model'],'bc_batch256','bc_idm_relabel']]
     parity = [('parity',s,8,a,'ground') for s in p['seeds'] for a in p['arms']]
     replay = [(*j[:4],'evaluate') for j in parity]
@@ -204,6 +214,7 @@ def process_created(pid):
         return None
 
 def aggregate(out,p):
+    p = normalize_config(p, "visual")
     from scipy.stats import t
     records=[]
     for budget in p['budgets']:
@@ -244,8 +255,8 @@ def aggregate(out,p):
         lines.append('|'+arm+'|'+'|'.join(cells)+'|')
     lines+=['','|预定比较（B1/B2/B4等权）|均值差|正向种子|t95|精确p|Holm p|','|---|---:|---:|---|---:|---:|']
     for r in contrasts:lines.append(f"|{r['model']} − {r['control']}|{r['mean_delta']:+.3f}|{r['positive_seeds']}/5|{r['t95']}|{r['exact_p']:.4f}|{r['holm_p']:.4f}|")
-    lines+=['','五种子双侧精确检验最低p=.0625；均值方向和统计证据分别报告。不得按低标签结果重选预算或主模型。','标签集合为嵌套轨迹前缀，各方法完全共用；本轮没有重抽数据集或新增训练种子。BC直接训练history，IDM由少量真实标签产生伪标签，潜表示方法冻结history后grounding。','本轮只检验标签效率；未解决agent-aligned视觉slot、新环境/更多agent或MTE各机制的完整归因。论文图表未自动修改，未上传GitHub。']
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    lines+=['','五种子双侧精确检验最低p=.0625；均值方向和统计证据分别报告。不得按低标签结果重选预算或主模型。','标签集合为嵌套轨迹前缀，各方法完全共用；本轮没有重抽数据集或新增训练种子。BC直接训练history，IDM由少量真实标签产生伪标签，潜表示方法冻结history后grounding。','本轮只检验标签效率；未解决agent-aligned视觉slot、新环境/更多agent或PC各机制的完整归因。论文图表未自动修改，未上传GitHub。']
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "control")+'\n',encoding='utf-8')
     dest=PACKAGE/'results'/p['name'];dest.mkdir(exist_ok=True,parents=True)
     for name in ['RESULTS_CN.md','summary.json','qualification.json','foundation_verification.json','protocol.json']:
         assert not (dest/name).exists();shutil.copy2(out/name,dest/name)

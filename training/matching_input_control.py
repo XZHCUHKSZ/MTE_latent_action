@@ -1,7 +1,7 @@
 """Controlled graph input experiment; uses the existing Graph class unchanged.
 
 All arms retain both endpoint tables through invertible transformations. This
-isolates explicit matching as an input inductive bias, not all MTE components.
+isolates explicit matching as an input inductive bias, not all PC components.
 """
 import hashlib
 import numpy as np

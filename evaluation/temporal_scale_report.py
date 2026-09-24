@@ -1,4 +1,6 @@
 """Complete-matrix reporting; paired training seeds are the statistical units."""
+from mte.method_names import report_text
+from mte.method_names import normalize_config
 import json
 from pathlib import Path
 import numpy as np
@@ -33,6 +35,7 @@ def holm(ps):
 
 
 def summarize(out, p):
+    p = normalize_config(p, "mpe")
     out = Path(out); rows = []
     for seed in p['seeds']:
         for budget in p['budgets']:
@@ -78,5 +81,5 @@ def summarize(out, p):
     lines += ['','## 预定主比较：每种子标签曲线面积差','',
               'AUC 在 log2 标签预算上积分并归一化；重复单位为训练种子，不是预算或评估episode。五种子t区间依赖分布假设，不能保证普遍性。','']
     for r in primary:lines.append(f"- {r['plus']} − {r['minus']}: {json.dumps(r,ensure_ascii=False)}")
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "mpe")+'\n',encoding='utf-8')
     return len(rows), expected

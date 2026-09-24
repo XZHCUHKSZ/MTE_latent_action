@@ -2,6 +2,7 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import normalize_job
 
 import hashlib
 
@@ -19,6 +20,7 @@ def digest(path):
     return h.hexdigest()
 
 def location(out,job):
+    job = normalize_job(job, 3, "control")
     phase,suite,seed,arm,kind=job
     return out/phase/suite/f'seed{seed}'/(kind+'_'+arm)
 

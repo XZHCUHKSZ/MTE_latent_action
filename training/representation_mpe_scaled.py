@@ -1,4 +1,4 @@
-"""Dimension-only entity/table builder; no MTE model redefinition."""
+"""Dimension-only entity/table builder; no PC model redefinition."""
 import numpy as np
 
 def endpoint_view(positions, actual, reference, masks):

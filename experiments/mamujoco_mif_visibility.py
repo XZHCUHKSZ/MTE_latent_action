@@ -2,6 +2,7 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
 
 import os
 
@@ -198,10 +199,10 @@ def summarize(out, manifest, c):
         '遮蔽的是各自基底的节点。同索引掩码并不意味着丢掉了相同的原始表信息。',
         '五个既有上游种子的受控扩展；每种子先平均五预算和五次decoder重复。不是新环境验证，均值正不等于稳定显著。',
         '全部500单元和逐种子差保留于summary.json。论文、图表和GitHub未自动更新。', '']
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines), encoding='utf-8')
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "control"), encoding='utf-8')
     delivery = PACKAGE/'results'/out.name
     delivery.mkdir(parents=True, exist_ok=True)
-    (delivery/'RESULTS_CN.md').write_text('\n'.join(lines), encoding='utf-8')
+    (delivery/'RESULTS_CN.md').write_text(report_text(lines, "control"), encoding='utf-8')
     atomic_json(delivery/'summary.json', summary)
 
 def manager(out):

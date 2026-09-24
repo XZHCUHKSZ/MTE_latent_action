@@ -3,7 +3,7 @@
 Run each training/evaluation stage in a fresh process. This entry has no
 background scheduler, continuation, retry, or Adapt experiment.
 """
-from mte.method_names import resolve_method
+from mte.method_names import resolve_coupled_ground
 import argparse
 import hashlib
 import json
@@ -87,7 +87,8 @@ def main():
         out=unit/'pre';out.mkdir(parents=True,exist_ok=False)
         result=pretrain(c,a.seed,Path(c['data_root'])/f'seed{a.teacher}'/'acquire/data64',out,note)
     elif a.stage=='ground':
-        a.arm=resolve_method(a.arm, 'coupled')
+        if a.arm is None: ap.error("ground requires --arm")
+        a.arm=resolve_coupled_ground(a.arm)
         if a.arm not in arms():ap.error('Select a Frozen arm, bc, or idm')
         check_freeze(r/'pretrain_freeze.json');check_freeze(r/'label_freeze.json')
         out=unit/'ground'/a.arm;out.mkdir(parents=True,exist_ok=False)

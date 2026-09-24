@@ -1,3 +1,4 @@
+from mte.method_names import resolve_control
 import numpy as np
 import torch
 from torch import nn
@@ -24,6 +25,7 @@ def complement_indices(masks):
 # Final implementation source: observation_mte_structural_v3_2026_09_12/representation.py:21
 
 def make_model(dim,masks,adjacency,hidden,arm,device='cuda'):
+    arm = resolve_control(arm)
     net=MIFCARAIncidenceFlow(dim,torch.as_tensor(masks,device=device),
         torch.as_tensor(adjacency,device=device),3,16,hidden).to(device)
     if arm.startswith('pooled_'):
@@ -38,6 +40,7 @@ def make_model(dim,masks,adjacency,hidden,arm,device='cuda'):
 # Final implementation source: observation_mte_structural_v3_2026_09_12/representation.py:33
 
 def canonical_prediction(pred,arm,input_mean,input_std,canonical_mean,canonical_std):
+    arm = resolve_control(arm)
     if not arm.endswith('_pair'):return pred
     d=pred.shape[-1]//2
     # Evaluate the affine map without adding then subtracting large endpoint means.
@@ -49,6 +52,7 @@ def canonical_prediction(pred,arm,input_mean,input_std,canonical_mean,canonical_
 # Final implementation source: observation_mte_structural_v3_2026_09_12/representation.py:42
 
 def train(a,b,valid,n,masks,adjacency,env,seed,updates,arm,progress):
+    arm = resolve_control(arm)
     assert a.shape==b.shape and a.ndim==6
     C.seed_all(seed)
     start=time.monotonic();torch.cuda.reset_peak_memory_stats()

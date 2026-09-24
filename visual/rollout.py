@@ -1,3 +1,4 @@
+from mte.method_names import resolve_visual_arm
 import numpy as np
 import torch
 from torch import nn
@@ -14,6 +15,7 @@ progress = V.progress
 
 @torch.no_grad()
 def evaluate(out, arm):
+    arm = resolve_visual_arm(arm)
     assert all(((RT / ('ground_' + a) / 'result.json').exists() for a in ARMS))
     from .render import teacher, render
     from environments.mamujoco import make_env

@@ -4,6 +4,7 @@ Scientific model classes, objectives and optimizer order come from visual.train.
 Only the number of labelled training episodes changes. B8 parity is a required
 all-five-seed gate before formal low-budget results can be dispatched.
 """
+from mte.method_names import resolve_visual_arm
 from pathlib import Path
 import numpy as np
 import torch
@@ -35,6 +36,7 @@ def configure(seed, job_root, budget, updates=600):
 
 # Adapted from visual/train.py:ground; method bodies remain in the frozen classes.
 def ground(out, arm):
+    arm = resolve_visual_arm(arm)
     assert read(SOURCE / 'freeze/result.json')['all_sources_frozen']
     labels_paths = [LABELS / f'{i:04d}.npy' for i in range(BUDGET)]
     paths = [SOURCE / 'features/features.npz'] + labels_paths

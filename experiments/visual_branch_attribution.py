@@ -2,6 +2,8 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
+from mte.method_names import normalize_config, normalize_job, resolve_control
 
 import argparse, hashlib, itertools, json, os, subprocess, sys, time, traceback
 
@@ -18,11 +20,14 @@ PACKAGE=Path(__file__).resolve().parents[1]
 WORKSPACE=PACKAGE.parents[1]
 
 def jobs(c,phase,kind):
+    c = normalize_config(c, "control")
     seeds=c['seeds'][:1] if phase=='smoke' else c['seeds']
     modes=['frozen','trainable'] if phase=='parity' else ['baseonly','auxonly']
     return [(phase,'visual',s,f'{f}_aux_pretrained_{m}',kind) for s in seeds for f in c['families'] for m in modes]
 
 def reference(c,seed,family,mode):
+    c = normalize_config(c, "control")
+    family = resolve_control(family)
     assert mode in ('frozen','trainable')
     if mode=='frozen' or family=='mif':
         from training.visual_branch_attribution import base_arm
@@ -36,6 +41,7 @@ def reference(c,seed,family,mode):
     return ground,result
 
 def validate(out,job):
+    job = normalize_job(job, 3, "control")
     d=location(out,job);r=read(d/'result.json')
     assert r['complete'] and r['job']==list(job) and not read(d/'access_audit.json')['violations']
     if job[-1]=='ground':
@@ -48,6 +54,8 @@ def validate(out,job):
     return r
 
 def worker(out,job,c):
+    c = normalize_config(c, "control")
+    job = normalize_job(job, 3, "control")
     import torch
     from closed_loop_lam_v1 import common as C
     from training import visual_label_budget as B
@@ -74,6 +82,7 @@ def worker(out,job,c):
     atomic_json(dest/'result.json',r)
 
 def pairing(out,c):
+    c = normalize_config(c, "control")
     checks=[];keys=['history_initial','decoder_initial','normalization','inputs','targets','batches','total_history_parameters','decoder_parameters','base_parameters','aux_parameters']
     for seed in c['seeds']:
         architecture=[]
@@ -106,6 +115,7 @@ def holm(rows):
         bound=max(bound,min(1.,r['exact_p']*(len(rows)-i)));r['holm_p']=bound
 
 def aggregate(out,c):
+    c = normalize_config(c, "control")
     records=[]
     for seed,family,mode in itertools.product(c['seeds'],c['families'],['frozen','baseonly','auxonly','trainable']):
         reused=mode in ('frozen','trainable')
@@ -134,12 +144,12 @@ def aggregate(out,c):
     check=subprocess.run([sys.executable,str(WORKSPACE/'tools/verify_frozen_foundation.py')],capture_output=True,text=True);assert check.returncode==0,check.stdout+check.stderr
     atomic_json(out/'foundation_verification.json',dict(returncode=check.returncode,stdout=check.stdout,stderr=check.stderr))
     atomic_json(out/'summary.json',dict(records=records,contrasts=contrasts,new_results=50,reused_results=50,source_and_weight_checks=True))
-    lines=['# 视觉MTE分支归因：B2五种子探索性检验','','## 四格平均回报','','|模型|都冻结|只更新Base|只更新辅助history|两支都更新|','|---|---:|---:|---:|---:|']
+    lines=['# 视觉PC分支归因：B2五种子探索性检验','','## 四格平均回报','','|模型|都冻结|只更新Base|只更新辅助history|两支都更新|','|---|---:|---:|---:|---:|']
     for f in c['families']:lines.append('|'+f+'|'+'|'.join(f'{np.mean([value(s,f,m) for s in c["seeds"]]):.5f}' for m in ['frozen','baseonly','auxonly','trainable'])+'|')
     lines+=['','## 全部预定比较','','|模型|比较|均值差|正向种子|t95|精确p|Holm p|','|---|---|---:|---:|---|---:|---:|']
     for r in contrasts:lines.append(f"|{r['family']}|{r['name']}|{r['mean']:+.5f}|{r['positive_seeds']}/5|{r['t95']}|{r['exact_p']:.4f}|{r['holm_p']:.4f}|")
-    lines+=['','Base为原visual_laom_target history；辅助分支为MTE或同16维、同参数history架构的LAOM state-adapter，不是官方端到端像素LAOM复现。','所有格均训练decoder；选择性更新只改变history梯度访问。每格400目标动作标签、600更新、相同采样，原前端及预训练原件不改。训练不访问模拟器或伙伴动作。跨方法使用同一种无动作归一化规则，但各自latent统计数值不同。','本轮是观察已有收益后的固定预算探索；MIF为原锁定主模型，Simple/Graph/Tree为家族跟进。分支五比较按每模型Holm族，16项MTE减LAOM组成单独Holm族。重复单位为五上游种子，p最低.0625。所有方向完整保留，不按结果改假设或挑选模型。','分支选择性更新定位适配收益，不等价于删除分支信息。与同容量LAOM相比估计MTE来源history在本任务、预算和训练方式下的相对价值，不单独证明matching构造、Mobius或通用因果机制。原冻结主结果保留，论文图表不自动修改。']
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    lines+=['','Base为原visual_laom_target history；辅助分支为PC或同16维、同参数history架构的LAOM state-adapter，不是官方端到端像素LAOM复现。','所有格均训练decoder；选择性更新只改变history梯度访问。每格400目标动作标签、600更新、相同采样，原前端及预训练原件不改。训练不访问模拟器或伙伴动作。跨方法使用同一种无动作归一化规则，但各自latent统计数值不同。','本轮是观察已有收益后的固定预算探索；MIF为原锁定主模型，Simple/Graph/Tree为家族跟进。分支五比较按每模型Holm族，16项PC减LAOM组成单独Holm族。重复单位为五上游种子，p最低.0625。所有方向完整保留，不按结果改假设或挑选模型。','分支选择性更新定位适配收益，不等价于删除分支信息。与同容量LAOM相比估计PC来源history在本任务、预算和训练方式下的相对价值，不单独证明matching构造、Mobius或通用因果机制。原冻结主结果保留，论文图表不自动修改。']
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "control")+'\n',encoding='utf-8')
     dest=PACKAGE/'results'/c['name'];dest.mkdir(parents=True,exist_ok=False)
     import shutil
     for n in ['RESULTS_CN.md','summary.json','protocol.json','qualification.json','pairing_checks.json','foundation_verification.json']:shutil.copy2(out/n,dest/n)

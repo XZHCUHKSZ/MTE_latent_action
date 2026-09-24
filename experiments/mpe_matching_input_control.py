@@ -2,6 +2,7 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
 
 import json
 
@@ -93,4 +94,4 @@ def aggregate(out,p):
         '这是Graph类的等资源机制控制，输入为两个8维端点向量；不是主实验原始8维edge-only Graph的替换值。端点预测目标对各臂完全相同，没有给matched额外标签。',
         '全部输入保持相同信息，差分是可逆变换。实验回答显式matching的归纳偏置，而非声称只有matching拥有更多信息。',
         '未更新论文图表，未上传GitHub。']
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "control")+'\n',encoding='utf8')

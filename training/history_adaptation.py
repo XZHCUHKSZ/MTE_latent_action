@@ -1,4 +1,5 @@
 """Downstream adapters using unchanged scientific recurrent/decoder classes."""
+from mte.method_names import resolve_method
 from pathlib import Path
 import copy
 import hashlib
@@ -27,6 +28,7 @@ def visual_ground(dest, root, seed, arm, updates):
 
 
 def mpe_net(source, method):
+    method = resolve_method(method, "mpe")
     members=method.split('+')
     net, ck=restore(source/'pretrain'/members[0]/'policy/policy.pt')
     if len(members)==2:
@@ -37,6 +39,7 @@ def mpe_net(source, method):
 
 
 def mpe_ground(dest, source, seed, method, trainable, updates):
+    method = resolve_method(method, "mpe")
     allowed=[source/'data/train.npz',source/'data/labels_b32.npz']
     allowed += [source/'pretrain'/m/'policy/policy.pt' for m in method.split('+')]
     audit=guard(dest,allowed,pretraining=False)

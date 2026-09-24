@@ -1,4 +1,5 @@
 """Final coordinate pilot, explicit configuration instead of dated job folders."""
+from mte.method_names import normalize_config
 import time,atexit,gc
 from pathlib import Path
 import numpy as np
@@ -12,6 +13,7 @@ from utils.access import guard
 from utils.atomic import atomic_json
 
 def run(j,p,out):
+    j = normalize_config(j, "control")
     s=j['suite'];out=Path(out);out.mkdir(exist_ok=False)
     start=time.time();torch.set_num_threads(1)
     audit=guard(out,[Path(s[k]) for k in ['train','dev']]+[endpoints(s)],True)

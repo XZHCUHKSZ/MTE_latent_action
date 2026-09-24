@@ -1,4 +1,6 @@
 """Read-only aggregation of explicitly separated reused and new evidence."""
+from mte.method_names import report_text
+from mte.method_names import normalize_config
 import json
 from pathlib import Path
 import numpy as np
@@ -7,6 +9,7 @@ from utils.atomic import atomic_json
 
 
 def summarize(out,c):
+    c = normalize_config(c, "mpe")
     from experiments.mpe_evidence_completion import plan
     out=Path(out);seeds=plan(c,c['full_n'])['seeds'];new=[];reused=[]
     for file in Path(c['source_run']).glob('seed*/grounding/budget_*/*.json'):
@@ -66,5 +69,5 @@ def summarize(out,c):
         '|N|B|模型|种子|回报 ↑|','|---:|---:|---|---:|---:|']
     for r in means:lines.append(f"|{r['n']}|{r['budget']}|{r['method']}|{r['seeds']}|{r['return_mean']:.5f}|")
     lines+=['','## 固定配对','']+[json.dumps(r,ensure_ascii=False) for r in contrasts]
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "control")+'\n',encoding='utf-8')
     return stats

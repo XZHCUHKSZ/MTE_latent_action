@@ -2,6 +2,8 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
+from mte.method_names import normalize_config, normalize_job, resolve_control
 
 import hashlib
 
@@ -38,10 +40,12 @@ def digest(path):
     return h.hexdigest()
 
 def path(out, job):
+    job = normalize_job(job, 3, "control")
     phase, seed, budget, arm, kind = job
     return out/phase/f'seed{seed}'/f'b{budget}'/(kind+'_'+arm)
 
 def jobs(c, phase, kind):
+    c = normalize_config(c, "control")
     if phase == 'smoke':
         return [(phase, c['seeds'][0], 1, a+'_pretrained_trainable', kind) for a in c['arms']]
     if phase == 'reproduce':
@@ -51,6 +55,8 @@ def jobs(c, phase, kind):
             if phase != 'formal' or b != 2 or not a.startswith(('lapo_', 'laom_'))]
 
 def reference(c, seed, budget, arm, adapted=False):
+    c = normalize_config(c, "control")
+    arm = resolve_control(arm)
     if adapted:
         root=P/c['pilot']/'formal/visual'/f'seed{seed}'
         return root/('ground_'+arm),root/('evaluate_'+arm)/'result.json'
@@ -67,6 +73,7 @@ def reference(c, seed, budget, arm, adapted=False):
     return ground,result
 
 def validate(out,job):
+    job = normalize_job(job, 3, "control")
     d=path(out,job); r=read(d/'result.json')
     assert r['complete'] and r['job']==list(job),job
     assert not read(d/'access_audit.json')['violations'],job
@@ -76,6 +83,8 @@ def validate(out,job):
     return r
 
 def worker(out,job,c):
+    c = normalize_config(c, "control")
+    job = normalize_job(job, 3, "control")
     import torch
     from closed_loop_lam_v1 import common as C
     from training import visual_adapt_controls as T, visual_label_budget as B
@@ -118,6 +127,7 @@ def holm(rows):
         bound=max(bound,min(1.,r['exact_p']*(len(rows)-i)));r['holm_p']=bound
 
 def aggregate(out,c):
+    c = normalize_config(c, "control")
     rows=[]
     for s in c['seeds']:
         for b in c['budgets']:
@@ -164,6 +174,6 @@ def aggregate(out,c):
             cells.append(f'{np.mean(v):.3f} ± {np.std(v,ddof=1):.3f}')
         lines.append('|'+arm+'/'+route+'|'+'|'.join(cells)+'|')
     lines+=['','旧任务、旧五种子后的预先固定补齐，仍属探索性证据；不是新任务确认。精确双侧p最小.0625，正均值不替代预定检验。','所有预训练保持observation-only，Adapt使用预算内目标动作更新history副本和decoder。Base-duplicate共享同一history，Random-edge仍保留MTE输入。BC/IDM保留其原训练路径，不称所有方法参数完全匹配。','本轮LAPO/LAOM是原state/feature adapters，不冒充新下载的官方像素基线。论文和图未自动更改。']
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "control")+'\n',encoding='utf8')
     target=P/'results'/c['name'];target.mkdir(exist_ok=False)
     for n in ('summary.json','RESULTS_CN.md','protocol.json','qualification.json','pairing_checks.json','foundation_verification.json'):shutil.copy2(out/n,target/n)

@@ -1,3 +1,4 @@
+from mte.method_names import resolve_control
 import numpy as np
 import torch
 from torch import nn
@@ -14,6 +15,7 @@ ARMS={"graph_matched":("graph","mobius"),"simple_matched":("simple","mobius"),"m
 # Final implementation source: mte_family_transfer_2026_09_16/representation.py:13
 
 def factory(model,variant,dim,masks,adj,env):
+    model = resolve_control(model)
     cm=torch.as_tensor(masks,device='cuda')
     if model=='graph':net=MobiusGraphEdgeCARA(dim,cm,16,128).cuda()
     elif model=='simple':net=MobiusSimple(dim,cm,16,128).cuda()
@@ -26,6 +28,7 @@ def factory(model,variant,dim,masks,adj,env):
 # Final implementation source: mte_family_transfer_2026_09_16/representation.py:23
 
 def forward(net,y,model):
+    model = resolve_control(model)
     if model=='mif':
         z,r,_=net(y,torch.ones(*y.shape[:-1],1,dtype=torch.bool,device=y.device));return z,r
     r=net(y);return r[0],r[-1]
@@ -34,6 +37,7 @@ def forward(net,y,model):
 
 def decode(net,z,model):
     """Expose the existing decoder for measurement only; checked against forward."""
+    model = resolve_control(model)
     if model=='mif':
         coords=(net.time_embedding[:,None,None,:]+net.coalition_embedding[None,:,None,:]+net.entity_embedding[None,None,:,:])
         coords=coords[None].expand(len(z),-1,-1,-1,-1)
@@ -47,6 +51,7 @@ def decode(net,z,model):
 # Final implementation source: mte_family_transfer_2026_09_16/representation.py:40
 
 def tables(s,arm):
+    arm = resolve_control(arm)
     model,variant=ARMS[arm]
     if model=='mif':
         x,m,n,a,b,masks,adj,valid=rich(s)
@@ -63,12 +68,14 @@ def tables(s,arm):
 # Final implementation source: mte_family_transfer_2026_09_16/representation.py:54
 
 def coefficients(y,model,M,edge_dim):
+    model = resolve_control(model)
     if model=='mif':return np.einsum('cd,bhdek->bhcek',M,y[...,edge_dim:],optimize=True)
     return np.einsum('cd,bdk->bck',M,y,optimize=True)
 
 # Final implementation source: mte_family_transfer_2026_09_16/representation.py:58
 
 def measure(net,model,y,valid,n,z,history,masks,edge_dim,seed,checkpoint):
+    model = resolve_control(model)
     tr=np.argwhere(valid[:n]);dv=np.argwhere(valid[n:]);dv[:,0]+=n
     rng=np.random.default_rng(811901+seed);tr=tr[rng.choice(len(tr),min(2048,len(tr)),replace=False)]
     rng=np.random.default_rng(811902+seed);dv=dv[rng.choice(len(dv),min(512,len(dv)),replace=False)]
@@ -99,6 +106,7 @@ def measure(net,model,y,valid,n,z,history,masks,edge_dim,seed,checkpoint):
 # Final implementation source: mte_family_transfer_2026_09_16/representation.py:86
 
 def train(s,arm,p,out,progress):
+    arm = resolve_control(arm)
     model,variant=ARMS[arm];x,m,n,y,valid,masks,adj,edge_dim=tables(s,arm)
     assert n==s['n']
     mu,sd=C.fit_mean_std(y[:n][valid[:n]].reshape(-1,y.shape[-1]));y=(y-mu)/sd

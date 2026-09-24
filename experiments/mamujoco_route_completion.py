@@ -2,6 +2,8 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
+from mte.method_names import normalize_config, resolve_control
 
 import os
 
@@ -56,11 +58,13 @@ def suite(seed):
         labels={str(b):str(old/(sid+f'__export_{b}/labels.npz')) for b in [4,8,16,32,64]})
 
 def old_pre(s,arm):
+    arm = resolve_control(arm)
     folder='mte_global_aux_scope_2026_09_16' if arm=='global16' else 'mte_family_transfer_2026_09_16'
     name='global' if arm=='global16' else arm
     return WORKSPACE/folder/'runtime'/(s['id']+'__pre_'+name)
 
 def old_result(s,arm,b,ds):
+    arm = resolve_control(arm)
     if arm=='global16':
         candidates=[WORKSPACE/'mte_global_aux_scope_2026_09_16/runtime'/f'{s["id"]}__B{b}_base_global_joint16_d{ds}'/'result.json']
     else:
@@ -76,6 +80,7 @@ def clean_audit(folder):
     for p in files: assert not read(p)['violations'],str(p)
 
 def setup(out,config):
+    config = normalize_config(config, "control")
     out.mkdir(parents=True,exist_ok=False)
     c=read(config)
     jobs=[]; paths={}; existing={}; inputs={}
@@ -142,6 +147,7 @@ def check_sources(manifest,inputs=False):
         for p,h in manifest['inputs'].items(): assert digest(p)==h,f'Changed source: {p}'
 
 def ground(s,j,c,out,manifest,progress):
+    j = normalize_config(j, "control")
     from training.composition import restore,FrozenPair
     from training.grounding_mamujoco import train_decoder,GroundedPolicy
     from evaluation.mamujoco import evaluate
@@ -218,6 +224,7 @@ def freeze(out,manifest):
     atomic_json(out/'freeze.json',dict(all_modules_frozen=True,hashes=hashes,time=time.time()))
 
 def summarize(out,manifest,c):
+    c = normalize_config(c, "control")
     from scipy.stats import t
     rows=[]
     for j in manifest['jobs']:
@@ -252,7 +259,7 @@ def summarize(out,manifest,c):
     for r in contrasts:lines.append(f'|{r["model"]}|{r["control"]}|{r["mean"]:.4f}|{r["ci95"]}|{r["positive_seeds"]}/5|{r["holm_p"]:.4f}|')
     lines+=['','全部875条记录见summary.json；原Base/LAPO/LAOM/BC背景参照见baseline_references.json，不混为同decoder配对。',
             '完整路线的目标/上游成本不同；raw配对保持同表与同目标，只替换Möbius/zeta坐标。该结果不验证实际donor物理语义。','']
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines),encoding='utf-8')
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "control"),encoding='utf-8')
 
 def manager(out):
     import msvcrt

@@ -22,13 +22,15 @@ See the [paper-to-code map](docs/PAPER_CODE_MAP.md),
 
 ```sh
 python inspect_release.py --verify
+python tests/test_method_names.py
+python tests/test_public_naming.py
 python tests/check_release_interfaces.py
 python -m experiments.coupled_frozen --help
 python -m experiments.visual_control --help
 ```
 
 The first command checks source/configuration syntax and the code-only file
-policy without training. Interface checks require NumPy/SciPy. Experiment stages
+policy without training. Naming integration checks require PyTorch/NumPy/SciPy; interface checks require NumPy/SciPy. Experiment stages
 need the dependencies and separately supplied assets described in the guide.
 
 ## Layout

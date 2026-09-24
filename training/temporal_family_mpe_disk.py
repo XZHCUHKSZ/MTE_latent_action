@@ -3,6 +3,7 @@
 Source: training/temporal_family_mpe_scaled.py. Only table materialization and
 elementwise normalization are chunked. Mean/std use the exact original reducer.
 """
+from mte.method_names import resolve_control
 from pathlib import Path
 import numpy as np
 import torch
@@ -16,6 +17,7 @@ from mte.structured_controls import complement_indices
 
 def prepare_disk_table(x, a, b, masks, n, model, out, chunk_episodes=4):
     """Preserve C-order float32 values and the original full training-row reducer."""
+    model = resolve_control(model)
     from numpy.lib.format import open_memmap
     assert 0 < n < len(x) and chunk_episodes > 0
     shape = ((len(x), 22, 3, len(masks), x.shape[-1]//2, 8)
@@ -47,6 +49,7 @@ def prepare_disk_table(x, a, b, masks, n, model, out, chunk_episodes=4):
 
 
 def train(x, a, b, masks, n, arm, p, out, progress):
+    arm = resolve_control(arm)
     model = arm.split('_')[0]
     variant = 'raw_coordinates' if arm.endswith('_raw') else 'mobius'
     if arm.endswith('_complement'): b = np.take(b, complement_indices(masks), axis=3)

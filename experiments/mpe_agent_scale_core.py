@@ -2,6 +2,8 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
+from mte.method_names import normalize_config, normalize_job
 
 import argparse,hashlib,itertools,json,os,subprocess,sys,time,traceback
 
@@ -21,15 +23,19 @@ def out_path(r):return r.parents[2]
 def root(out,phase,agents,seed):return out/phase/f'a{agents}'/f'seed{seed}'
 
 def location(out,j):
+    j = normalize_job(j, 4, "mpe")
     phase,agents,seed,stage,method,route=j;r=root(out,phase,agents,seed)
     return r/stage if stage in ('collect','pretrain') else r/(stage+'_'+method.replace('+','__')+'_'+route)
 
 def jobs(c,phase,stage):
+    c = normalize_config(c, "mpe")
     seeds=c['smoke']['seeds'] if phase=='smoke' else c['seeds']
     arms=[('-', '-')] if stage in ('collect','pretrain') else [(m,r) for m in c['methods'] for r in (['supervised'] if m=='bc' else c['routes'])]
     return [(phase,a,s,stage,m,r) for a in c['agents'] for s in seeds for m,r in arms]
 
 def settings(c,j):
+    c = normalize_config(c, "mpe")
+    j = normalize_job(j, 4, "mpe")
     p=dict(c,seed=j[2],device='cuda')
     if j[0]=='smoke':
         p.update(train_episodes=c['smoke']['train_episodes'],dev_episodes=c['smoke']['dev_episodes'],evaluation_episodes=1)
@@ -37,6 +43,8 @@ def settings(c,j):
     return p
 
 def collect(r,dest,j,c,p,progress):
+    c = normalize_config(c, "mpe")
+    j = normalize_job(j, 4, "mpe")
     from environments.mpe import make_env,teacher_assignment,teacher_forces
     from environments.native_particle import force_to_direction_id
     phase,agents,seed,*_=j;count=p['train_episodes']+p['dev_episodes']
@@ -69,6 +77,8 @@ def check_hashes(base,values):
     for f,h in values.items():assert digest(base/f)==h,f
 
 def pretrain(r,dest,j,c,p,progress):
+    c = normalize_config(c, "mpe")
+    j = normalize_job(j, 4, "mpe")
     import torch
     from utils.access import guard
     from mte.temporal_mpe_scaled import frontend,bridge
@@ -99,6 +109,8 @@ def pretrain(r,dest,j,c,p,progress):
     return dict(checkpoints={str(f.relative_to(dest)):digest(f) for f in dest.rglob('*.pt')},native_action_labels_read=0,simulator_queries=0,frozen_before_grounding=True,diagnostics=diags)
 
 def ground(r,dest,j,c,p,progress):
+    c = normalize_config(c, "mpe")
+    j = normalize_job(j, 4, "mpe")
     import torch
     from training.history_adaptation import mpe_ground
     phase,agents,seed,stage,method,route=j
@@ -134,6 +146,8 @@ def ground(r,dest,j,c,p,progress):
     return result
 
 def evaluate(r,dest,j,c,p,progress):
+    c = normalize_config(c, "mpe")
+    j = normalize_job(j, 4, "mpe")
     import torch
     from utils.access import guard
     from training.history_adaptation import mpe_net
@@ -162,6 +176,8 @@ def evaluate(r,dest,j,c,p,progress):
     assert not audit['violations'];atomic_json(dest/'access_audit.json',audit);return result
 
 def worker(out,j,c):
+    c = normalize_config(c, "mpe")
+    j = normalize_job(j, 4, "mpe")
     import torch
     torch.set_num_threads(1);torch.set_num_interop_threads(1)
     phase,agents,seed,stage,method,route=j;p=settings(c,j);r=root(out,phase,agents,seed);dest=location(out,j);dest.mkdir(parents=True,exist_ok=False)
@@ -171,12 +187,14 @@ def worker(out,j,c):
     except Exception:atomic_json(dest/'failure.json',dict(traceback=traceback.format_exc()));raise
 
 def validate(out,j):
+    j = normalize_job(j, 4, "mpe")
     d=location(out,j);r=read(d/'result.json');assert r['complete'] and r['job']==list(j)
     if j[3]!='collect':assert not read(d/'access_audit.json')['violations']
     if j[3]=='ground':assert r['native_action_labels_read']==704 and r['partner_labels_read']==0 and r['simulator_queries']==0
     return r
 
 def freeze_pretrain(out,c,phase):
+    c = normalize_config(c, "mpe")
     weights={}
     for j in jobs(c,phase,'pretrain'):
         d=location(out,j);r=validate(out,j);check_hashes(d,r['checkpoints'])
@@ -188,6 +206,7 @@ def freeze_pretrain(out,c,phase):
         np.savez_compressed(dest,actions=y,local_ids=np.arange(32))
 
 def pairing(out,c,phase):
+    c = normalize_config(c, "mpe")
     checks=[]
     for j in jobs(c,phase,'ground'):
         if j[-1]!='frozen':continue
@@ -200,6 +219,7 @@ def pairing(out,c,phase):
     return checks
 
 def aggregate(out,c):
+    c = normalize_config(c, "mpe")
     from scipy.stats import t
     rows=[dict(agents=j[1],seed=j[2],method=j[4],route=j[5],**validate(out,j)) for j in jobs(c,'formal','evaluate')]
     assert len(rows)==110 and len({(r['agents'],r['seed'],r['method'],r['route']) for r in rows})==110
@@ -225,5 +245,5 @@ def aggregate(out,c):
     lines=['# MPE 4/8-agent 固定预算规模与适配对照','','110独立控制身份；五个新上游种子。N700，B32=704个目标动作向量（528拟合+176预算内验证）。先每seed平均100共同episode，再做五seed配对。不同人数回报不混合。','','|族|人数|左−右|均值差|正向seed|t95|精确p|Holm|','|---|---:|---|---:|---:|---|---:|---:|']
     for r in contrasts:lines.append(f"|{r['family']}|{r['agents']}|{r['left']} − {r['right']}|{r['mean_delta']:+.6f}|{r['positive_seeds']}/5|{r['t95']}|{r['exact_p']}|{r['holm_p']}|")
     lines+=['','这是既有MPE任务的规模扩展，不是新环境或跨规模零样本迁移。MIF沿用MPE full-visibility route；LAOM是state adapter。Frozen和预算内监督Adapt分别报告，BC有其原训练路径/参数差异。五seed最小精确双侧p=.0625，不把正均值当预定显著。全部结果保留，论文图表和GitHub未自动修改。']
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "mpe")+'\n',encoding='utf-8')
     return report

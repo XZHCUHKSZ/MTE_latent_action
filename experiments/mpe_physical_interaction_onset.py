@@ -2,6 +2,7 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
 
 import hashlib
 
@@ -96,13 +97,13 @@ def run(config, out):
         elapsed_seconds=time.time()-started))
     report=['# MPE真实伙伴交互出现时间：评估诊断','',
       '固定同一状态，目标与伙伴第一步动作各保留/置零，后续动作完全相同。',
-      '这是模拟器测量审计，不是任何MTE模型的效果验证，也不修改原h1–h3模型。','',
+      '这是模拟器测量审计，不是任何PC模型的效果验证，也不修改原h1–h3模型。','',
       '|h|交互RMS|目标一阶效应RMS|交互最大绝对值|超过1e-7比例|',
       '|---|---:|---:|---:|---:|']
     report += [f"|{r['horizon']}|{r['interaction_rms']:.6g}|{r['target_effect_rms']:.6g}|{r['max_abs']:.6g}|{r['fraction_nonzero']['1e-07']:.1%}|" for r in stats]
     report += ['',f"{config['episodes']}个episode；每个4个状态、3个伙伴。状态/伙伴不是独立训练种子。",
       '保留全部h1–h8及三档浮点阈值；数据不回流训练，不基于结果选择论文模型或确认检验。']
-    (out/'RESULTS_CN.md').write_text('\n'.join(report)+'\n',encoding='utf-8')
+    (out/'RESULTS_CN.md').write_text(report_text(report, "control")+'\n',encoding='utf-8')
     atomic_json(out/'status.json',dict(status='complete',episodes=config['episodes'],
                 replay_exact=True,training_updates=0,elapsed_seconds=time.time()-started))
     print(json.dumps(stats,ensure_ascii=False))

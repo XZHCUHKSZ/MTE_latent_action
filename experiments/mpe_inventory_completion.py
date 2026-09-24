@@ -2,6 +2,8 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
+from mte.method_names import resolve_method
 
 import argparse,concurrent.futures,json,os,shutil,subprocess,sys,time,traceback
 
@@ -104,6 +106,7 @@ def pretrain(root,p,c,progress):
         simulator_queries=0,checkpoints={str(f.relative_to(out)):digest(f) for f in out.rglob('*.pt')}))
 
 def special_ground(root,p,method,b,progress):
+    method = resolve_method(method, "mpe")
     from training.composition import restore,FrozenPair
     from training.grounding_mpe import GroundedPolicy,train_decoder
     from training.temporal_inventory_mpe import train_idm_t2
@@ -174,4 +177,4 @@ def report(out,c):
     lines=['# 原论文模型清单：MPE时间修正版','',json.dumps(counts),'','29个论文标签对应28个唯一配置；同一个Base别名不重复当样本。','',
            '|N|B|配置|种子数|回报 ↑|','|---:|---:|---|---:|---:|']
     for r in rows:lines.append(f"|{r['n']}|{r['budget']}|{r['method']}|{r['seeds']}|{r['mean']:.5f}|")
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf-8');return counts
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "mpe")+'\n',encoding='utf-8');return counts

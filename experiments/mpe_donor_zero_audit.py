@@ -2,6 +2,7 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
 
 import hashlib
 
@@ -218,9 +219,9 @@ def summarize(out, results, cfg):
     for r in contrasts: lines.append(f"- {r['method']}: Δ={r['mean']:+.8g}; t95={r['ci95']}; exact p={r['exact_two_sided_p']}; seeds={r['seed_deltas']}")
     lines+=['','## 解释边界','',
         '- h1是位置即时效应为零的负对照，zero胜出不否定控制表征；h2/h3有非零物理效应，必须单独检验。',
-        '- zero是物理效应MSE的有效无学习基准，不是控制策略；差于它不能直接推出MTE闭环控制无用。',
+        '- zero是物理效应MSE的有效无学习基准，不是控制策略；差于它不能直接推出PC闭环控制无用。',
         '- 若query重编码改善，只能支持跨状态code输运是该测试的重要误差来源；没有证明可部署的donor修复或控制收益。',
         '- 本诊断沿用已分析过的状态，不是新环境、独立确认或对原负结果的替换。',
         '- 全表与逐种子数据见summary.json和seed*/result.json；论文和图表未自动更改。']
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "control")+'\n',encoding='utf8')
     atomic_json(out/'status.json',dict(status='complete',seeds=report['seeds'],source_and_weight_checks=True))

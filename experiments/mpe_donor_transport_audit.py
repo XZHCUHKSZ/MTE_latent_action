@@ -2,6 +2,7 @@
 
 See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+from mte.method_names import report_text
 
 import json
 
@@ -60,7 +61,7 @@ def main():
       '这是跨状态代码含义变化的线索，不是已识别的唯一原因；预测器重组误差仍可能共同贡献。',
       '下一步可用同一donor动作在query状态重编码作为evaluation-only对照，保持训练donor规则不变，分离输运与读出问题。',
       '这种模拟器重编码不能用于observation-only训练，也不能冒充标准部署。']
-    (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
+    (out/'RESULTS_CN.md').write_text(report_text(lines, "control")+'\n',encoding='utf8')
     atomic_json(out/'status.json',dict(status='complete',source_values_verified=True,training_updates=0))
     print('Complete',out)
 
