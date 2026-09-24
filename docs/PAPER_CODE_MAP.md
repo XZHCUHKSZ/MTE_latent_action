@@ -1,40 +1,25 @@
-# Paper-to-code and evidence map
+# Manuscript-to-code map
 
-The manuscript snapshot and hashes are recorded in `provenance/manuscript_snapshot.json`.
-See [the per-table alignment audit](MANUSCRIPT_ALIGNMENT_CN.md) for all 21 tables, included figures, numerical checks and remaining replay gaps.
-Current plotted/table exports are in `results/manuscript_snapshot/`. The original mixed reports
-are retired. Use the completed MPE inventory and `results/current/mamujoco_controls.json`.
+Scope: the 24 September 2026 professor-verbatim manuscript. This repository contains code and protocols only; no measured results, reports, or paper files.
 
-| Experiment/question | Entry point | Evidence | Manuscript status |
+| Experiment or diagnostic | Manuscript labels | Entry | Configuration |
 |---|---|---|---|
-| MPE temporal structural controls | [experiments/mpe_temporal_scale.py](../experiments/mpe_temporal_scale.py) | [mpe_temporal_full_scale_5seeds](../results/completed_runs/mpe_temporal_full_scale_5seeds/summary.json) | paper |
-| Additional structural and donor controls | [experiments/mpe_evidence_completion.py](../experiments/mpe_evidence_completion.py) | [mpe_evidence_completion_2026_09_18](../results/completed_runs/mpe_evidence_completion_2026_09_18/summary.json) | paper |
-| Complete MPE configuration, label and data inventory | [experiments/mpe_inventory_completion.py](../experiments/mpe_inventory_completion.py) | [mpe_inventory_completion_2026_09_18](../results/completed_runs/mpe_inventory_completion_2026_09_18/summary.json) | paper |
-| Fixed-policy partner perturbation diagnostic | [experiments/mpe_partner_shift.py](../experiments/mpe_partner_shift.py) | [mpe_partner_shift_2026_09_18_r1](../results/completed_runs/mpe_partner_shift_2026_09_18_r1/summary.json) | followup |
-| Simulator second-order physical-effect onset | [experiments/mpe_physical_interaction_onset.py](../experiments/mpe_physical_interaction_onset.py) | [mpe_physical_interaction_onset_2026_09_18](../results/completed_runs/mpe_physical_interaction_onset_2026_09_18/summary.json) | followup |
-| Read-only donor transport diagnostic | [experiments/mpe_donor_transport_audit.py](../experiments/mpe_donor_transport_audit.py) | [mpe_donor_transport_audit_2026_09_18](../results/completed_runs/mpe_donor_transport_audit_2026_09_18/summary.json) | followup |
-| Zero reference and query-state oracle diagnostic | [experiments/mpe_donor_zero_audit.py](../experiments/mpe_donor_zero_audit.py) | [mpe_donor_zero_audit_2026_09_19](../results/completed_runs/mpe_donor_zero_audit_2026_09_19/summary.json) | paper |
-| Same-resource Graph16 input control | [experiments/mpe_matching_input_control.py](../experiments/mpe_matching_input_control.py) | [mpe_matching_input_control_2026_09_19](../results/completed_runs/mpe_matching_input_control_2026_09_19/summary.json) | paper |
-| Seven-route matched/raw and Global16 comparison | [experiments/mamujoco_route_completion.py](../experiments/mamujoco_route_completion.py) | [mamujoco_route_completion_2026_09_19](../results/completed_runs/mamujoco_route_completion_2026_09_19/summary.json) | paper |
-| Native masking by coordinate-system factorial | [experiments/mamujoco_mif_visibility.py](../experiments/mamujoco_mif_visibility.py) | [mamujoco_mif_visibility_2026_09_19](../results/completed_runs/mamujoco_mif_visibility_2026_09_19/summary.json) | paper |
-| Frozen matching implementation audit | [experiments/mamujoco_frozen_matching_audit.py](../experiments/mamujoco_frozen_matching_audit.py) | [mamujoco_frozen_matching_audit_2026_09_19](../results/completed_runs/mamujoco_frozen_matching_audit_2026_09_19/summary.json) | followup |
-| Agent interface and computational resource audit | [experiments/mte_agent_resource_audit.py](../experiments/mte_agent_resource_audit.py) | [mte_agent_resource_audit_2026_09_19](../results/completed_runs/mte_agent_resource_audit_2026_09_19/summary.json) | followup |
-| Visual low-label curves for nine configurations | [experiments/visual_low_label.py](../experiments/visual_low_label.py) | [visual_low_label_2026_09_19_r1](../results/completed_runs/visual_low_label_2026_09_19_r1/summary.json) | paper |
-| Complete visual label inventory and supervision factorial | [experiments/visual_supervision_inventory.py](../experiments/visual_supervision_inventory.py) | [visual_supervision_inventory_2026_09_19](../results/completed_runs/visual_supervision_inventory_2026_09_19/summary.json) | followup |
-| Cross-method visual and MPE history adaptation | [experiments/policy_finetune_pilot.py](../experiments/policy_finetune_pilot.py) | [policy_finetune_pilot_2026_09_20_r1](../results/completed_runs/policy_finetune_pilot_2026_09_20_r1/summary.json) | followup |
-| MTE-family visual and MaMuJoCo adaptation | [experiments/mte_finetune_extension.py](../experiments/mte_finetune_extension.py) | [mte_finetune_extension_2026_09_20](../results/completed_runs/mte_finetune_extension_2026_09_20/summary.json) | followup |
-| Selective branch adaptation and capacity-matched LAOM control | [experiments/visual_branch_attribution.py](../experiments/visual_branch_attribution.py) | [visual_branch_attribution_2026_09_20](../results/completed_runs/visual_branch_attribution_2026_09_20/summary.json) | followup |
+| Corrected two-step MPE full family, budgets and observation scaling | `app:fullresults`, `app:scaling` | [experiments/mpe_inventory_completion.py](../experiments/mpe_inventory_completion.py) | [configs/mpe_inventory_completion.json](../configs/mpe_inventory_completion.json) |
+| MaMuJoCo full family, budgets, scaling and native metrics | `app:fullresults`, `app:scaling`, `app:native` | [experiments/mamujoco_frozen_control.py](../experiments/mamujoco_frozen_control.py) | [configs/mamujoco_numeric.json](../configs/mamujoco_numeric.json) |
+| RGB Ant frozen-control matrix | `app:visualtable`, `fig:visual` | [experiments/visual_control.py](../experiments/visual_control.py) | [configs/visual_design.json](../configs/visual_design.json), [configs/visual_config.json](../configs/visual_config.json) |
+| Action and partner-coefficient readouts | `app:probes`, `app:partnerprobe`, `tab:coefficientmpe`, `tab:coefficientmamujoco` | [experiments/action_information.py](../experiments/action_information.py), [evaluation/probes.py](../evaluation/probes.py), [experiments/partner_interactions.py](../experiments/partner_interactions.py) | Caller supplies stage parameters |
+| Whole-table reassignment diagnostic | `app:shuffle`, `tab:repairedcorrespondence` | [experiments/correspondence_controls.py](../experiments/correspondence_controls.py), [training/representation_mamujoco.py](../training/representation_mamujoco.py), [training/grounding_mamujoco.py](../training/grounding_mamujoco.py) | [configs/mamujoco_numeric.json](../configs/mamujoco_numeric.json) |
+| Temporal, raw-coordinate and equal-input structural controls | `app:v3results`, `tab:primarystructure` | [experiments/mpe_evidence_completion.py](../experiments/mpe_evidence_completion.py) | [configs/mpe_evidence_completion.json](../configs/mpe_evidence_completion.json) |
+| Seven-arm encoder/input factorial over five budgets | `fig:mamufactorial`, `app:structuralv3` | [experiments/resource_controls.py](../experiments/resource_controls.py) | [configs/mamujoco_structural.json](../configs/mamujoco_structural.json) |
+| Complete auxiliary route and Global16 comparison | `app:globalscope`, `tab:routegain` | [experiments/mamujoco_route_completion.py](../experiments/mamujoco_route_completion.py), [experiments/mamujoco_mif_visibility.py](../experiments/mamujoco_mif_visibility.py) | [configs/mamujoco_route_completion.json](../configs/mamujoco_route_completion.json), [configs/mamujoco_mif_visibility.json](../configs/mamujoco_mif_visibility.json) |
+| Physical onset and donor transport including zero/oracle controls | `app:physicaleffects`, `app:interactionaudit` | [experiments/mpe_donor_zero_audit.py](../experiments/mpe_donor_zero_audit.py) | [configs/mpe_donor_zero_audit.json](../configs/mpe_donor_zero_audit.json) |
+| B1/2/4/8 supervision and matched-initialization controls | `app:followupadapt`, `app:bccontext`, `tab:bcgrounding` | [experiments/visual_supervision_inventory.py](../experiments/visual_supervision_inventory.py) | [configs/visual_supervision_inventory.json](../configs/visual_supervision_inventory.json) |
+| Published history adaptation across label budgets | `tab:followupvisual`, `tab:followuppaired`, `fig:five_seed_routes` | [experiments/visual_adapt_controls.py](../experiments/visual_adapt_controls.py) | [configs/visual_adapt_controls.json](../configs/visual_adapt_controls.json) |
+| Base/auxiliary gradient and capacity controls | `app:followupadapt` | [experiments/visual_branch_attribution.py](../experiments/visual_branch_attribution.py) | [configs/visual_branch_attribution.json](../configs/visual_branch_attribution.json) |
+| Four/eight agents, separate five-seed Frozen/Adapt cohorts | `app:followupscale`, `tab:followupscale`, `fig:five_seed_routes` | [experiments/mpe_agent_scale_core.py](../experiments/mpe_agent_scale_core.py) | [configs/mpe_agent_scale_core.json](../configs/mpe_agent_scale_core.json) |
+| OTF/FLAM author pixel models: original three seeds only | `app:recentfrozen`, `fig:appendix_frozen_three` | [experiments/external_ant_stages.py](../experiments/external_ant_stages.py) | [configs/original_ant_external_three_seed_downstream_2026_09_22_r2.json](../configs/original_ant_external_three_seed_downstream_2026_09_22_r2.json) |
+| OTF/FLAM state adapters: original three seeds only | `app:recentmpe`, `tab:recentmpe` | [experiments/numerical_external_three_seed_2026_09_22_r3.py](../experiments/numerical_external_three_seed_2026_09_22_r3.py) | [configs/numerical_external_three_seed_2026_09_22_r3.json](../configs/numerical_external_three_seed_2026_09_22_r3.json) |
+| Clean-RGB CoupledHalfCheetah: two teachers, five seeds, Frozen only | `app:coupledfrozen`, `fig:coupledfrozen` | [experiments/coupled_frozen.py](../experiments/coupled_frozen.py) | [configs/coupled_frozen_five_seed.json](../configs/coupled_frozen_five_seed.json) |
+| Reported two-seed coordinate pilot and frozen MaMuJoCo alignment checks; not current control performance | `app:coordinatepilot`, `app:interactionaudit` | [experiments/coordinate_pilot.py](../experiments/coordinate_pilot.py), [evaluation/probes.py](../evaluation/probes.py), [mte/entity_view.py](../mte/entity_view.py), [evaluation/frozen_alignment.py](../evaluation/frozen_alignment.py) | [configs/coordinate_pilot.json](../configs/coordinate_pilot.json) |
 
-`paper` means this experiment supplies evidence used in the current manuscript; it does not
-mean every result row is printed. `followup` means separately completed evidence awaiting integration.
-
-## Protocol distinctions
-
-- Original MaMuJoCo route/full-visibility MIF and native masked MIF have separate objectives and labels.
-- Graph16 matching-input controls preserve endpoint information and keep their own results; the main Graph8 scores are unchanged.
-- Raw and random-edge controls retain MTE inputs. They test encoder increments within that construction.
-- Donor query-state oracle re-encoding uses evaluation simulator outcomes; its improvement is diagnostic, not a deployed policy repair.
-- Visual B1/B2/B4/B8 supervision inventory, B2 cross-family adaptation, MPE B32 pilot and MaMuJoCo B8 adaptation retain distinct scopes.
-- MaMuJoCo adaptation uses one decoder seed with five upstream seeds; the route factorial uses five nested decoder repeats.
-- Branch attribution retains both information branches. The selected branch receives gradients; capacity-matched LAOM uses its state adapter.
-- Fixed-budget adaptation is exploratory follow-up on existing tasks. New tasks, larger agent counts and visual entity alignment remain separate work.
+Historical alignment and coordinate diagnostics are separate from control experiments. Native visibility is separate from the seven-arm factorial. Observation-only pretraining and action grounding remain separate stages.

@@ -1,6 +1,6 @@
-"""X7. Compare MIF input/structure variants under the recorded shared schedule."""
-from mte.structured_controls import train,make_model,canonical_prediction,complement_indices
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
-# Exact variant implementations live in mte/structured_controls.py.
-# Equal decoder width is not equal total training compute. Paper primary
-# contrasts are retained, including Holm-adjusted inconclusive results.
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
+"""
+
+from mte.structured_controls import train,make_model,canonical_prediction,complement_indices

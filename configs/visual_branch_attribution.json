@@ -88,8 +88,6 @@
   "inventory": "outputs/visual_supervision_inventory_2026_09_19",
   "pilot": "outputs/policy_finetune_pilot_2026_09_20_r1",
   "extension": "outputs/mte_finetune_extension_2026_09_20",
-  "new_results": 50,
-  "reused_results": 50,
   "purpose": "Decompose Base-history and auxiliary-history adaptation; compare MTE-derived auxiliary features to capacity-matched non-MTE LAOM state-adapter. Existing effects examined: exploratory, not fresh confirmatory evidence.",
   "modes": {
     "frozen": "decoder only, reused",
@@ -99,6 +97,5 @@
   },
   "control": "LAOM auxiliary history has same 16-dimensional output and 80784 parameters as each MTE history. Base has 32 outputs; both paths share decoder architecture/initialization, observation normalization, labels and samples. Each family retains its own action-free pretrained latent normalization, fixed across its four modes. LAPO 128-dimensional history excluded from capacity-matched test.",
   "inference": "Within-family five branch contrasts per Holm family. MTE-minus-LAOM at four modes yields16 contrasts in one additional Holm family. Paired five upstream seeds after27 evaluation conditions; t95 and exact two-sided sign flip with minimum p .0625. MIF prespecified primary identity, all families/directions retained. No reward-based tuning, seed removal or model/budget substitution.",
-  "qualification": "10 real smoke paths,50 frozen/joint600-update decoder/fit reproductions and50 old908601 action/reward replays. Joint history state equality; frozen branches fingerprint unchanged. Full gates before formal runs, all weights frozen before evaluation.",
   "boundary": "Only current gradients change. Observation-only pretraining artifacts, RGB/PCA and source data remain immutable. Exactly400 budgeted target actions, no partner labels/simulator queries in grounding. This is supervised downstream adaptation, not frozen-policy main protocol. No claim selective freezing removes information. No new environment or causal proof of MTE construction."
 }

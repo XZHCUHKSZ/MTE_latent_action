@@ -1,19 +1,26 @@
-"""A fixed-budget 2x2 branch-gradient experiment with capacity-matched LAOM."""
-import argparse, hashlib, itertools, json, os, subprocess, sys, time, traceback
-from pathlib import Path
-import numpy as np
-import psutil
-from utils.atomic import atomic_json
-from experiments.policy_finetune_pilot import read, digest, location, progress, verify_sources
-PACKAGE=Path(__file__).resolve().parents[1]
-WORKSPACE=PACKAGE.parents[1]
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
+"""
+
+import argparse, hashlib, itertools, json, os, subprocess, sys, time, traceback
+
+from pathlib import Path
+
+import numpy as np
+
+from utils.atomic import atomic_json
+
+from experiments.stage_artifacts import read, digest, location, progress, verify_sources
+
+PACKAGE=Path(__file__).resolve().parents[1]
+
+WORKSPACE=PACKAGE.parents[1]
 
 def jobs(c,phase,kind):
     seeds=c['seeds'][:1] if phase=='smoke' else c['seeds']
     modes=['frozen','trainable'] if phase=='parity' else ['baseonly','auxonly']
     return [(phase,'visual',s,f'{f}_aux_pretrained_{m}',kind) for s in seeds for f in c['families'] for m in modes]
-
 
 def reference(c,seed,family,mode):
     assert mode in ('frozen','trainable')
@@ -28,7 +35,6 @@ def reference(c,seed,family,mode):
     ground=result.parent.parent/result.parent.name.replace('evaluate_','ground_',1)
     return ground,result
 
-
 def validate(out,job):
     d=location(out,job);r=read(d/'result.json')
     assert r['complete'] and r['job']==list(job) and not read(d/'access_audit.json')['violations']
@@ -40,7 +46,6 @@ def validate(out,job):
         for name in ['base','aux']:
             assert (r['branch_initial'][name]!=r['branch_final'][name])==r[name+'_trainable']
     return r
-
 
 def worker(out,job,c):
     import torch
@@ -68,48 +73,6 @@ def worker(out,job,c):
     r.update(complete=True,job=job,seconds=time.time()-start)
     atomic_json(dest/'result.json',r)
 
-
-def qualification(out,c):
-    import torch
-    checks=[]
-    for job in jobs(c,'parity','ground'):
-        _,_,seed,arm,_=job;family=arm.split('_')[0];mode=arm.split('_')[-1]
-        ground,result=reference(c,seed,family,mode);dest=location(out,job)
-        a=torch.load(dest/'decoder.pt',map_location='cpu',weights_only=False)
-        b=torch.load(ground/'decoder.pt',map_location='cpu',weights_only=False)
-        assert a['state_dict'].keys()==b['state_dict'].keys()
-        error=max(float((a['state_dict'][k]-b['state_dict'][k]).abs().max()) for k in b['state_dict']);assert error<=1e-6,(job,error)
-        if mode=='trainable':
-            assert a['history_state_dict'].keys()==b['history_state_dict'].keys()
-            assert all(torch.equal(a['history_state_dict'][k],b['history_state_dict'][k]) for k in b['history_state_dict']),job
-        assert np.max(np.abs(np.load(dest/'fit_predictions.npy')-np.load(ground/'fit_predictions.npy')))<=1e-6,job
-        with np.load(location(out,(*job[:-1],'evaluate'))/'episode_908601.npz') as x,np.load(result.parent/'episode_908601.npz') as y:
-            assert all(np.array_equal(x[k],y[k]) for k in y.files),job
-        checks.append(dict(job=job,decoder_max_abs=error,passed=True))
-    assert len(checks)==50
-    atomic_json(out/'qualification.json',dict(passed=True,smokes=10,reproductions=50,episode_replays=50,checks=checks))
-
-
-def snapshot(out,c):
-    files={}
-    for name in ['inventory','pilot','extension']:
-        root=PACKAGE/c[name]
-        assert read(root/'status.json')['status']=='complete' and read(root/'summary.json')['source_and_weight_checks']
-        for f,h in read(root/'source_manifest.json').items():
-            assert digest(Path(f))==h,f;files[Path(f)]=None
-        for f,h in read(root/'ground_freeze.json').items():assert digest(root/f)==h,f
-        for n in ['summary.json','source_manifest.json','ground_freeze.json','protocol.json']:files[root/n]=None
-    for sub in ['experiments','training','evaluation','mte','visual','environments','utils','closed_loop_lam_v1']:
-        files.update({f:None for f in (PACKAGE/sub).rglob('*.py')})
-    files[PACKAGE/'configs/visual_branch_attribution.json']=None
-    for s in c['seeds']:
-        for family in c['families']:
-            for mode in ['frozen','trainable']:
-                ground,result=reference(c,s,family,mode)
-                for f in [ground/'decoder.pt',ground/'fit_predictions.npy',result,result.parent/'episode_908601.npz']:files[f]=None
-    atomic_json(out/'source_manifest.json',{str(f.resolve()):digest(f) for f in sorted(files)})
-
-
 def pairing(out,c):
     checks=[];keys=['history_initial','decoder_initial','normalization','inputs','targets','batches','total_history_parameters','decoder_parameters','base_parameters','aux_parameters']
     for seed in c['seeds']:
@@ -131,19 +94,16 @@ def pairing(out,c):
     assert len(checks)==25
     atomic_json(out/'pairing_checks.json',dict(passed=True,cells=checks,capacity_matched_families=c['families']))
 
-
 def stats(values,**fields):
     from scipy.stats import t
     d=np.array(values);assert len(d)==5
     rad=float(t.ppf(.975,4)*d.std(ddof=1)/np.sqrt(5));null=np.abs(np.array(list(itertools.product([-1,1],repeat=5)))@d/5)
     return dict(**fields,mean=float(d.mean()),seed_differences=d.tolist(),positive_seeds=int((d>0).sum()),t95=[float(d.mean()-rad),float(d.mean()+rad)],exact_p=float((null>=abs(d.mean())-1e-12).mean()))
 
-
 def holm(rows):
     bound=0
     for i,r in enumerate(sorted(rows,key=lambda r:r['exact_p'])):
         bound=max(bound,min(1.,r['exact_p']*(len(rows)-i)));r['holm_p']=bound
-
 
 def aggregate(out,c):
     records=[]
@@ -183,73 +143,3 @@ def aggregate(out,c):
     dest=PACKAGE/'results'/c['name'];dest.mkdir(parents=True,exist_ok=False)
     import shutil
     for n in ['RESULTS_CN.md','summary.json','protocol.json','qualification.json','pairing_checks.json','foundation_verification.json']:shutil.copy2(out/n,dest/n)
-
-
-def run_phase(out,config,title,work):
-    active={};done=set();failure=None
-    for job in work:
-        d=location(out,job)
-        if (d/'result.json').exists():validate(out,job);done.add(job)
-        elif d.exists():raise RuntimeError(f'Partial retained; inspection needed: {d}')
-    while len(done)<len(work) or active:
-        for job,(proc,log,created) in list(active.items()):
-            rc=proc.poll()
-            if rc is None:continue
-            log.close();del active[job]
-            try:
-                assert rc==0,(job,rc);validate(out,job);done.add(job)
-            except Exception:failure=traceback.format_exc()
-        paused=(out/'PAUSE').exists()
-        if not failure and not paused:
-            for job in work:
-                if len(active)>=config['workers']:break
-                if job in done or job in active:continue
-                log=(out/'logs'/('__'.join(map(str,job))+f'.{time.time_ns()}.log')).open('w',encoding='utf-8')
-                env=os.environ.copy();env['CUBLAS_WORKSPACE_CONFIG']=':4096:8'
-                proc=subprocess.Popen([sys.executable,'-X','utf8','-m','experiments.visual_branch_attribution','worker','--out',str(out),'--job',*map(str,job)],cwd=PACKAGE,env=env,stdout=log,stderr=subprocess.STDOUT,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
-                try:created=psutil.Process(proc.pid).create_time()
-                except psutil.NoSuchProcess:created=None
-                active[job]=(proc,log,created)
-        atomic_json(out/'status.json',dict(status='draining_after_failure' if failure else 'pausing' if paused else 'running',phase=title,
-            manager_pid=os.getpid(),manager_created=psutil.Process().create_time(),updated_unix=time.time(),completed=len(done),total=len(work),failure=failure,
-            new_evaluations=len(list((out/'formal').glob('*/seed*/evaluate_*/result.json'))),
-            active=[dict(job=j,pid=p.pid,created=c,progress=progress(location(out,j)/'progress.json')) for j,(p,l,c) in active.items()]))
-        if not active and failure:raise RuntimeError(failure)
-        if not active and paused:return False
-        if len(done)<len(work):time.sleep(3)
-    return True
-
-
-
-
-def manage(out,config):
-    out.mkdir(parents=True,exist_ok=True);lock=out/'manager.lock'
-    with lock.open('x',encoding='utf-8') as f:json.dump(dict(pid=os.getpid(),created=psutil.Process().create_time()),f)
-    try:
-        (out/'logs').mkdir(exist_ok=True)
-        if (out/'source_manifest.json').exists():assert read(out/'protocol.json')==config;verify_sources(out)
-        else:atomic_json(out/'protocol.json',config);snapshot(out,config)
-        for phase,kind,title in [('smoke','ground','smoke_training'),('smoke','evaluate','smoke_rollout'),('parity','ground','frozen_weight_parity'),('parity','evaluate','original_episode_replay'),('formal','ground','history_finetuning'),('formal','evaluate','closed_loop_evaluation')]:
-            if not run_phase(out,config,title,jobs(config,phase,kind)):return
-            if phase=='parity' and kind=='evaluate':qualification(out,config);verify_sources(out)
-            if phase=='formal' and kind=='ground':
-                pairing(out,config)
-                atomic_json(out/'ground_freeze.json',{str(f.relative_to(out)):digest(f) for f in (out/'formal').glob('*/seed*/ground_*/decoder.pt')})
-        aggregate(out,config)
-        atomic_json(out/'status.json',dict(status='complete',new_results=50,reused_results=50,source_and_weight_checks=True,updated_unix=time.time()))
-    except Exception:
-        atomic_json(out/f'manager_failure.{time.time_ns()}.json',dict(error=traceback.format_exc()))
-        atomic_json(out/'status.json',dict(status='failed',manager_pid=os.getpid(),updated_unix=time.time()))
-        raise
-    finally:lock.unlink()
-
-
-def main():
-    ap=argparse.ArgumentParser();ap.add_argument('command',choices=['manage','worker']);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--job',nargs=5)
-    args=ap.parse_args();config=read(PACKAGE/'configs/visual_branch_attribution.json');out=args.out.resolve()
-    if args.command=='manage':manage(out,config)
-    else:
-        phase,suite,seed,arm,kind=args.job;worker(out,(phase,suite,int(seed),arm,kind),config)
-
-
-if __name__=='__main__':main()

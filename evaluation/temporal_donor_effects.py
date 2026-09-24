@@ -7,7 +7,7 @@ from mte.frontends import ObservationReadout
 from environments.effect_evaluation import EffectEnvironment
 from evaluation.probes import ridge_probe
 from evaluation.temporal_completion_probes import score
-from experiments.mpe_temporal_repair import digest
+from experiments.mpe_temporal_stages import digest
 from utils.access import read_rows
 from utils.atomic import atomic_json
 

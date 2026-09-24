@@ -174,9 +174,6 @@
     "mif_aux_random_frozen",
     "mif_aux_random_trainable"
   ],
-  "new_control_results": 360,
-  "reused_control_results": 260,
-  "total_results": 620,
   "initialization_control": "random histories with shared frozen RGB/PCA and common pretrained-derived observation/latent normalization, not entirely pretraining-free",
   "capacity_control": "identical recurrent pair and decoder within Solo/Aux; trainable pretrained vs random has identical trainable/total parameters; frozen vs trainable explicitly varies action-gradient access",
   "bc_full_note": "original bc_full1600 method name retained for source identity; actual full-batch supervision is B*200 at low budgets and metadata corrected in new adapter only; secondary unequal-presentation reference"

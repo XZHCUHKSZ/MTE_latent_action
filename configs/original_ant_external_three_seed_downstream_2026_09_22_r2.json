@@ -1,0 +1,76 @@
+{
+  "launch_locked": true,
+  "formal": false,
+  "models": [
+    [
+      908711,
+      "otf"
+    ],
+    [
+      908711,
+      "flam"
+    ],
+    [
+      908712,
+      "otf"
+    ],
+    [
+      908712,
+      "flam"
+    ],
+    [
+      908713,
+      "otf"
+    ],
+    [
+      908713,
+      "flam"
+    ]
+  ],
+  "evaluation_seeds": [
+    908604,
+    908605,
+    908606,
+    908607,
+    908608,
+    908609,
+    908610,
+    908611,
+    908612,
+    908613,
+    908614,
+    908615,
+    908616,
+    908617,
+    908618,
+    908619,
+    908620,
+    908621,
+    908622,
+    908623,
+    908624,
+    908625,
+    908626,
+    908627,
+    908628,
+    908629,
+    908630
+  ],
+  "budget": 2,
+  "target_action_vectors": 400,
+  "partner_action_vectors": 0,
+  "fit": 400,
+  "action_validation": 0,
+  "history_updates": 256,
+  "ground_updates": 600,
+  "ground_batch": 256,
+  "checkpoint": "final decoder",
+  "reuse": "three completed controller pairs;8 old episodes per completed controller;no upstream repetition",
+  "evidence_class": "three fixed seeds, original Ant, existing27 conditions, expanded exploratory method comparison",
+  "scope": "Preserve full author upstream widths and previously locked budgets; match observations/labels/downstream, do not claim equal parameters or compute",
+  "engineering_repair": {
+    "from": "original_ant_external_three_seed_downstream_2026_09_22",
+    "change": "Move manager-only psutil import into manage; WSL export needs no psutil. Scientific functions and protocol unchanged.",
+    "authorization": "User permits continuous engineering integration repairs with preserved failed runs and unchanged protocol."
+  }
+}

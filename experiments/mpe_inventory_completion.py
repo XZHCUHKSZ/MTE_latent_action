@@ -1,24 +1,27 @@
-"""Run every paper inventory row on a declared repaired temporal protocol."""
-import argparse,concurrent.futures,json,os,shutil,subprocess,sys,time,traceback
-from pathlib import Path
-import numpy as np
-import torch
-from experiments.mpe_temporal_repair import PACKAGE,digest,exports,load_x,ground
-from experiments.mpe_temporal_scale import source_hashes
-from utils.atomic import atomic_json
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
+"""
+
+import argparse,concurrent.futures,json,os,shutil,subprocess,sys,time,traceback
+
+import numpy as np
+
+import torch
+
+from experiments.mpe_temporal_stages import PACKAGE,digest,exports,load_x,ground
+
+from utils.atomic import atomic_json
 
 def source(c,n):
     item=c['sources'].get(str(n))
     return (PACKAGE/item).resolve() if item else None
-
 
 def p_for(c,n):
     p=json.loads((PACKAGE/'configs/mpe_temporal_full_scale.json').read_text());p.update(c['overrides'])
     p.update(train_episodes=n,budgets=c['budgets'] if n==c['full_n'] else [c['scaling_budget']],
              control_configs=c['methods'],primary_contrasts=[],scope='Full paper inventory on repaired temporal interface; existing valid cells reused.')
     return p
-
 
 def existing(c,n,seed,b,method):
     # Prefer the supplemental outputs; earlier full-scale cells live in their own immutable run.
@@ -29,7 +32,6 @@ def existing(c,n,seed,b,method):
         path=root/f'seed{seed}/grounding/budget_{b}'/f'b{b}_{method.replace("+","__")}.json'
         if path.exists():return path
     return None
-
 
 def setup(args,c):
     for n in c['sizes']:
@@ -48,7 +50,6 @@ def setup(args,c):
                 shutil.copytree(src,target,ignore=shutil.ignore_patterns('complete.json'))
                 atomic_json(root/'source_checkpoint_manifest.json',dict(source=str(src),checkpoints=ck))
         atomic_json(dest/'protocol.json',p)
-
 
 def pretrain(root,p,c,progress):
     from utils.access import guard
@@ -97,7 +98,6 @@ def pretrain(root,p,c,progress):
     atomic_json(out/'complete.json',dict(seed=p['seed'],frozen_before_grounding=True,native_action_labels_read=0,
         simulator_queries=0,checkpoints={str(f.relative_to(out)):digest(f) for f in out.rglob('*.pt')}))
 
-
 def special_ground(root,p,method,b,progress):
     from training.composition import restore,FrozenPair
     from training.grounding_mpe import GroundedPolicy,train_decoder
@@ -120,7 +120,6 @@ def special_ground(root,p,method,b,progress):
     path=dest/f'b{b}_{method}.json';atomic_json(path,row)
     torch.save(dict(history=net.state_dict(),decoder=None if decoder is None else decoder.state_dict(),mean=mu,std=sd,method=method,budget=b),path.with_suffix('.pt'))
 
-
 def ground_missing(root,p,c,n,b,progress):
     frozen=root/'pretrain';ck=json.loads((frozen/'complete.json').read_text())['checkpoints']
     assert all(digest(frozen/f)==h for f,h in ck.items())
@@ -131,7 +130,6 @@ def ground_missing(root,p,c,n,b,progress):
         if m in ('idm','base_duplicate') and not (root/f'grounding/budget_{b}/b{b}_{m}.json').exists():special_ground(root,p,m,b,progress)
     assert all(digest(frozen/f)==h for f,h in ck.items())
     atomic_json(root/f'grounding/budget_{b}/inventory_complete.json',dict(new_methods=todo,reused=[m for m in c['methods'] if m not in todo],weights_unchanged=True))
-
 
 def worker(args,c):
     root=args.out/f'n{args.n}/seed{args.seed}';p=dict(p_for(c,args.n),seed=args.seed)
@@ -145,7 +143,6 @@ def worker(args,c):
             evaluate(root,p,args.workspace,c,progress)
         progress('complete')
     except BaseException:atomic_json(root/f'failure_{name}.json',dict(traceback=traceback.format_exc()));raise
-
 
 def report(out,c):
     records=[];newcount=0;missing=[];seeds=p_for(c,c['full_n'])['seeds']
@@ -170,61 +167,3 @@ def report(out,c):
            '|N|B|配置|种子数|回报 ↑|','|---:|---:|---|---:|---:|']
     for r in rows:lines.append(f"|{r['n']}|{r['budget']}|{r['method']}|{r['seeds']}|{r['mean']:.5f}|")
     (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf-8');return counts
-
-
-def manage(args,c):
-    args.out.mkdir(parents=True,exist_ok=True);lock=args.out/'manager.lock'
-    with lock.open('x') as f:f.write(str(os.getpid()))
-    started=time.time()
-    try:
-        protocol=args.out/'protocol.json'
-        if protocol.exists():assert json.loads(protocol.read_text())==c
-        else:atomic_json(protocol,c)
-        hashes=source_hashes();hf=args.out/'implementation_sources.json'
-        if hf.exists():assert json.loads(hf.read_text())==hashes
-        else:atomic_json(hf,hashes)
-        setup(args,c);seeds=p_for(c,c['full_n'])['seeds']
-        def run(stage,n,s,b=None):
-            root=args.out/f'n{n}/seed{s}'
-            complete=root/('pretrain/complete.json' if stage=='pretrain' else 'probes.json' if stage=='probes' else f'grounding/budget_{b}/inventory_complete.json')
-            if complete.exists():return
-            cmd=[sys.executable,'-m','experiments.mpe_inventory_completion','--workspace',str(args.workspace),'--out',str(args.out),
-                 '--config',str(args.config),'--stage',stage,'--n',str(n),'--seed',str(s)]
-            if b is not None:cmd+=['--budget',str(b)]
-            with (root/f'{stage}_{b}.log').open('a',encoding='utf-8') as log:
-                subprocess.run(cmd,cwd=PACKAGE,stdout=log,stderr=subprocess.STDOUT,check=True,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
-        for stage in ('pretrain','probes','ground'):
-            jobs=[(stage,n,s,None) for n in (c['sizes'] if stage=='pretrain' else [c['full_n']]) for s in seeds] if stage!='ground' else [
-                (stage,n,s,b) for n in c['sizes'] for b in p_for(c,n)['budgets'] for s in seeds]
-            with concurrent.futures.ThreadPoolExecutor(max_workers=c['parallel']) as pool:
-                pending={pool.submit(run,*j):j for j in jobs};donecount=0
-                while pending:
-                    done,_=concurrent.futures.wait(pending,timeout=10,return_when=concurrent.futures.FIRST_COMPLETED)
-                    for f in done:f.result();pending.pop(f);donecount+=1
-                    atomic_json(args.out/'status.json',dict(status='running',stage=stage,phase_complete=donecount,phase_total=len(jobs),
-                        elapsed_seconds=time.time()-started,time=time.time(),**report(args.out,c)))
-            if stage=='pretrain':
-                for n in c['sizes']:
-                    atomic_json(args.out/f'n{n}/global_freeze.json',dict(all_pretraining_complete=True,time=time.time()))
-                    exports(args.workspace,args.out/f'n{n}',p_for(c,n),labels=True)
-        assert hashes==source_hashes()
-        for n in c['sizes']:
-            for s in seeds:
-                root=args.out/f'n{n}/seed{s}/pretrain';ck=json.loads((root/'complete.json').read_text())['checkpoints']
-                assert all(digest(root/f)==h for f,h in ck.items())
-        stats=report(args.out,c);assert stats['completed_cells']==stats['expected_cells']
-        atomic_json(args.out/'status.json',dict(status='complete',source_and_weight_checks=True,elapsed_seconds=time.time()-started,time=time.time(),**stats))
-    except BaseException:atomic_json(args.out/'status.json',dict(status='failed',traceback=traceback.format_exc(),time=time.time()));raise
-    finally:lock.unlink(missing_ok=True)
-
-
-def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--workspace',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
-    ap.add_argument('--config',type=Path,default=PACKAGE/'configs/mpe_inventory_completion.json')
-    ap.add_argument('--stage',choices=['pretrain','ground','probes']);ap.add_argument('--n',type=int);ap.add_argument('--seed',type=int);ap.add_argument('--budget',type=int)
-    args=ap.parse_args();args.workspace=args.workspace.resolve();args.out=args.out.resolve();args.config=args.config.resolve();c=json.loads(args.config.read_text())
-    if args.stage:worker(args,c)
-    else:manage(args,c)
-
-
-if __name__=='__main__':main()

@@ -1,19 +1,17 @@
-"""X8-X10. Frozen target effects, same-slot comparisons, and history transfer.
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
-Development diagnostic, NOT new policy training or confirmatory control evidence.
-Run with `python -m experiments.target_effects --help` from the package root.
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
-import argparse
-from copy import deepcopy
+
 import hashlib
+
 import json
+
 from pathlib import Path
+
 import time
+
 import numpy as np
-import torch
-
-ROOT = Path(__file__).resolve().parents[1]
-
 
 def write(path, obj):
     path = Path(path)
@@ -21,14 +19,12 @@ def write(path, obj):
     temp.write_text(json.dumps(obj, indent=2, ensure_ascii=False, allow_nan=False), encoding='utf-8')
     temp.replace(path)
 
-
 def fingerprint(path):
     h = hashlib.sha256()
     with Path(path).open('rb') as f:
         for block in iter(lambda: f.read(1024*1024), b''):
             h.update(block)
     return h.hexdigest()
-
 
 def manifest(workspace, env, seed):
     """Read-only final lineage; paths are explicit in each saved run manifest."""
@@ -65,7 +61,6 @@ def manifest(workspace, env, seed):
         raise FileNotFoundError(json.dumps(missing, indent=2))
     result['files'] = {str(p): fingerprint(p) for p in paths}
     return result
-
 
 def collect(workspace, env_name, cfg, out):
     from environments.effect_evaluation import EffectEnvironment
@@ -146,7 +141,6 @@ def collect(workspace, env_name, cfg, out):
                 termination='absorbing hold; live flags saved, h3 scores restricted to all-branch live samples')
     write(out/'collection.json', meta)
     return arrays
-
 
 def score(bundle, env_name, cfg, arrays, out):
     from evaluation.frozen_effect_models import Frontend, Predictor, history_features, route_representation
@@ -255,42 +249,3 @@ def score(bundle, env_name, cfg, arrays, out):
         primary_outcome='agent positions' if env_name == 'mpe' else 'first 27 state coordinates (kinematics), contact channels excluded',
         representation_updates=0, policy_updates=0, diagnostic_reader_supervision=True))
     return rows
-
-
-def main():
-    ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--workspace', type=Path, required=True)
-    ap.add_argument('--config', type=Path, default=ROOT/'configs/target_effects_pilot.json')
-    ap.add_argument('--out', type=Path, required=True)
-    ap.add_argument('--environment', choices=['mpe', 'mamujoco'], required=True)
-    args = ap.parse_args()
-    torch.set_num_threads(2)
-    cfg = json.loads(args.config.read_text(encoding='utf-8'))
-    args.out.mkdir(parents=True, exist_ok=False)
-    write(args.out/'protocol.json', cfg)
-    sources = [Path(__file__), ROOT/'evaluation/frozen_effect_models.py', ROOT/'evaluation/effect_statistics.py',
-               ROOT/'environments/effect_evaluation.py']
-    write(args.out/'implementation_sources.json', {str(p.relative_to(ROOT)):fingerprint(p) for p in sources})
-    started = time.time()
-    try:
-        bundles = [manifest(args.workspace, args.environment, s) for s in cfg['upstream_seeds'][args.environment]]
-        for b in bundles:
-            write(args.out/(b['suite']+'_manifest.json'), json.loads(json.dumps(b, default=str)))
-        arrays = collect(args.workspace, args.environment, cfg, args.out)
-        for b in bundles:
-            folder = args.out/b['suite']; folder.mkdir()
-            write(args.out/'progress.json', dict(stage='frozen_model_diagnostics', suite=b['suite']))
-            rows = score(b, args.environment, cfg, arrays, folder)
-            for file, original in b['files'].items():
-                if fingerprint(file) != original:
-                    raise RuntimeError('Input artifact changed during evaluation: '+file)
-            write(folder/'complete.json', dict(complete=True, rows=len(rows), input_artifacts_unchanged=True))
-        write(args.out/'complete.json', dict(complete=True, upstream_seeds=len(bundles), seconds=time.time()-started,
-              note='Diagnostic readers only; no training of representations, history policies, or controllers'))
-    except Exception as exc:
-        write(args.out/'failure.json', dict(error=repr(exc), seconds=time.time()-started))
-        raise
-
-
-if __name__ == '__main__':
-    main()

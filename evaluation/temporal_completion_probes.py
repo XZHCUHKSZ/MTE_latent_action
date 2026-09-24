@@ -4,7 +4,7 @@ import numpy as np
 import torch
 from closed_loop_lam_v1.unified_models import lattice_operators
 from evaluation.probes import ridge_probe
-from experiments.mpe_temporal_repair import digest
+from experiments.mpe_temporal_stages import digest
 from utils.access import read_rows
 from utils.atomic import atomic_json
 

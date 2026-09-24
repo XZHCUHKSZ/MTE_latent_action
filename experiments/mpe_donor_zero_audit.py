@@ -1,28 +1,36 @@
-"""Evaluation-only audit of the existing training-donor physical contrast.
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
-No learned method, checkpoint or old output is changed. Re-encoding at the
-query state uses simulator outcomes, and is a diagnostic oracle, not deployment.
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
-import argparse
+
 import hashlib
+
 import json
+
 import time
+
 from pathlib import Path
+
 import numpy as np
+
 import torch
+
 from closed_loop_lam_v1 import common as C
+
 from mte.frontends import ObservationReadout
+
 from environments.effect_evaluation import EffectEnvironment
+
 from evaluation.temporal_donor_effects import donor_bank
+
 from utils.access import read_rows
+
 from utils.atomic import atomic_json
 
 PACKAGE = Path(__file__).resolve().parents[1]
 
-
 def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
-
 
 def scores(truth, predictions, scale):
     rows = []
@@ -49,7 +57,6 @@ def scores(truth, predictions, scale):
                         fraction_samples_better_than_zero=float((np.square(z-y).mean(1) < np.square(y).mean(1)).mean()),
                         true_rms=float(np.sqrt(zero_mse))))
     return rows
-
 
 def run_seed(seed, cfg, out, episodes):
     torch.set_num_threads(2)
@@ -165,7 +172,6 @@ def run_seed(seed, cfg, out, episodes):
     atomic_json(out/'result.json',result)
     return result
 
-
 def summarize(out, results, cfg):
     from scipy.stats import t as student_t
     means=[]; keys=['kind','horizon','group','scope','method']
@@ -218,28 +224,3 @@ def summarize(out, results, cfg):
         '- 全表与逐种子数据见summary.json和seed*/result.json；论文和图表未自动更改。']
     (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
     atomic_json(out/'status.json',dict(status='complete',seeds=report['seeds'],source_and_weight_checks=True))
-
-
-def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--out',type=Path,required=True);ap.add_argument('--smoke',action='store_true');args=ap.parse_args()
-    cfg=json.loads((PACKAGE/'configs/mpe_donor_zero_audit.json').read_text())
-    args.out.mkdir(parents=True,exist_ok=False)
-    atomic_json(args.out/'protocol.json',dict(cfg,smoke=args.smoke))
-    sources={str(p):digest(p) for folder in ['experiments','evaluation','environments','mte','closed_loop_lam_v1','utils'] for p in (PACKAGE/folder).glob('*.py')}
-    atomic_json(args.out/'implementation_sources.json',sources)
-    results=[]
-    try:
-        for seed in (cfg['seeds'][:1] if args.smoke else cfg['seeds']):
-            dst=args.out/f'seed{seed}';dst.mkdir()
-            atomic_json(args.out/'status.json',dict(status='running',seed=seed,completed_seeds=len(results)))
-            results.append(run_seed(seed,cfg,dst,2 if args.smoke else cfg['episodes']))
-        assert all(digest(f)==h for f,h in sources.items())
-        summarize(args.out,results,cfg)
-        print(json.dumps(dict(status='complete',out=str(args.out),seeds=len(results))),flush=True)
-    except BaseException:
-        import traceback
-        atomic_json(args.out/'failure.json',dict(traceback=traceback.format_exc()))
-        atomic_json(args.out/'status.json',dict(status='failed'))
-        raise
-
-if __name__=='__main__':main()

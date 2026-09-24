@@ -1,26 +1,28 @@
-"""Evaluate when true target-partner interactions reach observed MPE positions.
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
-Read-only with respect to all scientific models and prior results. Four physical
-branches use identical state and future joint actions; only first target/partner
-actions change. This evaluates the measurement's signal, not a learned method.
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
-import argparse
+
 import hashlib
+
 import json
+
 from pathlib import Path
+
 import time
+
 import numpy as np
+
 from environments.effect_evaluation import EffectEnvironment
+
 from utils.atomic import atomic_json
 
 PACKAGE = Path(__file__).resolve().parents[1]
-
 
 def second_difference(factual, target_zero, partner_zero, both_zero):
     # Subtract in float64, so cancellation does not add float32 arithmetic error.
     return (factual.astype(np.float64) - target_zero.astype(np.float64)
             - partner_zero.astype(np.float64) + both_zero.astype(np.float64))
-
 
 def run(config, out):
     out.mkdir(parents=True, exist_ok=False)
@@ -104,17 +106,3 @@ def run(config, out):
     atomic_json(out/'status.json',dict(status='complete',episodes=config['episodes'],
                 replay_exact=True,training_updates=0,elapsed_seconds=time.time()-started))
     print(json.dumps(stats,ensure_ascii=False))
-
-
-if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--smoke',action='store_true');a=ap.parse_args()
-    c=json.loads((PACKAGE/'configs/mpe_physical_interaction_onset.json').read_text())
-    if a.smoke:
-        c.update(episodes=2,episode_seed_start=97909000,output=c['output']+'_smoke')
-    try:
-        run(c,PACKAGE/c['output'])
-    except Exception as exc:
-        # Do not overwrite an existing run on accidental restart.
-        if not isinstance(exc, FileExistsError):
-            atomic_json(PACKAGE/c['output']/'status.json',dict(status='failed',error=repr(exc)))
-        raise

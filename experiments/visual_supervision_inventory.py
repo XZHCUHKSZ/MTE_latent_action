@@ -1,29 +1,42 @@
-"""Prospective visual supervision-access factorial and remaining family label curves."""
-import argparse
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
+
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
+"""
+
 import hashlib
+
 import itertools
+
 import json
-import os
+
 from pathlib import Path
+
 import shutil
+
 import subprocess
+
 import sys
+
 import time
-import traceback
+
 import numpy as np
+
 from utils.atomic import atomic_json
 
 PACKAGE = Path(__file__).resolve().parents[1]
-WORKSPACE = PACKAGE.parents[1]
-ARCHIVE = WORKSPACE/'visual_multiagent_2026_09_10/seed5_v1/runtime'
-REPAIRED = WORKSPACE/'visual_multiagent_2026_09_10/seed5_render_repair/runtime'
-LOW = PACKAGE/'outputs/visual_low_label_2026_09_19_r1'
-PIXEL = WORKSPACE/'visual_multiagent_2026_09_10/pixel_pipeline_v1'
 
+WORKSPACE = PACKAGE.parents[1]
+
+ARCHIVE = WORKSPACE/'visual_multiagent_2026_09_10/seed5_v1/runtime'
+
+REPAIRED = WORKSPACE/'visual_multiagent_2026_09_10/seed5_render_repair/runtime'
+
+LOW = PACKAGE/'outputs/visual_low_label_2026_09_19_r1'
+
+PIXEL = WORKSPACE/'visual_multiagent_2026_09_10/pixel_pipeline_v1'
 
 def read(p):
     return json.loads(Path(p).read_text(encoding='utf-8'))
-
 
 def digest(p):
     h = hashlib.sha256()
@@ -32,15 +45,12 @@ def digest(p):
             h.update(block)
     return h.hexdigest()
 
-
 def budget_root(out, phase, seed, budget):
     return out/phase/f'seed{seed}'/f'b{budget}'
-
 
 def job_path(out, job):
     phase, seed, budget, arm, kind = job
     return budget_root(out, phase, seed, budget)/(kind+'_'+arm)
-
 
 def compare_checkpoint(new, old):
     import torch
@@ -62,7 +72,6 @@ def compare_checkpoint(new, old):
     error = max(differences, default=0.)
     assert error <= 1e-6, f'B8 weight mismatch: {new}: {error}'
     return error
-
 
 def source_snapshot(out, p):
     frozen = read(ARCHIVE/'global_freeze.json')
@@ -117,12 +126,10 @@ def source_snapshot(out, p):
     files.update((out/'assets').rglob('*'))
     return {str(f.resolve()): digest(f) for f in sorted(files) if f.is_file()}
 
-
 def verify_snapshot(out):
     data = read(out/'source_manifest.json')
     for f, h in data.items():
         assert digest(f) == h, f'Source changed: {f}'
-
 
 def worker(a, p):
     import torch
@@ -173,7 +180,6 @@ def worker(a, p):
              seconds=time.monotonic()-start)
     atomic_json(dest/'result.json', r)
 
-
 def validate_result(out, job):
     dest = job_path(out, job); phase, seed, budget, arm, kind = job
     r = read(dest/'result.json'); audit = read(dest/'access_audit.json')
@@ -213,7 +219,6 @@ def validate_result(out, job):
         atomic_json(dest/'parity.json', dict(passed=all(checks.values()), exact_episode_checks=checks))
         assert all(checks.values()), f'Independent B8 replay differs: {dest}'
 
-
 def phases(p):
     smoke=[('smoke',p['seeds'][0],1,f'mif_{c}_{i}_{a}','ground') for c in ['solo','aux'] for i in ['pretrained','random'] for a in ['frozen','trainable']]
     fair=[('fair_parity',s,b,f'mif_{c}_pretrained_frozen','ground') for s in p['seeds'] for b in p['budgets'] for c in ['solo','aux']]
@@ -222,7 +227,6 @@ def phases(p):
     ground=[('formal',s,b,a,'ground') for b in p['budgets'] for s in p['seeds'] for a in (p['fair_arms']+(p['missing_arms'] if b!=8 else []))]
     return [('factorial_smoke',smoke),('frozen_adapter_parity',fair),('b8_ground_parity',parity),('b8_replay',replay),('low_budget_ground',ground),('low_budget_evaluate',[(*j[:4],'evaluate') for j in ground])]
 
-
 def process_created(pid):
     """A worker can exit between poll and status serialization."""
     import psutil
@@ -230,55 +234,6 @@ def process_created(pid):
         return psutil.Process(pid).create_time()
     except psutil.NoSuchProcess:
         return None
-
-
-def run_phase(out, p, title, jobs):
-    import psutil
-    running = {}; done = set(); failure = None
-    for job in jobs:
-        dest = job_path(out,job)
-        if (dest/'result.json').exists():
-            validate_result(out,job); done.add(job)
-        elif dest.exists():
-            raise RuntimeError(f'Partial job requires inspection; no automatic overwrite: {dest}')
-    while len(done) < len(jobs) or running:
-        for job, (proc, log, start) in list(running.items()):
-            rc = proc.poll()
-            if rc is None:
-                continue
-            log.close(); del running[job]
-            try:
-                assert rc == 0, f'Worker exited {rc}: {job}'
-                validate_result(out,job); done.add(job)
-            except Exception:
-                failure = traceback.format_exc()
-                atomic_json(out/'manager_failure.json',dict(job=job,error=failure))
-        paused = (out/'PAUSE').exists()
-        if not paused and not failure:
-            for job in jobs:
-                if len(running) >= p['workers'] or psutil.virtual_memory().available/2**30 < p['minimum_available_gib']:
-                    break
-                if job in running or job in done:
-                    continue
-                name = '__'.join(map(str,job))
-                log = (out/'logs'/f'{name}.{time.time_ns()}.log').open('w',encoding='utf-8')
-                cmd = [sys.executable,'-X','utf8','-m','experiments.visual_supervision_inventory','worker','--out',str(out),'--job',*map(str,job)]
-                env = os.environ.copy();env['CUBLAS_WORKSPACE_CONFIG']=':4096:8'
-                proc = subprocess.Popen(cmd,cwd=PACKAGE,env=env,stdout=log,stderr=subprocess.STDOUT,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
-                running[job] = (proc,log,time.time())
-        state = dict(status='draining_after_failure' if failure else 'pausing' if paused else 'running',
-            phase=title,manager_pid=os.getpid(),manager_created=psutil.Process().create_time(),updated_unix=time.time(),
-            completed_phase_jobs=len(done),total_phase_jobs=len(jobs),failure=failure,
-            new_control_results=len(list((out/'formal').glob('seed*/b*/evaluate_*/result.json'))),target_new_control_results=360,
-            active=[dict(job=job,pid=proc.pid,created=process_created(proc.pid),seconds=time.time()-start,
-                progress=read(job_path(out,job)/'progress.json') if (job_path(out,job)/'progress.json').exists() else {}) for job,(proc,log,start) in running.items()])
-        atomic_json(out/'status.json',state)
-        if not running and (failure or paused):
-            state['status'] = 'failed' if failure else 'paused';atomic_json(out/'status.json',state)
-            return False
-        time.sleep(3)
-    return True
-
 
 def factorial_checks(out,p):
     checks=[]
@@ -297,7 +252,6 @@ def factorial_checks(out,p):
                 assert rows[0]['history_initial']!=rows[2]['history_initial']
                 checks.append(dict(seed=seed,budget=budget,composition=c,passed=True))
     atomic_json(out/'factorial_checks.json',checks)
-
 
 def aggregate(out,p):
     from scipy.stats import t
@@ -351,58 +305,3 @@ def aggregate(out,p):
     dest=PACKAGE/'results'/p['name'];dest.mkdir(exist_ok=True,parents=True)
     for name in ['RESULTS_CN.md','summary.json','qualification.json','foundation_verification.json','protocol.json','factorial_checks.json']:
         assert not (dest/name).exists();shutil.copy2(out/name,dest/name)
-
-
-def manage(a,p):
-    import psutil
-    out=a.out
-    out.mkdir(parents=True,exist_ok=True)
-    lock=out/'manager.lock'
-    if lock.exists():
-        old=read(lock)
-        if psutil.pid_exists(old['pid']) and abs(psutil.Process(old['pid']).create_time()-old['created'])<1:
-            raise RuntimeError('Existing manager alive; do not launch twice')
-        lock.rename(out/f'manager.stale.{time.time_ns()}.json')
-    with lock.open('x',encoding='utf-8') as f:json.dump(dict(pid=os.getpid(),created=psutil.Process().create_time()),f)
-    try:
-        (out/'logs').mkdir(exist_ok=True)
-        if not (out/'source_manifest.json').exists():
-            assert not (out/'protocol.json').exists(), 'Incomplete preparation requires inspection'
-            atomic_json(out/'protocol.json',p)
-            assets=out/'assets';(assets/'labels/dev').mkdir(parents=True)
-            shutil.copy2(PIXEL/'pilot_protocol.json',assets/'visual_config.json')
-            for i in range(8):shutil.copy2(PIXEL/f'runtime/pilot/validate/target_labels/dev/{i:04d}.npy',assets/f'labels/dev/{i:04d}.npy')
-            atomic_json(out/'source_manifest.json',source_snapshot(out,p))
-        else:
-            assert read(out/'protocol.json')==p
-            verify_snapshot(out)
-        for title,jobs in phases(p):
-            if not run_phase(out,p,title,jobs):return
-            if title=='b8_replay':
-                verify_snapshot(out)
-                atomic_json(out/'qualification.json',dict(passed=True,b8_decoder_checks=80,independent_episode_replays=80,frozen_adapter_checks=40,low_budget_smokes=8,weight_tolerance=1e-6,replay='exact actions and rewards',time=time.time()))
-            if title=='low_budget_ground':
-                factorial_checks(out,p)
-                atomic_json(out/'ground_freeze.json',{str(f.relative_to(out)):digest(f) for f in (out/'formal').glob('seed*/b*/ground_*/*.pt')})
-        aggregate(out,p)
-        atomic_json(out/'status.json',dict(status='complete',phase='complete',new_control_results=360,reused_results=260,total_results=620,source_and_weight_checks=True,updated_unix=time.time()))
-    except Exception:
-        atomic_json(out/'manager_failure.json',dict(error=traceback.format_exc()))
-        atomic_json(out/'status.json',dict(status='failed',manager_pid=os.getpid(),updated_unix=time.time()))
-        raise
-    finally:
-        lock.unlink()
-
-
-def main():
-    ap=argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('command',choices=['manage','worker'])
-    ap.add_argument('--out',type=Path,default=PACKAGE/'outputs/visual_supervision_inventory_2026_09_19')
-    ap.add_argument('--job',nargs=5)
-    a=ap.parse_args();a.out=a.out.resolve()
-    p=read(PACKAGE/'configs/visual_supervision_inventory.json')
-    if a.command=='manage':manage(a,p)
-    else:worker(a,p)
-
-
-if __name__=='__main__':main()

@@ -1,9 +1,7 @@
-"""X5. Test action information readable from frozen history features.
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
-Representation pretraining does not read actions. These supervised diagnostic
-probes are fitted AFTER freezing. Auxiliary-only excludes Base coordinates.
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
-from evaluation.probes import ridge_probe
 
 def feature_slice(z,kind):
     if kind=='base':return z[...,:16]

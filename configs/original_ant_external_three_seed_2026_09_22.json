@@ -1,0 +1,243 @@
+{
+  "launch_locked": true,
+  "qualification": false,
+  "run_name": "original_ant_external_three_seed_2026_09_22",
+  "objective": "User-authorized 2026-09-22 three-seed FLAM/OTF comparison in each of three original settings; visual upstream subset. Reuse all completed matching models; no result-based seed selection.",
+  "seeds": [
+    908711,
+    908712,
+    908713
+  ],
+  "method_order": [
+    "otf",
+    "flam"
+  ],
+  "upstream": {
+    "otf": {
+      "qualification": false,
+      "cost_only": false,
+      "performance": false,
+      "train_episodes": 32,
+      "vq_updates": 2000,
+      "vq_warmup_updates": 200,
+      "vq_batch": 32,
+      "pixel_updates": 20000,
+      "pixel_batch": 8,
+      "transition_offset": 1,
+      "steady_update_range_inclusive": [
+        21,
+        20000
+      ],
+      "image_size": 128,
+      "patch_size": 8,
+      "data": "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train",
+      "sampling": "Balanced shuffled episode identities; uniform adjacent frame start in 0..199; kmeans has its own recorded plan",
+      "scope": "Full-budget observation-only upstream training; downstream performance pending."
+    },
+    "flam": {
+      "qualification": false,
+      "performance": false,
+      "author_commit": "1c707becc33e0d45411a5cb6137cd984efa7eb8b",
+      "recipe_source": "train_lam.sh multigrid + MODEL_TYPE=flam defaults",
+      "tokenizer_updates": 5000,
+      "tokenizer_batch": 64,
+      "factored_updates": 1920,
+      "factored_batch": 32,
+      "sequence_length": 10,
+      "num_prediction_steps": 5,
+      "image_size": 128,
+      "num_slots": 4,
+      "slot_count_basis": "Author four-agent multigrid branch and known four original Ant action groups; no supplied slot-to-agent assignment",
+      "d_model": 256,
+      "num_blocks": 2,
+      "num_heads": 8,
+      "tokenizer_z_channels": 128,
+      "tokenizer_codebook_size": 1024,
+      "tokenizer_fsq_levels": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "action_quantizer": "vae_vq",
+      "vae_kl_coefficient": 0.0002,
+      "factorizer": "temporal_slot_attn",
+      "aggregator": "block_transformer",
+      "idm": "spatial_shifted_temporal",
+      "fdm": "cross_spatiotemporal",
+      "tokenizer_learning_rate": 0.0001,
+      "factored_learning_rate": 0.0001,
+      "amp": "bfloat16 with author GradScaler and gradient clipping",
+      "external_prior": "torchvision ImageNet1K VGG16 plus author LPIPS weights in tokenizer loss",
+      "tokenizer_lpips_weight": 1.0,
+      "factored_image_loss_weight": 0.0,
+      "eval_fvd": false,
+      "export_scope": "Full-budget observation-only upstream model for original Ant comparison",
+      "native_actions": 0,
+      "simulator_queries": 0,
+      "adaptations": [
+        "Original Ant four cameras losslessly tiled to128; author multigrid four-slot architecture.",
+        "Tokenizer50 epochs batch64 over6432 frames, drop_last; factored10 epochs batch32 over6144 windows.",
+        "Epoch-shuffled complete frame/window populations, no control-return selection.",
+        "Training calls is_last_batch=False: skips image logging which has zero weight in factored loss; tokenizer LPIPS loss remains active.",
+        "FVD metric off; external pretrained VGG/LPIPS retained; not complete author task recipe."
+      ],
+      "cost_only": false,
+      "train_files": [
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0000.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0001.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0002.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0003.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0004.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0005.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0006.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0007.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0008.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0009.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0010.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0011.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0012.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0013.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0014.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0015.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0016.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0017.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0018.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0019.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0020.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0021.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0022.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0023.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0024.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0025.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0026.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0027.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0028.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0029.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0030.npy",
+        "visual_multiagent_2026_09_10/pixel_pipeline_v1/data/pilot/rgb/train/0031.npy"
+      ],
+      "stopping": "Fixed budget; failure preserves partial and stops dispatch; never lower batch or retry.",
+      "tokenizer_epochs": 50,
+      "factored_epochs": 10
+    }
+  },
+  "stage": "upstream_only",
+  "downstream_commitment": {
+    "budgets": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "target_actions_per_episode": 200,
+    "partner_actions": 0,
+    "history_updates": 256,
+    "grounding_updates": 600,
+    "grounding_batch_indices": 256,
+    "routes": [
+      "Frozen",
+      "Adapt"
+    ],
+    "evaluation_seeds": [
+      908601,
+      908602,
+      908603,
+      908604,
+      908605,
+      908606,
+      908607,
+      908608,
+      908609,
+      908610,
+      908611,
+      908612,
+      908613,
+      908614,
+      908615,
+      908616,
+      908617,
+      908618,
+      908619,
+      908620,
+      908621,
+      908622,
+      908623,
+      908624,
+      908625,
+      908626,
+      908627,
+      908628,
+      908629,
+      908630
+    ],
+    "primary_evaluation_seeds": [
+      908604,
+      908605,
+      908606,
+      908607,
+      908608,
+      908609,
+      908610,
+      908611,
+      908612,
+      908613,
+      908614,
+      908615,
+      908616,
+      908617,
+      908618,
+      908619,
+      908620,
+      908621,
+      908622,
+      908623,
+      908624,
+      908625,
+      908626,
+      908627,
+      908628,
+      908629,
+      908630
+    ],
+    "checkpoint_selection": "Final fixed-budget update only; no return-based method, seed or budget selection",
+    "comparison": "Retain original LAPO/LAOM/BC and MTE results; distinguish feature/state adapters from author pixel models",
+    "analysis": "Paired five model seeds after mean over common primary episodes; exact two-sided sign-permutation and paired t95. Holm separately by external method: MIFSolo/MIFAux x Frozen/Adapt x four budgets (16 per family). Adapt-Frozen for two new methods x four budgets (8). Keep all positive and negative comparisons.",
+    "implementation_status": "Full downstream runner not yet delivered. This launch does not read labels or evaluation returns."
+  },
+  "failure_policy": "Stop dispatch, preserve completed and partial outputs; no automatic retry.",
+  "pause_policy": "PAUSE at run root stops new dispatch after current worker completes; no process termination.",
+  "scope": "Original shared32 training episodes, five model seeds; not independent data collections, equal parameters or equal compute.",
+  "supersedes_replication_count_only": "original_ant_external_full_2026_09_21",
+  "reuse": [
+    {
+      "seed": 908711,
+      "method": "otf"
+    },
+    {
+      "seed": 908711,
+      "method": "flam"
+    },
+    {
+      "seed": 908712,
+      "method": "otf"
+    }
+  ],
+  "missing_jobs": [
+    {
+      "seed": 908712,
+      "method": "flam"
+    },
+    {
+      "seed": 908713,
+      "method": "otf"
+    },
+    {
+      "seed": 908713,
+      "method": "flam"
+    }
+  ],
+  "reuse_root": "outputs/original_ant_external_full_2026_09_21",
+  "downstream": "Frozen and Adapt; existing B2 protocol and full original evaluation conditions; separate downstream manifest required before dispatch."
+}

@@ -1,10 +1,12 @@
-"""X3. Shared-physics four-view RGB control, final five-seed implementation.
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
-One stage per fresh process: access guards are process-wide. Global all-seed
-freeze is an external scheduling prerequisite, not merely a local file check.
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+
 import argparse,json
+
 from pathlib import Path
+
 from visual import train as V
 
 def main():

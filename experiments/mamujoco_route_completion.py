@@ -1,39 +1,49 @@
-"""Complete archived MaMuJoCo route/raw comparisons without changing methods.
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
-Pretraining and grounding run in separate allowlisted worker processes. All
-representations/history policies freeze before new action labels are opened.
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+
 import os
+
 for _key in ('OMP_NUM_THREADS', 'MKL_NUM_THREADS', 'OPENBLAS_NUM_THREADS'):
     os.environ[_key] = '1'
-import argparse
+
 import hashlib
+
 import itertools
+
 import json
+
 from pathlib import Path
+
 import subprocess
+
 import sys
+
 import time
+
 import traceback
+
 import numpy as np
+
 import psutil
+
 import torch
+
 from utils.atomic import atomic_json
 
 PACKAGE = Path(__file__).resolve().parents[1]
-WORKSPACE = PACKAGE.parents[1]
 
+WORKSPACE = PACKAGE.parents[1]
 
 def read(p):
     return json.loads(Path(p).read_text(encoding='utf-8'))
-
 
 def digest(p):
     h=hashlib.sha256()
     with Path(p).open('rb') as f:
         for block in iter(lambda:f.read(1024*1024),b''): h.update(block)
     return h.hexdigest()
-
 
 def suite(seed):
     sid=f'mamujoco_s{seed}_n90'
@@ -45,12 +55,10 @@ def suite(seed):
         base=str(old/(sid+'__pre_entity_target/policy/policy.pt')),
         labels={str(b):str(old/(sid+f'__export_{b}/labels.npz')) for b in [4,8,16,32,64]})
 
-
 def old_pre(s,arm):
     folder='mte_global_aux_scope_2026_09_16' if arm=='global16' else 'mte_family_transfer_2026_09_16'
     name='global' if arm=='global16' else arm
     return WORKSPACE/folder/'runtime'/(s['id']+'__pre_'+name)
-
 
 def old_result(s,arm,b,ds):
     if arm=='global16':
@@ -62,12 +70,10 @@ def old_result(s,arm,b,ds):
             candidates.append(WORKSPACE/'mte_family_transfer_audit_2026_09_16'/part/f'{s["id"]}_B{b}_{arm}_d{ds}'/'result.json')
     return next((p for p in candidates if p.is_file() and read(p).get('complete')),None)
 
-
 def clean_audit(folder):
     files=list(folder.glob('*access*.json'))
     assert files, f'Missing access audit: {folder}'
     for p in files: assert not read(p)['violations'],str(p)
-
 
 def setup(out,config):
     out.mkdir(parents=True,exist_ok=False)
@@ -130,12 +136,10 @@ def setup(out,config):
         control_total=sum(j['stage']=='ground' for j in jobs),control_reused=sum('reuse' in j for j in jobs)))
     print(json.dumps(read(out/'status.json')))
 
-
 def check_sources(manifest,inputs=False):
     for p,h in manifest['code'].items(): assert digest(p)==h,f'Changed code: {p}'
     if inputs:
         for p,h in manifest['inputs'].items(): assert digest(p)==h,f'Changed source: {p}'
-
 
 def ground(s,j,c,out,manifest,progress):
     from training.composition import restore,FrozenPair
@@ -162,7 +166,6 @@ def ground(s,j,c,out,manifest,progress):
     return dict(evaluation=ev,training=diag,budget=b,decoder_seed=j['decoder_seed'],seed=s['seed'],
         pretrained_modules_updated=False,latent_dimension=32,fit_episodes=len(fit),validation_episodes=len(val))
 
-
 def worker(out,jobid):
     torch.set_num_threads(1)
     c=read(out/'protocol.json');manifest=read(out/'manifest.json')
@@ -183,7 +186,7 @@ def worker(out,jobid):
     try:
         if j['stage']=='pre':
             if j['arm']=='global16':
-                from experiments.route_ablation import train_global
+                from experiments.route_stages import train_global
                 r=train_global(s,c,dest,progress)
             else:
                 from training import route_representation as route
@@ -199,7 +202,6 @@ def worker(out,jobid):
         atomic_json(dest/'access.json',audit);atomic_json(dest/'failure.json',dict(traceback=traceback.format_exc()))
         raise
 
-
 def freeze(out,manifest):
     from training.composition import restore
     hashes={}
@@ -214,7 +216,6 @@ def freeze(out,manifest):
             hashes[s['base']]=digest(s['base'])
     check_sources(manifest,True)
     atomic_json(out/'freeze.json',dict(all_modules_frozen=True,hashes=hashes,time=time.time()))
-
 
 def summarize(out,manifest,c):
     from scipy.stats import t
@@ -252,7 +253,6 @@ def summarize(out,manifest,c):
     lines+=['','全部875条记录见summary.json；原Base/LAPO/LAOM/BC背景参照见baseline_references.json，不混为同decoder配对。',
             '完整路线的目标/上游成本不同；raw配对保持同表与同目标，只替换Möbius/zeta坐标。该结果不验证实际donor物理语义。','']
     (out/'RESULTS_CN.md').write_text('\n'.join(lines),encoding='utf-8')
-
 
 def manager(out):
     import msvcrt
@@ -300,13 +300,3 @@ def manager(out):
             reused=sum('reuse' in j for j in manifest['jobs']),source_and_weight_checks=True,active_seconds=time.time()-started,updated=time.time()))
     finally:
         lock.close()
-
-
-if __name__=='__main__':
-    ap=argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--out',type=Path,required=True);ap.add_argument('--config',type=Path)
-    ap.add_argument('--setup',action='store_true');ap.add_argument('--manager',action='store_true');ap.add_argument('--job')
-    a=ap.parse_args();a.out=a.out.resolve()
-    if a.setup:setup(a.out,a.config)
-    elif a.manager:manager(a.out)
-    else:worker(a.out,a.job)

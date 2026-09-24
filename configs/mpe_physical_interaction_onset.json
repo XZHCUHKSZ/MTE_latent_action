@@ -2,14 +2,36 @@
   "protocol": "mpe_evaluation_only_physical_interaction_onset_v1",
   "episodes": 64,
   "episode_seed_start": 97910000,
-  "sample_times": [2, 6, 10, 14],
-  "horizons": [1, 2, 3, 4, 5, 6, 7, 8],
-  "partners": [1, 2, 3],
+  "sample_times": [
+    2,
+    6,
+    10,
+    14
+  ],
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "partners": [
+    1,
+    2,
+    3
+  ],
   "target": 0,
   "first_action_reference": "zero for replaced agent only",
   "continuation": "same recorded factual joint action repeated for all branches",
   "outcome": "raw positions of all four agents; landmarks excluded",
-  "nonzero_thresholds": [1e-8, 1e-7, 1e-6],
+  "nonzero_thresholds": [
+    1e-08,
+    1e-07,
+    1e-06
+  ],
   "primary": "physical four-branch second difference by horizon, not model ranking",
   "replication_unit": "episode, averaging four times and three partners within episode",
   "scope": "Development measurement audit. No training, no checkpoint selection, no added evidence of learned physical attribution. All horizons retained, including zero-effect controls.",

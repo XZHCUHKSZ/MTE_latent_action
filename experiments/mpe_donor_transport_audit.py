@@ -1,12 +1,19 @@
-"""Read-only error decomposition of completed, real-training-donor diagnostics."""
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
+
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
+"""
+
 import json
+
 import hashlib
+
 from pathlib import Path
+
 import numpy as np
+
 from utils.atomic import atomic_json
 
 PACKAGE=Path(__file__).resolve().parents[1]
-
 
 def main():
     out=PACKAGE/'outputs/mpe_donor_transport_audit_2026_09_18'
@@ -56,6 +63,5 @@ def main():
     (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
     atomic_json(out/'status.json',dict(status='complete',source_values_verified=True,training_updates=0))
     print('Complete',out)
-
 
 if __name__=='__main__':main()

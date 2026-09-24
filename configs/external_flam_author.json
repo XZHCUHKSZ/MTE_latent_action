@@ -1,0 +1,9 @@
+{
+  "seed": 202622320,
+  "tokenizer_batch": 64,
+  "tokenizer_learning_rate": 0.0001,
+  "tokenizer_lpips_weight": 1.0,
+  "sequence_length": 10,
+  "vae_kl_coefficient": 0.0002,
+  "factored_batch": 32
+}

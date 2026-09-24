@@ -1,7 +1,10 @@
-"""X6. Retain readable learned partner interactions, not physical causal truth."""
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
+
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
+"""
+
 from evaluation.probes import reader,transform
-from mte.coordinate_controls import factory,forward
-from closed_loop_lam_v1.unified_models import lattice_operators
+
 import numpy as np
 
 def readout(z_train,z_dev,y_train,y_dev,kind,masks):
@@ -22,7 +25,3 @@ def readout(z_train,z_dev,y_train,y_dev,kind,masks):
         mse=float(np.mean((p-q)**2));den=float(np.mean((q-mu)**2))
         rows.append(dict(kind=kind,group=label,mse=mse,training_mean_mse=den,skill=1-mse/den if den>1e-12 else None,latent_dimension=z_train.shape[1]))
     return rows
-
-# reader is the original fixed-ridge diagnostic; transform is the original
-# learned-coefficient construction. Use representation and history features
-# separately. Coordinate pilot: two development seeds, 400 updates, no rollout.

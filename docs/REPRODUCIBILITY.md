@@ -1,88 +1,72 @@
-# Reproduction and asset contract
+# Running the code
 
-## Evidence inspection
+## Scientific code and assets
 
-Run `python inspect_release.py --verify` from the repository root. This checks
-published file hashes, catalogue targets, and syntax/JSON integrity. The
-release manifest records the archive source hash and published hash separately.
-Result-path normalization preserves JSON scalar values, arrays and ordering.
+Install the recorded numerical/visual environments in separate environments as
+needed; see `requirements.txt` and `DEPENDENCIES.md`. Torch and
+Torchvision wheels must match the recorded platform. External author baselines
+also need their pinned repositories and original dependency environments in
+`DEPENDENCIES.md`. FLAM uses Linux and author dependencies;
+its unlicensed source and perceptual weights are not redistributed here.
 
-## Scientific environment
+A clone includes code and protocols only, **not a self-contained
+retraining dataset**. Required external assets include observation-only train/dev
+exports, frozen matched endpoints/masks, pretrained representation/history
+artifacts, fixed target-action exports, teachers and visual render assets (including
+DAVIS where used). Preserve their original SHA-256 identities. Collecting new data
+creates a new reproduction, not a replacement for the reported evidence.
 
-Use the versions recorded in `provenance/environment_versions.json` and
-`requirements.txt`. `requirements-reproduction.txt` adds the orchestration
-dependency (`psutil`) to that original list. PyTorch/CUDA and torchvision must be installed explicitly
-for the chosen platform; this release records the original environment rather
-than silently substituting new library versions. Orchestration also needs
-`psutil` (the release validation record records its tested version).
+The established MPE/MaMuJoCo/Ant stages retain workspace-relative asset contracts.
+For archival replay, install this tree at `<workspace>/paper/MTE_Paper_Code_Final_2026_09_17/`
+and restore the frozen asset paths referenced by the selected protocol. Stage
+functions are APIs, not promises that every file is a standalone training CLI.
+Use the mapped `worker`, `pretrain`, `ground`, `evaluate`, or readout API with its
+recorded parameters, one stage per fresh process. `visual_control.py --help`
+provides the established explicit visual-stage interface.
 
-From the repository root, with the scientific environment installed:
+External Ant upstream scripts preserve their original preflight/source guards.
+They additionally require the original OTF source manifest and FLAM source,
+perceptual-asset and build/preflight records referenced in those scripts. These
+archive records are not included in this code-only release, so **a default
+clone cannot launch those archival upstream scripts**. We do not disable their
+checks or silently label an unqualified replay as the original experiment.
+External downstream `external_ant_stages.worker` needs OUT/UP bindings to the
+selected three-seed run, its original source/freeze records, and the 27-condition
+configuration. There is no published continuation manager.
 
-```bash
-python tests/check_imports.py
-python tests/check_grounding_contract.py
+## Coupled Frozen stages
+
+Use the exact two frozen SAC teachers and their `teacher_freeze.json`/`result.json`
+sidecars. `configs/coupled_frozen_five_seed.json` fixes the acquisition, training,
+evaluation seeds, all budgets and both teacher strata. Restore observation arrays
+under `<data-root>/seed<teacher>/acquire/data64/`, or acquire a new reproduction
+with `collect` using the same teacher and fixed acquisition seeds.
+
+```sh
+python -m experiments.coupled_frozen init --run-dir outputs/coupled_reproduction --data-root local_assets/coupled/observations --teacher-root local_assets/coupled/teachers
+python -m experiments.coupled_frozen seal-data --run-dir outputs/coupled_reproduction
+python -m experiments.coupled_frozen pre --run-dir outputs/coupled_reproduction --teacher 202622200 --seed 202623500
 ```
 
-The first checks imports and unresolved global references. The second is a CPU
-contract check with actual recurrent networks and a recording decoder stub;
-it tests label partitioning, feature routing and update budgets, not performance.
-`tests/check_mamujoco_frozen_dispatch.py --reference <archived-limited_labels.py>`
-checks fifteen original MaMuJoCo paths with two real updates using synthetic
-observations; obtain the reference from commit `2a784fa` or the original archive.
-Other `tests/check_*.py` scripts include real GPU training/replays and require
-the assets below. They use new output paths and reject existing partial runs.
+Complete `pre` for all ten teacher/seed pairs, then `seal-pre`, then `labels`.
+Complete `ground --teacher ... --seed ... --arm ...` for all 190 controllers, then
+`seal-ground`, then `evaluate` for all ten pairs. `arms()` in
+`training/coupled_cheetah_frozen.py` lists the 19 allowed arms. The two seal stages
+refuse incomplete artifacts. Grounding verifies frozen observation models;
+evaluation verifies all frozen controllers. Run each command in a fresh process
+because label/simulator access guards are process-wide. No Adapt arm is accepted.
 
-## External assets for training and replay
+## Protocol scope
 
-The scientific runners retain their original workspace-relative routing. For
-archival replay, place this checkout at
-`<workspace>/paper/MTE_Paper_Code_Final_2026_09_17/` and restore the source
-trees named in the chosen `configs/*.json`, its experiment documentation and
-source manifests. A default clone with no assets supports result inspection,
-not full retraining. The exact scientific runners/configurations are unchanged.
+Frozen grounding trains only a decoder. Adapt changes permitted history copies.
+Solo/Aux is a separate input-composition choice. The new Coupled entry accepts
+only Frozen arms; existing Ant and population Adapt code remains because those
+experiments appear in the manuscript.
 
-Required asset classes include observation-only train/dev exports, frozen
-matched endpoints and valid masks, original representation/history weights,
-budgeted target-action exports, reference decoder weights and trajectory replay
-records. Visual studies also use frozen RGB/PCA artifacts and the declared
-DAVIS/distracting-control assets; MaMuJoCo uses its fixed teacher and simulator
-configuration. Respect the original datasets' and third parties' licenses.
+MaMuJoCo protocols retain dataset split IDs and schedules. Resolve
+`WORKSPACE_ROOT` against your immutable assets. For RGB Ant, place a copy of
+`configs/visual_config.json` in `--asset-dir` alongside separately supplied labels.
 
-Public metadata uses `WORKSPACE_ROOT/`, `PACKAGE_ROOT/`, or
-`LOCAL_ASSET_ROOT/` to denote original machine-specific paths. These are provenance
-identifiers, not downloadable URLs. Full replay requires resolving the original
-asset paths, not replacing data with newly generated trajectories under old labels.
-Exported status fields omit PIDs and timestamps; archive hashes identify their
-original files. These sanitized exports are not substitutes for original audit
-manifests during replay.
-
-The archival managers also call `<workspace>/tools/verify_frozen_foundation.py`
-with the original workspace freeze manifest. That guard covers additional
-historical research outside this paper. Those unrelated records are not included
-in this publication: original manager replay requires that original workspace
-guard and its referenced files. The public integrity inspector checks this
-release and does not bypass or replace the original scientific gate.
-
-Protocol entry points expose their own CLI (`python -m experiments.<name> --help`).
-Read the matching documentation first: some entry points require a manager/worker
-subcommand. Run the specified qualification/replay checks before full jobs.
-Never bypass source hashes, native parity or label-access guards to fit a new
-machine. New results belong in a fresh run directory.
-
-## Observation and supervision boundary
-
-Observation-only representation/history learning and budgeted action grounding
-are separate stages. Frozen trains a decoder. Adapt trains copies of selected
-history branches plus the decoder within the fixed target-action budget. The
-RGB/PCA front-end and original archived models stay unchanged. Training simulation
-queries and partner-action labels remain prohibited where specified. Evaluation
-simulator/oracle diagnostics are explicitly separated from deployable policies.
-
-## Historical records
-
-September 17 mixed-MPE reports and obsolete delivery guides have been removed
-from the current checkout. They remain available in Git history and original
-archives. The current file inventory is `provenance/release_manifest.json`;
-current checks are in `provenance/release_validation.json`. Per-experiment
-qualification records retain their original scientific meaning. The retirement
-list gives each removed path, its reason and replacement.
+`tests/check_coupled_frozen.py --reference <archived-adapter.py>` is an optional
+synthetic CPU extraction-parity check; it requires the separately held original
+adapter. No recorded experimental outcomes are bundled with these tests.

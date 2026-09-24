@@ -18,11 +18,6 @@
   ],
   "parallel": 4,
   "overrides": {},
-  "sources": {
-    "700": "outputs/mpe_evidence_completion_2026_09_18/n700",
-    "32": "outputs/mpe_evidence_completion_2026_09_18/n32",
-    "175": "outputs/mpe_evidence_completion_2026_09_18/n175"
-  },
   "original_full": "outputs/mpe_temporal_full_scale_5seeds",
   "paper_aliases": {
     "continuous_lam": "continuous",

@@ -1,16 +1,24 @@
-"""MaMuJoCo frozen-control dispatcher, extracted without changing MaMuJoCo operations.
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
-Supersedes the mixed-environment limited_labels entry. The legacy MPE branch is
-excluded; current MPE uses mpe_inventory_completion and the temporal adapters.
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
 """
+
 from pathlib import Path
+
 import numpy as np
+
 import torch
+
 from utils.artifacts import data, endpoints
+
 from training.representation_mamujoco import train_backend, train_history_policy as ma_history
+
 from mte.entity_view import entities
+
 from mte.structured_controls import train as structured_train
+
 OBSERVATION_METHODS={'continuous_lam','lapo_state_adapter','laom_state_adapter'}
+
 FRONTEND_METHODS={'entity_target','entity_joint','lapo_joint','laom_joint_k3'}
 
 def train_history(s, method, out, progress, p):

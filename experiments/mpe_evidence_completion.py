@@ -1,20 +1,27 @@
-"""Complete missing MPE evidence in new directories, never overwrite prior runs."""
-import argparse
-import concurrent.futures
-import json
-import os
-from pathlib import Path
-import shutil
-import subprocess
-import sys
-import time
-import traceback
-import numpy as np
-import torch
-from experiments.mpe_temporal_repair import PACKAGE, digest, exports, load_x, ground
-from experiments.mpe_temporal_scale import source_hashes
-from utils.atomic import atomic_json
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
+"""
+
+import json
+
+from pathlib import Path
+
+import shutil
+
+import sys
+
+import time
+
+import traceback
+
+import numpy as np
+
+import torch
+
+from experiments.mpe_temporal_stages import PACKAGE, digest, exports, load_x, ground
+
+from utils.atomic import atomic_json
 
 def plan(config, n):
     p = json.loads((PACKAGE/'configs/mpe_temporal_full_scale.json').read_text())
@@ -26,7 +33,6 @@ def plan(config, n):
     else:
         p.update(budgets=[config['scaling_budget']], control_configs=config['scaling_control_configs'])
     return p
-
 
 def pretrain(root, p, config, progress):
     from utils.access import guard
@@ -77,7 +83,6 @@ def pretrain(root, p, config, progress):
     atomic_json(out/'complete.json',dict(checkpoints={str(f.relative_to(out)):digest(f) for f in out.rglob('*.pt')},
         seed=p['seed'],native_action_labels_read=0,simulator_queries=0,frozen_before_grounding=True))
 
-
 def worker(args,c):
     p=dict(plan(c,args.n),seed=args.seed);root=args.out/f'n{args.n}'/f'seed{args.seed}'
     torch.set_num_threads(p['threads_per_process'])
@@ -95,12 +100,6 @@ def worker(args,c):
         progress('complete')
     except BaseException:
         atomic_json(root/f'failure_{name}.json',dict(traceback=traceback.format_exc()));raise
-
-
-def completion_path(root,stage,budget):
-    return root/({'pretrain':'pretrain/complete.json','probes':'probes.json','donor':'donor_effects.json'}.get(
-        stage,f'grounding/budget_{budget}/complete.json'))
-
 
 def prepare(args,c):
     source=Path(c['source_run']).resolve()
@@ -124,78 +123,6 @@ def prepare(args,c):
                 shutil.copytree(src,target,ignore=shutil.ignore_patterns('complete.json'))
                 atomic_json(dest/f'seed{seed}'/'reused_source.json',dict(source=str(src),checkpoint_hashes=old['checkpoints']))
 
-
 def report(out,c):
     from evaluation.temporal_completion_report import summarize
     return summarize(out,c)
-
-
-def manage(args,c):
-    args.out.mkdir(parents=True,exist_ok=True);lock=args.out/'manager.lock'
-    with lock.open('x') as f:f.write(str(os.getpid()))
-    start=time.time()
-    try:
-        pf=args.out/'protocol.json'
-        if pf.exists():assert json.loads(pf.read_text())==c,'Protocol changed'
-        else:atomic_json(pf,c)
-        hashes=source_hashes();hf=args.out/'implementation_sources.json'
-        if hf.exists():assert json.loads(hf.read_text())==hashes,'Implementation changed'
-        else:atomic_json(hf,hashes)
-        prepare(args,c)
-        seeds=c['overrides'].get('seeds',[45,46,47,48,49]);ns=[c['full_n'],*c['scales']]
-        def run(stage,n,seed,budget=None):
-            root=args.out/f'n{n}'/f'seed{seed}'
-            if completion_path(root,stage,budget).exists():return
-            cmd=[sys.executable,'-m','experiments.mpe_evidence_completion','--workspace',str(args.workspace),
-                 '--out',str(args.out),'--config',str(args.config),'--stage',stage,'--n',str(n),'--seed',str(seed)]
-            if budget is not None:cmd+=['--budget',str(budget)]
-            with (root/f'{stage}_{budget}.log').open('a',encoding='utf-8') as log:
-                subprocess.run(cmd,cwd=PACKAGE,stdout=log,stderr=subprocess.STDOUT,check=True,
-                               creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
-        for phase in ('pretrain_full','diagnostics','ground_full','pretrain_scales','ground_scales'):
-            if phase=='pretrain_full':jobs=[('pretrain',c['full_n'],s,None) for s in seeds]
-            elif phase=='diagnostics':jobs=[(stage,c['full_n'],s,None) for stage in ('probes','donor') for s in seeds]
-            elif phase=='ground_full':jobs=[('ground',c['full_n'],s,b) for b in c['budgets'] for s in seeds]
-            elif phase=='pretrain_scales':jobs=[('pretrain',n,s,None) for n in c['scales'] for s in seeds]
-            else:jobs=[('ground',n,s,c['scaling_budget']) for n in c['scales'] for s in seeds]
-            if not jobs:continue
-            with concurrent.futures.ThreadPoolExecutor(max_workers=c['parallel']) as pool:
-                pending={pool.submit(run,*j):j for j in jobs};finished=0
-                while pending:
-                    done,_=concurrent.futures.wait(pending,timeout=10,return_when=concurrent.futures.FIRST_COMPLETED)
-                    for f in done:
-                        f.result();pending.pop(f);finished+=1
-                    stats=report(args.out,c)
-                    atomic_json(args.out/'status.json',dict(status='running',phase=phase,finished=finished,
-                        phase_jobs=len(jobs),elapsed_seconds=time.time()-start,time=time.time(),**stats))
-            if phase in ('pretrain_full','pretrain_scales'):
-                for n in ([c['full_n']] if phase=='pretrain_full' else c['scales']):
-                    atomic_json(args.out/f'n{n}'/'global_freeze.json',dict(all_pretraining_complete=True,time=time.time()))
-                    exports(args.workspace,args.out/f'n{n}',plan(c,n),labels=True)
-        assert source_hashes()==hashes
-        for n in ns:
-            for seed in seeds:
-                folder=args.out/f'n{n}'/f'seed{seed}'/'pretrain'
-                ck=json.loads((folder/'complete.json').read_text())['checkpoints']
-                assert all(digest(folder/f)==h for f,h in ck.items())
-        stats=report(args.out,c)
-        assert stats['new_control_rows']==stats['expected_new_control_rows']
-        atomic_json(args.out/'status.json',dict(status='complete',source_and_weight_checks=True,
-            elapsed_seconds=time.time()-start,time=time.time(),**stats))
-    except BaseException:
-        atomic_json(args.out/'status.json',dict(status='failed',traceback=traceback.format_exc(),time=time.time()));raise
-    finally:lock.unlink(missing_ok=True)
-
-
-def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--workspace',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
-    ap.add_argument('--config',type=Path,default=PACKAGE/'configs/mpe_evidence_completion.json')
-    ap.add_argument('--stage',choices=['pretrain','ground','probes','donor']);ap.add_argument('--n',type=int)
-    ap.add_argument('--seed',type=int);ap.add_argument('--budget',type=int)
-    args=ap.parse_args();args.workspace=args.workspace.resolve();args.out=args.out.resolve();args.config=args.config.resolve()
-    c=json.loads(args.config.read_text());c['source_run']=str((PACKAGE/c['source_run']).resolve())
-    if args.stage:worker(args,c)
-    else:manage(args,c)
-
-
-if __name__=='__main__':main()

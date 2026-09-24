@@ -1,24 +1,39 @@
-"""Does coefficient masking change the control benefit of Mobius coordinates?"""
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
+
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
+"""
+
 import os
+
 for key in ('OMP_NUM_THREADS', 'MKL_NUM_THREADS', 'OPENBLAS_NUM_THREADS'):
     os.environ[key] = '1'
-import argparse
+
 import itertools
+
 import subprocess
+
 import sys
+
 import time
+
 import traceback
+
 from pathlib import Path
+
 import numpy as np
+
 import psutil
+
 import torch
+
 from utils.atomic import atomic_json
+
 from experiments.mamujoco_route_completion import (
     PACKAGE, WORKSPACE, read, digest, suite, ground, clean_audit, check_sources)
+
 from training.mif_visibility_control import ARMS
 
 MODULE = 'experiments.mamujoco_mif_visibility'
-
 
 def setup(out, config):
     c = read(config)
@@ -55,7 +70,6 @@ def setup(out, config):
         teacher=str(teacher), teacher_gate=str(gate), config_hash=digest(out / 'protocol.json')))
     atomic_json(out / 'status.json', dict(status='ready', pretraining_total=len(c['seeds'])*4,
         control_total=sum(j['stage']=='ground' for j in jobs)))
-
 
 def worker(out, jobid):
     torch.set_num_threads(1)
@@ -95,7 +109,6 @@ def worker(out, jobid):
         atomic_json(dest/'access.json', audit)
         atomic_json(dest/'failure.json', dict(traceback=traceback.format_exc()))
         raise
-
 
 def freeze(out, manifest, native_parity=True):
     from training.composition import restore
@@ -137,7 +150,6 @@ def freeze(out, manifest, native_parity=True):
     check_sources(manifest, True)
     atomic_json(out/'freeze.json', dict(all_modules_frozen=True, hashes=hashes, pairs=pairs,
                 archived_native_parity=parity, time=time.time()))
-
 
 def summarize(out, manifest, c):
     from scipy.stats import t
@@ -191,7 +203,6 @@ def summarize(out, manifest, c):
     delivery.mkdir(parents=True, exist_ok=True)
     (delivery/'RESULTS_CN.md').write_text('\n'.join(lines), encoding='utf-8')
     atomic_json(delivery/'summary.json', summary)
-
 
 def manager(out):
     import msvcrt
@@ -248,17 +259,3 @@ def manager(out):
         raise
     finally:
         lock.close()
-
-
-if __name__ == '__main__':
-    ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--out',type=Path,required=True)
-    ap.add_argument('--config',type=Path)
-    ap.add_argument('--setup',action='store_true')
-    ap.add_argument('--manager',action='store_true')
-    ap.add_argument('--job')
-    args = ap.parse_args()
-    out = args.out.resolve()
-    if args.setup: setup(out, args.config.resolve())
-    elif args.manager: manager(out)
-    else: worker(out, args.job)

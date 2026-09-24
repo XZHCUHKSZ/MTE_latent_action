@@ -1,19 +1,21 @@
-"""Stage-isolated fixed-budget matching controls. No changes to old runs."""
-import argparse
-import concurrent.futures as futures
-import json
-import os
-from pathlib import Path
-import shutil
-import subprocess
-import sys
-import time
-import traceback
-import numpy as np
-import torch
-from experiments.mpe_temporal_repair import PACKAGE,digest,ground
-from utils.atomic import atomic_json
+"""Scientific stage APIs retained for the manuscript experiment; no background manager.
 
+See docs/PAPER_CODE_MAP.md for the manuscript experiment mapping.
+"""
+
+import json
+
+import sys
+
+import time
+
+import numpy as np
+
+import torch
+
+from experiments.mpe_temporal_stages import PACKAGE,digest,ground
+
+from utils.atomic import atomic_json
 
 def worker(args,p):
     root=args.out/f'seed{args.seed}';p=dict(p,seed=args.seed)
@@ -57,7 +59,6 @@ def worker(args,p):
         ground(root,dict(p,control_configs=['base+'+a for a in p['arms']],primary_contrasts=[]),progress)
     progress('complete')
 
-
 def aggregate(out,p):
     from scipy.stats import t
     import itertools
@@ -93,73 +94,3 @@ def aggregate(out,p):
         '全部输入保持相同信息，差分是可逆变换。实验回答显式matching的归纳偏置，而非声称只有matching拥有更多信息。',
         '未更新论文图表，未上传GitHub。']
     (out/'RESULTS_CN.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
-
-
-def manage(args,p):
-    args.out.mkdir(parents=True,exist_ok=False)
-    atomic_json(args.out/'protocol.json',p)
-    hashes={str(f):digest(f) for folder in ['experiments','training','evaluation','environments','mte','utils','closed_loop_lam_v1'] for f in (PACKAGE/folder).glob('*.py')}
-    for seed in p['seeds']:
-        src=PACKAGE/p['source_run']/f'seed{seed}';root=args.out/f'seed{seed}'
-        (root/'data').mkdir(parents=True);(root/'pretrain/base/policy').mkdir(parents=True)
-        for split in ['train','dev']:
-            f=src/f'data/{split}.npz';hashes[str(f)]=digest(f)
-            if p.get('smoke'):
-                with np.load(f) as ff:v=ff['positions'][:p['train_episodes'] if split=='train' else p['dev_episodes']]
-                np.savez_compressed(root/f'data/{split}.npz',positions=v)
-            else:shutil.copy2(f,root/f'data/{split}.npz')
-        f=src/'pretrain/base/policy/policy.pt';hashes[str(f)]=digest(f);shutil.copy2(f,root/'pretrain/base/policy/policy.pt')
-        f=src/'pretrain/offset2/bridge/endpoints.npz';hashes[str(f)]=digest(f)
-        # Verify copied frozen source weights against their original registry.
-        freeze={Path(k).as_posix():v for k,v in json.loads((src/'pretrain/complete.json').read_text())['checkpoints'].items()}
-        assert digest(src/'pretrain/base/policy/policy.pt')==freeze['base/policy/policy.pt']
-    atomic_json(args.out/'source_manifest.json',hashes)
-    def run(stage,seed):
-        root=args.out/f'seed{seed}'
-        cmd=[sys.executable,'-X','utf8','-m','experiments.mpe_matching_input_control','--out',str(args.out),'--stage',stage,'--seed',str(seed)]
-        with (root/f'{stage}.stdout.log').open('x') as so,(root/f'{stage}.stderr.log').open('x') as se:
-            proc=subprocess.Popen(cmd,cwd=PACKAGE,stdout=so,stderr=se)
-            atomic_json(root/f'{stage}_process.json',dict(pid=proc.pid,command=cmd,started_at=time.time()))
-            ret=proc.wait()
-            if ret:raise RuntimeError(f'{stage} seed{seed} failed with code {ret}; new dispatch stopped')
-    def stage(name,parallel):
-        queue=iter(p['seeds']);done=0
-        with futures.ThreadPoolExecutor(max_workers=parallel) as pool:
-            active={pool.submit(run,name,s):s for s in [next(queue,None) for _ in range(parallel)] if s is not None}
-            while active:
-                finished,_=futures.wait(active,return_when=futures.FIRST_COMPLETED)
-                for f in finished:f.result();active.pop(f);done+=1
-                atomic_json(args.out/'status.json',dict(status='running',stage=name,completed_seeds=done,total_seeds=len(p['seeds']),pid=os.getpid(),time=time.time()))
-                for _ in finished:
-                    s=next(queue,None)
-                    if s is not None:active[pool.submit(run,name,s)]=s
-    try:
-        atomic_json(args.out/'status.json',dict(status='running',stage='pretrain',pid=os.getpid(),time=time.time()))
-        stage('pretrain',p['parallel_pretrain'])
-        freeze={str(f.relative_to(args.out)):digest(f) for f in args.out.rglob('*.pt')}
-        atomic_json(args.out/'global_freeze.json',freeze)
-        # First action-label access occurs only after every history has frozen.
-        for seed in p['seeds']:
-            src=PACKAGE/p['source_run']/f'seed{seed}'
-            f=src/'data/labels_b32.npz';hashes[str(f)]=digest(f)
-            shutil.copy2(f,args.out/f'seed{seed}/data/labels_b32.npz')
-        atomic_json(args.out/'source_manifest.json',hashes)
-        stage('ground',p['parallel_ground'])
-        aggregate(args.out,p)
-        atomic_json(args.out/'status.json',dict(status='complete',source_and_weight_checks=True,control_units=len(p['arms'])*len(p['seeds'])))
-    except BaseException:
-        atomic_json(args.out/'failure.json',dict(traceback=traceback.format_exc()))
-        atomic_json(args.out/'status.json',dict(status='failed',pid=os.getpid()))
-        raise
-
-
-def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--out',type=Path,required=True);ap.add_argument('--stage',choices=['pretrain','ground']);ap.add_argument('--seed',type=int);ap.add_argument('--smoke',action='store_true');args=ap.parse_args();args.out=args.out.resolve()
-    if args.stage:
-        p=json.loads((args.out/'protocol.json').read_text());worker(args,p)
-    else:
-        p=json.loads((PACKAGE/'configs/mpe_matching_input_control.json').read_text())
-        if args.smoke:p.update(smoke=True,seeds=[45],representation_updates=2,history_updates=2,decoder_updates=2,evaluation_episodes=2)
-        manage(args,p)
-
-if __name__=='__main__':main()
